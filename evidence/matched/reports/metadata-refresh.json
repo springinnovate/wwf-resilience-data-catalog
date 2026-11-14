@@ -1,0 +1,13 @@
+{
+  "datasets_updated": 24,
+  "payload_files_verified": 78,
+  "payload_bytes_and_mtimes_preserved": true,
+  "data_transformations_rerun": false,
+  "prior_provenance_retained": true,
+  "linked_scientific_notes": 24,
+  "catalog_rescan_performed": false,
+  "catalog_item_count": 24,
+  "catalog_ids_preserved": true,
+  "existing_asset_urls_preserved": true,
+  "geometry_and_temporal_metadata_preserved": true
+}

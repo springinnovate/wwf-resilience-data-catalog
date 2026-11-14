@@ -7,9 +7,14 @@ temporal:
   start_datetime: '2023-01-01T00:00:00Z'
   end_datetime: '2023-12-31T23:59:59Z'
 metadata:
-  title: ATTO monthly carbon fluxes, 2023
-  description: Monthly net ecosystem exchange (NEE), gross primary productivity (GPP) and ecosystem respiration
-    (Reco) at ATTO. Contains the twelve months of 2023, selected from the deposited 2014-2023 table.
+  title: ATTO forest carbon exchange during the 2023 Amazon drought
+  description: During the extreme 2023 drought, measurements near the Amazon Tall Tower Observatory showed
+    that the local forest remained a net carbon sink over the year. The study associated this local response
+    with reduced ecosystem respiration and sufficient soil moisture, while its wider regional analysis
+    found a different carbon balance. This table provides monthly carbon uptake, respiration and net exchange
+    for 2023, supporting investigation of local drought responses and checks on ecosystem models. The
+    linked 2014–2023 source table provides the historical comparison. These tower measurements describe
+    a local forest footprint and cannot establish the carbon balance of the whole Amazon.
   license: CC0-1.0
   attribution: Botia et al. (2026), supporting datasets deposited in Edmond.
   doi: 10.17617/3.OU3KYA
@@ -17,25 +22,24 @@ metadata:
     Version 1.0. Edmond. https://doi.org/10.17617/3.OU3KYA
   categories:
   - Nature
-  statuses:
-  - Matched to sheet description
+  statuses: []
   study_ids:
-  - paper-023
+  - doi-10.1029-2025AV001658
   study_time: Monthly flux totals for January through December 2023; Time is a month-end label.
   publications:
-  - id: paper-023
+  - id: doi-10.1029-2025AV001658
     title: Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon
       Source
     doi: 10.1029/2025AV001658
     url: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658
     year: 2026
   annotations:
-    row_ids:
-    - row-053
     limitations:
     - Underlying half-hourly measurements and quality flags are not included.
     - The source table's finalLat/finalLon describe air-trajectory endpoints, not the tower location.
     processing: Selected 2023 and six columns; original values and numeric precision preserved.
+    evidence_type: Local flux observations interpreted alongside regional models
+    dataset_role: 2023 monthly tower flux observations
 assets:
   data:
     location: local
@@ -109,3 +113,11 @@ assets:
           unnamed_first_column: Original row index, 0 through 118.
           finalLat / finalLon: Mean ending latitude / longitude of STILT backward trajectories.
           deltaCO2_ppm: Monthly mean regional CO2 signal, parts per million.
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

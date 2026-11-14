@@ -33,6 +33,7 @@ from shapely.geometry import MultiPolygon, mapping, shape
 import yaml
 
 from prepare_evidence_pilot import require, relative_file, sha256, write_json
+from evidence_notes import write_evidence_summary
 
 REPO = Path(__file__).resolve().parents[1]
 SCHEMA = REPO / 'evidence/pilot/eolab-item-v1.schema.json'
@@ -286,7 +287,8 @@ def evidence_context(record: dict) -> dict:
                 paper_references=[r for r in papers if r['paper_id'] in paper_ids],
                 asset_links=[r for r in links if r['row_id'] in row_ids],
                 curated_evidence=record.get('review_context',{}),source_files=record['source_files'],
-                operation=record['operation'])
+                operation=record['operation'], evidence_summary=record.get('evidence_summary',{}),
+                metadata_history=record.get('metadata_history',[]))
 
 
 def prepare(source_root: Path,output_root: Path,plan_dir: Path,sidecar_dir: Path|None=None) -> dict:
@@ -362,6 +364,7 @@ def prepare(source_root: Path,output_root: Path,plan_dir: Path,sidecar_dir: Path
                 checks.setdefault('supporting_archives',{})[bundle['path']]=members
             context=evidence_context(record);context['preparation_checks']=checks
             write_json(folder/'review-context.json',context)
+            write_evidence_summary(folder,record)
             sidecar=folder/(record['output_file']+'.eolab.yaml')
             sidecar.write_text(yaml.safe_dump(record['descriptor'],sort_keys=False,allow_unicode=True,width=100),encoding='utf-8',newline='\n')
             for asset in record['descriptor']['assets'].values():

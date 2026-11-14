@@ -1,8 +1,8 @@
 {
   "plans": {
-    "fish.json": "0f6bcb713b62a4816b2ca1e8eb21803026f096b9d6f41bf2224c9c6bf6945a1f",
-    "spatial.json": "eefe30b7aa615c097e580da6a98c040dc0fbda205649c5fbf480acef0b536342",
-    "tables.json": "a3a8c5f2acb1a84846edf2a5ee276366693c03462f32da35f38763e49ccba060"
+    "fish.json": "36c426aa4d9fafc8d76bf985f5e0ad27f8c27da32e17379b5ecc70a9e2905c5d",
+    "spatial.json": "fba43bdbad21a238307cdc5c47423a2bb8a2e44c6c2b81d8f60fb73f81202e30",
+    "tables.json": "91c2c609ecb3dcd24671228eb58e6148f31cc0dc1e6c7757dd073a215b64f7f2"
   },
   "runtime": {
     "numpy": "2.5.4",
@@ -366,12 +366,12 @@
           "bytes": 51200000
         },
         "amazon-commercial-fish-catch.gpkg.eolab.yaml": {
-          "sha256": "12614125c5e6ee7b6d02e26617e32c928a39ab4dbad22b333fbbbb997fa38d80",
-          "bytes": 2891
+          "sha256": "52c9c896efb904703255a94070ccaeaa962fb5fabc7f134f22490b058bc4989b",
+          "bytes": 3718
         },
         "review-context.json": {
-          "sha256": "d3cb5e8c3603a2f5cb46ca9161c51ecfa21744fe770299856bde50f5aa5989c0",
-          "bytes": 40988
+          "sha256": "769d10a0edea53e88691cd6c2d0f5dce4ad5a9ca4a2943dd25e4d1184e718b59",
+          "bytes": 47613
         },
         "source/science-metadata.xml": {
           "sha256": "9f3b75c6e632b67db7577d13ae74f89d79048ede90baf7cd732a08b9bae596c0",
@@ -380,6 +380,10 @@
         "source/SNAPP_Fish_Data.rar": {
           "sha256": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5",
           "bytes": 13515615
+        },
+        "evidence-summary.md": {
+          "sha256": "46533e511418d9ee1fb250cd2643b11c59cae36fb5677a66d53f6db4c3e8a46c",
+          "bytes": 2285
         }
       }
     },
@@ -434,8 +438,8 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "134d660d2aa3f671d5f5b9ddc81da7954534f6c871499893900b8bb619a4eb36",
-          "bytes": 20241
+          "sha256": "d2e4cba9fc4289c3b428f5ad18373e026a4bfc7ed278a87e746ed0f05c40b78c",
+          "bytes": 27998
         },
         "source/tfvi_gpp_0.1deg.tif": {
           "sha256": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
@@ -450,8 +454,12 @@
           "bytes": 648751
         },
         "tfvi-gpp-0.1deg.tif.eolab.yaml": {
-          "sha256": "1482aac77eb8dd4417bd3d0c23eb8f980c16b2fb15ea7c0a24580f0d6234cb18",
-          "bytes": 3022
+          "sha256": "003210da501347797f3ab43ea2938d1147419fc74378e6a9d6f434043825b55c",
+          "bytes": 3912
+        },
+        "evidence-summary.md": {
+          "sha256": "c9fc4914f3c68c4f93ba0b70c34ca8e2cb4ecc15c6ee230e349ff97424a583de",
+          "bytes": 3092
         }
       }
     },
@@ -506,8 +514,8 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "9809d175c45b09f879674120aded9691cf5d0a26998eb6dede97d02e5971208e",
-          "bytes": 20177
+          "sha256": "b9bd2dd6f6d0849664ae3d95cf56720d04c9a6f2553629ef3e6ce2a0070c8ffc",
+          "bytes": 28020
         },
         "source/tfvi_aet_0.1deg.tif": {
           "sha256": "55cb25ee5a483046db2d48bcdc23a24d5622fe48024b740787ad52228e61e591",
@@ -522,8 +530,12 @@
           "bytes": 773373
         },
         "tfvi-aet-0.1deg.tif.eolab.yaml": {
-          "sha256": "c9811ed9b7894f42a77e3c872a89a9ea47e6b3f911e2d5878ce094b19d692718",
-          "bytes": 3041
+          "sha256": "06383481a832261fca4cbb1afb83c13223e09d65569f8ab0a85187b20f65f935",
+          "bytes": 3957
+        },
+        "evidence-summary.md": {
+          "sha256": "8e94009e95c10c0ae5b4dba1567b6ca8d2386076d4d5f2f4a2ee7562aba85c26",
+          "bytes": 3158
         }
       }
     },
@@ -578,8 +590,8 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "eaaf22bbae3864440f672d174b3d4730c29354dceaca7dac559abb7a17135e35",
-          "bytes": 21241
+          "sha256": "8f27f93c9dc8137769451e29f74acef5323bee35f350ec0dd71076b8a43461bf",
+          "bytes": 29119
         },
         "source/tfvi_lst_0.1deg.tif": {
           "sha256": "ff9a40ed33aab63fcd6e2a471497b75b018d03dd3cdfde264d02a489b889740b",
@@ -594,8 +606,12 @@
           "bytes": 630345
         },
         "tfvi-lst-0.1deg.tif.eolab.yaml": {
-          "sha256": "435ba9bc50095f983465407f12e6c6260c91c58a09a2ab806621fad8c83fad95",
-          "bytes": 3084
+          "sha256": "714296120a70aa736965463565b79bfc088dd0ecca494b6337c13a4a33792318",
+          "bytes": 3973
+        },
+        "evidence-summary.md": {
+          "sha256": "40084f736e68d1f0f70b099e3b90c47cfcd48a52a708276d2e304f3fe1dc37d4",
+          "bytes": 3158
         }
       }
     },
@@ -655,12 +671,12 @@
           "bytes": 19865064
         },
         "amazon-terrestrial-resistance.tif.eolab.yaml": {
-          "sha256": "de677385bcb2cec3fe7bb2e13084fdf4b78cce06ac65b992fcfdaddfb1a68cfe",
-          "bytes": 3045
+          "sha256": "1676be45e7081215766b0bcdfa2fb0f53ac1113d4adb5bd254ac0da115828bc9",
+          "bytes": 3862
         },
         "review-context.json": {
-          "sha256": "3ff85c943876a9401aaf8615578b8302a0565dcaf3b29f87314b3c0a8d916d59",
-          "bytes": 174203
+          "sha256": "f26c29c499ecf0991583f880a2d46cd719c4d2c233cdd622dc39bd2c72b7cb5c",
+          "bytes": 181941
         },
         "source/_2SPAnew2024_Resistance_analysis.R": {
           "sha256": "81be817ede9cfc3e5d1e45ac1db0f316ad40e4ac54e63ed475d0ce49b9c403a3",
@@ -669,6 +685,10 @@
         "source/_2SPAnew2024_Resistance_analysis_DATASET.zip": {
           "sha256": "a484ed30bd4215f433a0a7960e18eaa47dd88cfb18d822941016be094201169e",
           "bytes": 59591179
+        },
+        "evidence-summary.md": {
+          "sha256": "31f56c85929888bbed1a4ae8e78c187ab81f873def8fbee05948de4b756fc1ef",
+          "bytes": 3077
         }
       }
     },
@@ -690,16 +710,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "e9da64895d2fb773d57f89c496665d4f9bc3572686c09ef0a73a2a279e4b483b",
-          "bytes": 19286
+          "sha256": "2e87299ead0266ea3244228a1dbb6c98386976cbf9bbe7c338ddec1f6e20507e",
+          "bytes": 26207
         },
         "wbgt-hist-forested.nc": {
           "sha256": "e1200832a05fe0d1dfd9b0106eda7d191c74d9fdb5c8255d8dc3e3f0275e0b97",
           "bytes": 257660
         },
         "wbgt-hist-forested.nc.eolab.yaml": {
-          "sha256": "6b8c791fed5ea15349770e951353525316e927fa95ed4789cf9d472bdd87c798",
-          "bytes": 2533
+          "sha256": "2b8799b28867ed7ab88e4133f351cad814fe489ecc095e75bd2049ee90b3d511",
+          "bytes": 3283
+        },
+        "evidence-summary.md": {
+          "sha256": "10b549ca2f1c0e330c6835868959c26e5b5da45a620a6c9dddbdc4d919719f5e",
+          "bytes": 3059
         }
       }
     },
@@ -721,16 +745,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "03f8fbd445a36c0423a90f4eb88f481c3efe0249428774fe4b082a861f42a6a8",
-          "bytes": 19287
+          "sha256": "afd94078836cdda1b1fd1fa71254097ca564bbb94cf411d8aa914a0e5827359b",
+          "bytes": 26232
         },
         "wbgt-hist-deforested.nc": {
           "sha256": "be61004103699ad2c2e9678d1719b71c03269c61712c320456ba23ba63b9d46e",
           "bytes": 257660
         },
         "wbgt-hist-deforested.nc.eolab.yaml": {
-          "sha256": "14a140d3343c944bdd4c3b168375781f885882cf1863522192d0fe1f93a6c147",
-          "bytes": 2543
+          "sha256": "b82e0e55cac8cebcf47ea01d4b18713c1932df9733205c89d7dd357cb4bda9ed",
+          "bytes": 3315
+        },
+        "evidence-summary.md": {
+          "sha256": "a3af4f0fdee32f56c261e8b1f585925144e6abffc9f0f5f505a8e82825f1ca6d",
+          "bytes": 3080
         }
       }
     },
@@ -752,16 +780,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "8d94aa53b30c296e397336d1921e40736d0a53555c958b4621f30a615e27a95c",
-          "bytes": 19286
+          "sha256": "aa0b31c631dbee46c950bb8d0208f4f7cb2ed1fece8bd1bd4c0ae9fb53b84716",
+          "bytes": 26204
         },
         "wbgt-rcp4-forested.nc": {
           "sha256": "65661be9b60f821e61347258dd60fcb76273217e57b594dabf132017a0d235fa",
           "bytes": 257660
         },
         "wbgt-rcp4-forested.nc.eolab.yaml": {
-          "sha256": "e8cea5bb7d9c888933702eaa96c5dea4a6af2055fe3111143416db5a57a65a5c",
-          "bytes": 2521
+          "sha256": "7a1282ff410972cc35869138c048d7aefd7014e67ceba6bed66a4a4c41ecb657",
+          "bytes": 3271
+        },
+        "evidence-summary.md": {
+          "sha256": "96dbdde3d93a8ccf5fab5b2835df7deff77afbc560493cee978965953cd967d8",
+          "bytes": 3056
         }
       }
     },
@@ -783,16 +815,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "9bf9b997250c071fb80c3c865f3d807887ee7ae8479563c5e0b5c880e56f6029",
-          "bytes": 19287
+          "sha256": "c02db5075fcaeba5d2b3eb1fc3d48185650f31e5309b5f41c34ad87663b05ddf",
+          "bytes": 26222
         },
         "wbgt-rcp4-deforested.nc": {
           "sha256": "d6058ac664713e5f519f8dcfcffc089bc8700bedba2489e166b44e2885f98131",
           "bytes": 257660
         },
         "wbgt-rcp4-deforested.nc.eolab.yaml": {
-          "sha256": "8d651c699643a2663ff693328ca25e7e37c068742baddf607d57943c838a1b62",
-          "bytes": 2531
+          "sha256": "e47a3b9d2384b9bc411218aa38e2ec6f86a4f1acfa5d0c0a239ee45ac9a284af",
+          "bytes": 3296
+        },
+        "evidence-summary.md": {
+          "sha256": "e293a672d32ad0d59497e84b5a5b76e4618cece3af01235c6e8f3049d09286b1",
+          "bytes": 3070
         }
       }
     },
@@ -814,16 +850,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "dc8999dddac8eb6c3eb6b52b3e98d72284ca36e1868b7f9748c7922a1d80608c",
-          "bytes": 19286
+          "sha256": "32abdbf164f3a5b2212996a46b9a404573122395f45061aeb1d84c51e26e7f4e",
+          "bytes": 26204
         },
         "wbgt-rcp8-forested.nc": {
           "sha256": "ca3d4fdb1c636af9987522139bee30191530b2ab2e30d3ce8f0f025ad317e8d5",
           "bytes": 257660
         },
         "wbgt-rcp8-forested.nc.eolab.yaml": {
-          "sha256": "ac8e791f20a51ac90d7a4154533ad43b447e2d8443e20410e979d59ec90a889d",
-          "bytes": 2521
+          "sha256": "1adc6ae5042f14673e04453f9199ba49e5e05edd2889cf414a5f963edc383339",
+          "bytes": 3271
+        },
+        "evidence-summary.md": {
+          "sha256": "3d717f38b6a406027679cdef33842d21279619eb1ea3448f82a56f7207bf488d",
+          "bytes": 3056
         }
       }
     },
@@ -845,16 +885,20 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "efb2ad7253e1f362af00770d35f7d9e04c357414ca988d228b3b74288e176123",
-          "bytes": 19287
+          "sha256": "49cb2bb0169c37176267d7197561e01e0777875e7e66c72338d73f140d469c48",
+          "bytes": 26222
         },
         "wbgt-rcp8-deforested.nc": {
           "sha256": "a69897e56c3f822ead443cd3da3da3cba282bc571678231c43dda71626a57fb2",
           "bytes": 257660
         },
         "wbgt-rcp8-deforested.nc.eolab.yaml": {
-          "sha256": "3cb006a5121b3b83fccae1edb281cc60d9e95f3112bde0ccd3df91f71cfdde49",
-          "bytes": 2531
+          "sha256": "e7dbf836a40f18686d79e48985c1763870e6176eb9954134cdb2d65f65756ae2",
+          "bytes": 3296
+        },
+        "evidence-summary.md": {
+          "sha256": "a1a61a59ab911e4c393aa1ca787df814f84105d31f39f592857b39010c9bd9b9",
+          "bytes": 3070
         }
       }
     },
@@ -883,12 +927,12 @@
           "bytes": 1069099
         },
         "amazon-tree-density.asc.eolab.yaml": {
-          "sha256": "d31f7343dcebd7b74a236caee9719d9314e6bbfd87e8b45b422e251dfc17a08b",
-          "bytes": 3124
+          "sha256": "d0813218184236a9d039a504fd5fe08fcab9616428f6ec8d6af15ec272763519",
+          "bytes": 3978
         },
         "review-context.json": {
-          "sha256": "d8cf5072e06543b68b9cfd33fc522f4479de52ae6136cbba2893ef9bbfda38bc",
-          "bytes": 25016
+          "sha256": "d0e4f6571488e33fadfab22142ae938adcc4601a275133e0c5564903b2dd6337",
+          "bytes": 32722
         },
         "source/AmazonLowLandForestRaisg.csv": {
           "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
@@ -901,6 +945,10 @@
         "source/TreeDiversityScript.R": {
           "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
           "bytes": 35264
+        },
+        "evidence-summary.md": {
+          "sha256": "fe78d5bb18ed586a9ccd1c5ca1d7864732fcdcae27635ef971c5dcfe22fe31a8",
+          "bytes": 2838
         }
       }
     },
@@ -929,12 +977,12 @@
           "bytes": 1074642
         },
         "amazon-tree-diversity.asc.eolab.yaml": {
-          "sha256": "be90e10feb0080bdce37e5cac751ebabdec453cbcbe8968a6322e8c378c7ddbb",
-          "bytes": 3123
+          "sha256": "0c535ab08455a2452be2580c78819d52a39163504c2de509e02a4a761d7519f3",
+          "bytes": 3937
         },
         "review-context.json": {
-          "sha256": "d69d5dc86ebce6cb927c20a8996c434dc3342172db21bf9c1a342695574c92e9",
-          "bytes": 24914
+          "sha256": "eb0ba916fb3085794d64d2de3a3ce5b5b8aa7447150e15aa93dee625b11ae233",
+          "bytes": 32864
         },
         "source/AmazonLowLandForestRaisg.csv": {
           "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
@@ -947,6 +995,10 @@
         "source/TreeDiversityScript.R": {
           "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
           "bytes": 35264
+        },
+        "evidence-summary.md": {
+          "sha256": "8139feaccb2703c0c852949f6b4f20a115538520048af56bfab82f6f30ec5ef9",
+          "bytes": 3087
         }
       }
     },
@@ -975,12 +1027,12 @@
           "bytes": 1047911
         },
         "amazon-tree-richness.asc.eolab.yaml": {
-          "sha256": "6b97918efb79bf969c901c16f9ffde695a092fcad75ff8bbbd14429ab16a39ae",
-          "bytes": 3159
+          "sha256": "0016de43989c92094c1e70fcf4884ea2c772ba17176305446a1f8d79a34f0acc",
+          "bytes": 3954
         },
         "review-context.json": {
-          "sha256": "c77909c4fa13a57bf69cda627364df9ee83d11d06006b708010abd23cb05b432",
-          "bytes": 24735
+          "sha256": "5c80f366ca831386321b908522e747e83360f0aa6518ac6815c8778f96194c20",
+          "bytes": 32775
         },
         "source/AmazonLowLandForestRaisg.csv": {
           "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
@@ -993,6 +1045,10 @@
         "source/TreeDiversityScript.R": {
           "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
           "bytes": 35264
+        },
+        "evidence-summary.md": {
+          "sha256": "b24344f3650f41f10bc77532d6481cc6da39907fffb2273c8bf01976f043ac58",
+          "bytes": 3146
         }
       }
     },
@@ -1020,12 +1076,12 @@
           "bytes": 107709
         },
         "carbon-losses.xlsx.eolab.yaml": {
-          "sha256": "3e45927df9b0145a12310b489e65c91cece80525de6868c0e3bd6597de7ccaf6",
-          "bytes": 3209
+          "sha256": "dd6729c47afefcd3a7f217a5b52ca221878b0881d64ce1cfd75d63cef05da8a6",
+          "bytes": 4189
         },
         "review-context.json": {
-          "sha256": "10f16fbece9238cb7fd4609addd2362220fdf9fa4e8e63629cf37dd8c23d19ed",
-          "bytes": 18023
+          "sha256": "ebd90ebc542557bce9ffc67e0e06a7e5829a6fc1ee1efc415d24817f72885b8c",
+          "bytes": 26637
         },
         "source/AGC_accumulation_forest_type_current_v2.xlsx": {
           "sha256": "8322dee016f3f606f5e8c34dd6af3dbe0bbba3b08a94063b26b14639e37876df",
@@ -1034,6 +1090,10 @@
         "source/references_info_v2.xlsx": {
           "sha256": "f059bc0207eb406adfe198b61bb23a065fe02e4d0c58744ff207bb4fd8faecbc",
           "bytes": 35326
+        },
+        "evidence-summary.md": {
+          "sha256": "cb10d1e0723de1d6cb7d2688e9d3e2c71f9fed962b4521db1b78e456fa73491b",
+          "bytes": 3670
         }
       }
     },
@@ -1077,12 +1137,12 @@
           "bytes": 13408
         },
         "fisheries-annual-metrics.csv.eolab.yaml": {
-          "sha256": "37a5ebf9f0e2b5c2bb58c39c24e5aa76cdb94bf66e7c34b6291178d80226c4b1",
-          "bytes": 2828
+          "sha256": "b3c5935775b6c56d00d748224e9d7c69e53181c2c0758f702b156b0f19a481fe",
+          "bytes": 3854
         },
         "review-context.json": {
-          "sha256": "67c58ab1534a2a262ba8ff814d990caa4171a7b88dccaedb02082202bd6cc4b4",
-          "bytes": 14833
+          "sha256": "25dfae89a037f8b34820f8f6ba314328d6c6441927f9407b88d3dd931cfb94ae",
+          "bytes": 22526
         },
         "source/rspb20220726_si_001.xlsx": {
           "sha256": "ca789522ea146afa4567ea6931e7425e1b0e3f73bf50689560ccd0963d3ca4f7",
@@ -1091,6 +1151,10 @@
         "source/rspb20220726_si_002.xlsx": {
           "sha256": "71365e3e2c142a77764456afa81bc6a3c6f4333020f82541fe04029bead4d214",
           "bytes": 30303
+        },
+        "evidence-summary.md": {
+          "sha256": "72353fee884bd237ad7d5bcc0cf568d5711e1d2f86c574c51f7f1b9fd5549adc",
+          "bytes": 3231
         }
       }
     },
@@ -1136,12 +1200,12 @@
           "bytes": 734
         },
         "heat-stress-exposed-population.csv.eolab.yaml": {
-          "sha256": "57b7c77aa17b4c2091173064ec48e383f9ba7df10517157a53c614894e9199e6",
-          "bytes": 4057
+          "sha256": "c1eef7ca764d57f4f3568165daab5361fbfd0152bfb3079a702633bc20fcedea",
+          "bytes": 4988
         },
         "review-context.json": {
-          "sha256": "1fe037662cdcb0b1dbb363dd4567a119bb8b4afded8bc3d83176f096a75a7922",
-          "bytes": 19727
+          "sha256": "b651133a887894159878df608e56a5c1a4b947d1e0bd4228426f62014d1ba44d",
+          "bytes": 30129
         },
         "source/Figure 3.R": {
           "sha256": "9958d7a61474d9e3695e73908f3fb48c4a260de0059921420f9f3967a9a67ef8",
@@ -1166,6 +1230,10 @@
         "source/threshold_34_pop.csv": {
           "sha256": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a",
           "bytes": 1055910
+        },
+        "evidence-summary.md": {
+          "sha256": "67d4e191f5c9fe435e7c701a633e2042f8a18e8d237d6c293502c10ae6b88ce2",
+          "bytes": 3844
         }
       }
     },
@@ -1252,16 +1320,16 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "0e0631cde491a1789ed25135f2150bf2700dccb061a44625f2b2099d4ce24382",
-          "bytes": 52021
+          "sha256": "9275bfcd75fa9fe86ec822a826ee17efc23075b8d39c95fe98c19dd1ba91f4c5",
+          "bytes": 62967
         },
         "site-biodiversity-carbon.csv": {
           "sha256": "9a375f6bcd197c31af617aa5f91a69b3334fb60255bbb2bf4e26298b12a322ca",
           "bytes": 23465
         },
         "site-biodiversity-carbon.csv.eolab.yaml": {
-          "sha256": "bd1980e1b02d7c27dbc56cecc0d2ef94abab7871b8df830f7ff496d80a8062ba",
-          "bytes": 4226
+          "sha256": "09f8b2616340bd3e2dad524c47337f7f3d542d89e0f455edade92bdec0c35709",
+          "bytes": 5205
         },
         "source/Carbon_all_PGM.txt": {
           "sha256": "d1add744e00269abff1e2eee97ccfbfb1a176fd9e3a619d29e897eb742450580",
@@ -1290,6 +1358,10 @@
         "source/Script_LMMs.R": {
           "sha256": "b8ce7fc0e600ff27bb52090f221160669d6c33af23d8f0171b21750c132b484e",
           "bytes": 7139
+        },
+        "evidence-summary.md": {
+          "sha256": "e11d96a1fbf9b3f610032d6ecdc5133f3e8084ba427beaae3c8f6f421fd0f7cb",
+          "bytes": 3786
         }
       }
     },
@@ -1341,12 +1413,12 @@
           "bytes": 588259
         },
         "amazon-tree-plots.csv.eolab.yaml": {
-          "sha256": "eb223035a45c9ef5bcddb6484c0dfa3547e794e6806e63309a6ddf0a20a39d9d",
-          "bytes": 3131
+          "sha256": "f0f3cdaae7da022183e8c854853e9aa88060f811cdf7af98ce3a2205d337f19a",
+          "bytes": 4100
         },
         "review-context.json": {
-          "sha256": "61b4ccb7cd56018a7518a0cf63b0031bf1f4d3fb999a53342330cf264f4c1ed5",
-          "bytes": 12084
+          "sha256": "92e1fd710c936f05e006fbc9dd2a259ee51d3d8143d2a7e9bdc1187a3955f9c3",
+          "bytes": 20774
         },
         "source/PlotData.csv": {
           "sha256": "67625f51f5fac612271050f553140fe9a3685afb9e0fc1cb1fe5d81a9c31c959",
@@ -1359,6 +1431,10 @@
         "source/TreeDiversityScript.R": {
           "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
           "bytes": 35264
+        },
+        "evidence-summary.md": {
+          "sha256": "2b29444bd5e789378d4de048291c4fc12e214b7890419fd5ab4510a900fd65f8",
+          "bytes": 3613
         }
       }
     },
@@ -1452,8 +1528,8 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "7f9cf4d4baf51abd68fb0fad811983466e2c396b28ffb9c5dedd9a21489bccb0",
-          "bytes": 16503
+          "sha256": "f357762ae49af3a44503507d30cd92b1453c266473f8e0a51496d145249f5687",
+          "bytes": 25234
         },
         "source/NetworkDataPollinationNew.csv": {
           "sha256": "be83b280e685e14fbdf758e1cfcd33921897a60353b8461146cb3ef1a1eb7bb1",
@@ -1472,8 +1548,12 @@
           "bytes": 387495
         },
         "tree-dispersal-traits.csv.eolab.yaml": {
-          "sha256": "60c2e5fdf58e8aa34684b7d5e6d6c9975fc0af3878603697bf64b0d569daef68",
-          "bytes": 3090
+          "sha256": "9c300bb31fff1facdd57e2c28a7a98da8e056779fff3b88b45a4100da64887a7",
+          "bytes": 4082
+        },
+        "evidence-summary.md": {
+          "sha256": "2ce2c52b4db92ab812eceab5c8820cecbe0cfe14707c205e1845aafeb533c0d7",
+          "bytes": 3751
         }
       }
     },
@@ -1651,19 +1731,103 @@
           "bytes": 15810
         },
         "chaglla-hydropower-knn.csv.eolab.yaml": {
-          "sha256": "293e0a40f675d691d5c5975c22f10de3d60d3df7286d25db58b0fa76ff0098d4",
-          "bytes": 2898
+          "sha256": "5c19d0c11cd862d7705a0aeffd8c1cc8611fdd00342e8d0f9ce1defd2480378f",
+          "bytes": 3856
         },
         "review-context.json": {
-          "sha256": "24a291573131035f2809c3bde4b30de5094fedbf68c4d8e4c130b04a6e6bda10",
-          "bytes": 453752
+          "sha256": "0ef61e02266d2e3b233cc7cfdc4db77a3cf74f77cfde2bd37b467bd1d1bbc8b8",
+          "bytes": 462345
         },
         "source/original-tables-and-code.zip": {
           "sha256": "c219463dd419d5d6e12debf4d81d9f29f922d4186bdfe79986c6da3165e7e3e5",
           "bytes": 18379
+        },
+        "evidence-summary.md": {
+          "sha256": "fde9a3ecf370e12baba1740fc4a1e5c9bef2ffa91708eb15c9d8a8547a10e09e",
+          "bytes": 4055
         }
       }
     }
   ],
-  "metadata_review": "Final reviewed descriptions applied before publication; operations, assets and scientific payload checks unchanged."
+  "metadata_review": "Final reviewed descriptions applied before publication; operations, assets and scientific payload checks unchanged.",
+  "metadata_refresh": {
+    "method": "Scientific summaries and linked evidence notes; original payloads and preparation checks retained.",
+    "previous_plan_fingerprints": {
+      "plans": {
+        "fish.json": "0f6bcb713b62a4816b2ca1e8eb21803026f096b9d6f41bf2224c9c6bf6945a1f",
+        "spatial.json": "eefe30b7aa615c097e580da6a98c040dc0fbda205649c5fbf480acef0b536342",
+        "tables.json": "a3a8c5f2acb1a84846edf2a5ee276366693c03462f32da35f38763e49ccba060"
+      }
+    },
+    "delivered_checksums_verified": true,
+    "payload_files_verified": 64,
+    "payload_bytes_and_mtimes_preserved": true,
+    "data_transformations_rerun": false,
+    "updated_files": [
+      "amazon-commercial-fish-catch/amazon-commercial-fish-catch.gpkg.eolab.yaml",
+      "amazon-commercial-fish-catch/review-context.json",
+      "amazon-commercial-fish-catch/evidence-summary.md",
+      "tfvi-gpp/tfvi-gpp-0.1deg.tif.eolab.yaml",
+      "tfvi-gpp/review-context.json",
+      "tfvi-gpp/evidence-summary.md",
+      "tfvi-aet/tfvi-aet-0.1deg.tif.eolab.yaml",
+      "tfvi-aet/review-context.json",
+      "tfvi-aet/evidence-summary.md",
+      "tfvi-lst/tfvi-lst-0.1deg.tif.eolab.yaml",
+      "tfvi-lst/review-context.json",
+      "tfvi-lst/evidence-summary.md",
+      "amazon-terrestrial-resistance/amazon-terrestrial-resistance.tif.eolab.yaml",
+      "amazon-terrestrial-resistance/review-context.json",
+      "amazon-terrestrial-resistance/evidence-summary.md",
+      "wbgt-hist-forested/wbgt-hist-forested.nc.eolab.yaml",
+      "wbgt-hist-forested/review-context.json",
+      "wbgt-hist-forested/evidence-summary.md",
+      "wbgt-hist-deforested/wbgt-hist-deforested.nc.eolab.yaml",
+      "wbgt-hist-deforested/review-context.json",
+      "wbgt-hist-deforested/evidence-summary.md",
+      "wbgt-rcp4-forested/wbgt-rcp4-forested.nc.eolab.yaml",
+      "wbgt-rcp4-forested/review-context.json",
+      "wbgt-rcp4-forested/evidence-summary.md",
+      "wbgt-rcp4-deforested/wbgt-rcp4-deforested.nc.eolab.yaml",
+      "wbgt-rcp4-deforested/review-context.json",
+      "wbgt-rcp4-deforested/evidence-summary.md",
+      "wbgt-rcp8-forested/wbgt-rcp8-forested.nc.eolab.yaml",
+      "wbgt-rcp8-forested/review-context.json",
+      "wbgt-rcp8-forested/evidence-summary.md",
+      "wbgt-rcp8-deforested/wbgt-rcp8-deforested.nc.eolab.yaml",
+      "wbgt-rcp8-deforested/review-context.json",
+      "wbgt-rcp8-deforested/evidence-summary.md",
+      "amazon-tree-density/amazon-tree-density.asc.eolab.yaml",
+      "amazon-tree-density/review-context.json",
+      "amazon-tree-density/evidence-summary.md",
+      "amazon-tree-diversity/amazon-tree-diversity.asc.eolab.yaml",
+      "amazon-tree-diversity/review-context.json",
+      "amazon-tree-diversity/evidence-summary.md",
+      "amazon-tree-richness/amazon-tree-richness.asc.eolab.yaml",
+      "amazon-tree-richness/review-context.json",
+      "amazon-tree-richness/evidence-summary.md",
+      "forest-carbon-loss-gain-compilation/carbon-losses.xlsx.eolab.yaml",
+      "forest-carbon-loss-gain-compilation/review-context.json",
+      "forest-carbon-loss-gain-compilation/evidence-summary.md",
+      "amazon-fisheries-annual-metrics/fisheries-annual-metrics.csv.eolab.yaml",
+      "amazon-fisheries-annual-metrics/review-context.json",
+      "amazon-fisheries-annual-metrics/evidence-summary.md",
+      "brazil-heat-stress-exposure/heat-stress-exposed-population.csv.eolab.yaml",
+      "brazil-heat-stress-exposure/review-context.json",
+      "brazil-heat-stress-exposure/evidence-summary.md",
+      "amazon-land-use-biodiversity-carbon/site-biodiversity-carbon.csv.eolab.yaml",
+      "amazon-land-use-biodiversity-carbon/review-context.json",
+      "amazon-land-use-biodiversity-carbon/evidence-summary.md",
+      "amazon-tree-plot-metadata/amazon-tree-plots.csv.eolab.yaml",
+      "amazon-tree-plot-metadata/review-context.json",
+      "amazon-tree-plot-metadata/evidence-summary.md",
+      "amazon-tree-dispersal-traits/tree-dispersal-traits.csv.eolab.yaml",
+      "amazon-tree-dispersal-traits/review-context.json",
+      "amazon-tree-dispersal-traits/evidence-summary.md",
+      "chaglla-hydropower-knn/chaglla-hydropower-knn.csv.eolab.yaml",
+      "chaglla-hydropower-knn/review-context.json",
+      "chaglla-hydropower-knn/evidence-summary.md",
+      "preparation-report.json"
+    ]
+  }
 }

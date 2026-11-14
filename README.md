@@ -34,6 +34,8 @@ For the six outstanding papers, the [article-search findings](docs/article-downl
 
 All **19 descriptions marked Matched** are now represented in the prepared collection. Together with the existing barrier-input pilot, there are **24 catalog entries: 7 maps, 8 tables/workbooks, and 9 native grids available for download while their CRS is confirmed**.
 
+Read the [catalog summaries](evidence/matched/reports/catalog-summaries.md) for the scientific questions, findings and the role of each dataset. They distinguish observed comparisons, modeled scenarios, research syntheses and ecological baselines. Each entry links to a cited evidence note and the complete provenance.
+
 Start with the [prepared evidence results](docs/prepared-evidence.md), [dataset list](evidence/matched/reports/datasets.csv), or [description coverage table](evidence/matched/reports/study_coverage.csv). Each entry has a concise YAML description and a linked file containing the full review evidence and preparation checks. The processed collection is ready for an EOLab directory scan.
 
 ## How to use the workbook

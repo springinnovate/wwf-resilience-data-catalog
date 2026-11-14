@@ -5,33 +5,38 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Tropical forest carbon loss and recovery compilation
-  description: 'Study-level carbon estimates in two workbooks: 212 loss rows and 214 recovery rows, with
-    a separate reference crosswalk. Original Excel formulas and cached values are retained.'
+  title: 'Tropical forest carbon: disturbance losses and recovery'
+  description: Tropical forest degradation can remove substantial aboveground carbon even when forest
+    remains. This synthesis of 146 studies compares losses after different disturbances and carbon stocks
+    during recovery. After 20 years, recovering degraded forests averaged 75% of reference carbon stocks,
+    versus 38% in secondary forests regrowing after clearance. The reference is prior standing or nearby
+    undisturbed forest. This difference includes carbon retained after disturbance; it does not mean faster
+    accumulation. The supplied loss and recovery workbooks contain the compiled study estimates and a
+    reference crosswalk. They support comparisons for carbon accounting and recovery planning, with substantial
+    variation among disturbance types, regions and studies; they are not predictions for a particular
+    site.
   license: CC-BY-4.0
   attribution: Heinrich, Holcomb et al. (2026)
   doi: 10.5281/zenodo.19470704
   categories:
   - Nature's Contributions to People
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-002
+  - doi-10.1126-sciadv.adz1923
   study_time: Literature compilation through January 2026; publication years are not measurement dates.
   publications:
-  - id: paper-002
+  - id: doi-10.1126-sciadv.adz1923
     title: A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration
     doi: 10.1126/sciadv.adz1923
     url: https://www.science.org/doi/10.1126/sciadv.adz1923
     year: 2026
   annotations:
-    row_ids:
-    - row-002
     limitations:
     - RefID 96 refers to two citations. Four in-preparation loss records have no cached RefID; citation
       joins need review.
     - Use the saved workbook values; formulas depend on external references and have not been recalculated.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Literature synthesis and meta-analysis
+    dataset_role: Compiled study estimates underlying disturbance-loss and carbon-recovery comparisons.
 assets:
   data:
     location: local
@@ -94,3 +99,11 @@ assets:
     - metadata
     metadata:
       title: Study reference crosswalk
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

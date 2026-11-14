@@ -21,7 +21,7 @@
       ],
       "collection": "eolab-mounted-vectors",
       "item_id": "geopackage-cb47e17782692bdd03c0f624",
-      "assets": 13,
+      "assets": 14,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -33,7 +33,7 @@
       ],
       "collection": "eolab-mounted-vectors",
       "item_id": "geopackage-26056cf171e1e4ef66442d0b",
-      "assets": 5,
+      "assets": 6,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -45,7 +45,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-fisheries-annual-metrics",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -58,7 +58,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-land-use-biodiversity-carbon",
-      "assets": 11,
+      "assets": 12,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -70,7 +70,7 @@
       ],
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-dff8dd0687c4df39a6bda8b2",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -82,7 +82,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-tree-density",
-      "assets": 7,
+      "assets": 8,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -94,7 +94,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-tree-dispersal-traits",
-      "assets": 7,
+      "assets": 8,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -106,7 +106,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-tree-diversity",
-      "assets": 7,
+      "assets": 8,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -118,7 +118,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-tree-plot-metadata",
-      "assets": 7,
+      "assets": 8,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -130,7 +130,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-amazon-tree-richness",
-      "assets": 7,
+      "assets": 8,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -142,7 +142,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-atto-monthly-carbon-fluxes-2023",
-      "assets": 5,
+      "assets": 6,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -154,7 +154,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-brazil-heat-stress-exposure",
-      "assets": 10,
+      "assets": 11,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -166,7 +166,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-chaglla-hydropower-knn",
-      "assets": 5,
+      "assets": 6,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -178,7 +178,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-forest-carbon-loss-gain-compilation",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -190,7 +190,7 @@
       ],
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-919615697e9d30bdc125b819",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -202,7 +202,7 @@
       ],
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-c986ccb6a71a458dd78f2073",
-      "assets": 5,
+      "assets": 6,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -214,7 +214,7 @@
       ],
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-50f5c39550e80ca7707351a0",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -226,7 +226,7 @@
       ],
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-38dc14ed5cfe2b6561937941",
-      "assets": 6,
+      "assets": 7,
       "full_evidence_preserved": true,
       "temporal_mode": "modified"
     },
@@ -238,7 +238,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-hist-deforested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -250,7 +250,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-hist-forested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -262,7 +262,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-rcp4-deforested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -274,7 +274,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-rcp4-forested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -286,7 +286,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-rcp8-deforested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     },
@@ -298,7 +298,7 @@
       ],
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-wbgt-rcp8-forested",
-      "assets": 4,
+      "assets": 5,
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     }

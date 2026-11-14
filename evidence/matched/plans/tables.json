@@ -22,24 +22,21 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Tropical forest carbon loss and recovery compilation",
-          "description": "Study-level carbon estimates in two workbooks: 212 loss rows and 214 recovery rows, with a separate reference crosswalk. Original Excel formulas and cached values are retained.",
+          "title": "Tropical forest carbon: disturbance losses and recovery",
+          "description": "Tropical forest degradation can remove substantial aboveground carbon even when forest remains. This synthesis of 146 studies compares losses after different disturbances and carbon stocks during recovery. After 20 years, recovering degraded forests averaged 75% of reference carbon stocks, versus 38% in secondary forests regrowing after clearance. The reference is prior standing or nearby undisturbed forest. This difference includes carbon retained after disturbance; it does not mean faster accumulation. The supplied loss and recovery workbooks contain the compiled study estimates and a reference crosswalk. They support comparisons for carbon accounting and recovery planning, with substantial variation among disturbance types, regions and studies; they are not predictions for a particular site.",
           "license": "CC-BY-4.0",
           "attribution": "Heinrich, Holcomb et al. (2026)",
           "doi": "10.5281/zenodo.19470704",
           "categories": [
             "Nature's Contributions to People"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-002"
+            "doi-10.1126-sciadv.adz1923"
           ],
           "study_time": "Literature compilation through January 2026; publication years are not measurement dates.",
           "publications": [
             {
-              "id": "paper-002",
+              "id": "doi-10.1126-sciadv.adz1923",
               "title": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
               "doi": "10.1126/sciadv.adz1923",
               "url": "https://www.science.org/doi/10.1126/sciadv.adz1923",
@@ -47,14 +44,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-002"
-            ],
             "limitations": [
               "RefID 96 refers to two citations. Four in-preparation loss records have no cached RefID; citation joins need review.",
               "Use the saved workbook values; formulas depend on external references and have not been recalculated."
             ],
-            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date.",
+            "evidence_type": "Literature synthesis and meta-analysis",
+            "dataset_role": "Compiled study estimates underlying disturbance-loss and carbon-recovery comparisons."
           }
         },
         "assets": {
@@ -139,6 +135,17 @@
             ],
             "metadata": {
               "title": "Study reference crosswalk"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -458,7 +465,174 @@
         "corrections": [
           "The earlier 208-loss-record count counted cached RefIDs. There are 212 nonempty Study rows, including four in-preparation rows with uncached RefID lookups. They are preserved."
         ]
-      }
+      },
+      "evidence_summary": {
+        "question": "How much aboveground carbon is lost after different forms of tropical moist forest disturbance, and how do subsequent carbon stocks and accumulation differ between degraded forests and forests regrowing after clearance?",
+        "finding": "The meta-analysis synthesized 146 studies. Twenty years after the last disturbance, recovering degraded forests averaged (mean plus or minus one standard deviation) 75 ± 23% of reference aboveground carbon density (prior standing forest or nearby undisturbed forest), compared with 38 ± 16% for secondary regrowth forests. More intense and repeated disturbances were associated with greater losses. The paper reports faster accumulation as percentage points of reference stock during the first 20 years in secondary regrowth (+1.6 ± 0.8 percentage points per year) than in recovering degraded forest (+0.9 ± 0.7 percentage points per year).",
+        "interpretation": "Disturbance history matters for carbon accounting and recovery expectations. Higher stocks in recovering degraded forest partly reflect carbon that survived the disturbance. The reported percentages compare remaining or accumulated stocks with a reference of prior standing forest or nearby undisturbed forest; they are not the fraction of previously lost carbon recovered. These are synthesis estimates rather than a controlled test of a specific conservation intervention.",
+        "evidence_type": "Literature synthesis and meta-analysis",
+        "dataset_role": "Compiled study estimates underlying disturbance-loss and carbon-recovery comparisons.",
+        "limitations": [
+          "Studies differ in disturbance history, timing, spatial scale and measurement methods; the synthesis is more geographically complete in tropical America than in Africa, Asia and Oceania.",
+          "The delivered workbooks contain 212 loss rows and 214 recovery rows, not one independent study per row. They are compiled inputs rather than new site observations or a spatial recovery forecast.",
+          "RefID 96 labels two citations; four in-preparation loss records lack cached RefID values. Original formulas and cached values are retained without recalculation."
+        ],
+        "sources": [
+          {
+            "title": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
+            "url": "https://www.science.org/doi/10.1126/sciadv.adz1923",
+            "location": "Carbon gains from regeneration, PDF page 6; Figure 6A-B, PDF page 8",
+            "supports": "20-year stock fractions; Figure 6 caption specifies the prior-standing or nearby-undisturbed-forest reference. The section reports retained-carbon interpretation and annual gains expressed relative to that reference stock."
+          },
+          {
+            "title": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
+            "url": "https://www.science.org/doi/10.1126/sciadv.adz1923",
+            "location": "Carbon losses from deforestation and degradation; Figures 4-5; PDF pages 6-7",
+            "supports": "Disturbance-specific losses and the association of greater intensity or repeated disturbance with greater loss."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.5281/zenodo.19470704",
+            "location": "Zenodo v1; AGC_losses_forest_type_current_v2.xlsx, AGC_accumulation_forest_type_current_v2.xlsx and references_info_v2.xlsx",
+            "supports": "The loss/recovery input estimates, original formulas and citation crosswalk; delivered source-file structure and counts are documented separately in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-forest-carbon-loss-gain-compilation",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Tropical forest carbon loss and recovery compilation",
+              "description": "Study-level carbon estimates in two workbooks: 212 loss rows and 214 recovery rows, with a separate reference crosswalk. Original Excel formulas and cached values are retained.",
+              "license": "CC-BY-4.0",
+              "attribution": "Heinrich, Holcomb et al. (2026)",
+              "doi": "10.5281/zenodo.19470704",
+              "categories": [
+                "Nature's Contributions to People"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-002"
+              ],
+              "study_time": "Literature compilation through January 2026; publication years are not measurement dates.",
+              "publications": [
+                {
+                  "id": "paper-002",
+                  "title": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
+                  "doi": "10.1126/sciadv.adz1923",
+                  "url": "https://www.science.org/doi/10.1126/sciadv.adz1923",
+                  "year": 2026
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-002"
+                ],
+                "limitations": [
+                  "RefID 96 refers to two citations. Four in-preparation loss records have no cached RefID; citation joins need review.",
+                  "Use the saved workbook values; formulas depend on external references and have not been recalculated."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "carbon-losses.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "sheet": "Sheet1",
+                    "rows": 212,
+                    "key_fields": {
+                      "Study": "Study label; retain alongside RefID.",
+                      "AbsoluteCLoss": "Absolute carbon loss, Mg C per hectare.",
+                      "PercLossCompIntactFor": "Loss relative to intact forest, percent.",
+                      "Cpool": "Carbon pools included by the source study."
+                    }
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.19470704",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.science.org/doi/10.1126/sciadv.adz1923",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "carbon_recovery": {
+                "location": "local",
+                "path": "source/AGC_accumulation_forest_type_current_v2.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Carbon recovery workbook",
+                  "annotations": {
+                    "sheet": "Sheet1",
+                    "rows": 214,
+                    "key_fields": {
+                      "GrowthRate": "Annual carbon gain, Mg C per hectare per year.",
+                      "PercentageAt20yrs": "Recovery relative to intact forest after 20 years, percent."
+                    }
+                  }
+                }
+              },
+              "references": {
+                "location": "local",
+                "path": "source/references_info_v2.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Study reference crosswalk"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-fisheries-annual-metrics",
@@ -486,24 +660,21 @@
           "end_datetime": "2016-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Amazon fisheries: annual landings and diversity",
-          "description": "Annual landings, diversity and biomass-weighted trait metrics for six Amazon fishing regions. Contains 121 region-year records spanning 1984-2016.",
+          "title": "Amazon fisheries: harvest trends and resilience",
+          "description": "Amazon fish landings shifted toward smaller-bodied species across six regional time series, even though total landed biomass showed no consistent decline. The study combines these observations with food-web models in which species can temporarily replace declining catches, while continued depletion reduces that buffering capacity. The models suggest that higher biodiversity can delay fishery collapse; the landings alone do not demonstrate that outcome. This table provides 121 annual regional records from 1984–2016, including landings, diversity and biomass-weighted traits. It supports scrutiny of warning signs beyond total catch, but lacks fishing effort, subsistence harvests and independent stock surveys needed for a complete fishery assessment.",
           "license": "CC-BY-4.0",
           "attribution": "Heilpern et al. (2022)",
           "doi": "10.6084/m9.figshare.20013551.v1",
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-007"
+            "doi-10.1098-rspb.2022.0726"
           ],
           "study_time": "Annual records, 1984-2016; coverage differs among the six regions.",
           "publications": [
             {
-              "id": "paper-007",
+              "id": "doi-10.1098-rspb.2022.0726",
               "title": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
               "doi": "10.1098/rspb.2022.0726",
               "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
@@ -511,12 +682,11 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-013"
-            ],
             "limitations": [
               "These are regional summary metrics. Raw annual taxon-landings records and region geometries are not supplied."
-            ]
+            ],
+            "evidence_type": "Observational landings analysis interpreted with theoretical food-web models",
+            "dataset_role": "Annual regional summary metrics from the observed landings series; not model trajectories or stock assessments."
           }
         },
         "assets": {
@@ -594,6 +764,17 @@
             ],
             "metadata": {
               "title": "Source traits and field definitions"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -761,7 +942,167 @@
           "result": "Workbook bytes differ; every populated literal/formula/cached cell in both sheets matches the published workbook."
         }
       },
-      "expected_rows": 121
+      "expected_rows": 121,
+      "evidence_summary": {
+        "question": "Can changes in catch composition reveal declining resilience in multispecies fisheries when total catches do not clearly decline?",
+        "finding": "Across six Amazon landings series, landed biomass varied without a consistent downward trend, while mean body size declined and species composition changed. Evenness trends differed by region. In the theoretical food-web models, compensating species initially maintained harvests; continued depletion reduced compensation, and communities with fewer species reached collapse sooner under the modeled harvest targets.",
+        "interpretation": "Total landed biomass can conceal changes in the species supporting a fishery. The authors interpret composition, body-size and evenness patterns as warning signs consistent with exploitation and model-derived loss of resilience. Delayed collapse with higher biodiversity is a theoretical result, not an observed effect of a conservation intervention or a causal estimate from these regional tables.",
+        "evidence_type": "Observational landings analysis interpreted with theoretical food-web models",
+        "dataset_role": "Annual regional summary metrics from the observed landings series; not model trajectories or stock assessments.",
+        "limitations": [
+          "Landings omit fishing effort and subsistence harvests. Market catches are not a complete census of fish communities, and other pressures can affect composition.",
+          "The theoretical results depend on harvest targets, community-level exploitation and modeled species interactions. Regional evenness trajectories are not interchangeable.",
+          "The prepared table contains annual summaries rather than taxon-level catches, model outputs or region geometries; the periods differ among regions."
+        ],
+        "sources": [
+          {
+            "title": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
+            "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
+            "location": "Results and discussion, Amazon landings trends and Trait-based trends; Figure 3c; PDF pages 4-5 and 7",
+            "supports": "No consistent decline in total landed biomass, decline in mean body size, and limitations of landings coverage."
+          },
+          {
+            "title": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
+            "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
+            "location": "Results and discussion, theoretical food-web interpretation; Figure 4 and supplementary Figures S7-S8; PDF pages 7-9",
+            "supports": "Compensation, the modeled evenness trajectory, biodiversity-dependent collapse timing and assumptions limiting interpretation."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.6084/m9.figshare.20013551.v1",
+            "location": "Figshare v1, rspb20220726_si_002.xlsx, Supplement Table 2_Year Trends_; accompanying metadata and trait workbook rspb20220726_si_001.xlsx",
+            "supports": "Annual regional landings and trait/diversity metrics used in the observational analysis; the prepared CSV preserves the 121 source rows."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-fisheries-annual-metrics",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "1984-01-01T00:00:00Z",
+              "end_datetime": "2016-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Amazon fisheries: annual landings and diversity",
+              "description": "Annual landings, diversity and biomass-weighted trait metrics for six Amazon fishing regions. Contains 121 region-year records spanning 1984-2016.",
+              "license": "CC-BY-4.0",
+              "attribution": "Heilpern et al. (2022)",
+              "doi": "10.6084/m9.figshare.20013551.v1",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-007"
+              ],
+              "study_time": "Annual records, 1984-2016; coverage differs among the six regions.",
+              "publications": [
+                {
+                  "id": "paper-007",
+                  "title": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
+                  "doi": "10.1098/rspb.2022.0726",
+                  "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
+                  "year": 2022
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-013"
+                ],
+                "limitations": [
+                  "These are regional summary metrics. Raw annual taxon-landings records and region geometries are not supplied."
+                ]
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "fisheries-annual-metrics.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "rows": 121,
+                    "encoding": "UTF-8",
+                    "missing_value": "NA",
+                    "key_fields": {
+                      "Total Landings (tonnes)": "Annual landed biomass, tonnes.",
+                      "Mean Body Size": "Landings biomass-weighted total body length, cm.",
+                      "Jaccard Dissimilarity": "Change from the first year of each regional series.",
+                      "Mean Price Index / Mean Revenue Index": "Source economic indices; definitions are in the linked review evidence."
+                    }
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.20013551.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/rspb20220726_si_002.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Original results workbook"
+                }
+              },
+              "traits": {
+                "location": "local",
+                "path": "source/rspb20220726_si_001.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Source traits and field definitions"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-brazil-heat-stress-exposure",
@@ -790,24 +1131,21 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Brazil: additional heat-stress exposure from Amazon deforestation",
-          "description": "Twelve published Figure 3 estimates of additional people exposed to extreme heat stress because of Amazon deforestation, under historical, RCP4.5 and RCP8.5 climates. Total Population and its high-vulnerability subset are separate rows.",
+          "title": "Brazil: additional heat exposure under Amazon savannization",
+          "description": "A worst-case climate-model experiment replacing all Amazon rainforest with savanna increased estimated human heat exposure, especially under high emissions. In the late-century RCP8.5 scenario, the study estimated more than 11 million additional people exposed to extreme in-shade heat stress, including about 5.7 million in highly vulnerable communities. These are conditional estimates using 2019 population, not forecasts of population growth or observed health outcomes. This table contains the 12 published Figure 3 estimates across historical and future climates, heat-exposure settings and vulnerability groups. It supports comparing the modeled human consequences of forest loss; the high-vulnerability figures are subsets of the totals and must not be added to them.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128679.v1",
           "categories": [
             "Climate"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "2019 population applied to historical and late-century climate scenarios; no population-growth projection.",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -815,14 +1153,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-018"
-            ],
             "limitations": [
               "Population is in millions. The high-vulnerability rows are part of the totals and must not be added to them.",
               "These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent start years for its climate periods."
             ],
-            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date.",
+            "evidence_type": "Climate-model scenario experiment with population exposure analysis",
+            "dataset_role": "Published Figure 3 additional-exposure estimates, with municipal inputs retained as supporting data."
           }
         },
         "assets": {
@@ -962,6 +1299,17 @@
             ],
             "metadata": {
               "title": "Municipal analysis source code"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -1121,7 +1469,235 @@
           "pop": "Published additional exposure attributed to Amazon rainforest deforestation, in millions of people; the Total Population label is the full affected population, and High vulnerability is its subset."
         }
       },
-      "expected_rows": 12
+      "expected_rows": 12,
+      "evidence_summary": {
+        "question": "How could replacement of all Amazon rainforest by savanna change human heat-stress exposure under historical and future climates, and who would be most vulnerable?",
+        "finding": "The worst-case experiment replacing all Amazon rainforest with savanna increased exposure to extreme heat stress. Under late-century RCP8.5, the paper reports more than 11 million additional people above the in-shade extreme-risk threshold relative to the forested scenario; about 5.7 million were in the high-vulnerability subset. Figure 3 reports additional exposure attributed to Amazon deforestation across historical, RCP4.5 and RCP8.5 climates, for in-shade and outdoor conditions.",
+        "interpretation": "These comparisons illustrate potential exposure consequences of complete Amazon rainforest replacement by savanna and their overlap with social vulnerability. The population is held at 2019 levels, so the results ask how that population would be exposed under the simulated climates. They do not predict a specific future deforestation trajectory, demographic change, illness or mortality. The published Figure 3 values are transcribed, not independently recomputed from the municipal inputs.",
+        "evidence_type": "Climate-model scenario experiment with population exposure analysis",
+        "dataset_role": "Published Figure 3 additional-exposure estimates, with municipal inputs retained as supporting data.",
+        "limitations": [
+          "A particular climate model and complete Amazon rainforest replacement by savanna define this worst-case experiment; it does not represent ordinary partial deforestation, observed impacts or a calibrated forecast of a policy intervention.",
+          "Population growth, demographic changes and changes in adaptation are not modeled. Social vulnerability describes population context rather than a measured health response.",
+          "Population units are millions, and the high-vulnerability rows overlap the total-population rows. The paper gives inconsistent start years for its historical and future climate periods; categorical source labels are retained."
+        ],
+        "sources": [
+          {
+            "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "Introduction, experimental scope; PDF page 2",
+            "supports": "The study frames replacement of the entire Amazon rainforest by savanna as a worst-case scenario."
+          },
+          {
+            "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "Results and discussion, Amazon savannization and heat stress; Figure 3 caption; PDF pages 4-5",
+            "supports": "Additional exposure relative to the forested scenario, the more-than-11-million estimate, its high-vulnerability subset and the scenario interpretation."
+          },
+          {
+            "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "Methods, Population analysis and climate experiment description; PDF pages 6-7",
+            "supports": "2019 municipality populations, vulnerability indicators, modeled heat metrics and experimental climate/land-cover conditions."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.6084/m9.figshare.15128679.v1",
+            "location": "Figshare Figure 3 v1: number_population_figure3.csv and Figure 3.R; Figure 4 municipal inputs linked in review-context.json",
+            "supports": "The 12 published population estimates, population units, original scenario labels and supporting municipal tables."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-brazil-heat-stress-exposure",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Brazil: additional heat-stress exposure from Amazon deforestation",
+              "description": "Twelve published Figure 3 estimates of additional people exposed to extreme heat stress because of Amazon deforestation, under historical, RCP4.5 and RCP8.5 climates. Total Population and its high-vulnerability subset are separate rows.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128679.v1",
+              "categories": [
+                "Climate"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "2019 population applied to historical and late-century climate scenarios; no population-growth projection.",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-018"
+                ],
+                "limitations": [
+                  "Population is in millions. The high-vulnerability rows are part of the totals and must not be added to them.",
+                  "These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent start years for its climate periods."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "heat-stress-exposed-population.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "encoding": "UTF-8",
+                    "decimal_separator": ".",
+                    "columns": {
+                      "WBGT": "Exposure setting and threshold: in-shade >34 C or outdoor >40 C.",
+                      "periodo": "Historical, RCP 4.5 or RCP 8.5.",
+                      "pop": "Additional people exposed due to Amazon deforestation, millions.",
+                      "tip": "Total Population or its High vulnerability subset."
+                    }
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128679.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/number_population_figure3.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Original Figure 3 table",
+                  "annotations": {
+                    "encoding": "Windows-1252",
+                    "delimiter": ";",
+                    "decimal_separator": ","
+                  }
+                }
+              },
+              "figure_code": {
+                "location": "local",
+                "path": "source/Figure 3.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Figure 3 source code"
+                }
+              },
+              "municipal_outdoor": {
+                "location": "local",
+                "path": "source/outdoor_pop.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Municipal outdoor-WBGT inputs",
+                  "annotations": {
+                    "delimiter": ";",
+                    "decimal_separator": ",",
+                    "encoding": "Windows-1252"
+                  }
+                }
+              },
+              "municipal_threshold": {
+                "location": "local",
+                "path": "source/threshold_34_pop.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Municipal threshold and vulnerability inputs",
+                  "annotations": {
+                    "delimiter": ";",
+                    "decimal_separator": ",",
+                    "encoding": "Windows-1252"
+                  }
+                }
+              },
+              "municipal_wbgt": {
+                "location": "local",
+                "path": "source/munic_WbgtMaxMed-id.txt",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Municipal WBGT input table",
+                  "annotations": {
+                    "delimiter": "whitespace",
+                    "decimal_separator": "."
+                  }
+                }
+              },
+              "figure4_code": {
+                "location": "local",
+                "path": "source/Figure 4.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Municipal analysis source code"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-land-use-biodiversity-carbon",
@@ -1186,8 +1762,8 @@
           "end_datetime": "2011-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Eastern Amazon sites: biodiversity and carbon stocks",
-          "description": "Species richness for seven groups and four carbon pools at 310 sampling sites in Santarem and Paragominas. The linked forest-species table distinguishes richness of forest-associated species.",
+          "title": "Eastern Amazon: biodiversity and carbon across land uses",
+          "description": "Land-use comparisons at 310 eastern Amazon sites show that ecological losses extend beyond complete forest clearance. Logged-and-burned primary forest had 25% lower large-tree richness and 27% lower dung-beetle richness than undisturbed primary forest; aboveground carbon also differed substantially among forest conditions. These are observational comparisons used to estimate transition impacts, not repeated measurements of experimentally changed sites. The supplied table contains site-level richness for seven groups and four carbon pools, with forest-species richness linked separately. It supports examining which ecological components differ across land uses and why tracking forest area alone can miss degradation; it does not itself contain the paper’s estimated transition effects.",
           "license": "Apache-2.0",
           "attribution": "Nunes et al. (2022)",
           "doi": "10.5281/zenodo.6518744",
@@ -1195,16 +1771,13 @@
             "Nature",
             "Nature's Contributions to People"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-015"
+            "doi-10.1073-pnas.2202310119"
           ],
           "study_time": "Field surveys during 2010 and 2011.",
           "publications": [
             {
-              "id": "paper-015",
+              "id": "doi-10.1073-pnas.2202310119",
               "title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
               "doi": "10.1073/pnas.2202310119",
               "url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
@@ -1212,14 +1785,12 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-035",
-              "row-036"
-            ],
             "limitations": [
               "Site tables remain nonspatial; coordinates require a verified join and CRS.",
               "Missing values remain NA. Site aggregates do not replace individual observations."
-            ]
+            ],
+            "evidence_type": "Observational site comparisons combined with land-cover transition analysis",
+            "dataset_role": "Site-level biodiversity and carbon inputs underlying comparisons among land-use classes."
           }
         },
         "assets": {
@@ -1388,6 +1959,17 @@
             ],
             "metadata": {
               "title": "Source site-analysis code"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -1591,7 +2173,267 @@
           "tables_joined_during_preparation": false
         }
       },
-      "expected_rows": 310
+      "expected_rows": 310,
+      "evidence_summary": {
+        "question": "How do different land-use and land-cover transitions compare in their ecological consequences, including changes within forests that remain standing?",
+        "finding": "Using 310 sites, the study compared biodiversity, carbon and soil across seven land-use classes and estimated impacts for 18 transitions. Logged-and-burned versus undisturbed primary forest had 25% lower large-tree richness and 27% lower dung-beetle richness. Aboveground carbon was 28–46% lower in logged or logged-and-burned forest than in undisturbed forest. Combining ecological contrasts with transition rates identified forest conversion to pasture as both prevalent and high impact.",
+        "interpretation": "The evidence supports examining degradation and regeneration alongside clearance, and evaluating biodiversity and carbon separately rather than treating forest area as a complete measure of condition. The comparisons are observational across sites, not before-and-after interventions. The delivered table is an input dataset of site aggregates; estimated transition effects, uncertainty and regional transition frequencies require the paper’s analyses and additional inputs.",
+        "evidence_type": "Observational site comparisons combined with land-cover transition analysis",
+        "dataset_role": "Site-level biodiversity and carbon inputs underlying comparisons among land-use classes.",
+        "limitations": [
+          "The field sites are in two eastern Amazon regions and were surveyed during 2010–2011; results should not be read as a causal estimate applicable uniformly across Amazonia.",
+          "Missing values remain NA; orchid bees were sampled only in Paragominas. Forest species means species recorded at least once at a primary-forest site, not necessarily forest specialists.",
+          "Carbon is expressed per hectare, with soil carbon measured at 0–30 cm depth. Coordinates require a verified join and CRS before mapping."
+        ],
+        "sources": [
+          {
+            "title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+            "url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+            "location": "Results, Impacts of LULCTs on Biodiversity, Carbon, and Soil; Figure 2A-B and supplementary Table S4; printed page 3 (PDF page 4)",
+            "supports": "Large-tree and dung-beetle richness comparisons, carbon differences, and component-specific transition impacts."
+          },
+          {
+            "title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+            "url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+            "location": "Materials and Methods, Study sites and sampling design and Ecological variables; printed pages 7-8 (PDF pages 8-9)",
+            "supports": "Observational 310-site design, seven land-use classes, 2010–2011 surveys, restricted orchid-bee coverage, forest-species definition and carbon-pool methods."
+          },
+          {
+            "title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+            "url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+            "location": "Discussion, policy implications; printed page 6 (PDF page 7)",
+            "supports": "Why monitoring ecological condition requires both transition prevalence and component-specific impacts, including degradation and regeneration."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.5281/zenodo.6518744",
+            "location": "Zenodo v1.1: Data/data_all_joined.csv, Data/data_rich_forest_sp.csv and carbon-pool source tables",
+            "supports": "Site aggregates for the richness and carbon comparisons. The prepared CSV selects the site identifiers, seven richness fields and four carbon pools without estimating transition effects."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-land-use-biodiversity-carbon",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "2010-01-01T00:00:00Z",
+              "end_datetime": "2011-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Eastern Amazon sites: biodiversity and carbon stocks",
+              "description": "Species richness for seven groups and four carbon pools at 310 sampling sites in Santarem and Paragominas. The linked forest-species table distinguishes richness of forest-associated species.",
+              "license": "Apache-2.0",
+              "attribution": "Nunes et al. (2022)",
+              "doi": "10.5281/zenodo.6518744",
+              "categories": [
+                "Nature",
+                "Nature's Contributions to People"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-015"
+              ],
+              "study_time": "Field surveys during 2010 and 2011.",
+              "publications": [
+                {
+                  "id": "paper-015",
+                  "title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+                  "doi": "10.1073/pnas.2202310119",
+                  "url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+                  "year": 2022
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-035",
+                  "row-036"
+                ],
+                "limitations": [
+                  "Site tables remain nonspatial; coordinates require a verified join and CRS.",
+                  "Missing values remain NA. Site aggregates do not replace individual observations."
+                ]
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "site-biodiversity-carbon.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "encoding": "UTF-8",
+                    "missing_value": "NA",
+                    "site_key": [
+                      "Region",
+                      "Transect_code"
+                    ],
+                    "units": {
+                      "richness_fields": "species count",
+                      "carbon_pool_fields": "Mg C per hectare"
+                    },
+                    "field_groups": {
+                      "richness": [
+                        "ant_rich",
+                        "bird_rich",
+                        "db_rich",
+                        "liana_rich",
+                        "sap_rich",
+                        "tree_rich",
+                        "bee_rich"
+                      ],
+                      "carbon": [
+                        "Aboveground_pool",
+                        "Litter_pool",
+                        "Dead_pool",
+                        "Soil_pool_new"
+                      ]
+                    },
+                    "Soil_pool_new": "Soil carbon stock at 0-30 cm depth, Mg C per hectare."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.6518744",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/data_all_joined.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Original joined site table and covariates"
+                }
+              },
+              "forest_species": {
+                "location": "local",
+                "path": "source/data_rich_forest_sp.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Forest-species richness by site",
+                  "annotations": {
+                    "site_key": [
+                      "Region",
+                      "Transect_code"
+                    ],
+                    "missing_value": "NA",
+                    "first_column": "Unnamed source row index.",
+                    "definition": "Species recorded at least once at a primary forest site."
+                  }
+                }
+              },
+              "carbon_pgm": {
+                "location": "local",
+                "path": "source/Carbon_all_PGM.txt",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Paragominas carbon pools",
+                  "annotations": {
+                    "delimiter": "whitespace with quoted headers",
+                    "unit": "Mg C per hectare"
+                  }
+                }
+              },
+              "carbon_stm": {
+                "location": "local",
+                "path": "source/Carbon_all_STM.txt",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Santarem carbon pools",
+                  "annotations": {
+                    "delimiter": "whitespace with quoted headers",
+                    "unit": "Mg C per hectare"
+                  }
+                }
+              },
+              "license": {
+                "location": "local",
+                "path": "source/LICENSE",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Source repository license"
+                }
+              },
+              "readme": {
+                "location": "local",
+                "path": "source/README.md",
+                "media_type": "text/markdown",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Source repository README"
+                }
+              },
+              "analysis_code": {
+                "location": "local",
+                "path": "source/Script_LMMs.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Source site-analysis code"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-tree-plot-metadata",
@@ -1617,24 +2459,21 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon Tree Diversity Network: plot metadata",
-          "description": "Metadata, tree density, diversity, richness and references for 2,046 inventory plots. Includes original coordinate values and plot establishment years.",
+          "title": "Amazon tree diversity: plot observations",
+          "description": "Amazon tree diversity varies strongly among forest types and regions, so tree counts or a single basin-wide average cannot describe it adequately. Using 2,046 inventory plots, the study found distinct patterns in density, species richness and Fisher’s alpha diversity, and used forest-type-specific spatial models to map those patterns. This table supplies the plot observations and standardized diversity measures behind that analysis, for free-standing woody stems at least 10 cm in diameter. It supports checking the observational basis of regional biodiversity comparisons. It is not a current forest-condition map or evidence of change through time; the supplied coordinates remain attributes because their datum is unverified.",
           "license": "CC-BY-4.0",
           "attribution": "ter Steege et al. (2023)",
           "doi": "10.6084/m9.figshare.22786166.v2",
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-016"
+            "doi-10.1038-s42003-023-05514-6"
           ],
           "study_time": "Plot establishment years 1934-2021; these do not establish the dates of the reported measurements.",
           "publications": [
             {
-              "id": "paper-016",
+              "id": "doi-10.1038-s42003-023-05514-6",
               "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
               "doi": "10.1038/s42003-023-05514-6",
               "url": "https://www.nature.com/articles/s42003-023-05514-6",
@@ -1642,14 +2481,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-041"
-            ],
             "limitations": [
               "Coordinate datum is not documented in the inspected sources; this delivery is a table without inferred map geometry.",
               "The paper reports establishment through 2020, while three supplied records have year_est=2021."
             ],
-            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date.",
+            "evidence_type": "Forest inventory observations with spatial modeling in the associated study",
+            "dataset_role": "Plot-level density, richness, diversity and reference data underlying regional models."
           }
         },
         "assets": {
@@ -1744,6 +2582,17 @@
             "metadata": {
               "title": "Tree-diversity analysis code"
             }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
+            }
           }
         }
       },
@@ -1832,7 +2681,189 @@
           ]
         }
       },
-      "expected_rows": 2046
+      "expected_rows": 2046,
+      "evidence_summary": {
+        "question": "How do tree density, diversity and species richness vary across Amazonian forest types and regions, and what observations support the mapped patterns?",
+        "finding": "The study used 2,046 inventory plots and found strong variation among soil–forest combinations and regions. For example, Fisher’s alpha diversity was highest in terra-firme forests of the western Pebas region and French Guiana, with lower values in white-sand, floodplain and swamp settings. Forest type explained 23% of variation in plot Fisher’s alpha, while a combined spatial model explained 66% for that untransformed metric. These are descriptions and models of spatial variation rather than trends through time.",
+        "interpretation": "Plot measurements help distinguish density, richness and diversity and test the basis of regional biodiversity maps. Conservation comparisons require attention to forest type and species composition, not richness alone. The delivered table contains observations and derived plot metrics; regional interpolation, species distributions and current deforestation are separate products and analyses.",
+        "evidence_type": "Forest inventory observations with spatial modeling in the associated study",
+        "dataset_role": "Plot-level density, richness, diversity and reference data underlying regional models.",
+        "limitations": [
+          "The observations concern undisturbed or old-growth forest inventories and stems with DBH at least 10 cm; they do not represent every vegetation state or all life stages.",
+          "All 2,046 supplied plots are retained, while individual modeling steps apply additional filters. Plot establishment year is not a measurement date or a repeated time series.",
+          "Coordinate datum remains unverified. The source includes three establishment years in 2021 although the paper describes coverage through 2020. Species richness per hectare and at 500 trees are derived standardizations, not raw species totals."
+        ],
+        "sources": [
+          {
+            "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "Results, Tree density and Tree alpha-diversity; Figure 1 and supplementary Figure 1; PDF pages 2-3",
+            "supports": "Differences among forest types and regions, distinction between diversity and density, and reported model fits."
+          },
+          {
+            "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "Methods, Tree data and Modelling density, diversity, and richness patterns; PDF page 8",
+            "supports": "Single inventories, the DBH threshold, plot-size selection and derivation of per-hectare and 500-tree richness."
+          },
+          {
+            "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "Discussion, conservation interpretation and conclusions; PDF page 8",
+            "supports": "Richness maps describe the original forest extent and do not replace attention to species composition or current forest loss."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+            "location": "Figshare v2: PlotData.csv, PlotsAbiotic.csv and TreeDiversityScript.R",
+            "supports": "The 2,046-row plot table, environmental covariates and analysis code. The prepared table preserves every source row while converting text encoding to UTF-8."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-tree-plot-metadata",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon Tree Diversity Network: plot metadata",
+              "description": "Metadata, tree density, diversity, richness and references for 2,046 inventory plots. Includes original coordinate values and plot establishment years.",
+              "license": "CC-BY-4.0",
+              "attribution": "ter Steege et al. (2023)",
+              "doi": "10.6084/m9.figshare.22786166.v2",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-016"
+              ],
+              "study_time": "Plot establishment years 1934-2021; these do not establish the dates of the reported measurements.",
+              "publications": [
+                {
+                  "id": "paper-016",
+                  "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+                  "doi": "10.1038/s42003-023-05514-6",
+                  "url": "https://www.nature.com/articles/s42003-023-05514-6",
+                  "year": 2023
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-041"
+                ],
+                "limitations": [
+                  "Coordinate datum is not documented in the inspected sources; this delivery is a table without inferred map geometry.",
+                  "The paper reports establishment through 2020, while three supplied records have year_est=2021."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "amazon-tree-plots.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "encoding": "UTF-8",
+                    "key": "PlotCode",
+                    "key_fields": {
+                      "D": "Tree density, trees per hectare.",
+                      "S": "Observed plot species richness.",
+                      "fa.plots": "Fisher's alpha diversity index.",
+                      "S.ha": "Estimated species richness per hectare.",
+                      "S.500": "Richness standardized to 500 trees.",
+                      "year_est": "Plot establishment year."
+                    },
+                    "sample_definition": "Free-standing woody stems with diameter at breast height (DBH) at least 10 cm."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s42003-023-05514-6",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/PlotData.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Original plot table",
+                  "annotations": {
+                    "encoding": "ISO-8859-1; Windows-1252 gives identical text for the bytes present."
+                  }
+                }
+              },
+              "environment": {
+                "location": "local",
+                "path": "source/PlotsAbiotic.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Plot environmental covariates"
+                }
+              },
+              "analysis_code": {
+                "location": "local",
+                "path": "source/TreeDiversityScript.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Tree-diversity analysis code"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-tree-dispersal-traits",
@@ -1902,24 +2933,21 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon trees: dispersal modes and seed traits",
-          "description": "Dispersal assignments, seed-mass classes and fruit fleshiness for 5,201 tree species. Two published dispersal classifications are retained separately.",
+          "title": "Amazon trees: animal seed dispersal and seed traits",
+          "description": "Animal seed dispersal is widespread among Amazonian trees: the study’s two classifications assign roughly four in five sampled species to animal-mediated dispersal. This highlights a potential dependence of forest regeneration on animals, rather than demonstrating a restoration response to protecting them. The supplied table contains dispersal assignments, seed-mass classes and fruit fleshiness for 5,201 species, keeping the two classifications separate. It supports comparisons of tree traits and potential dispersal dependencies; it is a selected part of the broader pollination-and-dispersal study, not its complete interaction network. Some species have multiple assignments, and the seed-mass values are class codes rather than measurements in grams.",
           "license": "CC-BY-4.0",
           "attribution": "ter Steege et al. (2026)",
           "doi": "10.6084/m9.figshare.28417586.v2",
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-020"
+            "doi-10.1038-s42003-026-09896-1"
           ],
           "study_time": "Species-trait compilation; individual observation dates are not supplied.",
           "publications": [
             {
-              "id": "paper-020",
+              "id": "doi-10.1038-s42003-026-09896-1",
               "title": "Pollination and dispersal networks in the Amazonian tree flora",
               "doi": "10.1038/s42003-026-09896-1",
               "url": "https://www.nature.com/articles/s42003-026-09896-1",
@@ -1927,14 +2955,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-049"
-            ],
             "limitations": [
               "seedmass contains logarithmic class codes, not measured mass in grams; exact class boundaries are unresolved.",
               "Some species have multiple dispersal assignments. The two classifications must not be combined as independent species counts."
             ],
-            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date.",
+            "evidence_type": "Species-trait and dispersal-mode compilation",
+            "dataset_role": "Selected species-level dispersal assignments and seed traits from the broader network dataset."
           }
         },
         "assets": {
@@ -2024,6 +3051,17 @@
             ],
             "metadata": {
               "title": "Source publication list"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -2234,7 +3272,186 @@
           }
         }
       },
-      "expected_rows": 5201
+      "expected_rows": 5201,
+      "evidence_summary": {
+        "question": "How widespread is animal-mediated seed dispersal among Amazonian trees, and how do seed and fruit traits differ among dispersal modes?",
+        "finding": "The paper’s Discussion summarizes 78–83% of the sampled species as animal dispersed, depending on classification, with arboreal vertebrates prominent. Animal-dispersed species generally have fleshy fruits. The analysis identifies a small set of abundant genera that contribute a disproportionate share of estimated fruit resources. The delivered table provides the underlying dispersal classifications and seed traits for 5,201 species; it does not include all pollination fields or population-weighted network calculations.",
+        "interpretation": "These trait assignments describe potential dependencies between trees and dispersers and help identify why animal loss could matter for regeneration. They do not measure changes in recruitment after animal loss or estimate the effect of a restoration intervention. Claims about combined pollination and dispersal dependence come from the broader study and cannot be reproduced from this selected dispersal table alone.",
+        "evidence_type": "Species-trait and dispersal-mode compilation",
+        "dataset_role": "Selected species-level dispersal assignments and seed traits from the broader network dataset.",
+        "limitations": [
+          "The two classification systems use different categories and some species have multiple assignments; they should not be added together as independent species counts.",
+          "Dispersal assignments draw on literature and taxonomic inference, including genus-based assignments where appropriate; they are not all direct observations of interactions for each species.",
+          "The paper gives internally inconsistent exact counts/percentages in its dispersal Results; the summary uses its Discussion’s approximate range rather than silently resolving them.",
+          "Seed-mass values are logarithmic class codes, with exact class boundaries unresolved in the delivered metadata. The selected table alone does not reproduce pollination-network or population-weighted conclusions."
+        ],
+        "sources": [
+          {
+            "title": "Pollination and dispersal networks in the Amazonian tree flora",
+            "url": "https://www.nature.com/articles/s42003-026-09896-1",
+            "location": "Results, Dispersal; Table 3, Figure 6 and supplementary Figures 5-6; PDF pages 4-5",
+            "supports": "Two dispersal classifications, dominance of animal dispersal, relationships with fruit traits and internally differing exact counts."
+          },
+          {
+            "title": "Pollination and dispersal networks in the Amazonian tree flora",
+            "url": "https://www.nature.com/articles/s42003-026-09896-1",
+            "location": "Discussion, animal-mediated dispersal; PDF page 10",
+            "supports": "The 78–83% summary range, ecological interpretation and gaps in community-wide interaction evidence."
+          },
+          {
+            "title": "Pollination and dispersal networks in the Amazonian tree flora",
+            "url": "https://www.nature.com/articles/s42003-026-09896-1",
+            "location": "Methods, Fruit, seed and dispersal data and Analysis; PDF pages 11-12",
+            "supports": "Classification sources, taxonomic inference, logarithmic seed-mass classes and distinction from broader network analyses."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.6084/m9.figshare.28417586.v2",
+            "location": "Figshare v2: NetworkDataPollinationNew.csv, NetworksFinal.R and Publications.xlsx",
+            "supports": "Original species-level traits, the two positional dispersal blocks and supporting code/references. The selected CSV disambiguates duplicate Unassisted headers and retains source class values."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-tree-dispersal-traits",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon trees: dispersal modes and seed traits",
+              "description": "Dispersal assignments, seed-mass classes and fruit fleshiness for 5,201 tree species. Two published dispersal classifications are retained separately.",
+              "license": "CC-BY-4.0",
+              "attribution": "ter Steege et al. (2026)",
+              "doi": "10.6084/m9.figshare.28417586.v2",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-020"
+              ],
+              "study_time": "Species-trait compilation; individual observation dates are not supplied.",
+              "publications": [
+                {
+                  "id": "paper-020",
+                  "title": "Pollination and dispersal networks in the Amazonian tree flora",
+                  "doi": "10.1038/s42003-026-09896-1",
+                  "url": "https://www.nature.com/articles/s42003-026-09896-1",
+                  "year": 2026
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-049"
+                ],
+                "limitations": [
+                  "seedmass contains logarithmic class codes, not measured mass in grams; exact class boundaries are unresolved.",
+                  "Some species have multiple dispersal assignments. The two classifications must not be combined as independent species counts."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "tree-dispersal-traits.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "encoding": "UTF-8",
+                    "key": "species",
+                    "missing_value": "NA",
+                    "key_fields": {
+                      "seedmass": "Logarithmic seed-mass class code.",
+                      "Fleshy": "0: dry; 1: fleshy fruit or caruncle.",
+                      "Unassisted_Stevenson_Correa": "Unassisted dispersal in the Stevenson/Correa classification.",
+                      "Unassisted_McGlone": "Unassisted dispersal in the McGlone classification."
+                    },
+                    "dispersal_values": "0/1 indicators; more than one assignment can occur."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.28417586.v2",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s42003-026-09896-1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/NetworkDataPollinationNew.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Complete original network table"
+                }
+              },
+              "analysis_code": {
+                "location": "local",
+                "path": "source/NetworksFinal.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Source dispersal analysis code"
+                }
+              },
+              "references": {
+                "location": "local",
+                "path": "source/Publications.xlsx",
+                "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Source publication list"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-chaglla-hydropower-knn",
@@ -2337,24 +3554,21 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Chaglla hydropower: mean and firm power scenarios",
-          "description": "Mean and firm power estimates for 16 land-management configurations under KNN-downscaled climate scenarios. Contains 336 rows: three historical model combinations and 18 future combinations per configuration.",
+          "title": "Chaglla hydropower: irrigation and climate scenarios",
+          "description": "Upstream irrigation can protect crop production while reducing downstream hydropower in the upper Huallaga basin. Coupled watershed and reservoir models found that irrigation choices could affect Chaglla’s firm power more strongly than climate change alone, making food, energy and ecosystem objectives difficult to satisfy together. This table supplies 336 modeled mean- and firm-power summaries for 16 land-management configurations under selected climate scenarios. It supports inspecting the hydropower side of those comparisons; it is not the full multisector decision analysis or observed electricity generation. Original scenario codes are retained because their mapping and exact period bounds still need confirmation, as does the firm-power reliability criterion.",
           "license": "CC-BY-4.0",
           "attribution": "Ding et al. (2024)",
           "doi": "10.5281/zenodo.8161594",
           "categories": [
             "Nature's Contributions to People"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-026"
+            "doi-10.1038-s43247-024-01738-4"
           ],
           "study_time": "Historical and three future climatology groups; exact period bounds differ between the paper and supplied code.",
           "publications": [
             {
-              "id": "paper-026",
+              "id": "doi-10.1038-s43247-024-01738-4",
               "title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
               "doi": "10.1038/s43247-024-01738-4",
               "url": "https://www.nature.com/articles/s43247-024-01738-4",
@@ -2362,14 +3576,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-067"
-            ],
             "limitations": [
               "Management and climatology codes retain the source labels; their complete mapping to paper scenario names and periods needs confirmation.",
               "These are modeled summary power estimates, not a daily power series or measured generation."
             ],
-            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+            "temporal_note": "Catalog time is the source-file modification date; it is not an observation date.",
+            "evidence_type": "Coupled watershed–reservoir modeling and climate/management scenario analysis",
+            "dataset_role": "Selected modeled mean/firm-power outputs; a subset of the broader multisector analysis."
           }
         },
         "assets": {
@@ -2440,6 +3653,17 @@
             ],
             "metadata": {
               "title": "Original scenario tables and preparation code"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -2818,6 +4042,166 @@
               "path": "script_parallelCoordinatesPlot_v5_1_Deltas.R"
             }
           ]
+        }
+      ],
+      "evidence_summary": {
+        "question": "How do upstream land management and irrigation interact with climate change to affect Chaglla hydropower, and what trade-offs arise with food production and ecosystems?",
+        "finding": "In the modeled upper Huallaga system, maintaining current land use produced comparatively modest climate-only changes in hydropower, while irrigation expansion could substantially reduce firm power and create years with none. The broader analysis found that options favoring food production, hydropower or ecosystems separately could impose losses on other sectors, with more efficient irrigation and coordinated decisions reducing some trade-offs rather than eliminating them.",
+        "interpretation": "The evidence motivates considering upstream water use alongside reservoir operation when comparing adaptation options. These are conditional outcomes of a coupled modeling framework, not measured effects of implemented policies. The delivered table is a power-output subset with 16 management configurations and 21 KNN climate/model combinations each. It does not supply all crop, ecosystem, reservoir-operation or target-screening results from the 10,080-pathway decision analysis.",
+        "evidence_type": "Coupled watershed–reservoir modeling and climate/management scenario analysis",
+        "dataset_role": "Selected modeled mean/firm-power outputs; a subset of the broader multisector analysis.",
+        "limitations": [
+          "Source management and climatology codes are preserved. Their complete mapping to published scenario names and precise time periods remains unresolved; the paper and code use differing period bounds.",
+          "The firm-power field is in MW, but its reliability/exceedance criterion was not established in the inspected paper, supplementary methods or supplied algorithms.",
+          "The analysis assumes management configurations remain constant within each climatic period; transitional effects, wider crop choices and future changes in electricity demand are not fully represented.",
+          "The prepared table contains modeled summary power, not measured generation or daily series, and retains only KNN results; the linked archive preserves the complete original KNN/BCSD tables and inspected scripts."
+        ],
+        "sources": [
+          {
+            "title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+            "url": "https://www.nature.com/articles/s43247-024-01738-4",
+            "location": "Results, Sectoral impacts of climate and landuse change and Conflicting outcomes for hydropower, food, and ecosystems; Figures 3-4; PDF pages 3-5",
+            "supports": "Climate-only comparisons, effects of irrigation and modeled cross-sector trade-offs."
+          },
+          {
+            "title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+            "url": "https://www.nature.com/articles/s43247-024-01738-4",
+            "location": "Results, multisector pathways; Figure 5; PDF pages 5-6; Discussion, study limitations; PDF page 8",
+            "supports": "The broader decision analysis, limits of optimizing one sector, and assumptions about fixed land-use configurations and demand."
+          },
+          {
+            "title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+            "url": "https://www.nature.com/articles/s43247-024-01738-4",
+            "location": "Methods, Climate and landuse scenarios and Hydropower services modeling; PDF page 9",
+            "supports": "Selection of KNN downscaling, three GCMs, 16 management scenarios and daily reservoir modeling."
+          },
+          {
+            "title": "Original dataset repository",
+            "url": "https://doi.org/10.5281/zenodo.8161594",
+            "location": "Zenodo Data repository.zip: Results/energy/energy_*_PF0.csv; SRC/SWAT/Run_landuse_analysis.R and scenario plotting script",
+            "supports": "Source energy summaries and exact management filenames. The prepared table selects 336 KNN rows and mean/firm-power fields while keeping originals in a supporting archive."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-chaglla-hydropower-knn",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Chaglla hydropower: mean and firm power scenarios",
+              "description": "Mean and firm power estimates for 16 land-management configurations under KNN-downscaled climate scenarios. Contains 336 rows: three historical model combinations and 18 future combinations per configuration.",
+              "license": "CC-BY-4.0",
+              "attribution": "Ding et al. (2024)",
+              "doi": "10.5281/zenodo.8161594",
+              "categories": [
+                "Nature's Contributions to People"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-026"
+              ],
+              "study_time": "Historical and three future climatology groups; exact period bounds differ between the paper and supplied code.",
+              "publications": [
+                {
+                  "id": "paper-026",
+                  "title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+                  "doi": "10.1038/s43247-024-01738-4",
+                  "url": "https://www.nature.com/articles/s43247-024-01738-4",
+                  "year": 2024
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-067"
+                ],
+                "limitations": [
+                  "Management and climatology codes retain the source labels; their complete mapping to paper scenario names and periods needs confirmation.",
+                  "These are modeled summary power estimates, not a daily power series or measured generation."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date; it is not an observation date."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "chaglla-hydropower-knn.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "encoding": "UTF-8",
+                    "units": {
+                      "Average_Energy_MW": "MW",
+                      "Firm_Energy_MW": "MW"
+                    },
+                    "key_fields": {
+                      "land_management": "Original E0/E1/E2/E4 management-file code.",
+                      "scenario": "Source climate label: his or historical, ssp126, ssp585.",
+                      "climatology": "Source period code: 0 historical; 1, 2, 3 future groups.",
+                      "DS": "Climate model and KNN downscaling method.",
+                      "Firm_Energy_MW": "Modeled firm power, MW; the reliability criterion needs confirmation."
+                    }
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.8161594",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-024-01738-4",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "originals": {
+                "location": "local",
+                "path": "source/original-tables-and-code.zip",
+                "media_type": "application/zip",
+                "roles": [
+                  "data",
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original scenario tables and preparation code"
+                }
+              }
+            }
+          }
         }
       ]
     }

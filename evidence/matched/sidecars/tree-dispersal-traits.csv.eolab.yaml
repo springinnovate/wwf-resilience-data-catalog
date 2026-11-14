@@ -5,34 +5,39 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: 'Amazon trees: dispersal modes and seed traits'
-  description: Dispersal assignments, seed-mass classes and fruit fleshiness for 5,201 tree species. Two
-    published dispersal classifications are retained separately.
+  title: 'Amazon trees: animal seed dispersal and seed traits'
+  description: 'Animal seed dispersal is widespread among Amazonian trees: the study’s two classifications
+    assign roughly four in five sampled species to animal-mediated dispersal. This highlights a potential
+    dependence of forest regeneration on animals, rather than demonstrating a restoration response to
+    protecting them. The supplied table contains dispersal assignments, seed-mass classes and fruit fleshiness
+    for 5,201 species, keeping the two classifications separate. It supports comparisons of tree traits
+    and potential dispersal dependencies; it is a selected part of the broader pollination-and-dispersal
+    study, not its complete interaction network. Some species have multiple assignments, and the seed-mass
+    values are class codes rather than measurements in grams.'
   license: CC-BY-4.0
   attribution: ter Steege et al. (2026)
   doi: 10.6084/m9.figshare.28417586.v2
   categories:
   - Nature
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-020
+  - doi-10.1038-s42003-026-09896-1
   study_time: Species-trait compilation; individual observation dates are not supplied.
   publications:
-  - id: paper-020
+  - id: doi-10.1038-s42003-026-09896-1
     title: Pollination and dispersal networks in the Amazonian tree flora
     doi: 10.1038/s42003-026-09896-1
     url: https://www.nature.com/articles/s42003-026-09896-1
     year: 2026
   annotations:
-    row_ids:
-    - row-049
     limitations:
     - seedmass contains logarithmic class codes, not measured mass in grams; exact class boundaries are
       unresolved.
     - Some species have multiple dispersal assignments. The two classifications must not be combined as
       independent species counts.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Species-trait and dispersal-mode compilation
+    dataset_role: Selected species-level dispersal assignments and seed traits from the broader network
+      dataset.
 assets:
   data:
     location: local
@@ -99,3 +104,11 @@ assets:
     - metadata
     metadata:
       title: Source publication list
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

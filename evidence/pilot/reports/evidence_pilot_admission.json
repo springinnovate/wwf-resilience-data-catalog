@@ -14,7 +14,7 @@
       "kind": "vector",
       "collection": "eolab-mounted-vectors",
       "item_id": "geopackage-332ac9b3fad2d687a9903529",
-      "assets": 13,
+      "assets": 14,
       "annotations_preserved": true,
       "supporting_evidence_preserved": true,
       "temporal_mode": "modified"
@@ -24,7 +24,7 @@
       "kind": "nonspatial",
       "collection": "eolab-described-nonspatial",
       "item_id": "wwf-atto-monthly-carbon-fluxes-2023",
-      "assets": 5,
+      "assets": 6,
       "annotations_preserved": true,
       "supporting_evidence_preserved": true,
       "temporal_mode": "interval"
@@ -34,7 +34,7 @@
       "kind": "raster",
       "collection": "eolab-mounted-geotiffs",
       "item_id": "geotiff-078e371b1ec6f32fb43ab389",
-      "assets": 5,
+      "assets": 6,
       "annotations_preserved": true,
       "supporting_evidence_preserved": true,
       "temporal_mode": "modified"

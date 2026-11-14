@@ -5,33 +5,37 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: 'Amazon Tree Diversity Network: plot metadata'
-  description: Metadata, tree density, diversity, richness and references for 2,046 inventory plots. Includes
-    original coordinate values and plot establishment years.
+  title: 'Amazon tree diversity: plot observations'
+  description: Amazon tree diversity varies strongly among forest types and regions, so tree counts or
+    a single basin-wide average cannot describe it adequately. Using 2,046 inventory plots, the study
+    found distinct patterns in density, species richness and Fisher’s alpha diversity, and used forest-type-specific
+    spatial models to map those patterns. This table supplies the plot observations and standardized diversity
+    measures behind that analysis, for free-standing woody stems at least 10 cm in diameter. It supports
+    checking the observational basis of regional biodiversity comparisons. It is not a current forest-condition
+    map or evidence of change through time; the supplied coordinates remain attributes because their datum
+    is unverified.
   license: CC-BY-4.0
   attribution: ter Steege et al. (2023)
   doi: 10.6084/m9.figshare.22786166.v2
   categories:
   - Nature
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-016
+  - doi-10.1038-s42003-023-05514-6
   study_time: Plot establishment years 1934-2021; these do not establish the dates of the reported measurements.
   publications:
-  - id: paper-016
+  - id: doi-10.1038-s42003-023-05514-6
     title: Mapping density, diversity and species-richness of the Amazon tree flora
     doi: 10.1038/s42003-023-05514-6
     url: https://www.nature.com/articles/s42003-023-05514-6
     year: 2023
   annotations:
-    row_ids:
-    - row-041
     limitations:
     - Coordinate datum is not documented in the inspected sources; this delivery is a table without inferred
       map geometry.
     - The paper reports establishment through 2020, while three supplied records have year_est=2021.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Forest inventory observations with spatial modeling in the associated study
+    dataset_role: Plot-level density, richness, diversity and reference data underlying regional models.
 assets:
   data:
     location: local
@@ -102,3 +106,11 @@ assets:
     - metadata
     metadata:
       title: Tree-diversity analysis code
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

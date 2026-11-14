@@ -69,14 +69,15 @@ class EvidencePreparationTests(unittest.TestCase):
         plan = json.loads((ROOT/'evidence/pilot/records.json').read_text(encoding='utf-8'))
         schema = json.loads((ROOT/'evidence/pilot/eolab-item-v1.schema.json').read_text(encoding='utf-8'))
         with (ROOT/'outputs/papers.csv').open(encoding='utf-8-sig', newline='') as f:
-            papers = {row['paper_id']: row for row in csv.DictReader(f)}
+            papers = {row['article_doi']: row for row in csv.DictReader(f)}
         self.assertEqual(sorted(row['kind'] for row in plan['records']), ['nonspatial','raster','vector'])
         for row in plan['records']:
             declaration = row['descriptor']
             Draft202012Validator(schema).validate(declaration)
             self.assertEqual(row['id'], declaration['id'])
             for paper in declaration['metadata']['publications']:
-                self.assertEqual(paper['doi'], papers[paper['id']]['article_doi'])
+                self.assertIn(paper['doi'], papers)
+                self.assertEqual(paper['id'], 'doi-' + paper['doi'].replace('/', '-').replace(':', '-'))
             for asset in declaration['assets'].values():
                 if asset['location'] == 'local':
                     prepare.relative_file(self.root, asset['path'])

@@ -408,10 +408,9 @@ class MatchedPreparationTests(unittest.TestCase):
         with (ROOT / 'outputs/matches.csv').open(encoding='utf-8-sig', newline='') as handle:
             matched = {row['row_id'] for row in csv.DictReader(handle) if row['match_status'] == 'Matched'}
         self.assertEqual(len(matched), 19)
-        represented = {row for record in all_records for row in record.get(
-            'row_ids', record['descriptor']['metadata']['annotations']['row_ids'])}
+        represented = {row for record in all_records for row in record['row_ids']}
         barrier = next(record for record in pilot if record['id'] == 'wwf-amazon-barrier-locations')
-        related_barrier_rows = set(barrier['descriptor']['metadata']['annotations']['row_ids'])
+        related_barrier_rows = set(barrier['row_ids'])
         self.assertEqual(represented, matched | related_barrier_rows)
         self.assertEqual(represented & matched, matched)
 
@@ -420,7 +419,7 @@ class MatchedPreparationTests(unittest.TestCase):
         datasets, coverage = delivery_report.build(output)
         self.assertEqual(len(datasets), 24)
         self.assertEqual(len(coverage), 19)
-        for name in ['datasets.csv', 'study_coverage.csv']:
+        for name in ['datasets.csv', 'study_coverage.csv', 'catalog-summaries.md']:
             with self.subTest(report=name):
                 self.assertEqual((output / name).read_bytes(),
                                  (ROOT / 'evidence/matched/reports' / name).read_bytes())

@@ -5,10 +5,15 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Tropical forest surface temperature vulnerability (TFVI), 0.1-degree grid
-  description: Pan-tropical vulnerability index for daytime land-surface temperature. Positive values
-    indicate vulnerability toward warming, negative values toward cooling; values near zero indicate relative
-    stability.
+  title: Forest surface-warming vulnerability to climate and forest loss
+  description: The study asked how climate stress and forest loss affect tropical forest functioning.
+    Its land-surface temperature analysis found widespread vulnerability toward persistent warming across
+    forests in the Americas, associated with climate warming, atmospheric drying, and tree-cover loss.
+    This 0.1-degree map is the dimensionless diagnostic index for daytime land-surface temperature. Positive
+    values indicate vulnerability toward warming, negative values toward cooling, and values near zero
+    indicate relative stability. The map can help examine where forest cooling functions may be under
+    pressure. Values are not degrees Celsius, the probability of forest collapse, or a prediction of the
+    cooling benefit from planting or restoring forest.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -16,26 +21,24 @@ metadata:
     to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158
   categories:
   - Nature
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-010
+  - doi-10.1016-j.oneear.2021.06.002
   study_time: MODIS Collection-6 daytime surface-temperature inputs; broader study period 1982-2018. The
     exact map interval is not embedded.
   publications:
-  - id: paper-010
+  - id: doi-10.1016-j.oneear.2021.06.002
     title: Detecting vulnerability of humid tropical forests to multiple stressors
     doi: 10.1016/j.oneear.2021.06.002
     url: https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444
     year: 2021
   annotations:
-    row_ids:
-    - row-022
     limitations:
     - Standardized index; values are not probabilities, percentages or measurements of the response variable.
     - Results describe correlations and assume stable model relationships over time.
     temporal_note: Catalog time is the source-file modification date, not the observation period.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
+    evidence_type: Diagnostic model using satellite and environmental observations
+    dataset_role: 0.1-degree TFVI diagnostic grid for daytime land-surface temperature.
 assets:
   data:
     location: local
@@ -90,5 +93,13 @@ assets:
     - data
     metadata:
       title: Supplied alternative grid, 0.25 degree
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources
 source:
   format: geotiff

@@ -16,6 +16,7 @@ import yaml
 
 from prepare_evidence_pilot import require,relative_file,sha256,write_json
 from prepare_matched_evidence import load_records,evidence_context,read_dicts
+from evidence_notes import render_evidence_summary, pilot_evidence_context
 
 REPO=Path(__file__).resolve().parents[1]
 
@@ -45,10 +46,12 @@ def validate(data_root: Path,eolab_source: Path,plan_dir: Path,include_pilot=Fal
         delivered=json.loads((data_root/'pilot/preparation-report.json').read_text(encoding='utf-8'))
         old={r['id']:r for r in delivered['datasets']}
         for record in pilot['records']:
-            record['row_ids']=record['descriptor']['metadata']['annotations']['row_ids']
-            entries[record['id']]=(record,data_root/'pilot'/record['directory'],record['review_context'],old[record['id']])
+            record['row_ids']=record.get('row_ids') or record['descriptor']['metadata']['annotations']['row_ids']
+            entries[record['id']]=(record,data_root/'pilot'/record['directory'],pilot_evidence_context(record),old[record['id']])
     for identifier,(record,folder,context,result) in entries.items():
         declaration=record['descriptor']
+        require((folder/'evidence-summary.md').read_text(encoding='utf-8')==render_evidence_summary(record),
+                'Linked scientific summary differs from the reviewed plan: '+identifier)
         Draft202012Validator(schema).validate(declaration)
         require(yaml.safe_load((folder/result['sidecar']).read_text(encoding='utf-8'))==declaration,
                 'Delivered YAML differs from its plan: '+identifier)

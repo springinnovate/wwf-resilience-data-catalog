@@ -27,6 +27,8 @@ from rasterio.shutil import copy as raster_copy
 from shapely.geometry import shape
 import yaml
 
+from evidence_notes import write_evidence_summary, pilot_evidence_context
+
 REPO = Path(__file__).resolve().parents[1]
 
 
@@ -183,7 +185,8 @@ def prepare(source_root: Path, output_root: Path, records_path: Path,
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(relative_file(source_root, attachment['source']), destination)
                 require(sha256(destination) == record['source_files'][attachment['source']], 'Attachment copy changed.')
-            write_json(folder / 'review-context.json', record['review_context'])
+            write_json(folder / 'review-context.json', pilot_evidence_context(record))
+            write_evidence_summary(folder, record)
             sidecar = folder / (record['output_file'] + '.eolab.yaml')
             sidecar.write_text(yaml.safe_dump(record['descriptor'], allow_unicode=True, sort_keys=False,
                                                width=100), encoding='utf-8', newline='\n')
@@ -219,6 +222,17 @@ def refresh_metadata(source_root: Path, output_root: Path, records_path: Path,
     require(len({r['id'] for r in records}) == 3, 'Pilot identifiers are not unique.')
     report_path = output_root / 'preparation-report.json'
     previous = json.loads(report_path.read_text(encoding='utf-8'))
+    if all('evidence_summary' in record for record in records):
+        from refresh_evidence_metadata import plan_collection, publish
+        require(previous['eolab_contract'] == plan['eolab_contract'], 'EOLab contract changed.')
+        for record in records:
+            for name, checksum in record['source_files'].items():
+                require(sha256(relative_file(source_root, name)) == checksum, 'Source checksum differs.')
+        report, replacements, before, payloads = plan_collection(
+            output_root, records, {r['id']: pilot_evidence_context(r) for r in records},
+            {'records_sha256': sha256(records_path)}, json.loads(schema_path.read_text(encoding='utf-8')))
+        publish(output_root, replacements, before, payloads)
+        return report
     report = deepcopy(previous)
     require(report['eolab_contract'] == plan['eolab_contract'], 'EOLab contract changed; prepare a new delivery.')
     require(len(report['datasets']) == 3 and {d['id'] for d in report['datasets']} == {r['id'] for r in records},

@@ -11,5 +11,6 @@
     "README.md",
     "datasets.csv",
     "study_coverage.csv"
-  ]
+  ],
+  "scope_note": "Historical check from the initial expanded delivery, before the scientific-summary refresh. Current results are in admission.json and metadata-refresh.json."
 }

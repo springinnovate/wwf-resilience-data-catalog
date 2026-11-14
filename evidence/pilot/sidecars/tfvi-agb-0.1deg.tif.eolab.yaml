@@ -5,10 +5,15 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Tropical forest biomass vulnerability (TFVI), 0.1-degree grid
-  description: Pan-tropical, 0.1-degree Tropical Forest Vulnerability Index for above-ground biomass.
-    Negative values indicate vulnerability toward biomass loss; positive values toward higher biomass;
-    values near zero indicate relative stability.
+  title: Tropical forest biomass vulnerability to climate and land-use pressures
+  description: Satellite observations show that tropical forests respond differently to climate and land-use
+    pressures. The study found widespread vulnerability in the Americas and slower recovery of forest
+    carbon cycling as stress increased. This map shows the biomass component of that assessment, helping
+    identify regions for closer monitoring and conservation or restoration planning. Negative index values
+    indicate vulnerability toward biomass loss, positive values toward higher biomass, and values near
+    zero relative stability. It is a standardized diagnostic index based on observed relationships; it
+    does not measure carbon stocks, predict a probability of collapse, or estimate the benefit of a restoration
+    intervention.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -16,14 +21,13 @@ metadata:
     to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158
   categories:
   - Nature
-  statuses:
-  - Matched to sheet description
+  statuses: []
   study_ids:
-  - paper-010
+  - doi-10.1016-j.oneear.2021.06.002
   study_time: 'Above-ground biomass response observations: 2000-2018. Broader study and long-term stressor
     records: 1982-2018.'
   publications:
-  - id: paper-010
+  - id: doi-10.1016-j.oneear.2021.06.002
     title: Detecting vulnerability of humid tropical forests to multiple stressors
     doi: 10.1016/j.oneear.2021.06.002
     citation: Saatchi, S., et al. (2021). Detecting vulnerability of humid tropical forests to multiple
@@ -31,8 +35,6 @@ metadata:
     url: https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444
     year: 2021
   annotations:
-    row_ids:
-    - row-019
     limitations:
     - Standardized index; values are not probabilities, percentages or biomass stocks.
     - Exact map observation dates are unresolved. Results describe correlations and assume stable model
@@ -40,6 +42,8 @@ metadata:
     temporal_note: Catalog time is the source-file modification date. Documented scientific periods are
       listed under study time.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
+    evidence_type: Satellite observations and statistical modeling
+    dataset_role: Derived biomass vulnerability index
 assets:
   data:
     location: local
@@ -86,5 +90,13 @@ assets:
     - data
     metadata:
       title: Unchanged source GeoTIFF
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources
 source:
   format: geotiff

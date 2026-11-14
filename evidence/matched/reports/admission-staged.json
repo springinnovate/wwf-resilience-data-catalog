@@ -263,5 +263,6 @@
       "full_evidence_preserved": true,
       "temporal_mode": "interval"
     }
-  ]
+  ],
+  "scope_note": "Historical check from the initial expanded delivery, before the scientific-summary refresh. Current results are in admission.json and metadata-refresh.json."
 }

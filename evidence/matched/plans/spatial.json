@@ -22,8 +22,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Tropical forest productivity vulnerability (TFVI), 0.1-degree grid",
-          "description": "Pan-tropical vulnerability index for gross primary productivity. Negative values indicate vulnerability toward decreases and positive values toward increases; values near zero indicate relative stability.",
+          "title": "Forest productivity vulnerability to climate and forest loss",
+          "description": "The study asked where climate stress and forest loss are weakening humid tropical forests. It found widespread vulnerability of forest productivity in the Amazon, with stronger signals along the arc of deforestation. This 0.1-degree map is the dimensionless diagnostic index for gross primary productivity. Negative values indicate vulnerability toward lower productivity; positive values toward higher productivity, and values near zero indicate relative stability. It can help identify places for closer assessment alongside land-use and climate evidence. The index describes vulnerability inferred from observed relationships; it does not measure carbon uptake, the probability of forest collapse, or the effect of a restoration intervention.",
           "license": "CC-BY-4.0",
           "attribution": "Saatchi et al. (2021)",
           "doi": "10.5281/zenodo.5115158",
@@ -31,16 +31,13 @@
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-010"
+            "doi-10.1016-j.oneear.2021.06.002"
           ],
           "study_time": "GPP inputs span 1982-2018; the derived map has no embedded observation interval.",
           "publications": [
             {
-              "id": "paper-010",
+              "id": "doi-10.1016-j.oneear.2021.06.002",
               "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
               "doi": "10.1016/j.oneear.2021.06.002",
               "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
@@ -48,15 +45,14 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-020"
-            ],
             "limitations": [
               "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
               "Results describe correlations and assume stable model relationships over time."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
-            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved.",
+            "evidence_type": "Diagnostic model using satellite and environmental observations",
+            "dataset_role": "0.1-degree TFVI diagnostic grid for gross primary productivity."
           }
         },
         "assets": {
@@ -130,6 +126,17 @@
             ],
             "metadata": {
               "title": "Supplied alternative grid, 0.25 degree"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         },
@@ -310,7 +317,169 @@
             }
           ]
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "Where are humid tropical forests vulnerable to changes in gross primary productivity under climate stress and forest-cover change?",
+        "finding": "The paper reports widespread vulnerability toward reduced gross primary productivity in the Amazon, with stronger negative signals along the arc of deforestation. Most forests in Africa and Asia had lower GPP vulnerability in this analysis (Figure 5B). These are findings from the study analysis, not a new statistical analysis of the delivered grid.",
+        "interpretation": "Use this diagnostic map to examine where forest productivity may be vulnerable under the stressor trends analyzed in the paper. Negative values indicate vulnerability toward decreasing GPP, positive values toward increasing GPP, and near-zero values relative stability. Values are standardized and dimensionless, not measured carbon uptake or probabilities. Use in conservation planning requires other evidence; the study did not evaluate a restoration treatment.",
+        "evidence_type": "Diagnostic model using satellite and environmental observations",
+        "dataset_role": "0.1-degree TFVI diagnostic grid for gross primary productivity.",
+        "limitations": [
+          "The model describes statistical relationships and assumes they remain stable; it is not a causal evaluation of conservation or restoration.",
+          "Values are dimensionless signed indices, not probabilities, measured changes, or the physical units of the response variable.",
+          "Figure 5 uses the separately supplied 0.25-degree grid; the primary asset is the 0.1-degree version, with the alternative retained as a linked file.",
+          "Model uncertainty and significance were not recalculated. The grid does not contain a verified observation interval."
+        ],
+        "sources": [
+          {
+            "title": "Saatchi et al. (2021), forest vulnerability results",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.7-8 / printed pp.993-994, Forest vulnerability and resilience; Figure 5B on PDF p.10 / printed p.996",
+            "supports": "Study findings for gross primary productivity and the direction represented by TFVI. Figure 5B is the paper analysis corresponding to this response variable."
+          },
+          {
+            "title": "Saatchi et al. (2021), data and index construction",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.12-14 / printed pp.998-1000, Forest response variables and Equations 8-10; Figure S12",
+            "supports": "Response definition, standardized index construction, sign interpretation, and model assumptions."
+          },
+          {
+            "title": "TFVI supporting data and scripts",
+            "url": "https://doi.org/10.5281/zenodo.5115158",
+            "location": "Dataset record; supplied Figure05 and FigureS12 grids, with identities in review-context.json",
+            "supports": "Study-output provenance and license. The supplied 0.1-degree file is the primary diagnostic map; the distinct 0.25-degree grid remains linked."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-tfvi-gpp-01deg",
+            "kind": "raster",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Tropical forest productivity vulnerability (TFVI), 0.1-degree grid",
+              "description": "Pan-tropical vulnerability index for gross primary productivity. Negative values indicate vulnerability toward decreases and positive values toward increases; values near zero indicate relative stability.",
+              "license": "CC-BY-4.0",
+              "attribution": "Saatchi et al. (2021)",
+              "doi": "10.5281/zenodo.5115158",
+              "citation": "Saatchi et al. (2021). Supporting scripts for 'Detecting Vulnerability of Humid Tropical Forests to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-010"
+              ],
+              "study_time": "GPP inputs span 1982-2018; the derived map has no embedded observation interval.",
+              "publications": [
+                {
+                  "id": "paper-010",
+                  "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
+                  "doi": "10.1016/j.oneear.2021.06.002",
+                  "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-020"
+                ],
+                "limitations": [
+                  "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
+                  "Results describe correlations and assume stable model relationships over time."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
+                "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "tfvi-gpp-0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "band": 1,
+                    "meaning": "Tropical Forest Vulnerability Index for gross primary productivity",
+                    "unit": "1",
+                    "unit_description": "dimensionless standardized index",
+                    "zero_is_valid": true
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.5115158",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/tfvi_gpp_0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Unchanged source grid, 0.1 degree"
+                }
+              },
+              "alternative_resolution": {
+                "location": "local",
+                "path": "source/tfvi_gpp_0.25deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Supplied alternative grid, 0.25 degree"
+                }
+              }
+            },
+            "source": {
+              "format": "geotiff"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-tfvi-aet-01deg",
@@ -334,8 +503,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Tropical forest evapotranspiration vulnerability (TFVI), 0.1-degree grid",
-          "description": "Pan-tropical vulnerability index for evapotranspiration. Negative values indicate vulnerability toward decreases and positive values toward increases; values near zero indicate relative stability.",
+          "title": "Forest water-cycle vulnerability to climate and forest loss",
+          "description": "The study asked how climate stress and forest loss affect tropical forest water and carbon cycling. It identified vulnerability toward lower evapotranspiration in areas of forest loss, including the southern and eastern Amazon, while other tropical areas showed signals toward higher evapotranspiration. This 0.1-degree map is the dimensionless diagnostic index for evapotranspiration, the water returned to the atmosphere by vegetation and evaporation. Negative values indicate vulnerability toward decreases; positive values toward increases, with near-zero values indicating relative stability. It provides context for assessing forest water-cycle pressures. It is not a measurement of water flux, a probability of forest collapse, or an estimate of restoration benefits.",
           "license": "CC-BY-4.0",
           "attribution": "Saatchi et al. (2021)",
           "doi": "10.5281/zenodo.5115158",
@@ -343,16 +512,13 @@
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-010"
+            "doi-10.1016-j.oneear.2021.06.002"
           ],
           "study_time": "GLEAM source data span 1980-2018; the broader study covers 1982-2018. The exact map interval is not embedded.",
           "publications": [
             {
-              "id": "paper-010",
+              "id": "doi-10.1016-j.oneear.2021.06.002",
               "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
               "doi": "10.1016/j.oneear.2021.06.002",
               "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
@@ -360,15 +526,14 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-021"
-            ],
             "limitations": [
               "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
               "Results describe correlations and assume stable model relationships over time."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
-            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved.",
+            "evidence_type": "Diagnostic model using satellite and environmental observations",
+            "dataset_role": "0.1-degree TFVI diagnostic grid for evapotranspiration."
           }
         },
         "assets": {
@@ -442,6 +607,17 @@
             ],
             "metadata": {
               "title": "Supplied alternative grid, 0.25 degree"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         },
@@ -622,7 +798,169 @@
             }
           ]
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "Where are humid tropical forests vulnerable to changes in evapotranspiration under climate stress and forest-cover change?",
+        "finding": "The paper identifies vulnerability toward declining evapotranspiration in areas of forest-cover loss, including the southern and eastern Amazon, Central America, eastern Africa and Madagascar, and insular Asia. It also reports regions with vulnerability toward higher evapotranspiration, related to atmospheric drying and incoming radiation (Figure 5C). These results concern the study analysis rather than a new comparison calculated for this delivery.",
+        "interpretation": "Interpret the sign as the direction of potential change in evapotranspiration under the analyzed stressor trends: negative for decreases, positive for increases, and near zero for relative stability. Both directions need ecological context; the index is not a water-flux measurement or a direct score of ecosystem health. The map can inform investigation of water-cycle vulnerability but does not estimate the effect of a land-management intervention.",
+        "evidence_type": "Diagnostic model using satellite and environmental observations",
+        "dataset_role": "0.1-degree TFVI diagnostic grid for evapotranspiration.",
+        "limitations": [
+          "The model describes statistical relationships and assumes they remain stable; it is not a causal evaluation of conservation or restoration.",
+          "Values are dimensionless signed indices, not probabilities, measured changes, or the physical units of the response variable.",
+          "Figure 5 uses the separately supplied 0.25-degree grid; the primary asset is the 0.1-degree version, with the alternative retained as a linked file.",
+          "Model uncertainty and significance were not recalculated. The grid does not contain a verified observation interval."
+        ],
+        "sources": [
+          {
+            "title": "Saatchi et al. (2021), forest vulnerability results",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.7-8 / printed pp.993-994, Forest vulnerability and resilience; Figure 5C on PDF p.10 / printed p.996",
+            "supports": "Study findings for evapotranspiration and the direction represented by TFVI. Figure 5C is the paper analysis corresponding to this response variable."
+          },
+          {
+            "title": "Saatchi et al. (2021), data and index construction",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.12-14 / printed pp.998-1000, Forest response variables and Equations 8-10; Figure S13",
+            "supports": "Response definition, standardized index construction, sign interpretation, and model assumptions."
+          },
+          {
+            "title": "TFVI supporting data and scripts",
+            "url": "https://doi.org/10.5281/zenodo.5115158",
+            "location": "Dataset record; supplied Figure05 and FigureS13 grids, with identities in review-context.json",
+            "supports": "Study-output provenance and license. The supplied 0.1-degree file is the primary diagnostic map; the distinct 0.25-degree grid remains linked."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-tfvi-aet-01deg",
+            "kind": "raster",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Tropical forest evapotranspiration vulnerability (TFVI), 0.1-degree grid",
+              "description": "Pan-tropical vulnerability index for evapotranspiration. Negative values indicate vulnerability toward decreases and positive values toward increases; values near zero indicate relative stability.",
+              "license": "CC-BY-4.0",
+              "attribution": "Saatchi et al. (2021)",
+              "doi": "10.5281/zenodo.5115158",
+              "citation": "Saatchi et al. (2021). Supporting scripts for 'Detecting Vulnerability of Humid Tropical Forests to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-010"
+              ],
+              "study_time": "GLEAM source data span 1980-2018; the broader study covers 1982-2018. The exact map interval is not embedded.",
+              "publications": [
+                {
+                  "id": "paper-010",
+                  "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
+                  "doi": "10.1016/j.oneear.2021.06.002",
+                  "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-021"
+                ],
+                "limitations": [
+                  "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
+                  "Results describe correlations and assume stable model relationships over time."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
+                "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "tfvi-aet-0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "band": 1,
+                    "meaning": "Tropical Forest Vulnerability Index for evapotranspiration",
+                    "unit": "1",
+                    "unit_description": "dimensionless standardized index",
+                    "zero_is_valid": true
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.5115158",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/tfvi_aet_0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Unchanged source grid, 0.1 degree"
+                }
+              },
+              "alternative_resolution": {
+                "location": "local",
+                "path": "source/tfvi_aet_0.25deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Supplied alternative grid, 0.25 degree"
+                }
+              }
+            },
+            "source": {
+              "format": "geotiff"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-tfvi-lst-01deg",
@@ -646,8 +984,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Tropical forest surface temperature vulnerability (TFVI), 0.1-degree grid",
-          "description": "Pan-tropical vulnerability index for daytime land-surface temperature. Positive values indicate vulnerability toward warming, negative values toward cooling; values near zero indicate relative stability.",
+          "title": "Forest surface-warming vulnerability to climate and forest loss",
+          "description": "The study asked how climate stress and forest loss affect tropical forest functioning. Its land-surface temperature analysis found widespread vulnerability toward persistent warming across forests in the Americas, associated with climate warming, atmospheric drying, and tree-cover loss. This 0.1-degree map is the dimensionless diagnostic index for daytime land-surface temperature. Positive values indicate vulnerability toward warming, negative values toward cooling, and values near zero indicate relative stability. The map can help examine where forest cooling functions may be under pressure. Values are not degrees Celsius, the probability of forest collapse, or a prediction of the cooling benefit from planting or restoring forest.",
           "license": "CC-BY-4.0",
           "attribution": "Saatchi et al. (2021)",
           "doi": "10.5281/zenodo.5115158",
@@ -655,16 +993,13 @@
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-010"
+            "doi-10.1016-j.oneear.2021.06.002"
           ],
           "study_time": "MODIS Collection-6 daytime surface-temperature inputs; broader study period 1982-2018. The exact map interval is not embedded.",
           "publications": [
             {
-              "id": "paper-010",
+              "id": "doi-10.1016-j.oneear.2021.06.002",
               "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
               "doi": "10.1016/j.oneear.2021.06.002",
               "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
@@ -672,15 +1007,14 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-022"
-            ],
             "limitations": [
               "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
               "Results describe correlations and assume stable model relationships over time."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
-            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved.",
+            "evidence_type": "Diagnostic model using satellite and environmental observations",
+            "dataset_role": "0.1-degree TFVI diagnostic grid for daytime land-surface temperature."
           }
         },
         "assets": {
@@ -754,6 +1088,17 @@
             ],
             "metadata": {
               "title": "Supplied alternative grid, 0.25 degree"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         },
@@ -940,7 +1285,169 @@
             }
           ]
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "Where are humid tropical forests vulnerable to changes in daytime land-surface temperature under climate stress and forest-cover change?",
+        "finding": "The paper reports widespread vulnerability toward persistent land-surface warming across forests in the Americas. It associates this pattern with warming climate, increasing vapor-pressure deficit, and large-scale tree-cover loss; African forests generally showed lower sensitivity except where land-use pressures were extensive (Figure 5D). This is a reported study result, not a temperature-change estimate derived anew from this file.",
+        "interpretation": "Positive index values indicate vulnerability toward higher land-surface temperature, so a positive sign means warming rather than ecological improvement. Negative values indicate the opposite direction and near-zero values relative stability. Use the map as diagnostic context for forest energy-balance pressures. It neither supplies temperatures in degrees Celsius nor predicts the outcome of a restoration intervention.",
+        "evidence_type": "Diagnostic model using satellite and environmental observations",
+        "dataset_role": "0.1-degree TFVI diagnostic grid for daytime land-surface temperature.",
+        "limitations": [
+          "The model describes statistical relationships and assumes they remain stable; it is not a causal evaluation of conservation or restoration.",
+          "Values are dimensionless signed indices, not probabilities, measured changes, or the physical units of the response variable.",
+          "Figure 5 uses the separately supplied 0.25-degree grid; the primary asset is the 0.1-degree version, with the alternative retained as a linked file.",
+          "Model uncertainty and significance were not recalculated. The grid does not contain a verified observation interval."
+        ],
+        "sources": [
+          {
+            "title": "Saatchi et al. (2021), forest vulnerability results",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.7-8 / printed pp.993-994, Forest vulnerability and resilience; Figure 5D on PDF p.10 / printed p.996",
+            "supports": "Study findings for daytime land-surface temperature and the direction represented by TFVI. Figure 5D is the paper analysis corresponding to this response variable."
+          },
+          {
+            "title": "Saatchi et al. (2021), data and index construction",
+            "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+            "location": "PDF pp.12-14 / printed pp.998-1000, Forest response variables and Equations 8-10; Figure S14",
+            "supports": "Response definition, standardized index construction, sign interpretation, and model assumptions."
+          },
+          {
+            "title": "TFVI supporting data and scripts",
+            "url": "https://doi.org/10.5281/zenodo.5115158",
+            "location": "Dataset record; supplied Figure05 and FigureS14 grids, with identities in review-context.json",
+            "supports": "Study-output provenance and license. The supplied 0.1-degree file is the primary diagnostic map; the distinct 0.25-degree grid remains linked."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-tfvi-lst-01deg",
+            "kind": "raster",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Tropical forest surface temperature vulnerability (TFVI), 0.1-degree grid",
+              "description": "Pan-tropical vulnerability index for daytime land-surface temperature. Positive values indicate vulnerability toward warming, negative values toward cooling; values near zero indicate relative stability.",
+              "license": "CC-BY-4.0",
+              "attribution": "Saatchi et al. (2021)",
+              "doi": "10.5281/zenodo.5115158",
+              "citation": "Saatchi et al. (2021). Supporting scripts for 'Detecting Vulnerability of Humid Tropical Forests to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-010"
+              ],
+              "study_time": "MODIS Collection-6 daytime surface-temperature inputs; broader study period 1982-2018. The exact map interval is not embedded.",
+              "publications": [
+                {
+                  "id": "paper-010",
+                  "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
+                  "doi": "10.1016/j.oneear.2021.06.002",
+                  "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-022"
+                ],
+                "limitations": [
+                  "Standardized index; values are not probabilities, percentages or measurements of the response variable.",
+                  "Results describe correlations and assume stable model relationships over time."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not the observation period.",
+                "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "tfvi-lst-0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "band": 1,
+                    "meaning": "Tropical Forest Vulnerability Index for daytime land-surface temperature",
+                    "unit": "1",
+                    "unit_description": "dimensionless standardized index",
+                    "zero_is_valid": true
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.5281/zenodo.5115158",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original": {
+                "location": "local",
+                "path": "source/tfvi_lst_0.1deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Unchanged source grid, 0.1 degree"
+                }
+              },
+              "alternative_resolution": {
+                "location": "local",
+                "path": "source/tfvi_lst_0.25deg.tif",
+                "media_type": "image/tiff; application=geotiff",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Supplied alternative grid, 0.25 degree"
+                }
+              }
+            },
+            "source": {
+              "format": "geotiff"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-terrestrial-resistance",
@@ -965,8 +1472,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon terrestrial ecosystem resistance",
-          "description": "Relative resistance to terrestrial ecological connectivity across the Amazon basin. Higher scores indicate stronger barriers from human impacts and natural features. The supplied grid ranges from 1 to 34.",
+          "title": "Barriers to terrestrial connectivity across the Amazon",
+          "description": "The study examined how dams, forest loss, fire, extraction and roads interrupt ecological connections across the Amazon, and how modeled connectivity differs inside and outside Indigenous Territories and Protected Areas. It found higher connectivity inside those areas. This file is the terrestrial resistance surface used as an input to that analysis: it combines weighted human pressures with natural barriers such as rivers and wetlands. Higher scores mean stronger barriers; supplied values range from 1 to 34. Use it to examine the assumed pattern of terrestrial barriers. It is neither the final connectivity result nor a causal estimate of protection or restoration benefits.",
           "license": "CC-BY-4.0",
           "attribution": "Ritter et al. (2025)",
           "doi": "10.6084/m9.figshare.28089815.v1",
@@ -974,16 +1481,13 @@
           "categories": [
             "Nature"
           ],
-          "statuses": [
-            "Matched to sheet description"
-          ],
           "study_ids": [
-            "paper-014"
+            "doi-10.1073-pnas.2418189122"
           ],
           "study_time": "Input layers represent different dates, spanning 2001-2023; this is a composite resistance surface.",
           "publications": [
             {
-              "id": "paper-014",
+              "id": "doi-10.1073-pnas.2418189122",
               "title": "Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon basin",
               "doi": "10.1073/pnas.2418189122",
               "url": "https://www.pnas.org/doi/10.1073/pnas.2418189122",
@@ -991,15 +1495,14 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-033"
-            ],
             "limitations": [
               "Relative resistance scores are not probabilities or measured movement rates.",
               "The delivered grid starts at 1; values have not been shifted to the paper's conceptual zero-impact baseline."
             ],
             "temporal_note": "Catalog time is a source-file modification date; the component dates are described in the linked evidence.",
-            "processing": "Lossless COG conversion in native EPSG:5641; grid, values and mask preserved."
+            "processing": "Lossless COG conversion in native EPSG:5641; grid, values and mask preserved.",
+            "evidence_type": "Spatial connectivity modeling and area comparison",
+            "dataset_role": "Terrestrial resistance input to the connectivity analysis."
           }
         },
         "assets": {
@@ -1072,6 +1575,17 @@
             ],
             "metadata": {
               "title": "Original resistance-generation script"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         },
@@ -1269,7 +1783,168 @@
           "Paper and script refer to multiple ecosystem resistance layers; only the matched terrestrial layer is admitted here.",
           "Generating-code and publication descriptions differ in the baseline and some historical source-date labels. The supplied raster is preserved, and no silent reconciliation is applied."
         ]
-      }
+      },
+      "evidence_summary": {
+        "question": "How do human activities and natural barriers shape Amazonian connectivity, and how does modeled connectivity compare inside and outside Indigenous Territories and Protected Areas?",
+        "finding": "Across terrestrial, wetland, and river analyses, the paper reports higher modeled connectivity inside Indigenous Territories and Protected Areas than outside. For terrestrial ecosystems it identifies substantial impacts in the southern and eastern Amazon. These findings come from the full resistance-based connectivity analysis and area comparisons, not from this resistance grid alone.",
+        "interpretation": "This raster is an input to the terrestrial connectivity model. It sums ecosystem-specific resistance weights for overlapping pressures and incorporates natural barriers. Larger values represent greater assumed barriers to ecological movement and processes. Use it to inspect that model input; final connected-area polygons and inside/outside comparisons are separate results. The spatial comparison does not establish a causal effect of a protection policy.",
+        "evidence_type": "Spatial connectivity modeling and area comparison",
+        "dataset_role": "Terrestrial resistance input to the connectivity analysis.",
+        "limitations": [
+          "Resistance weights are model assumptions; values are not probabilities or measured movement rates.",
+          "The grid ranges from 1 to 34 and has not been shifted to the paper's conceptual zero-impact baseline.",
+          "Components represent different dates. Some dates in the paper differ from source-code labels; the full evidence retains that discrepancy.",
+          "This is not a map of final connectivity, protected-area effectiveness, or restoration benefits."
+        ],
+        "sources": [
+          {
+            "title": "Ritter et al. (2025), connectivity findings",
+            "url": "https://doi.org/10.1073/pnas.2418189122",
+            "location": "PDF p.1, Abstract; PDF p.2, Results and Impacts on Terrestrial Ecosystems",
+            "supports": "Whole-study findings and modeled inside/outside comparisons, which require analyses beyond the supplied resistance input."
+          },
+          {
+            "title": "Ritter et al. (2025), resistance and connectivity methods",
+            "url": "https://doi.org/10.1073/pnas.2418189122",
+            "location": "PDF p.7, Materials and Methods, resistance construction and grainscape analysis; SI Appendix Table S2 cited there",
+            "supports": "Weighted additive resistance, natural barriers, higher scores as greater barriers, and the distinction between the input raster and downstream connectivity results."
+          },
+          {
+            "title": "Amazon Basin data and code, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.28089815.v1",
+            "location": "_2SPAnew2024_Resistance_analysis.R, lines 38-89; _2SPAnew2024_Resistance_analysis_DATASET.zip, resLand_EPSG5641.tif",
+            "supports": "Exact terrestrial input and producing script. Native CRS, score range and source identities are recorded in the full evidence."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-terrestrial-resistance",
+            "kind": "raster",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon terrestrial ecosystem resistance",
+              "description": "Relative resistance to terrestrial ecological connectivity across the Amazon basin. Higher scores indicate stronger barriers from human impacts and natural features. The supplied grid ranges from 1 to 34.",
+              "license": "CC-BY-4.0",
+              "attribution": "Ritter et al. (2025)",
+              "doi": "10.6084/m9.figshare.28089815.v1",
+              "citation": "Ritter, C. D. (2025). Amazon Basin data and code to replicate analyses. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.28089815.v1",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description"
+              ],
+              "study_ids": [
+                "paper-014"
+              ],
+              "study_time": "Input layers represent different dates, spanning 2001-2023; this is a composite resistance surface.",
+              "publications": [
+                {
+                  "id": "paper-014",
+                  "title": "Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon basin",
+                  "doi": "10.1073/pnas.2418189122",
+                  "url": "https://www.pnas.org/doi/10.1073/pnas.2418189122",
+                  "year": 2025
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-033"
+                ],
+                "limitations": [
+                  "Relative resistance scores are not probabilities or measured movement rates.",
+                  "The delivered grid starts at 1; values have not been shifted to the paper's conceptual zero-impact baseline."
+                ],
+                "temporal_note": "Catalog time is a source-file modification date; the component dates are described in the linked evidence.",
+                "processing": "Lossless COG conversion in native EPSG:5641; grid, values and mask preserved."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "amazon-terrestrial-resistance.tif",
+                "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "band": 1,
+                    "meaning": "Terrestrial resistance to ecological connectivity",
+                    "unit": "1",
+                    "unit_description": "dimensionless relative resistance score"
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.28089815.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.pnas.org/doi/10.1073/pnas.2418189122",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "original_archive": {
+                "location": "local",
+                "path": "source/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+                "media_type": "application/zip",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "title": "Original resistance-analysis package"
+                }
+              },
+              "source_code": {
+                "location": "local",
+                "path": "source/_2SPAnew2024_Resistance_analysis.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original resistance-generation script"
+                }
+              }
+            },
+            "source": {
+              "format": "geotiff"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-hist-forested",
@@ -1295,8 +1970,8 @@
           "end_datetime": "2010-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: Historical, forested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the Historical climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: historical climate with retained Amazon forest",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the historical climate (1981-2010) scenario with retained Amazon forest. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -1305,16 +1980,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 1981-2010. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -1322,14 +1996,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "Historical; forested Amazon Basin",
+            "scenario": "historical climate (1981-2010); retained Amazon forest",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Historical forested comparison baseline (HF), Figure 1."
           }
         },
         "assets": {
@@ -1380,6 +2053,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -1495,7 +2179,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario HF.",
+        "interpretation": "This HF grid supplies one component of the comparison: historical climate (1981-2010) with retained Amazon forest. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Historical forested comparison baseline (HF), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel HF",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel HF identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_hist_comflor.nc",
+            "supports": "Original NetCDF for scenario HF. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-hist-forested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "1981-01-01T00:00:00Z",
+              "end_datetime": "2010-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: Historical, forested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the Historical climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 1981-2010. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "Historical; forested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-hist-forested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-hist-deforested",
@@ -1521,8 +2343,8 @@
           "end_datetime": "2010-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: Historical, deforested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the Historical climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: historical climate with complete Amazon savannization",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the historical climate (1981-2010) scenario with complete Amazon savannization. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -1531,16 +2353,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 1981-2010. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -1548,14 +2369,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "Historical; deforested Amazon Basin",
+            "scenario": "historical climate (1981-2010); complete Amazon savannization",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Single modeled climate and land-cover scenario (HS), Figure 1."
           }
         },
         "assets": {
@@ -1606,6 +2426,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -1721,7 +2552,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario HS.",
+        "interpretation": "This HS grid supplies one component of the comparison: historical climate (1981-2010) with complete Amazon savannization. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Single modeled climate and land-cover scenario (HS), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel HS",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel HS identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_hist_se6flor.nc",
+            "supports": "Original NetCDF for scenario HS. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-hist-deforested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "1981-01-01T00:00:00Z",
+              "end_datetime": "2010-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: Historical, deforested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the Historical climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 1981-2010. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "Historical; deforested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-hist-deforested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-rcp4-forested",
@@ -1747,8 +2716,8 @@
           "end_datetime": "2100-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: RCP4.5, forested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP4.5 climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: RCP4.5 with retained Amazon forest",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the RCP4.5 climate (2071-2100) scenario with retained Amazon forest. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -1757,16 +2726,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -1774,14 +2742,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "RCP4.5; forested Amazon Basin",
+            "scenario": "RCP4.5 climate (2071-2100); retained Amazon forest",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Single modeled climate and land-cover scenario (45F), Figure 1."
           }
         },
         "assets": {
@@ -1832,6 +2799,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -1947,7 +2925,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario 45F.",
+        "interpretation": "This 45F grid supplies one component of the comparison: RCP4.5 climate (2071-2100) with retained Amazon forest. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Single modeled climate and land-cover scenario (45F), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel 45F",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel 45F identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_rcp4_comflor.nc",
+            "supports": "Original NetCDF for scenario 45F. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-rcp4-forested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "2071-01-01T00:00:00Z",
+              "end_datetime": "2100-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: RCP4.5, forested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP4.5 climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "RCP4.5; forested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-rcp4-forested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-rcp4-deforested",
@@ -1973,8 +3089,8 @@
           "end_datetime": "2100-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: RCP4.5, deforested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP4.5 climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: RCP4.5 with complete Amazon savannization",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the RCP4.5 climate (2071-2100) scenario with complete Amazon savannization. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -1983,16 +3099,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -2000,14 +3115,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "RCP4.5; deforested Amazon Basin",
+            "scenario": "RCP4.5 climate (2071-2100); complete Amazon savannization",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Single modeled climate and land-cover scenario (45S), Figure 1."
           }
         },
         "assets": {
@@ -2058,6 +3172,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -2173,7 +3298,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario 45S.",
+        "interpretation": "This 45S grid supplies one component of the comparison: RCP4.5 climate (2071-2100) with complete Amazon savannization. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Single modeled climate and land-cover scenario (45S), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel 45S",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel 45S identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_rcp4_se6flor.nc",
+            "supports": "Original NetCDF for scenario 45S. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-rcp4-deforested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "2071-01-01T00:00:00Z",
+              "end_datetime": "2100-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: RCP4.5, deforested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP4.5 climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "RCP4.5; deforested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-rcp4-deforested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-rcp8-forested",
@@ -2199,8 +3462,8 @@
           "end_datetime": "2100-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: RCP8.5, forested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP8.5 climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: RCP8.5 with retained Amazon forest",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the RCP8.5 climate (2071-2100) scenario with retained Amazon forest. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -2209,16 +3472,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -2226,14 +3488,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "RCP8.5; forested Amazon Basin",
+            "scenario": "RCP8.5 climate (2071-2100); retained Amazon forest",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Single modeled climate and land-cover scenario (85F), Figure 1."
           }
         },
         "assets": {
@@ -2284,6 +3545,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -2399,7 +3671,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario 85F.",
+        "interpretation": "This 85F grid supplies one component of the comparison: RCP8.5 climate (2071-2100) with retained Amazon forest. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Single modeled climate and land-cover scenario (85F), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel 85F",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel 85F identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_rcp8_comflor.nc",
+            "supports": "Original NetCDF for scenario 85F. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-rcp8-forested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "2071-01-01T00:00:00Z",
+              "end_datetime": "2100-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: RCP8.5, forested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP8.5 climate and forested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "RCP8.5; forested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-rcp8-forested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-wbgt-rcp8-deforested",
@@ -2425,8 +3835,8 @@
           "end_datetime": "2100-12-31T23:59:59Z"
         },
         "metadata": {
-          "title": "Warmest-month in-shade heat stress: RCP8.5, deforested",
-          "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP8.5 climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+          "title": "In-shade heat stress: RCP8.5 with complete Amazon savannization",
+          "description": "The study used a climate model to ask how complete replacement of Amazon forest by savanna would change heat stress alongside global warming. Across paired simulations, savannization raised in-shade heat stress, with greater increases under RCP8.5. This file supplies the RCP8.5 climate (2071-2100) scenario with complete Amazon savannization. Values are degrees Celsius for average daily maximum in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "Oliveira et al. (2021)",
           "doi": "10.6084/m9.figshare.15128664.v1",
@@ -2435,16 +3845,15 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-009"
+            "doi-10.1038-s43247-021-00275-8"
           ],
           "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
           "publications": [
             {
-              "id": "paper-009",
+              "id": "doi-10.1038-s43247-021-00275-8",
               "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
               "doi": "10.1038/s43247-021-00275-8",
               "url": "https://www.nature.com/articles/s43247-021-00275-8",
@@ -2452,14 +3861,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-017"
-            ],
-            "scenario": "RCP8.5; deforested Amazon Basin",
+            "scenario": "RCP8.5 climate (2071-2100); complete Amazon savannization",
             "limitations": [
               "The native file's 1987 timestamp is a placeholder shared by all scenarios."
             ],
-            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Climate model scenario experiment",
+            "dataset_role": "Single modeled climate and land-cover scenario (85S), Figure 1."
           }
         },
         "assets": {
@@ -2510,6 +3918,17 @@
             ],
             "metadata": {
               "title": "Research article"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -2625,7 +4044,145 @@
           "pixel_size_degrees": 0.25,
           "crs": "Confirmation required; none assigned"
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How would complete Amazon savannization affect heat stress under historical climate and the RCP4.5 and RCP8.5 climate scenarios?",
+        "finding": "The paired simulations in the paper show that complete savannization increases warmest-month daily maximum in-shade WBGT by 1-5 degrees Celsius under historical atmospheric conditions, with increases reaching 7.5 degrees Celsius in future experiments and stronger effects under RCP8.5. These are comparisons across model runs in the paper; this file contains only scenario 85S.",
+        "interpretation": "This 85S grid supplies one component of the comparison: RCP8.5 climate (2071-2100) with complete Amazon savannization. Compare it with the appropriate paired scenario to investigate the model experiment. Complete forest replacement by savanna is an extreme imposed boundary condition, not an observed land-cover trajectory or a forecast of policy implementation. WBGT represents environmental heat stress and does not record illness, deaths, or people exposed.",
+        "evidence_type": "Climate model scenario experiment",
+        "dataset_role": "Single modeled climate and land-cover scenario (85S), Figure 1.",
+        "limitations": [
+          "Complete savannization is an extreme model experiment; the runs do not evaluate a specific conservation policy or gradual deforestation pathway.",
+          "This is a single-scenario climatology, not a scenario difference, population-exposure table, daily time series, or observed health outcome.",
+          "Geographic CRS is undocumented. The original NetCDF is downloadable, but map display is withheld pending confirmation.",
+          "Coverage dates follow Methods; figure captions differ. The native 1987 timestamp is a shared placeholder, not the modeled period."
+        ],
+        "sources": [
+          {
+            "title": "Oliveira et al. (2021), savannization and heat stress",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.2, Results and discussion: Amazon savannization and heat stress; PDF p.3, Figure 1, panel 85S",
+            "supports": "Paired-simulation findings, complete forest replacement, in-shade WBGT meaning and units. Panel 85S identifies this scenario rather than a difference map."
+          },
+          {
+            "title": "Oliveira et al. (2021), experimental design",
+            "url": "https://www.nature.com/articles/s43247-021-00275-8",
+            "location": "PDF p.7, Methods: Experimental design; PDF p.6, Population analysis",
+            "supports": "Imposed forested and savanna conditions; historical 1981-2010 and future 2071-2100 periods; distinction between climate grids and subsequent exposure calculations."
+          },
+          {
+            "title": "Figure 1 source data, version 1",
+            "url": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+            "location": "WBGTid_COR-mdmx_AS_MesMax_rcp8_se6flor.nc",
+            "supports": "Original NetCDF for scenario 85S. File identity, grid attributes and missing CRS definition are documented in review-context.json."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-wbgt-rcp8-deforested",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "interval",
+              "start_datetime": "2071-01-01T00:00:00Z",
+              "end_datetime": "2100-12-31T23:59:59Z"
+            },
+            "metadata": {
+              "title": "Warmest-month in-shade heat stress: RCP8.5, deforested",
+              "description": "Average daily maximum in-shade wet-bulb globe temperature for the warmest climatological month, under the RCP8.5 climate and deforested Amazon scenario. South American model grid available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "Oliveira et al. (2021)",
+              "doi": "10.6084/m9.figshare.15128664.v1",
+              "citation": "Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1",
+              "categories": [
+                "Drivers & Pressures"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-009"
+              ],
+              "study_time": "Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked evidence).",
+              "publications": [
+                {
+                  "id": "paper-009",
+                  "title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+                  "doi": "10.1038/s43247-021-00275-8",
+                  "url": "https://www.nature.com/articles/s43247-021-00275-8",
+                  "year": 2021
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-017"
+                ],
+                "scenario": "RCP8.5; deforested Amazon Basin",
+                "limitations": [
+                  "The native file's 1987 timestamp is a placeholder shared by all scenarios."
+                ],
+                "processing": "Original NetCDF preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "wbgt-rcp8-deforested.nc",
+                "media_type": "application/x-netcdf",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "variable": "wbgt",
+                    "meaning": "Warmest-month average daily maximum in-shade wet-bulb globe temperature",
+                    "unit": "degC",
+                    "unit_basis": "Paper Figure1 and Methods; unit absent from the source variable."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.15128664.v1",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s43247-021-00275-8",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-tree-density",
@@ -2649,8 +4206,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon tree density",
-          "description": "Estimated trees per hectare across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+          "title": "Tree density across the original Amazon forest",
+          "description": "The study mapped how tree density and diversity vary across Amazonian forest types. It found the highest tree densities in northwestern Amazonia and lower densities in central-southern and eastern areas; its density model explained 43% of variation among inventory plots. This file is the interpolated 0.1-degree density baseline, in trees per hectare, from old-growth inventories of woody individuals at least 10 cm in diameter at breast height. It describes the original lowland forest extent and can provide ecological context for conservation planning. Estimates retain substantial unexplained variation and do not measure current forest loss or restoration success. Map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "ter Steege et al. (2023)",
           "doi": "10.6084/m9.figshare.22786166.v2",
@@ -2659,16 +4216,15 @@
             "Nature"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-016"
+            "doi-10.1038-s42003-023-05514-6"
           ],
           "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
           "publications": [
             {
-              "id": "paper-016",
+              "id": "doi-10.1038-s42003-023-05514-6",
               "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
               "doi": "10.1038/s42003-023-05514-6",
               "url": "https://www.nature.com/articles/s42003-023-05514-6",
@@ -2676,14 +4232,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-038"
-            ],
             "limitations": [
               "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
-            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Forest-inventory baseline with spatial interpolation",
+            "dataset_role": "Interpolated tree-density baseline, trees per hectare."
           }
         },
         "assets": {
@@ -2767,6 +4322,17 @@
             ],
             "metadata": {
               "title": "Original interpolation-grid coordinates"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -3152,7 +4718,176 @@
           "map_scope": "Interpolated attributes over the original lowland forest extent, not a current forest-cover map.",
           "richness_basis": "Species richness per hectare uses Fisher alpha and trees per hectare to standardize plots of differing area."
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How does tree density vary across Amazonian forest types and regions?",
+        "finding": "The paper reports higher tree densities in northwestern Amazonia and lower densities in central-southern and eastern Amazonia. The spatial density model explained 43% of variation among inventory plots (Results: Tree density; Supplementary Figure 1). This describes a modeled ecological baseline, not a present-day census of the grid cells.",
+        "interpretation": "Values estimate the number of trees per hectare for woody individuals with diameter at breast height of at least 10 cm. The model interpolates old-growth plot observations over the original lowland forest extent. It can provide background on natural differences in forest structure, but it does not measure present forest cover, degradation, carbon stocks, or restoration outcomes.",
+        "evidence_type": "Forest-inventory baseline with spatial interpolation",
+        "dataset_role": "Interpolated tree-density baseline, trees per hectare.",
+        "limitations": [
+          "The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.",
+          "Inventory dates vary; the April 2023 compilation does not establish a single map observation period.",
+          "The density model explained 43% of variation among inventory plots; substantial variation remains unexplained.",
+          "Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable."
+        ],
+        "sources": [
+          {
+            "title": "ter Steege et al. (2023), density results",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF p.2, Results: Tree density; Supplementary Figure 1 discussed there",
+            "supports": "Regional density pattern, units and the density model's 43% explained variation."
+          },
+          {
+            "title": "ter Steege et al. (2023), sampling and map construction",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns",
+            "supports": "Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness."
+          },
+          {
+            "title": "Amazon tree flora data, version 2",
+            "url": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+            "location": "TreeDensity.asc; TreeDiversityScript.R and TreeDiversityFunctions.R",
+            "supports": "Exact output variable and scripts. The full review records source-grid identity and the lack of a documented geographic CRS."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-tree-density",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon tree density",
+              "description": "Estimated trees per hectare across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "ter Steege et al. (2023)",
+              "doi": "10.6084/m9.figshare.22786166.v2",
+              "citation": "ter Steege et al. (2023). Mapping density, diversity and species-richness of the Amazon tree flora. Version2. Figshare. https://doi.org/10.6084/m9.figshare.22786166.v2",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-016"
+              ],
+              "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
+              "publications": [
+                {
+                  "id": "paper-016",
+                  "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+                  "doi": "10.1038/s42003-023-05514-6",
+                  "url": "https://www.nature.com/articles/s42003-023-05514-6",
+                  "year": 2023
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-038"
+                ],
+                "limitations": [
+                  "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
+                "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "amazon-tree-density.asc",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "meaning": "Estimated trees per hectare",
+                    "unit": "trees ha-1",
+                    "source_format": "ESRI ASCII grid",
+                    "tree_definition": "Free-standing woody individuals with diameter at breast height at least 10 cm."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s42003-023-05514-6",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "source_script": {
+                "location": "local",
+                "path": "source/TreeDiversityScript.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original map-generation script"
+                }
+              },
+              "source_functions": {
+                "location": "local",
+                "path": "source/TreeDiversityFunctions.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation functions"
+                }
+              },
+              "source_grid": {
+                "location": "local",
+                "path": "source/AmazonLowLandForestRaisg.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation-grid coordinates"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-tree-diversity",
@@ -3176,8 +4911,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon tree alpha-diversity",
-          "description": "Estimated Fisher's alpha across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+          "title": "Tree diversity across the original Amazon forest",
+          "description": "The study asked how Amazonian tree diversity varies with location and forest type. It found especially high Fisher's alpha in terra-firme forests of western Amazonia's Pebas region and French Guiana. This 0.1-degree grid interpolates that diversity index from old-growth inventories of trees at least 10 cm in diameter at breast height. It provides an ecological baseline across the original lowland forest extent, rather than a map of current habitat condition or restoration effects. Fisher's alpha is dimensionless and differs from species per hectare. Estimates are less certain in sparsely sampled white-sand and swamp forests. Map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "ter Steege et al. (2023)",
           "doi": "10.6084/m9.figshare.22786166.v2",
@@ -3186,16 +4921,15 @@
             "Nature"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-016"
+            "doi-10.1038-s42003-023-05514-6"
           ],
           "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
           "publications": [
             {
-              "id": "paper-016",
+              "id": "doi-10.1038-s42003-023-05514-6",
               "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
               "doi": "10.1038/s42003-023-05514-6",
               "url": "https://www.nature.com/articles/s42003-023-05514-6",
@@ -3203,14 +4937,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-039"
-            ],
             "limitations": [
               "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
-            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Forest-inventory baseline with spatial interpolation",
+            "dataset_role": "Interpolated tree alpha-diversity baseline, Fisher's alpha."
           }
         },
         "assets": {
@@ -3294,6 +5027,17 @@
             ],
             "metadata": {
               "title": "Original interpolation-grid coordinates"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -3679,7 +5423,176 @@
           "map_scope": "Interpolated attributes over the original lowland forest extent, not a current forest-cover map.",
           "richness_basis": "Species richness per hectare uses Fisher alpha and trees per hectare to standardize plots of differing area."
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How do Amazonian tree alpha-diversity patterns differ among forest types and regions?",
+        "finding": "The paper reports the highest Fisher's alpha in terra-firme forests of the Pebas region and French Guiana, and lower values in several sandy-soil, floodplain and swamp forests. Its spatial model explained 66% of variation in plot diversity. Standard errors were higher in white-sand and swamp forests (Results: Tree alpha-diversity; Figure 1). These are fitted-model results, not evidence of an intervention effect.",
+        "interpretation": "Fisher's alpha is a dimensionless diversity index derived from tree inventories, not a count of species per hectare. This map interpolates observations for trees with diameter at breast height of at least 10 cm, across the original lowland forest extent. Use it as ecological background on differences among forest types and regions. Low modeled diversity alone does not establish degradation or a need for restoration.",
+        "evidence_type": "Forest-inventory baseline with spatial interpolation",
+        "dataset_role": "Interpolated tree alpha-diversity baseline, Fisher's alpha.",
+        "limitations": [
+          "The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.",
+          "Inventory dates vary; the April 2023 compilation does not establish a single map observation period.",
+          "Sparse sampling raises uncertainty in white-sand and swamp forests; fitted-model explained variation is not an out-of-sample accuracy guarantee.",
+          "Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable."
+        ],
+        "sources": [
+          {
+            "title": "ter Steege et al. (2023), diversity results",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF p.2, Results: Tree alpha-diversity; Figure 1 on PDF p.3; Supplementary Figure 2 discussed in Results",
+            "supports": "Regional alpha-diversity pattern, 66% fitted-model explained variation and higher errors in white-sand and swamp forests."
+          },
+          {
+            "title": "ter Steege et al. (2023), sampling and map construction",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns",
+            "supports": "Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness."
+          },
+          {
+            "title": "Amazon tree flora data, version 2",
+            "url": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+            "location": "TreeDiversity.asc; TreeDiversityScript.R and TreeDiversityFunctions.R",
+            "supports": "Exact output variable and scripts. The full review records source-grid identity and the lack of a documented geographic CRS."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-tree-diversity",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon tree alpha-diversity",
+              "description": "Estimated Fisher's alpha across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "ter Steege et al. (2023)",
+              "doi": "10.6084/m9.figshare.22786166.v2",
+              "citation": "ter Steege et al. (2023). Mapping density, diversity and species-richness of the Amazon tree flora. Version2. Figshare. https://doi.org/10.6084/m9.figshare.22786166.v2",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-016"
+              ],
+              "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
+              "publications": [
+                {
+                  "id": "paper-016",
+                  "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+                  "doi": "10.1038/s42003-023-05514-6",
+                  "url": "https://www.nature.com/articles/s42003-023-05514-6",
+                  "year": 2023
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-039"
+                ],
+                "limitations": [
+                  "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
+                "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "amazon-tree-diversity.asc",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "meaning": "Estimated Fisher's alpha",
+                    "unit": "1",
+                    "source_format": "ESRI ASCII grid",
+                    "tree_definition": "Free-standing woody individuals with diameter at breast height at least 10 cm."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s42003-023-05514-6",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "source_script": {
+                "location": "local",
+                "path": "source/TreeDiversityScript.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original map-generation script"
+                }
+              },
+              "source_functions": {
+                "location": "local",
+                "path": "source/TreeDiversityFunctions.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation functions"
+                }
+              },
+              "source_grid": {
+                "location": "local",
+                "path": "source/AmazonLowLandForestRaisg.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation-grid coordinates"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       "id": "wwf-amazon-tree-richness",
@@ -3703,8 +5616,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon tree species richness",
-          "description": "Estimated species richness per hectare across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+          "title": "Tree species richness across the original Amazon forest",
+          "description": "Using forest inventories, the study asked where Amazonian tree species richness is greatest and how it varies among forest types. The highest richness was found in terra-firme forests of western Amazonia's Pebas region and French Guiana. This file estimates species per hectare on a 0.1-degree grid, using old-growth plots of trees at least 10 cm in diameter at breast height. It describes the original lowland forest extent, with greater uncertainty in sparsely sampled white-sand and swamp forests. Values are not total species per grid cell or a measure of restoration success. The original grid is downloadable; map display awaits CRS confirmation.",
           "license": "CC-BY-4.0",
           "attribution": "ter Steege et al. (2023)",
           "doi": "10.6084/m9.figshare.22786166.v2",
@@ -3713,16 +5626,15 @@
             "Nature"
           ],
           "statuses": [
-            "Matched to sheet description",
             "CRS confirmation needed"
           ],
           "study_ids": [
-            "paper-016"
+            "doi-10.1038-s42003-023-05514-6"
           ],
           "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
           "publications": [
             {
-              "id": "paper-016",
+              "id": "doi-10.1038-s42003-023-05514-6",
               "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
               "doi": "10.1038/s42003-023-05514-6",
               "url": "https://www.nature.com/articles/s42003-023-05514-6",
@@ -3730,14 +5642,13 @@
             }
           ],
           "annotations": {
-            "row_ids": [
-              "row-040"
-            ],
             "limitations": [
               "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
             ],
             "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
-            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+            "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.",
+            "evidence_type": "Forest-inventory baseline with spatial interpolation",
+            "dataset_role": "Interpolated tree species-richness baseline, species per hectare."
           }
         },
         "assets": {
@@ -3821,6 +5732,17 @@
             ],
             "metadata": {
               "title": "Original interpolation-grid coordinates"
+            }
+          },
+          "evidence_summary": {
+            "location": "local",
+            "path": "evidence-summary.md",
+            "media_type": "text/markdown",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Study findings, interpretation and sources"
             }
           }
         }
@@ -4206,7 +6128,176 @@
           "map_scope": "Interpolated attributes over the original lowland forest extent, not a current forest-cover map.",
           "richness_basis": "Species richness per hectare uses Fisher alpha and trees per hectare to standardize plots of differing area."
         }
-      }
+      },
+      "evidence_summary": {
+        "question": "How does tree species richness per hectare vary across Amazonian forest types and regions?",
+        "finding": "The paper reports highest richness in terra-firme forests of the Pebas region and French Guiana, with lower richness in several sandy-soil, floodplain and swamp forests. The spatial model explained 71% of plot-level variation, dropping to 65% when plots were left out in turn; white-sand and swamp predictions weakened especially strongly in that check (Results: Tree species-richness; Figure 2).",
+        "interpretation": "Each value estimates species per hectare, standardized from the plot data using Fisher's alpha and tree density. It is not the total number of species in the 0.1-degree cell. The model uses old-growth inventories of trees with diameter at breast height of at least 10 cm and covers the original lowland forest extent. It provides baseline ecological context; it does not quantify present habitat quality or the gain from restoration.",
+        "evidence_type": "Forest-inventory baseline with spatial interpolation",
+        "dataset_role": "Interpolated tree species-richness baseline, species per hectare.",
+        "limitations": [
+          "The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.",
+          "Inventory dates vary; the April 2023 compilation does not establish a single map observation period.",
+          "The leave-one-out check reduced overall explained variation from 71% to 65%, with particularly large losses for sparsely sampled white-sand and swamp forests.",
+          "Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable."
+        ],
+        "sources": [
+          {
+            "title": "ter Steege et al. (2023), richness results",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF pp.3-4, Results: Tree species-richness; Figure 2; leave-one-out check and Supplementary Figure 6 discussed on PDF p.4",
+            "supports": "Per-hectare richness, regional pattern, fitted and leave-one-out model results, and higher uncertainty in white-sand and swamp forests."
+          },
+          {
+            "title": "ter Steege et al. (2023), sampling and map construction",
+            "url": "https://www.nature.com/articles/s42003-023-05514-6",
+            "location": "PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns",
+            "supports": "Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness."
+          },
+          {
+            "title": "Amazon tree flora data, version 2",
+            "url": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+            "location": "TreeRichness_ha.asc; TreeDiversityScript.R and TreeDiversityFunctions.R",
+            "supports": "Exact output variable and scripts. The full review records source-grid identity and the lack of a documented geographic CRS."
+          }
+        ]
+      },
+      "metadata_history": [
+        {
+          "revision": "Before evidence interpretation review",
+          "descriptor": {
+            "schema": "eolab/item/v1",
+            "id": "wwf-amazon-tree-richness",
+            "kind": "nonspatial",
+            "primary_asset": "data",
+            "temporal": {
+              "mode": "modified"
+            },
+            "metadata": {
+              "title": "Amazon tree species richness",
+              "description": "Estimated species richness per hectare across Amazon lowland forests on the published 0.1-degree grid, interpolated from inventory plots by forest type. The original grid is available for download; map display awaits CRS confirmation.",
+              "license": "CC-BY-4.0",
+              "attribution": "ter Steege et al. (2023)",
+              "doi": "10.6084/m9.figshare.22786166.v2",
+              "citation": "ter Steege et al. (2023). Mapping density, diversity and species-richness of the Amazon tree flora. Version2. Figshare. https://doi.org/10.6084/m9.figshare.22786166.v2",
+              "categories": [
+                "Nature"
+              ],
+              "statuses": [
+                "Matched to sheet description",
+                "CRS confirmation needed"
+              ],
+              "study_ids": [
+                "paper-016"
+              ],
+              "study_time": "April 2023 ATDN compilation; the underlying plot census dates vary and do not establish one map observation interval.",
+              "publications": [
+                {
+                  "id": "paper-016",
+                  "title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+                  "doi": "10.1038/s42003-023-05514-6",
+                  "url": "https://www.nature.com/articles/s42003-023-05514-6",
+                  "year": 2023
+                }
+              ],
+              "annotations": {
+                "row_ids": [
+                  "row-040"
+                ],
+                "limitations": [
+                  "Based on old-growth forest plots and interpolated over the original lowland forest extent; this is not a current forest-cover inventory."
+                ],
+                "temporal_note": "Catalog time is the source-file modification date, not a measurement date.",
+                "processing": "Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned."
+              }
+            },
+            "assets": {
+              "data": {
+                "location": "local",
+                "path": "amazon-tree-richness.asc",
+                "media_type": "text/plain",
+                "roles": [
+                  "data"
+                ],
+                "metadata": {
+                  "annotations": {
+                    "meaning": "Estimated species richness per hectare",
+                    "unit": "species ha-1",
+                    "source_format": "ESRI ASCII grid",
+                    "tree_definition": "Free-standing woody individuals with diameter at breast height at least 10 cm."
+                  }
+                }
+              },
+              "review_context": {
+                "location": "local",
+                "path": "review-context.json",
+                "media_type": "application/json",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Full review evidence and source history"
+                }
+              },
+              "source_repository": {
+                "location": "external",
+                "href": "https://doi.org/10.6084/m9.figshare.22786166.v2",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original dataset repository"
+                }
+              },
+              "publication": {
+                "location": "external",
+                "href": "https://www.nature.com/articles/s42003-023-05514-6",
+                "media_type": "text/html",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Research article"
+                }
+              },
+              "source_script": {
+                "location": "local",
+                "path": "source/TreeDiversityScript.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original map-generation script"
+                }
+              },
+              "source_functions": {
+                "location": "local",
+                "path": "source/TreeDiversityFunctions.R",
+                "media_type": "text/plain",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation functions"
+                }
+              },
+              "source_grid": {
+                "location": "local",
+                "path": "source/AmazonLowLandForestRaisg.csv",
+                "media_type": "text/csv",
+                "roles": [
+                  "metadata"
+                ],
+                "metadata": {
+                  "title": "Original interpolation-grid coordinates"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   "blocked": []

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+from evidence_notes import pilot_evidence_context
 from pathlib import Path
 import subprocess
 import sys
@@ -74,7 +75,7 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
         require(props['eolab:metadata'] == expected_metadata,
                 'Curated metadata or publication references changed during admission.')
         context_path = data_root / record['directory'] / declaration['assets']['review_context']['path']
-        require(json.loads(context_path.read_text(encoding='utf-8')) == record['review_context'],
+        require(json.loads(context_path.read_text(encoding='utf-8')) == pilot_evidence_context(record),
                 'Linked supporting evidence differs from the reviewed record.')
         for key, asset in declaration['assets'].items():
             admitted = item['assets'][key]

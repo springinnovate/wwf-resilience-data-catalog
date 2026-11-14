@@ -43,8 +43,8 @@
       4.585417
     ],
     "properties": {
-      "title": "Amazon river barriers: current and future scenarios",
-      "description": "Locations of 359 dams and 203 waterfalls used in the Amazon fish-connectivity study (562 points). Includes 293 current and 269 future scenario records.",
+      "title": "Amazon dams and waterfalls used to assess fish access to suitable habitat",
+      "description": "Dams can block fish from reaching suitable habitat as the climate changes. A study combining fish-distribution models with river connectivity found that the Amazon–Solimões corridor retains extensive connected, suitable habitat, while planned hydropower expansion and climate change could reduce such areas. This layer provides the dam and waterfall locations used to examine those risks and supports inspection of barriers relevant to energy and river-conservation planning. It contains current barriers and additional future-scenario records. The points are study inputs: the modeled habitat-access results and dam-impact rankings are not included in this layer.",
       "eolab:geopackage_layer": "barriers",
       "eolab:vector_source": {
         "kind": "mounted",
@@ -193,8 +193,8 @@
       "proj:epsg": 4326,
       "eolab:metadata": {
         "version": 1,
-        "title": "Amazon river barriers: current and future scenarios",
-        "description": "Locations of 359 dams and 203 waterfalls used in the Amazon fish-connectivity study (562 points). Includes 293 current and 269 future scenario records.",
+        "title": "Amazon dams and waterfalls used to assess fish access to suitable habitat",
+        "description": "Dams can block fish from reaching suitable habitat as the climate changes. A study combining fish-distribution models with river connectivity found that the Amazon–Solimões corridor retains extensive connected, suitable habitat, while planned hydropower expansion and climate change could reduce such areas. This layer provides the dam and waterfall locations used to examine those risks and supports inspection of barriers relevant to energy and river-conservation planning. It contains current barriers and additional future-scenario records. The points are study inputs: the modeled habitat-access results and dam-impact rankings are not included in this layer.",
         "keywords": [],
         "license": "CC-BY-4.0",
         "attribution": "Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly",
@@ -205,16 +205,14 @@
           "Drivers & Pressures"
         ],
         "risks": [],
-        "statuses": [
-          "Supporting input for sheet descriptions"
-        ],
+        "statuses": [],
         "study_ids": [
-          "paper-006"
+          "doi-10.1111-gcb.70685"
         ],
         "study_time": "Current and future barrier scenarios; observation and commissioning dates unknown.",
         "publications": [
           {
-            "id": "paper-006",
+            "id": "doi-10.1111-gcb.70685",
             "title": "Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change",
             "doi": "10.1111/gcb.70685",
             "citation": "Yofukuji et al. (2026). Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change. Global Change Biology 32:e70685. https://doi.org/10.1111/gcb.70685",
@@ -226,19 +224,15 @@
           }
         ],
         "annotations": {
-          "row_ids": [
-            "row-009",
-            "row-010",
-            "row-011",
-            "row-012"
-          ],
           "limitations": [
             "Connectivity indices and barrier-impact rankings are absent.",
             "Some auxiliary field definitions and relationships between dam-status columns are unresolved."
           ],
           "temporal_note": "Catalog time is the source-file modification date, not an observation or scenario date.",
           "processing": "Converted Shapefile to GeoPackage; all coordinates and 31 attributes retained.",
-          "attribution_note": "Retain the per-record Source attribution when reusing the data."
+          "attribution_note": "Retain the per-record Source attribution when reusing the data.",
+          "evidence_type": "Species-distribution and river-connectivity modeling",
+          "dataset_role": "Barrier-location inputs to the study"
         }
       },
       "license": "CC-BY-4.0",
@@ -622,6 +616,34 @@
           "annotations": {}
         },
         "title": "Source workflow part_1_add_barriers_FUTURE_SET.R"
+      },
+      "evidence_summary": {
+        "href": "/api/catalog/asset?collection=eolab-mounted-vectors&item=geopackage-332ac9b3fad2d687a9903529&asset=evidence_summary",
+        "type": "text/markdown",
+        "roles": [
+          "metadata"
+        ],
+        "eolab:access": {
+          "kind": "catalog"
+        },
+        "eolab:metadata": {
+          "version": 1,
+          "title": "Study findings, interpretation and sources",
+          "description": null,
+          "keywords": [],
+          "license": null,
+          "attribution": null,
+          "doi": null,
+          "citation": null,
+          "categories": [],
+          "risks": [],
+          "statuses": [],
+          "study_ids": [],
+          "study_time": null,
+          "publications": [],
+          "annotations": {}
+        },
+        "title": "Study findings, interpretation and sources"
       }
     }
   },
@@ -634,8 +656,8 @@
     "properties": {
       "eolab:metadata": {
         "version": 1,
-        "title": "ATTO monthly carbon fluxes, 2023",
-        "description": "Monthly net ecosystem exchange (NEE), gross primary productivity (GPP) and ecosystem respiration (Reco) at ATTO. Contains the twelve months of 2023, selected from the deposited 2014-2023 table.",
+        "title": "ATTO forest carbon exchange during the 2023 Amazon drought",
+        "description": "During the extreme 2023 drought, measurements near the Amazon Tall Tower Observatory showed that the local forest remained a net carbon sink over the year. The study associated this local response with reduced ecosystem respiration and sufficient soil moisture, while its wider regional analysis found a different carbon balance. This table provides monthly carbon uptake, respiration and net exchange for 2023, supporting investigation of local drought responses and checks on ecosystem models. The linked 2014–2023 source table provides the historical comparison. These tower measurements describe a local forest footprint and cannot establish the carbon balance of the whole Amazon.",
         "keywords": [],
         "license": "CC0-1.0",
         "attribution": "Botia et al. (2026), supporting datasets deposited in Edmond.",
@@ -645,16 +667,14 @@
           "Nature"
         ],
         "risks": [],
-        "statuses": [
-          "Matched to sheet description"
-        ],
+        "statuses": [],
         "study_ids": [
-          "paper-023"
+          "doi-10.1029-2025AV001658"
         ],
         "study_time": "Monthly flux totals for January through December 2023; Time is a month-end label.",
         "publications": [
           {
-            "id": "paper-023",
+            "id": "doi-10.1029-2025AV001658",
             "title": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
             "doi": "10.1029/2025AV001658",
             "citation": null,
@@ -666,18 +686,17 @@
           }
         ],
         "annotations": {
-          "row_ids": [
-            "row-053"
-          ],
           "limitations": [
             "Underlying half-hourly measurements and quality flags are not included.",
             "The source table's finalLat/finalLon describe air-trajectory endpoints, not the tower location."
           ],
-          "processing": "Selected 2023 and six columns; original values and numeric precision preserved."
+          "processing": "Selected 2023 and six columns; original values and numeric precision preserved.",
+          "evidence_type": "Local flux observations interpreted alongside regional models",
+          "dataset_role": "2023 monthly tower flux observations"
         }
       },
-      "title": "ATTO monthly carbon fluxes, 2023",
-      "description": "Monthly net ecosystem exchange (NEE), gross primary productivity (GPP) and ecosystem respiration (Reco) at ATTO. Contains the twelve months of 2023, selected from the deposited 2014-2023 table.",
+      "title": "ATTO forest carbon exchange during the 2023 Amazon drought",
+      "description": "During the extreme 2023 drought, measurements near the Amazon Tall Tower Observatory showed that the local forest remained a net carbon sink over the year. The study associated this local response with reduced ecosystem respiration and sufficient soil moisture, while its wider regional analysis found a different carbon balance. This table provides monthly carbon uptake, respiration and net exchange for 2023, supporting investigation of local drought responses and checks on ecosystem models. The linked 2014–2023 source table provides the historical comparison. These tower measurements describe a local forest footprint and cannot establish the carbon balance of the whole Amazon.",
       "license": "CC0-1.0",
       "eolab:descriptor_id": "wwf-atto-monthly-carbon-fluxes-2023",
       "datetime": null,
@@ -872,6 +891,34 @@
           }
         },
         "title": "Complete original 2014-2023 table"
+      },
+      "evidence_summary": {
+        "href": "/api/catalog/asset?collection=eolab-described-nonspatial&item=wwf-atto-monthly-carbon-fluxes-2023&asset=evidence_summary",
+        "type": "text/markdown",
+        "roles": [
+          "metadata"
+        ],
+        "eolab:access": {
+          "kind": "catalog"
+        },
+        "eolab:metadata": {
+          "version": 1,
+          "title": "Study findings, interpretation and sources",
+          "description": null,
+          "keywords": [],
+          "license": null,
+          "attribution": null,
+          "doi": null,
+          "citation": null,
+          "categories": [],
+          "risks": [],
+          "statuses": [],
+          "study_ids": [],
+          "study_time": null,
+          "publications": [],
+          "annotations": {}
+        },
+        "title": "Study findings, interpretation and sources"
       }
     }
   },
@@ -919,8 +966,8 @@
       30.85
     ],
     "properties": {
-      "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
-      "description": "Pan-tropical, 0.1-degree Tropical Forest Vulnerability Index for above-ground biomass. Negative values indicate vulnerability toward biomass loss; positive values toward higher biomass; values near zero indicate relative stability.",
+      "title": "Tropical forest biomass vulnerability to climate and land-use pressures",
+      "description": "Satellite observations show that tropical forests respond differently to climate and land-use pressures. The study found widespread vulnerability in the Americas and slower recovery of forest carbon cycling as stress increased. This map shows the biomass component of that assessment, helping identify regions for closer monitoring and conservation or restoration planning. Negative index values indicate vulnerability toward biomass loss, positive values toward higher biomass, and values near zero relative stability. It is a standardized diagnostic index based on observed relationships; it does not measure carbon stocks, predict a probability of collapse, or estimate the benefit of a restoration intervention.",
       "proj:shape": [
         649,
         3599
@@ -936,8 +983,8 @@
       "proj:epsg": 4326,
       "eolab:metadata": {
         "version": 1,
-        "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
-        "description": "Pan-tropical, 0.1-degree Tropical Forest Vulnerability Index for above-ground biomass. Negative values indicate vulnerability toward biomass loss; positive values toward higher biomass; values near zero indicate relative stability.",
+        "title": "Tropical forest biomass vulnerability to climate and land-use pressures",
+        "description": "Satellite observations show that tropical forests respond differently to climate and land-use pressures. The study found widespread vulnerability in the Americas and slower recovery of forest carbon cycling as stress increased. This map shows the biomass component of that assessment, helping identify regions for closer monitoring and conservation or restoration planning. Negative index values indicate vulnerability toward biomass loss, positive values toward higher biomass, and values near zero relative stability. It is a standardized diagnostic index based on observed relationships; it does not measure carbon stocks, predict a probability of collapse, or estimate the benefit of a restoration intervention.",
         "keywords": [],
         "license": "CC-BY-4.0",
         "attribution": "Saatchi et al. (2021)",
@@ -947,16 +994,14 @@
           "Nature"
         ],
         "risks": [],
-        "statuses": [
-          "Matched to sheet description"
-        ],
+        "statuses": [],
         "study_ids": [
-          "paper-010"
+          "doi-10.1016-j.oneear.2021.06.002"
         ],
         "study_time": "Above-ground biomass response observations: 2000-2018. Broader study and long-term stressor records: 1982-2018.",
         "publications": [
           {
-            "id": "paper-010",
+            "id": "doi-10.1016-j.oneear.2021.06.002",
             "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
             "doi": "10.1016/j.oneear.2021.06.002",
             "citation": "Saatchi, S., et al. (2021). Detecting vulnerability of humid tropical forests to multiple stressors. One Earth 4(7), 988-1003. https://doi.org/10.1016/j.oneear.2021.06.002",
@@ -968,15 +1013,14 @@
           }
         ],
         "annotations": {
-          "row_ids": [
-            "row-019"
-          ],
           "limitations": [
             "Standardized index; values are not probabilities, percentages or biomass stocks.",
             "Exact map observation dates are unresolved. Results describe correlations and assume stable model relationships over time."
           ],
           "temporal_note": "Catalog time is the source-file modification date. Documented scientific periods are listed under study time.",
-          "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
+          "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved.",
+          "evidence_type": "Satellite observations and statistical modeling",
+          "dataset_role": "Derived biomass vulnerability index"
         }
       },
       "license": "CC-BY-4.0",
@@ -1147,6 +1191,34 @@
           "annotations": {}
         },
         "title": "Unchanged source GeoTIFF"
+      },
+      "evidence_summary": {
+        "href": "/api/catalog/asset?collection=eolab-mounted-geotiffs&item=geotiff-078e371b1ec6f32fb43ab389&asset=evidence_summary",
+        "type": "text/markdown",
+        "roles": [
+          "metadata"
+        ],
+        "eolab:access": {
+          "kind": "catalog"
+        },
+        "eolab:metadata": {
+          "version": 1,
+          "title": "Study findings, interpretation and sources",
+          "description": null,
+          "keywords": [],
+          "license": null,
+          "attribution": null,
+          "doi": null,
+          "citation": null,
+          "categories": [],
+          "risks": [],
+          "statuses": [],
+          "study_ids": [],
+          "study_time": null,
+          "publications": [],
+          "annotations": {}
+        },
+        "title": "Study findings, interpretation and sources"
       }
     }
   }

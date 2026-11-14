@@ -5,37 +5,41 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: 'Brazil: additional heat-stress exposure from Amazon deforestation'
-  description: Twelve published Figure 3 estimates of additional people exposed to extreme heat stress
-    because of Amazon deforestation, under historical, RCP4.5 and RCP8.5 climates. Total Population and
-    its high-vulnerability subset are separate rows.
+  title: 'Brazil: additional heat exposure under Amazon savannization'
+  description: A worst-case climate-model experiment replacing all Amazon rainforest with savanna increased
+    estimated human heat exposure, especially under high emissions. In the late-century RCP8.5 scenario,
+    the study estimated more than 11 million additional people exposed to extreme in-shade heat stress,
+    including about 5.7 million in highly vulnerable communities. These are conditional estimates using
+    2019 population, not forecasts of population growth or observed health outcomes. This table contains
+    the 12 published Figure 3 estimates across historical and future climates, heat-exposure settings
+    and vulnerability groups. It supports comparing the modeled human consequences of forest loss; the
+    high-vulnerability figures are subsets of the totals and must not be added to them.
   license: CC-BY-4.0
   attribution: Oliveira et al. (2021)
   doi: 10.6084/m9.figshare.15128679.v1
   categories:
   - Climate
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-009
+  - doi-10.1038-s43247-021-00275-8
   study_time: 2019 population applied to historical and late-century climate scenarios; no population-growth
     projection.
   publications:
-  - id: paper-009
+  - id: doi-10.1038-s43247-021-00275-8
     title: Deforestation and climate change are projected to increase heat stress risk in the Brazilian
       Amazon
     doi: 10.1038/s43247-021-00275-8
     url: https://www.nature.com/articles/s43247-021-00275-8
     year: 2021
   annotations:
-    row_ids:
-    - row-018
     limitations:
     - Population is in millions. The high-vulnerability rows are part of the totals and must not be added
       to them.
     - These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent
       start years for its climate periods.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Climate-model scenario experiment with population exposure analysis
+    dataset_role: Published Figure 3 additional-exposure estimates, with municipal inputs retained as
+      supporting data.
 assets:
   data:
     location: local
@@ -139,3 +143,11 @@ assets:
     - metadata
     metadata:
       title: Municipal analysis source code
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

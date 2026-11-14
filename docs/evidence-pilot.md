@@ -22,7 +22,7 @@ The [public STAC preview](../evidence/pilot/reports/evidence_pilot_stac.json) is
 
 ## Metadata and remaining questions
 
-The [sidecar copies](../evidence/pilot/sidecars/) contain the catalog description, references, rights, variable meanings and essential limitations. “Matched to sheet description” and “Supporting input for sheet descriptions” describe the association with the original workbook; they do not certify scientific validity or suitability for a particular analysis.
+The [sidecar copies](../evidence/pilot/sidecars/) contain the catalog description, references, rights, variable meanings and essential limitations. The current descriptions explain the scientific findings, evidence type and the role of each file. Worksheet matching labels are retained only in the linked provenance. A separate `evidence-summary.md` note provides the study question, interpretation and source passages.
 
 Each dataset links to **Full review evidence and source history** (`review-context.json`). This preserves the original spreadsheet rows and matching records. Its `pilot_sidecar_snapshot` also preserves every field from the first pilot sidecar: detailed source citations, processing notes, checksums, technical inventories, complete field dictionaries, limitations and corrections. It is labeled as historical evidence so old comments and readiness judgments can be read in context. For ATTO, `pilot_sidecar_snapshot.metadata.annotations.pilot_corrections` explains the corrected date-column and coordinate interpretations.
 
@@ -33,7 +33,7 @@ The versioned [records](../evidence/pilot/records.json) are the authoring source
 - **Table corrections:** the date column is `Time`, not `TimeYearMonth`. The complete source's `finalLat` and `finalLon` are mean STILT backward-trajectory endpoints, not fixed ATTO coordinates. Those earlier matching annotations are preserved as history and corrected explicitly for this pilot. The complete source lacks May 2021; the 2023 subset has all twelve months.
 - **Source rights:** the raster and barrier package records declare CC-BY-4.0; the ATTO package declares CC0-1.0. Paper and dataset references remain separate. Article PDFs are not included in this delivery.
 
-The fisheries catch polygons were considered for the vector example but deferred: 147 of 198 source geometries failed validity checks. A later geometry-repair task would need to document its effects. The point layer lets this first pilot exercise EOLab without introducing that additional transformation.
+The initial pilot deferred the fisheries catch polygons after its reader reported invalid geometry. The [expanded delivery](prepared-evidence.md) now includes that layer, with a fresh reader check, documented repairs and preserved original data. Historical inspection results remain in its linked provenance.
 
 ## Rebuild the prepared files
 
@@ -55,14 +55,7 @@ The preparer refuses to overwrite an existing output directory and publishes the
 
 ### Refresh descriptions on an existing delivery
 
-After editing the records, set `WWF_EVIDENCE_OUTPUT` to the existing pilot directory and run:
-
-```powershell
-python scripts/prepare_evidence_pilot.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_OUTPUT" --refresh-metadata --report build/evidence-pilot.json --sidecar-dir evidence/pilot/sidecars
-python scripts/validate_evidence_pilot.py --data-root "$env:WWF_EVIDENCE_OUTPUT" --eolab-source "$env:EOLAB_SOURCE" --report build/evidence-admission.json --items build/evidence-stac.json
-```
-
-The refresh verifies source and delivered-file hashes before replacing the YAMLs, linked review-context files and preparation report. Scientific files retain their bytes and modification times. The report keeps the original transformation checks and records the metadata refresh separately. If files have changed unexpectedly, it stops for review. Changes to data selection or processing require a fresh build; the refresh also refuses changes to temporal declarations or local asset locations. Files are replaced individually, with rollback on reported errors. Wait for the refresh and validation to finish before rescanning.
+The pilot is now refreshed together with the remaining matched entries. Follow the [combined metadata refresh instructions](prepared-evidence.md#refresh-scientific-descriptions). They update all 24 descriptions and their linked scientific notes while preserving scientific files and catalog identities. The pilot-only refresh also understands scientific notes, but the combined command keeps this 24-entry delivery and its reports synchronized.
 
 After validation, use **Scan directories** in EOLab. The same dataset paths and identifiers are retained. A metadata refresh prepares the files for rescanning; it does not itself update the running catalog.
 

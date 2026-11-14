@@ -5,36 +5,39 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: 'Chaglla hydropower: mean and firm power scenarios'
-  description: 'Mean and firm power estimates for 16 land-management configurations under KNN-downscaled
-    climate scenarios. Contains 336 rows: three historical model combinations and 18 future combinations
-    per configuration.'
+  title: 'Chaglla hydropower: irrigation and climate scenarios'
+  description: Upstream irrigation can protect crop production while reducing downstream hydropower in
+    the upper Huallaga basin. Coupled watershed and reservoir models found that irrigation choices could
+    affect Chaglla’s firm power more strongly than climate change alone, making food, energy and ecosystem
+    objectives difficult to satisfy together. This table supplies 336 modeled mean- and firm-power summaries
+    for 16 land-management configurations under selected climate scenarios. It supports inspecting the
+    hydropower side of those comparisons; it is not the full multisector decision analysis or observed
+    electricity generation. Original scenario codes are retained because their mapping and exact period
+    bounds still need confirmation, as does the firm-power reliability criterion.
   license: CC-BY-4.0
   attribution: Ding et al. (2024)
   doi: 10.5281/zenodo.8161594
   categories:
   - Nature's Contributions to People
-  statuses:
-  - Matched to sheet description
   study_ids:
-  - paper-026
+  - doi-10.1038-s43247-024-01738-4
   study_time: Historical and three future climatology groups; exact period bounds differ between the paper
     and supplied code.
   publications:
-  - id: paper-026
+  - id: doi-10.1038-s43247-024-01738-4
     title: Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon
       headwaters
     doi: 10.1038/s43247-024-01738-4
     url: https://www.nature.com/articles/s43247-024-01738-4
     year: 2024
   annotations:
-    row_ids:
-    - row-067
     limitations:
     - Management and climatology codes retain the source labels; their complete mapping to paper scenario
       names and periods needs confirmation.
     - These are modeled summary power estimates, not a daily power series or measured generation.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Coupled watershed–reservoir modeling and climate/management scenario analysis
+    dataset_role: Selected modeled mean/firm-power outputs; a subset of the broader multisector analysis.
 assets:
   data:
     location: local
@@ -87,3 +90,11 @@ assets:
     - metadata
     metadata:
       title: Original scenario tables and preparation code
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

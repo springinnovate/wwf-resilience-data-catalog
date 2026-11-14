@@ -8,7 +8,7 @@ This pilot prepares one raster, one vector and one nonspatial table from the stu
 | Amazon river barriers | `amazon-barriers/amazon-barriers.gpkg` | 562 points: 359 dams and 203 waterfalls, with all 31 source attributes. | Supporting input locations, including current and future scenarios. These are not the missing connectivity indices or impact rankings. Some auxiliary field definitions remain unresolved. |
 | ATTO carbon fluxes, 2023 | `atto-fluxes-2023/atto-monthly-carbon-fluxes-2023.csv` | Twelve monthly records of NEE, GPP and ecosystem respiration, with their original date labels. | Monthly derivatives, not the original half-hourly measurements. The source's trajectory coordinates are not station coordinates. |
 
-The [three-row review table](../reports/evidence_pilot.csv) lists the files, references and checks.
+The [three-row review table](../evidence/pilot/reports/evidence_pilot.csv) lists the files, references and checks.
 
 These paths are relative to `processed-evidence-data/pilot/`. Each primary file has an adjacent `.eolab.yaml` sidecar. Original files are retained as supporting assets inside each dataset's `source/` directory. The original study-data collection is unchanged.
 
@@ -16,9 +16,9 @@ These paths are relative to `processed-evidence-data/pilot/`. Each primary file 
 
 The preparation script checks source hashes before processing. It compares every full-resolution raster value and mask, every vector coordinate and decoded attribute, and every selected table value with the originals. The spatial files retain EPSG:4326; no reprojection, clipping, coordinate inference or geometry repair is applied. Raster overviews use nearest-neighbour sampling for display.
 
-The EOLab check uses its existing filesystem discovery and native metadata readers, then its public metadata projection. It checks that supporting files do not become duplicate datasets, annotations and publication references survive, repeated discovery is stable, and public file links use catalog identities rather than machine paths. This is a local admission check, not a deployment or a write to a running STAC database. All three passed these local checks. The Docker service was unavailable, so no live HTTP/pgSTAC import was attempted. See the [preparation report](../reports/evidence_pilot.json) and [EOLab admission report](../reports/evidence_pilot_admission.json) for the actual results.
+The EOLab check uses its existing filesystem discovery and native metadata readers, then its public metadata projection. It checks that supporting files do not become duplicate datasets, annotations and publication references survive, repeated discovery is stable, and public file links use catalog identities rather than machine paths. This is a local admission check, not a deployment or a write to a running STAC database. All three passed these local checks. The Docker service was unavailable, so no live HTTP/pgSTAC import was attempted. See the [preparation report](../evidence/pilot/reports/evidence_pilot.json) and [EOLab admission report](../evidence/pilot/reports/evidence_pilot_admission.json) for the actual results.
 
-The [public STAC preview](../reports/evidence_pilot_stac.json) is an inspection artifact. Its local asset URLs become usable after the datasets are imported into EOLab; the preview is not a standalone hosted catalog.
+The [public STAC preview](../evidence/pilot/reports/evidence_pilot_stac.json) is an inspection artifact. Its local asset URLs become usable after the datasets are imported into EOLab; the preview is not a standalone hosted catalog.
 
 ## Metadata and remaining questions
 

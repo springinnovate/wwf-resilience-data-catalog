@@ -1,0 +1,3636 @@
+[
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/amazon_basin_deforestation_90m_EPSG4326_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 30448238,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/amazon_basin_LBA_LC07_RECLASS_ONLY_WETLANDS.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "Wetland extent/mask input for wetland resistance/connectivity construction, not final connectivity polygons.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 24157696,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 193114620,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1643,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 38826196,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2016.txt",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 804,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.html",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 205718960,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 480,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 46344184,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2017.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.html",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 197173674,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1359,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 41812540,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2018.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.html",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 211684254,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1363,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 51865898,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2019.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.html",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 214207784,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1361,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 53602138,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2020.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.html",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 59140,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 519761,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tfw",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 82,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 194155498,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif.aux.xml",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1359,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif.ovr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 45417206,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif.vat.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 488,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/AreasQuemadas2016_2021/AQS2GEE_amazon_2021.tif.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 563,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 90841041,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 147226,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 208944,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 11776,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.sbn",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 944548,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.sbx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 34940,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 122889644,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.shp.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 390564,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/mineria2023/mineria.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 780684,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 3212,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 667,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 8816404,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_all_types_from_buffered_0.008333.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 108,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 44610,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 89978,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 266844,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 7168,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.sbn",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 444,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.sbx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 132,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 1598776,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 356,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln_buffered_0.008333.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln_buffered_0.008333.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1923,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln_buffered_0.008333.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 667,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln_buffered_0.008333.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 1447548,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_ln_buffered_0.008333.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 108,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5388738,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 96438,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 274704,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 9216,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.sbn",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 35596,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.sbx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1028,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 12723604,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pol.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 30628,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1572476,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/mineriaIlegal_pt.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 90660,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/mineriaIlegal_pt.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 287374,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 13824,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.sbn",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 7908,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.sbx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 412,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 22892,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 6612,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt_buffered_0.008333.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt_buffered_0.008333.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 2573,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt_buffered_0.008333.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 667,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt_buffered_0.008333.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 199840,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/MineriaIlegal_2022/MineriaIlegal_pt_buffered_0.008333.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 108,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 270061,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 137622,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 153253,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.lyr",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 10240,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.qix",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 8680,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 492548,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.shp.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 292718,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/petroleo2023/petroleo.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 2732,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 40222320,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.htm",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 66902,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.jpg",
+    "selector": "Source preview/thumbnail image.",
+    "disposition": "figure",
+    "row_ids": [
+      33
+    ],
+    "reason": "Illustrative preview of source geospatial data, not the underlying spatial asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1088583,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.jpg.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 3577,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 145,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.sbn",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 10801700,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.sbx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 166516,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 227236472,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.shp.xml",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 6061,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/quemas2020_2019/quemas2000_2019.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 10380020,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_dams_LESS_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2815051,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_dams_MORE_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2835733,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_dams_underconstruction.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2792439,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_deforestation_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 8747321,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_land_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5279998,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_land_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5707800,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_petrol_produccion_exploration_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2991959,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_rivers_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32,
+      33
+    ],
+    "reason": "River extent/mask input for river connectivity and natural-barrier contribution to terrestrial resistance.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3728288,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_rivers_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32,
+      33
+    ],
+    "reason": "River extent/mask input for river connectivity and natural-barrier contribution to terrestrial resistance.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3728292,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_amazon_basin_roads_railroads_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3204550,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/r_burned_years_between_2016_2021_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 8086689,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 140343,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 3997,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 7696,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_LESS_than_10MWpot.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1788,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 90618,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [
+      33
+    ],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 3997,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 4996,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_1SPAnew2024_Analysis_raster_DATASET.zip",
+    "member": "_1SPAnew2024_Analysis_raster_DATASET/under_operation_dams_MORE_than_10MWpot.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [
+      33
+    ],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1188,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/resLand_EPSG5641.tif",
+    "selector": "Whole resistance raster; units/CRS metadata require usual ingestion validation.",
+    "disposition": "matched_data",
+    "row_ids": [
+      33
+    ],
+    "reason": "Terrestrial cumulative anthropogenic/natural-barrier resistance raster, explicitly written by resistance script; repeated in stages 2 and 3.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R:42-76"
+    ],
+    "uncompressed_bytes": 17798644,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/resRivers_EPSG5641.tif",
+    "selector": "Whole ecosystem-specific resistance raster.",
+    "disposition": "related_input",
+    "row_ids": [
+      32
+    ],
+    "reason": "River/wetland resistance surface is an upstream input to requested connectivity units. It is not the terrestrial cumulative-resistance row 33 nor the final polygons.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 6580276,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/resWetlands_EPSG5641.tif",
+    "selector": "Whole ecosystem-specific resistance raster.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "River/wetland resistance surface is an upstream input to requested connectivity units. It is not the terrestrial cumulative-resistance row 33 nor the final polygons.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 15367044,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_burned_2000_2019_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 4854359,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_dams_LESS_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2815051,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_dams_MORE_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2835733,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_dams_underconstruction.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2792439,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_deforestation_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 8747321,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_land_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5279998,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_land_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5707800,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_mask_180m_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2561926,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_mining_concesion_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2964289,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_mining_explotation_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3520600,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_mining_illegal_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3019551,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_petrol_produccion_exploration_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2991959,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_rivers_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32,
+      33
+    ],
+    "reason": "River extent/mask input for river connectivity and natural-barrier contribution to terrestrial resistance.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3728292,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_roads_railroads_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3204550,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "member": "_2SPAnew2024_Resistance_analysis_DATASET/r_amazon_basin_wetlands_EXPANDED1PIXEL_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "Wetland extent/mask input for wetland resistance/connectivity construction, not final connectivity polygons.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 120743008,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/resLand_EPSG5641.tif",
+    "selector": "Whole resistance raster; units/CRS metadata require usual ingestion validation.",
+    "disposition": "matched_data",
+    "row_ids": [
+      33
+    ],
+    "reason": "Terrestrial cumulative anthropogenic/natural-barrier resistance raster, explicitly written by resistance script; repeated in stages 2 and 3.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R:42-76"
+    ],
+    "uncompressed_bytes": 17798644,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/resRivers_EPSG5641.tif",
+    "selector": "Whole ecosystem-specific resistance raster.",
+    "disposition": "related_input",
+    "row_ids": [
+      32
+    ],
+    "reason": "River/wetland resistance surface is an upstream input to requested connectivity units. It is not the terrestrial cumulative-resistance row 33 nor the final polygons.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 6580276,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/resWetlands_EPSG5641.tif",
+    "selector": "Whole ecosystem-specific resistance raster.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "River/wetland resistance surface is an upstream input to requested connectivity units. It is not the terrestrial cumulative-resistance row 33 nor the final polygons.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 15367044,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/rivers_patches_20k_INT1U_EPSG5641.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32
+    ],
+    "reason": "Lattice patch geometry used in the minimum-planar-graph connectivity analysis.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 2177115,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalaranalysis_landMPG_nThresh500.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 10279,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalaranalysis_landMPG_WITH_DERIVATIVES.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 6074,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalaranalysis_riversMPG_nThresh200.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 4581,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalaranalysis_riversMPG_WITH_DERIVATIVES.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 24393,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalarAnalysis_wetlandsMPG_nThresh100.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 1933,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/scalaranalysis_wetlandsMPG_WITH_DERIVATIVES.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Scalar threshold-response/derivative analysis output, not a resistance map or a requested-threshold polygon dataset.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 18173,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/wetlands_patches_20k_EPSG5641.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "Lattice patch geometry used in the minimum-planar-graph connectivity analysis.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 2176931,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/_landMPG_lat200.rds",
+    "selector": "Serialized minimum-planar-graph object; not inspected by executing R.",
+    "disposition": "related_input",
+    "row_ids": [
+      34
+    ],
+    "reason": "Saved minimum-planar-graph object used as an intermediate to derive connectivity grains; not final polygons.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 24533612,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/_riversMPG_lat20k.rds",
+    "selector": "Serialized minimum-planar-graph object; not inspected by executing R.",
+    "disposition": "related_input",
+    "row_ids": [
+      32
+    ],
+    "reason": "Saved minimum-planar-graph object used as an intermediate to derive connectivity grains; not final polygons.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 16448582,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip",
+    "member": "_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET/_wetlandsMPG_lat20k.rds",
+    "selector": "Serialized minimum-planar-graph object; not inspected by executing R.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "Saved minimum-planar-graph object used as an intermediate to derive connectivity grains; not final polygons.",
+    "code_provenance": [
+      "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape.R"
+    ],
+    "uncompressed_bytes": 47556137,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_burned_2000_2019_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 4854359,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_dams_LESS_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2815051,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_dams_MORE_than_10MWpot.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2835733,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_dams_underconstruction.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2792439,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_deforestation_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 8747321,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_land_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5279998,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_land_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5707800,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_mask_180m_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2561926,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_mining_concesion_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2964289,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_mining_explotation_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3520600,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_mining_illegal_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3019551,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_petrol_produccion_exploration_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 2991959,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_rivers_EXPANDED1PIXEL_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32,
+      33
+    ],
+    "reason": "River extent/mask input for river connectivity and natural-barrier contribution to terrestrial resistance.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3833033,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_rivers_MASK_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      32,
+      33
+    ],
+    "reason": "River extent/mask input for river connectivity and natural-barrier contribution to terrestrial resistance.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3728292,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_roads_railroads_INT2S.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33
+    ],
+    "reason": "Source pressure/land-domain data (fire, deforestation, mining, petroleum, dams, roads or basin mask) used to construct resistance; not the cumulative resistance result.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 3204550,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/r_amazon_basin_wetlands_EXPANDED1PIXEL_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      31
+    ],
+    "reason": "Wetland extent/mask input for wetland resistance/connectivity construction, not final connectivity polygons.",
+    "code_provenance": [
+      "28089815/_1SPAnew2024_Analysis_raster.R",
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 4683271,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/Table S4.docx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sensitivity-analysis output for perturbed resistance coefficients. Table S4 DOCX confirms maximum-curvature summaries; neither replicate workbooks nor these table exports are described assets.",
+    "code_provenance": [
+      "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS.R"
+    ],
+    "uncompressed_bytes": 153289,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/_SENSITIVITY_ANALYSIS_WETLANDS_100_replicates.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sensitivity-analysis output for perturbed resistance coefficients. Table S4 DOCX confirms maximum-curvature summaries; neither replicate workbooks nor these table exports are described assets.",
+    "code_provenance": [
+      "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS.R"
+    ],
+    "uncompressed_bytes": 12542,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/_SENSITIVITY_ANALYSIS_LAND_100_replicates.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sensitivity-analysis output for perturbed resistance coefficients. Table S4 DOCX confirms maximum-curvature summaries; neither replicate workbooks nor these table exports are described assets.",
+    "code_provenance": [
+      "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS.R"
+    ],
+    "uncompressed_bytes": 12692,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/_SENSITIVITY_ANALYSIS_RIVERS_100_replicates.xlsx",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sensitivity-analysis output for perturbed resistance coefficients. Table S4 DOCX confirms maximum-curvature summaries; neither replicate workbooks nor these table exports are described assets.",
+    "code_provenance": [
+      "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS.R"
+    ],
+    "uncompressed_bytes": 12655,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET.zip",
+    "member": "_4SPAnew2024_SENSITIVITY_ANALYSIS_DATASET/Table S4.pdf",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sensitivity-analysis output for perturbed resistance coefficients. Table S4 DOCX confirms maximum-curvature summaries; neither replicate workbooks nor these table exports are described assets.",
+    "code_provenance": [
+      "28089815/_4SPAnew2024_SENSITIVITY_ANALYSIS.R"
+    ],
+    "uncompressed_bytes": 107169,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/amazon_basin_limits_LBA_LC07_EPSG4326_v.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/amazon_basin_limits_LBA_LC07_EPSG4326_v.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 181,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/amazon_basin_limits_LBA_LC07_EPSG4326_v.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 145,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/amazon_basin_limits_LBA_LC07_EPSG4326_v.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 1252088,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/amazon_basin_limits_LBA_LC07_EPSG4326_v.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 108,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 986700,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1109,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 25168400,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_direct_WITH_INCONGRUENCES.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 4436,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 310032,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1109,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 13646088,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/ANP_INdirect_ONLY.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1460,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/landuse_samplingGrid.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 25113255,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/landuse_VALUES_1_2_3_4_5_6.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 18613796,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/r_amazon_basin_land_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5279998,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 2409,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.idm",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 235,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.ind",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 6144,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 145,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 1281928,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/sampling_grid_0.16667dd.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 1804,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.cpg",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 5,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.dbf",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 11137213,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.prj",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 151,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.qmd",
+    "selector": "Source metadata, explanatory text or QGIS metadata.",
+    "disposition": "documentation",
+    "row_ids": [],
+    "reason": "Documentation accompanying a source input or GIS layer; not a scientific observation or final connectivity asset.",
+    "code_provenance": [],
+    "uncompressed_bytes": 666,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.shp",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 107809616,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_5SPAnew2024_raster_intersections_preparation1_DATASET.zip",
+    "member": "_5SPAnew2024_raster_intersections_preparation1_DATASET/Tis_territoriosIndigenas_edited_CLIPPED.shx",
+    "selector": "GIS attribute/projection/index/style/overview component; preserve with the same-stem parent asset.",
+    "disposition": "sidecar",
+    "row_ids": [],
+    "reason": "Supporting component of a source raster/vector; not a standalone final connectivity data product.",
+    "code_provenance": [],
+    "uncompressed_bytes": 54060,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/landuse_1_unprotected.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 11253596,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/landuse_samplingGrid.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 25113255,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/landuse_VALUES_1_2_3_4_5_6.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [],
+    "reason": "Protected-area/Indigenous-territory, land-use or sampling-grid input for subsequent land-use/intersection analyses; those analyses are not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_5SPAnew2024_raster_intersections_preparation1.R",
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 18613796,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/land_GOC_lattice_218_voronoi.tif",
+    "selector": "Whole alternate-threshold raster.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Alternate connectivity threshold product (not wetland 0, river 35 or terrestrial 225). No sheet row specifically describes this threshold; do not merge it into requested geometry.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 38057023,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/land_GOC_lattice_225_voronoi.tif",
+    "selector": "Whole raster connectivity-unit IDs; precursor to dissolved polygons, not polygon geometry.",
+    "disposition": "partial_data",
+    "row_ids": [
+      34
+    ],
+    "reason": "Rasterized connectivity units for the requested terrestrial threshold 225; the row requests polygons, whose POLYGONIZED shapefile outputs are not supplied. Terrestrial row also describes centroids/kernel density, not supplied by this raster.",
+    "code_provenance": [
+      "28089815/_8SPAnew2024_polygonize.R:48-67"
+    ],
+    "uncompressed_bytes": 36356156,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/land_GOC_lattice_247_voronoi.tif",
+    "selector": "Whole alternate-threshold raster.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Alternate connectivity threshold product (not wetland 0, river 35 or terrestrial 225). No sheet row specifically describes this threshold; do not merge it into requested geometry.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 32059002,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/rivers_GOC_lattice_103_voronoi.tif",
+    "selector": "Whole alternate-threshold raster.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Alternate connectivity threshold product (not wetland 0, river 35 or terrestrial 225). No sheet row specifically describes this threshold; do not merge it into requested geometry.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 11594579,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/rivers_GOC_lattice_35_voronoi.tif",
+    "selector": "Whole raster connectivity-unit IDs; precursor to dissolved polygons, not polygon geometry.",
+    "disposition": "partial_data",
+    "row_ids": [
+      32
+    ],
+    "reason": "Rasterized connectivity units for the requested river threshold 35; the row requests polygons, whose POLYGONIZED shapefile outputs are not supplied. Terrestrial row also describes centroids/kernel density, not supplied by this raster.",
+    "code_provenance": [
+      "28089815/_8SPAnew2024_polygonize.R:73-91"
+    ],
+    "uncompressed_bytes": 12035027,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/rivers_GOC_lattice_69_voronoi.tif",
+    "selector": "Whole alternate-threshold raster.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Alternate connectivity threshold product (not wetland 0, river 35 or terrestrial 225). No sheet row specifically describes this threshold; do not merge it into requested geometry.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 11768591,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/r_amazon_basin_land_INT1U.tif",
+    "selector": "Whole source mask, pressure layer, patch geometry or land-use/reference layer.",
+    "disposition": "related_input",
+    "row_ids": [
+      33,
+      34
+    ],
+    "reason": "Land mask/domain input for resistance and terrestrial connectivity, not a computed resistance or connectivity-unit asset.",
+    "code_provenance": [
+      "28089815/_2SPAnew2024_Resistance_analysis.R"
+    ],
+    "uncompressed_bytes": 5279998,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/wetlands_GOC_lat20k_0_voronoi.tif",
+    "selector": "Whole raster connectivity-unit IDs; precursor to dissolved polygons, not polygon geometry.",
+    "disposition": "partial_data",
+    "row_ids": [
+      31
+    ],
+    "reason": "Rasterized connectivity units for the requested wetland threshold 0; the row requests polygons, whose POLYGONIZED shapefile outputs are not supplied. Terrestrial row also describes centroids/kernel density, not supplied by this raster.",
+    "code_provenance": [
+      "28089815/_8SPAnew2024_polygonize.R:127-144"
+    ],
+    "uncompressed_bytes": 60921846,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/wetlands_GOC_lat20k_1163_voronoi.tif",
+    "selector": "Whole alternate-threshold raster.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Alternate connectivity threshold product (not wetland 0, river 35 or terrestrial 225). No sheet row specifically describes this threshold; do not merge it into requested geometry.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 26604791,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_INTERSECTED_samplingGrid_landuse.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Large per-cell sampling-grid/land-use intersection table; an intermediate statistical dataset not described by rows 31-34.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R"
+    ],
+    "uncompressed_bytes": 3326524076,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_LAND_lg218.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 32320,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_LAND_lg225.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 32301,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_LAND_lg247.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 32238,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_RIVERS_rg103.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 24542,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_RIVERS_rg35.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 24571,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_RIVERS_rg69.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 24560,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_WETLANDS_wg0.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 27659,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  },
+  {
+    "outer_path": "28089815/_6SPAnew2024_raster_intersections_preparation2_DATASET.zip",
+    "member": "_6SPAnew2024_raster_intersections_preparation2_DATASET/_table_for_glmm_analyses_WETLANDS_wg1163.csv",
+    "selector": "Whole statistical/analysis product.",
+    "disposition": "unmatched_data",
+    "row_ids": [],
+    "reason": "Sampling-grid/land-use aggregate table for GLMM analyses, not requested polygons or resistance raster; even requested-threshold tables have different aggregation and variables.",
+    "code_provenance": [
+      "28089815/_6SPAnew2024_raster_intersections_preparation2.R",
+      "28089815/_7SPAnew2024_GrainsOfConnectivity_Grainscape_GroupsComparison_GLMER.Rmd"
+    ],
+    "uncompressed_bytes": 27200,
+    "inspection": "Archive central-directory identity and relevant R-code provenance; bulk raster arrays not read/extracted."
+  }
+]

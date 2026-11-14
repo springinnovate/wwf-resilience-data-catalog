@@ -1,0 +1,1056 @@
+{
+  "search_date": "2026-11-13",
+  "search_timezone": "America/Los_Angeles",
+  "report_timestamp_utc": "2026-11-14T03:23:04+00:00",
+  "local_directory": "C:\\Users\\richp\\Downloads\\wwf-resilience-articles",
+  "scope": "The 30 article identities from the original supplied description sheet. Articles are stored locally outside the Git repository.",
+  "records": [
+    {
+      "paper_id": "paper-001",
+      "status": "Download blocked",
+      "source_name": "ResearchGate",
+      "found_url": "https://www.researchgate.net/publication/407245451_A_first_glimpse_into_the_Selva_stingless_bee_diversity_and_plant-bee_links_inferred_from_adhered_pollen_in_the_Peruvian_Amazon",
+      "download_url": "",
+      "human_url": "https://www.researchgate.net/publication/407245451_A_first_glimpse_into_the_Selva_stingless_bee_diversity_and_plant-bee_links_inferred_from_adhered_pollen_in_the_Peruvian_Amazon",
+      "filename": "",
+      "copy_version": "Not downloaded",
+      "reader_note": "ResearchGate lists full text; automated download returned 403. Sapienza requires institutional login. Manual download is unverified.",
+      "detailed_notes": [
+        "Publisher displays a subscription preview and offers institutional login or purchase. No purchase attempted.",
+        "Sapienza repository exposes an article filename, but retrieval redirects to institutional login.",
+        "ResearchGate labels its author-provided full text available; both page and PDF requests returned HTTP 403. A person can try its Download full-text PDF control or institutional access. No article copy was saved."
+      ],
+      "attempts": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s11829-026-10257-2.pdf",
+          "outcome": "Returned HTML cookie/preview page rather than PDF"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s11829-026-10257-2",
+          "outcome": "Returned HTML cookie/preview page rather than PDF"
+        },
+        {
+          "url": "https://iris.uniroma1.it/handle/11573/1776053",
+          "outcome": "Returned non-PDF A first glimpse into the Selva: stingless bee diversity and plant-bee links inferred from adhered pollen in the Peruvian Amazon"
+        },
+        {
+          "url": "https://iris.uniroma1.it/retrieve/d7ed3a28-08bd-44ed-b92b-c0fd82270a43/Baikova_first-glimpse-into_2026.pdf",
+          "outcome": "Redirected to institutional login; no PDF retrieved"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/407245451_A_first_glimpse_into_the_Selva_stingless_bee_diversity_and_plant-bee_links_inferred_from_adhered_pollen_in_the_Peruvian_Amazon",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.researchgate.net/profile/Emiliano-Mancini/publication/407245451_A_first_glimpse_into_the_Selva_stingless_bee_diversity_and_plant-bee_links_inferred_from_adhered_pollen_in_the_Peruvian_Amazon/links/6a37a6e9d551e312d7210586/A-first-glimpse-into-the-Selva-stingless-bee-diversity-and-plant-bee-links-inferred-from-adhered-pollen-in-the-Peruvian-Amazon.pdf",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-002",
+      "status": "Downloaded",
+      "source_name": "University of Liege (ORBi)",
+      "found_url": "https://orbi.uliege.be/handle/2268/346852",
+      "download_url": "https://orbi.uliege.be/bitstream/2268/346852/1/sciadv.adz1923.pdf",
+      "human_url": "",
+      "filename": "paper-002_carbon-losses-and-gains.pdf",
+      "copy_version": "Published version (repository labels file author postprint)",
+      "reader_note": "Journal-formatted article plus citation page; ORBi labels this copy an author postprint.",
+      "detailed_notes": [
+        "Downloaded the complete journal-formatted article from the University of Liege ORBi repository: 21 article pages plus a citation page (22 PDF pages).",
+        "ORBi labels this file Author postprint; the PDF itself has Science Advances published layout, volume/article number, publication date, and DOI.",
+        "Science returned HTTP 403; PMC PDF returned an HTML download interstitial and Europe PMC returned HTTP 403."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.science.org/doi/pdf/10.1126/sciadv.adz1923",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13330863/",
+          "outcome": "Returned non-PDF \n            A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration - PMC\n        "
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13330863/pdf/sciadv.adz1923.pdf",
+          "outcome": "Returned non-PDF Preparing to download ..."
+        },
+        {
+          "url": "https://orbi.uliege.be/handle/2268/346852",
+          "outcome": "Returned non-PDF ORBi: A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration. - 2026"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC13330863?pdf=render",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://orbi.uliege.be/bitstream/2268/346852/1/sciadv.adz1923.pdf",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        }
+      ],
+      "sha256": "aae6b67d7cb05bafcd21ad2a416e88e6edb891d226ae461a8eda566fb7cfde1c",
+      "pages": 22,
+      "size_bytes": 1768216
+    },
+    {
+      "paper_id": "paper-003",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s43247-025-02606-5.pdf",
+      "download_url": "https://www.nature.com/articles/s43247-025-02606-5.pdf",
+      "human_url": "",
+      "filename": "paper-003_amazon-dieback.pdf",
+      "copy_version": "Published version",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Downloaded the published 14-page PDF directly from Nature.",
+        "An alternative 14-page copy at the German National Library also validated; only one local copy was retained."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s43247-025-02606-5.pdf",
+          "outcome": "Returned HTML cookie/preview page rather than PDF"
+        },
+        {
+          "url": "https://d-nb.info/1379344832/34",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        }
+      ],
+      "sha256": "31232a2b93e874d5a526576b85e539c7f98ee4670c8de8b963560d95bb700245",
+      "pages": 14,
+      "size_bytes": 3829285
+    },
+    {
+      "paper_id": "paper-004",
+      "status": "No open copy found",
+      "source_name": "Science",
+      "found_url": "https://www.science.org/doi/10.1126/science.adz8296",
+      "download_url": "",
+      "human_url": "https://www.science.org/doi/10.1126/science.adz8296",
+      "filename": "",
+      "copy_version": "Not downloaded",
+      "reader_note": "No open manuscript located. Science blocked access; try institutional access or request a copy from the authors.",
+      "detailed_notes": [
+        "Publisher article page and PDF both returned HTTP 403.",
+        "NOAA publication/data pages and the author publication page identify the paper but link back to Science; no downloadable article was exposed there. Supporting datasets were not substituted for the article.",
+        "Europe PMC reports not open access, not in PMC, and no PDF. Searches of the title/DOI, author sites and NOAA repository did not locate an accessible author manuscript.",
+        "A person can try the Science article page through institutional access or request a copy from the authors. No article copy was saved.",
+        "Focused second pass queried the NOAA Institutional Repository API for all OAR and Cooperative Institutes records modified during 2026: 3,130 and 1,672 records respectively, with no exact article title/DOI match. The API did return five other Dror articles, including the distinct August 2026 Earth's Future paper; none was substituted.",
+        "OSTI API exact DOI search returned zero records. NOAA news and CU Boulder bibliographic records link to the Science DOI but expose no article copy. Additional DOI/title/preprint searches found no accessible open copy."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.science.org/doi/pdf/10.1126/science.adz8296",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://csl.noaa.gov/groups/csl9/datasets/",
+          "outcome": "Returned non-PDF NOAA CSL: Clouds, Aerosol, &amp; Climate: Data Sets"
+        },
+        {
+          "url": "https://csl.noaa.gov/groups/csl9/pubs.html",
+          "outcome": "Returned non-PDF NOAA CSL: Clouds, Aerosol, &amp; Climate: Publications"
+        },
+        {
+          "url": "https://tomadror.github.io/tomdror/",
+          "outcome": "Returned non-PDF Tom Dror"
+        },
+        {
+          "url": "https://www.science.org/doi/10.1126/science.adz8296",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1126/science.adz8296&format=json",
+          "outcome": "Article record reports isOpenAccess=N, inPMC=N, hasPDF=N."
+        },
+        {
+          "url": "https://repository.library.noaa.gov/fedora/export/view/collection/noaa:7?from=2026-01-01T00%3A00%3A00Z&until=2026-11-14T00%3A00%3A00Z&rows=10000",
+          "outcome": "Read all 3,130 returned 2026-modified collection records; no exact title or DOI match. Other Dror papers present but are different articles."
+        },
+        {
+          "url": "https://repository.library.noaa.gov/fedora/export/view/collection/noaa:23649?from=2026-01-01T00%3A00%3A00Z&until=2026-11-14T00%3A00%3A00Z&rows=10000",
+          "outcome": "Read all 1,672 returned 2026-modified collection records; no exact title or DOI match. Other Dror papers present but are different articles."
+        },
+        {
+          "url": "https://www.osti.gov/api/v1/records?search=10.1126%2Fscience.adz8296",
+          "outcome": "Exact DOI search returned zero records."
+        },
+        {
+          "url": "https://csl.noaa.gov/news/2026/441_0423.html",
+          "outcome": "Institutional news summary plus abstract and DOI link; no article PDF/full manuscript link."
+        },
+        {
+          "url": "https://vivo.colorado.edu/display/pubid_512360",
+          "outcome": "Institutional bibliographic record links only to article DOI; no full-text copy exposed."
+        },
+        {
+          "url": "https://csl.noaa.gov/pubs/",
+          "outcome": "Publication portal links to a bibliographic PDF and NOAA IR OAR collection. The bibliography request timed out; collection API was checked independently."
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-005",
+      "status": "Downloaded",
+      "source_name": "University of Groningen",
+      "found_url": "https://pure.rug.nl/ws/files/176729920/s41586_021_03629_6.pdf",
+      "download_url": "https://pure.rug.nl/ws/files/176729920/s41586_021_03629_6.pdf",
+      "human_url": "",
+      "filename": "paper-005_amazonia-carbon-source.pdf",
+      "copy_version": "Published version",
+      "reader_note": "Published article with a university repository cover and extended material.",
+      "detailed_notes": [
+        "Downloaded the publisher version hosted by the University of Groningen repository, with a repository cover and extended article material (21 PDF pages).",
+        "The Nature PDF request redirected to an HTML cookie/preview page. The institutional repository explicitly identifies its file as the publisher PDF/version of record."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41586-021-03629-6.pdf",
+          "outcome": "Returned HTML cookie/preview page rather than PDF"
+        },
+        {
+          "url": "https://pure.rug.nl/ws/files/176729920/s41586_021_03629_6.pdf",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        }
+      ],
+      "sha256": "9aad03cdb581b974f9c838a729275338df936e5e72104b1c7ca264daca04b064",
+      "pages": 21,
+      "size_bytes": 12301512
+    },
+    {
+      "paper_id": "paper-006",
+      "status": "Downloaded",
+      "source_name": "PubMed Central",
+      "found_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12759175/",
+      "download_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12759175.1/PMC12759175.1.pdf",
+      "human_url": "",
+      "filename": "paper-006_fish-access-climate-change.pdf",
+      "copy_version": "Published version",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Downloaded the published 13-page article through the official PMC Cloud Service.",
+        "PMC JSON metadata confirms the DOI/title, is_manuscript=false, and CC BY license; its PDF checksum matches the saved file.",
+        "Wiley PDF endpoints returned HTTP 403; the ordinary PMC PDF endpoint returned an HTML interstitial and Europe PMC returned HTTP 403.",
+        "The old PMC OA Web Service returned HTTP 404; official documentation confirms its 2026 retirement in favor of the public Cloud Service."
+      ],
+      "attempts": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.70685",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12759175/",
+          "outcome": "Returned non-PDF \n            Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change - PMC\n        "
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12759175/pdf/GCB-32-e70685.pdf",
+          "outcome": "Returned non-PDF Preparing to download ..."
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC12759175?pdf=render",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1111/gcb.70685",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12759175.1/PMC12759175.1.pdf",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12759175.1/PMC12759175.1.json",
+          "outcome": "Metadata verifies title, DOI, published version, CC BY license and matching PDF MD5."
+        }
+      ],
+      "sha256": "d6b5834894c0fc2dbb89fcd718abec31111bc7f15a8811f919bff358352b46ab",
+      "pages": 13,
+      "size_bytes": 8702321
+    },
+    {
+      "paper_id": "paper-007",
+      "status": "Downloaded",
+      "source_name": "Ifremer",
+      "found_url": "https://archimer.ifremer.fr/doc/00776/88847/94474.pdf",
+      "download_url": "https://archimer.ifremer.fr/doc/00776/88847/94474.pdf",
+      "human_url": "",
+      "filename": "paper-007_fisheries-resilience.pdf",
+      "copy_version": "Published version",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Downloaded the published 10-page article from the Ifremer institutional repository.",
+        "Royal Society publisher PDF request returned HTTP 403. Alternative search also located the article at IRD and IIAP; only one local copy was retained."
+      ],
+      "attempts": [
+        {
+          "url": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2022.0726",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://archimer.ifremer.fr/doc/00776/88847/94474.pdf",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        }
+      ],
+      "sha256": "bf9c5518b831cbdffa7be4397b2d6241306f11038739dea706028e1d8e7d1326",
+      "pages": 10,
+      "size_bytes": 1259823
+    },
+    {
+      "paper_id": "paper-008",
+      "status": "Downloaded",
+      "source_name": "MDPI",
+      "found_url": "https://www.mdpi.com/2073-445X/15/7/1322",
+      "download_url": "https://mdpi-res.com/d_attachment/land/land-15-01322/article_deploy/land-15-01322.pdf",
+      "human_url": "",
+      "filename": "paper-008_cocoa-socio-biodiversity.pdf",
+      "copy_version": "Published version",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Downloaded the published 31-page PDF from the MDPI publisher asset server.",
+        "MDPI article/PDF endpoints returned a non-article HTML interstitial to the HTTP client. The public publisher PDF asset validated successfully.",
+        "An alternative search found the article citation on the corresponding author University of Amsterdam profile."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.mdpi.com/2073-445X/15/7/1322/pdf",
+          "outcome": "Returned non-article HTML interstitial rather than PDF"
+        },
+        {
+          "url": "https://www.mdpi.com/2073-445X/15/7/1322",
+          "outcome": "Returned non-article HTML interstitial rather than PDF"
+        },
+        {
+          "url": "https://www.mdpi.com/2073-445x/15/7/1322",
+          "outcome": "Returned non-article HTML interstitial rather than PDF"
+        },
+        {
+          "url": "https://mdpi-res.com/d_attachment/land/land-15-01322/article_deploy/land-15-01322.pdf",
+          "outcome": "Validated article PDF (readable pages and title/DOI match)"
+        }
+      ],
+      "sha256": "ed6456e179a77f72cb7436866a7ff011be0e605249ee2dda9bb0ca072fb55dfc",
+      "pages": 31,
+      "size_bytes": 4882466
+    },
+    {
+      "paper_id": "paper-009",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s43247-021-00275-8.pdf",
+      "download_url": "https://www.nature.com/articles/s43247-021-00275-8.pdf",
+      "human_url": "",
+      "filename": "paper-009_brazil-amazon-heat-stress.pdf",
+      "copy_version": "Published version of record",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "PDF validated with pypdf: all 8 pages yield readable text; the article title and DOI match after normalizing typographic ligatures. This is the article, not an access page or a supplement alone."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s43247-021-00275-8.pdf",
+          "outcome": "HTTP 200 PDF; 1830850 bytes; 8 readable pages; title=True, DOI=True."
+        }
+      ],
+      "sha256": "3ec56be489d9a14e2103784456a10ed22b48e0945bc291793ffed22cb82dc3b4",
+      "pages": 8,
+      "size_bytes": 1830850
+    },
+    {
+      "paper_id": "paper-010",
+      "status": "Downloaded",
+      "source_name": "UPC (UPCommons)",
+      "found_url": "https://upcommons.upc.edu/server/api/core/bitstreams/8f8635b0-c527-4659-ac18-b545416be3cf/content",
+      "download_url": "https://upcommons.upc.edu/server/api/core/bitstreams/8f8635b0-c527-4659-ac18-b545416be3cf/content",
+      "human_url": "",
+      "filename": "paper-010_tropical-forest-vulnerability.pdf",
+      "copy_version": "Published version of record",
+      "reader_note": "Published article followed by supplementary material in the same PDF.",
+      "detailed_notes": [
+        "PDF validated with pypdf: all 37 pages yield readable text; the article title and DOI match after normalizing typographic ligatures. This is the article, not an access page or a supplement alone. The repository PDF includes the main article followed by supplementary material."
+      ],
+      "attempts": [
+        {
+          "url": "https://upcommons.upc.edu/server/api/core/bitstreams/8f8635b0-c527-4659-ac18-b545416be3cf/content",
+          "outcome": "HTTP 200 PDF; 11449808 bytes; 37 readable pages; title=True, DOI=True."
+        }
+      ],
+      "sha256": "1f96545865fb1162fd5f9e4dfd3159fa6debe6089f86ac9b645046293b45cc64",
+      "pages": 37,
+      "size_bytes": 11449808
+    },
+    {
+      "paper_id": "paper-011",
+      "status": "Download blocked",
+      "source_name": "Wiley / ResearchGate",
+      "found_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/faf.12328",
+      "download_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/faf.12328",
+      "human_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/faf.12328",
+      "filename": "",
+      "copy_version": "Published article; not downloaded",
+      "reader_note": "Wiley and ResearchGate list full text, but downloads returned 403. A separate repository returned 503. Manual download is unverified.",
+      "detailed_notes": [
+        "Wiley lists the full article as open access, but PDF and full-text requests returned HTTP 403. The CEHUM PDF returned 503 and the Mamiraua Institute copy returned 404. Open the Wiley full-text page in a browser and use its PDF download; the CEHUM link may work when its server recovers. An additional author-uploaded ResearchGate copy is explicitly available, but its PDF request also returned 403; its Download full-text PDF button is another human option."
+      ],
+      "attempts": [
+        {
+          "url": "https://biblioteca.cehum.org/bitstream/CEHUM2018/1630/1/Goulding%2C%20Venticinque%2C%20Ribeiro.%20Ecosystem%E2%80%90based%20management%20of%20Amazon%20fisheries%20and%20wetlands.pdf",
+          "outcome": "HTTPError: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/faf.12328",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://mamiraua.org.br/documentos/36a6b02ae8c555465dd91b5a782198fc.pdf",
+          "outcome": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/faf.12328",
+          "outcome": "Web search indexed full article sections; direct HTTP full-text request returned 403."
+        },
+        {
+          "url": "http://biblioteca.cehum.org/bitstream/CEHUM2018/1630/1/Goulding%2C%20Venticinque%2C%20Ribeiro.%20Ecosystem%E2%80%90based%20management%20of%20Amazon%20fisheries%20and%20wetlands.pdf",
+          "outcome": "HTTP 503; no file saved."
+        },
+        {
+          "url": "https://www.researchgate.net/publication/profile/Urbano-Silva-Junior/publication/327867805_Ecosystem-based_management_of_Amazon_fisheries_and_wetlands/links/5baa4d9ba6fdccd3cb72197f/Ecosystem-based-management-of-Amazon-fisheries-and-wetlands.pdf",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/327867805_Ecosystem-based_management_of_Amazon_fisheries_and_wetlands",
+          "outcome": "Author-uploaded public full text and a PDF link identified; direct PDF request returned HTTP 403."
+        },
+        {
+          "url": "https://www.nceas.ucsb.edu/workinggroups/snapp-western-amazonia-balancing-infrastructure-development-among-conservation-waters",
+          "outcome": "Project page lists the article but links back to Wiley; no separate repository PDF. Targeted Castello/Virginia Tech searches found citations in other papers, not this article."
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-012",
+      "status": "Download blocked",
+      "source_name": "Macquarie University",
+      "found_url": "https://researchers.mq.edu.au/en/publications/global-forests-risk-to-climate-and-land-use-change/",
+      "download_url": "https://researchers.mq.edu.au/files/518904140/518662538.pdf",
+      "human_url": "https://researchers.mq.edu.au/en/publications/global-forests-risk-to-climate-and-land-use-change/",
+      "filename": "",
+      "copy_version": "Published version of record listed by Macquarie; not downloaded",
+      "reader_note": "Macquarie lists a publisher PDF, but retrieval returned 403. Manual download is unverified.",
+      "detailed_notes": [
+        "ScienceDirect and the Macquarie PDF endpoint returned HTTP 403. Macquarie lists a 7-page, 2.29 MB open-access publisher version with a CC BY license. Open that record and choose Publisher version (open access); this is a concrete available copy, not a finding that full text is unavailable."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0006320726001278/pdfft?isDTMRedir=true&download=true",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://researchers.mq.edu.au/files/518904140/518662538.pdf",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://researchers.mq.edu.au/en/publications/global-forests-risk-to-climate-and-land-use-change/",
+          "outcome": "Repository page found and inspected with web tool; explicitly links a published open-access PDF. Download endpoint returned 403."
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0006320726001278",
+          "outcome": "Publisher identifies an open-access article; direct web opening returned 403."
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-013",
+      "status": "Downloaded",
+      "source_name": "OSTI (US DOE)",
+      "found_url": "https://www.osti.gov/biblio/3017041",
+      "download_url": "https://www.osti.gov/servlets/purl/3017041",
+      "human_url": "",
+      "filename": "paper-013_amazon-hot-droughts.pdf",
+      "copy_version": "Author manuscript; OSTI labels it Accepted Manuscript",
+      "reader_note": "Author manuscript with an earlier title and editing notes. OSTI labels it accepted; the final published PDF was not obtained.",
+      "detailed_notes": [
+        "Full 54-page author manuscript obtained from DOE OSTI record 3017041, whose DOI is 10.1038/s41586-025-09728-y. The PDF title is the earlier wording Hot droughts in the Amazon: A window to a future hypertropical climate, with matching authors; it does not print the final article DOI. It has an internal editing/backup note on the first page and differs from the publisher layout, so retain this version label. All pages yield text, with main article, methods, figures and references; not a supplement alone."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41586-025-09728-y.pdf",
+          "outcome": "Non-PDF response: text/html; charset=utf-8, 523189 bytes; rejected."
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-025-09728-y",
+          "outcome": "HTTP 200 HTML, but only abstract/access options plus ancillary sections; rejected as full text."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41372411/",
+          "outcome": "Bibliographic record inspected; no PMC full-text link."
+        },
+        {
+          "url": "https://www.pnnl.gov/publications/hot-droughts-amazon-provide-window-future-hypertropical-climate",
+          "outcome": "Author-institution record found through exact-title search; bibliographic/abstract content, no alternative PDF identified."
+        },
+        {
+          "url": "https://impact.ornl.gov/en/publications/hot-droughts-in-the-amazonprovide-a-window-to-a-future-hypertropi/",
+          "outcome": "Institutional record found; Access to Document points to the publisher DOI, not a separate manuscript."
+        },
+        {
+          "url": "https://facultyprofiles.vanderbilt.edu/esploro/outputs/journalArticle/Hot-droughts-in-the-Amazonprovide-a/991044770679903276",
+          "outcome": "Author-institution bibliographic record found; no alternative full-text PDF identified."
+        },
+        {
+          "url": "https://www.osti.gov/api/v1/records?title=Hot%20droughts%20in%20the%20Amazon",
+          "outcome": "OSTI title API returned article 3017041 with matching DOI, Accepted Manuscript designation and a fulltext purl."
+        },
+        {
+          "url": "https://www.osti.gov/servlets/purl/3017041",
+          "outcome": "PDF retrieved, but exact final-title/DOI text check failed; subsequent inspection confirmed earlier title wording and matching authors in the manuscript."
+        },
+        {
+          "url": "https://www.osti.gov/servlets/purl/3017041",
+          "outcome": "Downloaded with curl after a transient Python certificate-chain error; 54-page manuscript validated against OSTI DOI metadata, earlier title and matching authors."
+        },
+        {
+          "url": "https://escholarship.org/search?q=Hot%20droughts%20in%20the%20Amazon",
+          "outcome": "Targeted Berkeley repository search endpoint returned HTTP 403; exact-title/domain searches did not reveal a separate copy."
+        }
+      ],
+      "sha256": "c114a4eb6dc665d01e173fd16ecde8d32c98aa1c35857bbe5fce9708c088077c",
+      "pages": 54,
+      "size_bytes": 13847269
+    },
+    {
+      "paper_id": "paper-014",
+      "status": "Downloaded",
+      "source_name": "University of Turku",
+      "found_url": "https://www.utupub.fi/server/api/core/bitstreams/01f9ee17-a450-4735-ad86-5d0368c5dc0f/content",
+      "download_url": "https://www.utupub.fi/server/api/core/bitstreams/01f9ee17-a450-4735-ad86-5d0368c5dc0f/content",
+      "human_url": "",
+      "filename": "paper-014_amazon-ecosystem-connectivity.pdf",
+      "copy_version": "Published version of record",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "PDF validated with pypdf: all 9 pages yield readable text; the article title and DOI match after normalizing typographic ligatures. This is the article, not an access page or a supplement alone."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.utupub.fi/server/api/core/bitstreams/01f9ee17-a450-4735-ad86-5d0368c5dc0f/content",
+          "outcome": "HTTP 200 PDF; 6466142 bytes; 9 readable pages; title=True, DOI=True."
+        }
+      ],
+      "sha256": "342f7a243a79b071c8cfd6c45c5fa91a29e924259f97bcc8a2b7b997114b172e",
+      "pages": 9,
+      "size_bytes": 6466142
+    },
+    {
+      "paper_id": "paper-015",
+      "status": "Downloaded",
+      "source_name": "University of Bristol",
+      "found_url": "https://research-information.bris.ac.uk/ws/portalfiles/portal/329964201/Full_text_PDF_final_published_version_.pdf",
+      "download_url": "https://research-information.bris.ac.uk/ws/portalfiles/portal/329964201/Full_text_PDF_final_published_version_.pdf",
+      "human_url": "",
+      "filename": "paper-015_amazon-land-cover-transitions.pdf",
+      "copy_version": "Published version of record",
+      "reader_note": "Published article with a university repository cover.",
+      "detailed_notes": [
+        "PDF validated with pypdf: all 10 pages yield readable text; the article title and DOI match after normalizing typographic ligatures. This is the article, not an access page or a supplement alone. The institutional repository copy includes its cover information."
+      ],
+      "attempts": [
+        {
+          "url": "https://research-information.bris.ac.uk/ws/portalfiles/portal/329964201/Full_text_PDF_final_published_version_.pdf",
+          "outcome": "HTTP 200 PDF; 2145738 bytes; 10 readable pages; title=True, DOI=True."
+        }
+      ],
+      "sha256": "520a7660a8955a8596de869b8679553ac547fc504a1e3efde806809238177c0d",
+      "pages": 10,
+      "size_bytes": 2145738
+    },
+    {
+      "paper_id": "paper-016",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s42003-023-05514-6.pdf",
+      "download_url": "https://www.nature.com/articles/s42003-023-05514-6.pdf",
+      "human_url": "",
+      "filename": "paper-016_amazon-tree-flora-mapping.pdf",
+      "copy_version": "Published version of record",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "PDF validated with pypdf: all 14 pages yield readable text; the article title and DOI match after normalizing typographic ligatures. This is the article, not an access page or a supplement alone."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s42003-023-05514-6.pdf",
+          "outcome": "HTTP 200 PDF; 5981405 bytes; 14 readable pages; title=False, DOI=True."
+        }
+      ],
+      "sha256": "cf3b618df846b390c43f7a30280173a5b11f3c0add18acae8a514b26d1fe0bd0",
+      "pages": 14,
+      "size_bytes": 5981405
+    },
+    {
+      "paper_id": "paper-017",
+      "status": "Downloaded",
+      "source_name": "Rede Biota Cerrado",
+      "found_url": "https://redebiotacerrado.org/assets/pdfs/publicacoes/Global%20Change%20Biology%20-%202025%20-%20Rosenfield%20-%20Mapping%20Resilient%20Landscapes%20to%20Climate%20Change%20in%20a%20Megadiverse%20Country.pdf",
+      "download_url": "https://redebiotacerrado.org/assets/pdfs/publicacoes/Global%20Change%20Biology%20-%202025%20-%20Rosenfield%20-%20Mapping%20Resilient%20Landscapes%20to%20Climate%20Change%20in%20a%20Megadiverse%20Country.pdf",
+      "human_url": "",
+      "filename": "paper-017_mapping-resilient-landscapes.pdf",
+      "copy_version": "Published article (version of record)",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Article PDF validated with pypdf: title and article DOI match; full text and multiple pages present. Not a supplement or HTML challenge. Article title page was also rendered and visually checked. Retrieved from the public Rede Biota Cerrado research-network site after Wiley returned HTTP 403. The Zenodo evidence link is supporting data, not the article."
+      ],
+      "attempts": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70544",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5551 bytes"
+        },
+        {
+          "url": "https://zenodo.org/records/13320277",
+          "outcome": "HTTP 200; text/html; charset=utf-8; 229263 bytes; HTML title: Landscape resilience to climate change in Brazil | Zenodo; not a PDF"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.70544",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5581 bytes"
+        },
+        {
+          "url": "https://redebiotacerrado.org/assets/pdfs/publicacoes/Global%20Change%20Biology%20-%202025%20-%20Rosenfield%20-%20Mapping%20Resilient%20Landscapes%20to%20Climate%20Change%20in%20a%20Megadiverse%20Country.pdf",
+          "outcome": "HTTP 200; application/pdf; 13344826 bytes; valid article PDF; 17 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "7b0e01425e663743fb89be30d48291df2963bb371bf5c27fdd1d03483c95b151",
+      "pages": 17,
+      "size_bytes": 13344826
+    },
+    {
+      "paper_id": "paper-018",
+      "status": "Downloaded",
+      "source_name": "Lancaster University",
+      "found_url": "https://eprints.lancs.ac.uk/id/eprint/233580/1/gcb.70595.pdf",
+      "download_url": "https://eprints.lancs.ac.uk/id/eprint/233580/1/gcb.70595.pdf",
+      "human_url": "",
+      "filename": "paper-018_amazonian-tree-diversity.pdf",
+      "copy_version": "Published article (version of record)",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Article PDF validated with pypdf: title and article DOI match; full text and multiple pages present. Not a supplement or HTML challenge. Article title page was also rendered and visually checked. Retrieved from Lancaster University repository after Wiley returned HTTP 403."
+      ],
+      "attempts": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.70595",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5566 bytes"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.70595",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5581 bytes"
+        },
+        {
+          "url": "https://eprints.lancs.ac.uk/id/eprint/233580/1/gcb.70595.pdf",
+          "outcome": "HTTP 200; application/pdf; 2771281 bytes; valid article PDF; 13 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "c23569f532d30f151a68832b7dbefd83e8b95a677f0448bf3bceb075c3b77bb8",
+      "pages": 13,
+      "size_bytes": 2771281
+    },
+    {
+      "paper_id": "paper-019",
+      "status": "Downloaded",
+      "source_name": "University of East Anglia",
+      "found_url": "https://ueaeprints.uea.ac.uk/id/eprint/102860/",
+      "download_url": "https://ueaeprints.uea.ac.uk/id/eprint/102860/1/Ecography_-_2026_-_Braga_-_Patterns_of_understorey_bird_diversity_across_Amazonian_forests_survey_effort_and_range_maps.pdf",
+      "human_url": "",
+      "filename": "paper-019_understorey-bird-diversity.pdf",
+      "copy_version": "Published article (version of record)",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "PDF pages counted with pypdf; article title and DOI verified from the first/last pages and metadata. Main article text present; not a supplement or HTML challenge. Article title page was also rendered and visually checked. Retrieved from the UEA institutional repository after Wiley and the first Max Planck PDF endpoint returned HTTP 403."
+      ],
+      "attempts": [
+        {
+          "url": "https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/ecog.07625",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5624 bytes"
+        },
+        {
+          "url": "https://ueaeprints.uea.ac.uk/id/eprint/102860/",
+          "outcome": "HTTP 200; text/html; charset=utf-8; 39989 bytes; HTML title:  Patterns of understorey bird diversity across Amazonian forests:survey effort and range maps predict local species richness - UEA Digital Repository; not a PDF"
+        },
+        {
+          "url": "https://nsojournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecog.07625",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5639 bytes"
+        },
+        {
+          "url": "https://pure.mpg.de/pubman/item/item_3689591_1/component/file_3689592/BGC5036.pdf",
+          "outcome": "HTTP 403; text/html; charset=utf-8; 7074 bytes"
+        },
+        {
+          "url": "https://ueaeprints.uea.ac.uk/id/eprint/102860/1/Ecography_-_2026_-_Braga_-_Patterns_of_understorey_bird_diversity_across_Amazonian_forests_survey_effort_and_range_maps.pdf",
+          "outcome": "HTTP 200; application/pdf; 2772605 bytes; valid article PDF; 14 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "6f2ead8d4ff921a47cd33f2a4e87bc44f6f516f74516f6e42f16849ddb9d4b20",
+      "pages": 14,
+      "size_bytes": 2772605
+    },
+    {
+      "paper_id": "paper-020",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s42003-026-09896-1",
+      "download_url": "https://www.nature.com/articles/s42003-026-09896-1.pdf",
+      "human_url": "",
+      "filename": "paper-020_pollination-dispersal-networks.pdf",
+      "copy_version": "Published article (version of record)",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Article PDF validated with pypdf: title and article DOI match; full text and multiple pages present. Not a supplement or HTML challenge. Article title page was also rendered and visually checked."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s42003-026-09896-1",
+          "outcome": "HTTP 200; text/html; charset=utf-8; 605123 bytes; HTML title: Pollination and dispersal networks in the Amazonian tree flora | Communications Biology; not a PDF"
+        },
+        {
+          "url": "https://www.nature.com/articles/s42003-026-09896-1.pdf",
+          "outcome": "HTTP 200; application/pdf; 3439025 bytes; valid article PDF; 15 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "e6b39d12d7d786acad47c383322d02561be23617737f5d2fac46817cb9b646d0",
+      "pages": 15,
+      "size_bytes": 3439025
+    },
+    {
+      "paper_id": "paper-021",
+      "status": "Downloaded",
+      "source_name": "MapBiomas Colombia",
+      "found_url": "https://colombia.mapbiomas.org/premio-mapbiomas/",
+      "download_url": "https://colombia.mapbiomas.org/wp-content/uploads/sites/9/2026/10/Post-agreement-acceleration-of-habitat-loss-and-landscape-connectivity-decline-in-and-around-Colombian-protected-areas.pdf",
+      "human_url": "",
+      "filename": "paper-021_colombian-protected-areas.pdf",
+      "copy_version": "Published article with publisher cover and appended code-access notes",
+      "reader_note": "Published article with publisher cover and appended code-access notes.",
+      "detailed_notes": [
+        "PDF pages counted with pypdf; article title and DOI verified from the first/last pages and metadata. Main article text present; not a supplement or HTML challenge. Article title page was also rendered and visually checked. Retrieved through the MapBiomas Colombia full-work link. The 22-page PDF includes the publisher cover and appended code-access notes. IOP requests returned Radware CAPTCHA HTML; no CAPTCHA bypass attempted."
+      ],
+      "attempts": [
+        {
+          "url": "https://iopscience.iop.org/article/10.1088/2515-7620/ae69a5",
+          "outcome": "HTTP 200; text/html; charset=UTF-8; 14371 bytes; HTML title: Radware Bot Manager Captcha; access/bot challenge or protection page; not a PDF"
+        },
+        {
+          "url": "https://pure.urosario.edu.co/en/publications/post-agreement-acceleration-of-habitat-loss-and-landscape-connect/",
+          "outcome": "HTTP 200; text/html;charset=UTF-8; 59838 bytes; HTML title:  Post-agreement acceleration of habitat loss and landscape connectivity decline in and around Colombian protected areas - Universidad del Rosario; not a PDF"
+        },
+        {
+          "url": "https://iopscience.iop.org/article/10.1088/2515-7620/ae69a5/pdf",
+          "outcome": "HTTP 200; text/html; charset=UTF-8; 14371 bytes; HTML title: Radware Bot Manager Captcha; access/bot challenge or protection page; not a PDF"
+        },
+        {
+          "url": "https://colombia.mapbiomas.org/premio-mapbiomas/",
+          "outcome": "Public awards page identifies the paper and provides a full-work PDF link; followed that link."
+        },
+        {
+          "url": "https://colombia.mapbiomas.org/wp-content/uploads/sites/9/2026/10/Post-agreement-acceleration-of-habitat-loss-and-landscape-connectivity-decline-in-and-around-Colombian-protected-areas.pdf",
+          "outcome": "HTTP 200; application/pdf; 16627538 bytes; valid article PDF; 22 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "ead9ea42ea6d55cfe8399c04983c3cb1168380194492f61a7a34183d565e909a",
+      "pages": 22,
+      "size_bytes": 16627538
+    },
+    {
+      "paper_id": "paper-022",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s41558-022-01287-8",
+      "download_url": "https://www.nature.com/articles/s41558-022-01287-8.pdf",
+      "human_url": "",
+      "filename": "paper-022_rainforest-resilience-loss.pdf",
+      "copy_version": "Published article (version of record)",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Article PDF validated with pypdf: title and article DOI match; full text and multiple pages present. Not a supplement or HTML challenge. Article title page was also rendered and visually checked."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41558-022-01287-8",
+          "outcome": "HTTP 200; text/html; charset=utf-8; 421682 bytes; HTML title: Pronounced loss of Amazon rainforest resilience since the early 2000s | Nature Climate Change; not a PDF"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41558-022-01287-8.pdf",
+          "outcome": "HTTP 200; application/pdf; 3199031 bytes; valid article PDF; 10 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "f90c8d20c24646064eb517bf7c138bd42ee0d7acb561d56d9cfd56a5ecb91f92",
+      "pages": 10,
+      "size_bytes": 3199031
+    },
+    {
+      "paper_id": "paper-023",
+      "status": "Downloaded",
+      "source_name": "Utrecht University",
+      "found_url": "https://research-portal.uu.nl/ws/files/283711679/AGU_Advances_-_2026_-_Bot_a_-_Reduced_Vegetation_Uptake_During_the_Extreme_2023_Drought_Turns_the_Amazon_Into_a_Weak_Carbon.pdf",
+      "download_url": "https://research-portal.uu.nl/ws/files/283711679/AGU_Advances_-_2026_-_Bot_a_-_Reduced_Vegetation_Uptake_During_the_Extreme_2023_Drought_Turns_the_Amazon_Into_a_Weak_Carbon.pdf",
+      "human_url": "",
+      "filename": "paper-023_amazon-carbon-source-2023.pdf",
+      "copy_version": "Published article with Utrecht University repository cover",
+      "reader_note": "Published article with a university repository cover.",
+      "detailed_notes": [
+        "Article PDF validated with pypdf: title and article DOI match; full text and multiple pages present. Not a supplement or HTML challenge. Article title page was also rendered and visually checked. PDF contains a repository cover followed by the 22-page published article (23 PDF pages total). Retrieved after Wiley returned HTTP 403."
+      ],
+      "attempts": [
+        {
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5568 bytes"
+        },
+        {
+          "url": "https://research-portal.uu.nl/ws/files/283711679/AGU_Advances_-_2026_-_Bot_a_-_Reduced_Vegetation_Uptake_During_the_Extreme_2023_Drought_Turns_the_Amazon_Into_a_Weak_Carbon.pdf",
+          "outcome": "HTTP 200; application/pdf; 3750850 bytes; valid article PDF; 23 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "190af2a4ed0e76e76315570e11df23afb26dcab5a86fcb5bd06f1ae4e11f7532",
+      "pages": 23,
+      "size_bytes": 3750850
+    },
+    {
+      "paper_id": "paper-024",
+      "status": "Downloaded",
+      "source_name": "Amazon Cooperation Treaty Organization",
+      "found_url": "https://otca.org/wp-content/uploads/2023/03/Flecker-et-al-2022-Reducing-adverse-impacts-of-Amazon-hydropower-expansion.pdf",
+      "download_url": "https://otca.org/wp-content/uploads/2023/03/Flecker-et-al-2022-Reducing-adverse-impacts-of-Amazon-hydropower-expansion.pdf",
+      "human_url": "",
+      "filename": "paper-024_amazon-hydropower-expansion.pdf",
+      "copy_version": "Published article with publisher metadata page",
+      "reader_note": "Published article with an additional publisher metadata page.",
+      "detailed_notes": [
+        "PDF pages counted with pypdf; article title and DOI verified from the first/last pages and metadata. Main article text present; not a supplement or HTML challenge. Article title page was also rendered and visually checked. Public OTCA copy contains the 8-page Science article plus a publisher metadata page (9 PDF pages total). The first full-document text-extraction pass hit a parser limit; bounded title/DOI verification then succeeded."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.science.org/doi/10.1126/science.abj4017",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5539 bytes"
+        },
+        {
+          "url": "https://www.cs.cornell.edu/gomes/udiscoverit/amazon-ecovistas/",
+          "outcome": "HTTP 200; text/html; 7363 bytes; HTML title: Amazon EcoVistas: Home; not a PDF"
+        },
+        {
+          "url": "https://doi.org/10.1126/science.abj4017",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5539 bytes"
+        },
+        {
+          "url": "https://cals.cornell.edu/news/2022/02/ai-enables-strategic-hydropower-planning-across-amazon-basin",
+          "outcome": "HTTP 200; text/html; charset=UTF-8; 67771 bytes; HTML title: AI enables strategic hydropower planning across Amazon basin | CALS; not a PDF"
+        },
+        {
+          "url": "https://www.science.org/doi/pdf/10.1126/science.abj4017",
+          "outcome": "HTTP 403; text/html; charset=UTF-8; 5551 bytes"
+        },
+        {
+          "url": "https://otca.org/wp-content/uploads/2023/03/Flecker-et-al-2022-Reducing-adverse-impacts-of-Amazon-hydropower-expansion.pdf",
+          "outcome": "HTTP 200; application/pdf; 4650088 bytes"
+        },
+        {
+          "url": "https://otca.org/wp-content/uploads/2023/03/Flecker-et-al-2022-Reducing-adverse-impacts-of-Amazon-hydropower-expansion.pdf",
+          "outcome": "LimitReachedError: Reached maximum number of tokens per stream."
+        },
+        {
+          "url": "https://otca.org/wp-content/uploads/2023/03/Flecker-et-al-2022-Reducing-adverse-impacts-of-Amazon-hydropower-expansion.pdf",
+          "outcome": "HTTP 200; application/pdf; 4650088 bytes; valid article PDF; 9 pages; title and DOI verified"
+        }
+      ],
+      "sha256": "85a9d031e1bc402e0d4de7c5e1c7a02c5ed8a4794e39986e5223b725bf3feec9",
+      "pages": 9,
+      "size_bytes": 4650088
+    },
+    {
+      "paper_id": "paper-025",
+      "status": "Downloaded",
+      "source_name": "Federal University of Minas Gerais",
+      "found_url": "https://csr.ufmg.br/csr/wp-content/uploads/2018/11/Soares-Filho_et-al_Rajao_Spatially-explicit-evaluation-of-the-Amazon_NSUS.pdf",
+      "download_url": "https://csr.ufmg.br/csr/wp-content/uploads/2018/11/Soares-Filho_et-al_Rajao_Spatially-explicit-evaluation-of-the-Amazon_NSUS.pdf",
+      "human_url": "",
+      "filename": "paper-025_spatial-valuation-amazon-ecosystem-services.pdf",
+      "copy_version": "Published article",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Readable article PDF; title and DOI checked."
+      ],
+      "attempts": [
+        {
+          "url": "https://csr.ufmg.br/csr/wp-content/uploads/2018/11/Soares-Filho_et-al_Rajao_Spatially-explicit-evaluation-of-the-Amazon_NSUS.pdf",
+          "outcome": "Downloaded"
+        }
+      ],
+      "sha256": "38b91a293b8c273911120b2d57d0e3c622aa8dc98da17e74651f00652fcc6e82",
+      "pages": 8,
+      "size_bytes": 4649790
+    },
+    {
+      "paper_id": "paper-026",
+      "status": "Downloaded",
+      "source_name": "Nature",
+      "found_url": "https://www.nature.com/articles/s43247-024-01738-4.pdf",
+      "download_url": "https://www.nature.com/articles/s43247-024-01738-4.pdf",
+      "human_url": "",
+      "filename": "paper-026_land-irrigation-and-hydropower.pdf",
+      "copy_version": "Published article",
+      "reader_note": "Published article PDF.",
+      "detailed_notes": [
+        "Readable article PDF; title and DOI checked."
+      ],
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s43247-024-01738-4.pdf",
+          "outcome": "Downloaded"
+        }
+      ],
+      "sha256": "9a32af5bdabff6c78d58840fa285ee1069de466b3655c51cd42f16237d552310",
+      "pages": 11,
+      "size_bytes": 2850158
+    },
+    {
+      "paper_id": "paper-027",
+      "status": "Download blocked",
+      "source_name": "ResearchGate",
+      "found_url": "https://www.researchgate.net/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient",
+      "download_url": "https://www.researchgate.net/publication/journal/Proceedings-of-the-Royal-Society-B-1471-2954/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient/links/69c385df3c618943066b415d/Temperature-boosts-and-constrains-dung-beetle-diversity-along-an-Andean-Amazonian-elevation-gradient.pdf",
+      "human_url": "https://www.researchgate.net/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient",
+      "filename": "",
+      "copy_version": "Not downloaded",
+      "reader_note": "ResearchGate lists publisher-supplied full text, but downloads returned 403. Manual download is unverified.",
+      "detailed_notes": [
+        "ResearchGate exposes a publisher-supplied full-text PDF, but its PDF request and the Royal Society request returned HTTP 403. Try the ResearchGate Download full-text PDF button in a browser."
+      ],
+      "attempts": [
+        {
+          "url": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2025.2792",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/journal/Proceedings-of-the-Royal-Society-B-1471-2954/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient/links/69c385df3c618943066b415d/Temperature-boosts-and-constrains-dung-beetle-diversity-along-an-Andean-Amazonian-elevation-gradient.pdf",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient",
+          "outcome": "Web page exposes full article text and a Download full-text PDF link supplied by Royal Society."
+        },
+        {
+          "url": "https://www.gunnarbrehm.de/en/science",
+          "outcome": "Coauthor publication page cites the DOI but has no article download link for this paper."
+        },
+        {
+          "url": "https://api.openalex.org/works/https://doi.org/10.1098/rspb.2025.2792",
+          "outcome": "Lists publisher/PubMed records; no repository PDF location."
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-028",
+      "status": "Downloaded",
+      "source_name": "Beijing Normal University",
+      "found_url": "https://sss.bnu.edu.cn/docs/2024-05/d1029b65f9344b609ecc8ef0ea60e4cc.pdf",
+      "download_url": "https://sss.bnu.edu.cn/docs/2024-05/d1029b65f9344b609ecc8ef0ea60e4cc.pdf",
+      "human_url": "",
+      "filename": "paper-028_drivers-and-impacts-forest-degradation.pdf",
+      "copy_version": "Published article; corrected 16 February 2023",
+      "reader_note": "Published article, including the correction notice dated 16 February 2023.",
+      "detailed_notes": [
+        "University-hosted published version; PDF includes the correction notice dated 16 February 2023."
+      ],
+      "attempts": [
+        {
+          "url": "https://sss.bnu.edu.cn/docs/2024-05/d1029b65f9344b609ecc8ef0ea60e4cc.pdf",
+          "outcome": "Downloaded"
+        }
+      ],
+      "sha256": "b3606df9f8e2accc301d9a92c7be8280e926e8acae19942cf3f5e3e844704dc8",
+      "pages": 12,
+      "size_bytes": 5999808
+    },
+    {
+      "paper_id": "paper-029",
+      "status": "Download blocked",
+      "source_name": "IOP / author page",
+      "found_url": "https://lmdavalos.github.io/publication/journal_weather_disasters_underreported_impacts/",
+      "download_url": "https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7/pdf",
+      "human_url": "https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7/pdf",
+      "filename": "",
+      "copy_version": "Not downloaded",
+      "reader_note": "The author-linked IOP PDF returned a CAPTCHA page. The SSRN preprint was also blocked. Try the PDF link in a browser.",
+      "detailed_notes": [
+        "The author page links to the open-access IOP article PDF. Download returned a Radware CAPTCHA page. Try the IOP PDF link in a browser; the SSRN preprint page also returned HTTP 403."
+      ],
+      "attempts": [
+        {
+          "url": "https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7/pdf",
+          "outcome": "Returned a CAPTCHA page, not a PDF."
+        },
+        {
+          "url": "https://lmdavalos.github.io/publication/journal_weather_disasters_underreported_impacts/",
+          "outcome": "Author publication page explicitly links to the IOP article PDF; no separate local copy linked."
+        },
+        {
+          "url": "https://research-information.bris.ac.uk/en/publications/weather-disasters-and-their-underreported-transboundary-impacts-o/",
+          "outcome": "Institutional record links DOI; no separate PDF."
+        },
+        {
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106528",
+          "outcome": "Preprint record identified; HTTP 403 on request."
+        }
+      ],
+      "sha256": "",
+      "pages": 0,
+      "size_bytes": 0
+    },
+    {
+      "paper_id": "paper-030",
+      "status": "Downloaded",
+      "source_name": "PubMed Central",
+      "found_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13428540/",
+      "download_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13428540.1/PMC13428540.1.pdf",
+      "human_url": "",
+      "filename": "paper-030_river-dolphins-ecuador.pdf",
+      "copy_version": "Published article",
+      "reader_note": "Published PDF from the official PubMed Central cloud archive.",
+      "detailed_notes": [
+        "Published PDF obtained through the official PMC Cloud Service after publisher and standard PMC PDF downloads were blocked."
+      ],
+      "attempts": [
+        {
+          "url": "https://peerj.com/articles/21586.pdf",
+          "outcome": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13428540/pdf/peerj-14-21586.pdf",
+          "outcome": "Not a PDF: returned text/html; charset=utf-8"
+        },
+        {
+          "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13428540.1/PMC13428540.1.pdf",
+          "outcome": "Downloaded"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+          "outcome": "Official documentation identifies the public cloud archive and versioned PDF access."
+        }
+      ],
+      "sha256": "bdda1ea69be7c8c0746186e275a1df564e851dda2b5215d7205d90bf1a0bc174",
+      "pages": 31,
+      "size_bytes": 887244
+    }
+  ]
+}

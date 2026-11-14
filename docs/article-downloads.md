@@ -1,0 +1,28 @@
+# Article full-text search
+
+**24 of the 30 papers were downloaded as PDFs.** Five more have identified full-text routes that blocked automated retrieval. For one paper, no open article copy was located in the sources checked. These are the recorded results of the 13 November 2026 search, not a guarantee of current access.
+
+Open the [article download workbook](../reports/article_downloads.xlsx) or [CSV table](../reports/article_downloads.csv) for the full paper list, source links, filenames, versions and access notes. The actual PDFs are in `C:\Users\richp\Downloads\wwf-resilience-articles`; they are not stored in Git.
+
+## The six outstanding papers
+
+Manual access through the links below has **not been verified**. A browser session or institutional login may succeed where an automated request failed, but the report does not assume that it will. No purchase or author-contact request was made.
+
+| Paper | Article | What happened and where to try |
+| --- | --- | --- |
+| 001 | [A first glimpse into the Selva: stingless bee diversity and plant-bee links inferred from adhered pollen in the Peruvian Amazon](https://link.springer.com/article/10.1007/s11829-026-10257-2) | **Download blocked.** [ResearchGate](https://www.researchgate.net/publication/407245451_A_first_glimpse_into_the_Selva_stingless_bee_diversity_and_plant-bee_links_inferred_from_adhered_pollen_in_the_Peruvian_Amazon) lists author-provided full text, but requests returned 403. Try its PDF control or institutional access; the [Sapienza record](https://iris.uniroma1.it/handle/11573/1776053) led to institutional login. |
+| 004 | [Amazon forest loss: An all-sky biophysical top-of-atmosphere cooling feedback](https://www.science.org/doi/10.1126/science.adz8296) | **No open copy found.** Science returned 403. Searches of NOAA, author and repository sources located the paper's citation or supporting data, but no accessible manuscript. Try institutional access through Science or request a copy from the authors. This does not establish that no open copy exists. |
+| 011 | [Ecosystem-based management of Amazon fisheries and wetlands](https://onlinelibrary.wiley.com/doi/full/10.1111/faf.12328) | **Download blocked.** Wiley lists an open-access article, but requests returned 403. An [author-uploaded ResearchGate copy](https://www.researchgate.net/publication/327867805_Ecosystem-based_management_of_Amazon_fisheries_and_wetlands) was also blocked. Try either page's PDF control. Other repository attempts returned 503 or 404. |
+| 012 | [Global forests risk to climate and land-use change](https://www.sciencedirect.com/science/article/pii/S0006320726001278) | **Download blocked.** [Macquarie University](https://researchers.mq.edu.au/en/publications/global-forests-risk-to-climate-and-land-use-change/) explicitly lists a seven-page open-access publisher PDF. Choose **Publisher version (open access)** on that record. Both its PDF endpoint and ScienceDirect returned 403 during the search. |
+| 027 | [Temperature boosts and constrains dung beetle diversity along an Andean-Amazonian elevation gradient](https://royalsocietypublishing.org/doi/10.1098/rspb.2025.2792) | **Download blocked.** [ResearchGate](https://www.researchgate.net/publication/403101674_Temperature_boosts_and_constrains_dung_beetle_diversity_along_an_Andean-Amazonian_elevation_gradient) lists publisher-supplied full text. Try its **Download full-text PDF** control; both that PDF and the Royal Society request returned 403. |
+| 029 | [Weather disasters and their underreported transboundary impacts on Amazonian communities](https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7) | **Download blocked.** The [author page](https://lmdavalos.github.io/publication/journal_weather_disasters_underreported_impacts/) links to the [IOP PDF](https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7/pdf), but retrieval returned a CAPTCHA. Try that PDF in a browser. The [SSRN preprint](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106528) also returned 403. |
+
+## What counts as downloaded
+
+A downloaded entry identifies a saved PDF checked as an article or manuscript. Abstract-only pages, login/CAPTCHA responses and supplements without the main article were not counted as article downloads. Copies were checked for readable pages and identifying title/DOI information; file hashes and page counts are retained in the search record.
+
+Versions matter. **Paper 013, Hot droughts in the Amazon provide a window to a future hypertropical climate, was obtained as an author manuscript from [OSTI](https://www.osti.gov/biblio/3017041).** OSTI labels it an Accepted Manuscript. The 54-page file uses the earlier title *Hot droughts in the Amazon: A window to a future hypertropical climate* and includes an internal editing/backup note. Its authors and the repository DOI identify the paper, but the file does not print the final article DOI. It is not the final publisher PDF. Other version differences and appended supplementary material are noted per paper in the report.
+
+The article search is separate from the dataset review. Finding a paper does not establish that its described data are available locally, resolve a scientific discrepancy or grant redistribution rights. Article PDFs remain outside Git; the repository contains the search results and links needed to follow up.
+
+The findings and attempted URLs are preserved in [`data/articles/article_search.json`](../data/articles/article_search.json), alongside the [paper identity registry](../outputs/papers.csv). For regenerating the tables or recording a later download, see the [rebuilding guide](rebuilding.md#rebuild-the-article-download-table).

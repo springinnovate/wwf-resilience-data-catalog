@@ -4,3 +4,4 @@
 *.csv -text -whitespace
 data/source/source_sheet.tsv -text -whitespace
 outputs/** linguist-generated=true
+reports/** linguist-generated=true

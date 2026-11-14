@@ -23,4 +23,6 @@ jobs:
       - run: python scripts/build_reconciliation.py --output-dir build/rebuilt
       - run: python scripts/validate_reconciliation.py --output-dir build/rebuilt
       - run: python scripts/compare_outputs.py build/rebuilt
+      - run: python scripts/build_article_report.py --output-dir build/article-report
+      - run: python scripts/compare_outputs.py build/article-report --expected reports
       - run: python -m unittest discover -s tests -v

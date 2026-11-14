@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+local-data/
+inspection/
+~$*.xlsx
+.DS_Store
+Thumbs.db
+desktop.ini

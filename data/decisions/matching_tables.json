@@ -1,0 +1,3989 @@
+{
+  "scope": {
+    "folders": [
+      "22786166",
+      "28417586",
+      "30258298",
+      "cassioalencarnunes-LULC_transitions-c501bd5",
+      "cassioalencarnunes-tree_diversity_GCB-b8419e5",
+      "AMetaAnalysisOfCarbonLosses_row8",
+      "AnthropogenicBarriers_row34",
+      "BiodiversityUnderpins_row41",
+      "Cacao Frontiers - SM",
+      "Gatti-etal_2021_allfiles"
+    ],
+    "sheet_row_numbering": "1-based parsed data rows, excluding banner/header",
+    "standalone_files": 275,
+    "sheet_rows": 25,
+    "archive_members": 14,
+    "method": "Every non-OS file assigned through explicit filename/family rules expanded to standalone entries. Asset selectors distinguish sheet/variable subsets. Scientific analytical outputs without a described row are unmatched_data; scripts and sidecars are not scientific asset matches. No study code executed or source file modified."
+  },
+  "rows": [
+    {
+      "row_id": 2,
+      "status": "matched",
+      "evidence": "Two workbooks directly contain the described carbon loss and accumulation compilation: 208 loss and 214 accumulation records with RefID. A reference workbook links citations.",
+      "limitations": "There are 147 reference rows and 146 unique RefIDs, but RefID 96 identifies two different citations. Resolve this before citation joins; populated records differ from formatted used ranges. The row supplies units and citation context that are not all explicit in local headers.",
+      "assets": [
+        {
+          "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_accumulation_forest_type_current_v2.xlsx",
+          "relationship": "described_asset",
+          "selector": "Sheet1: RefID, GrowthRate, MaxAge, StandardisedAge, PercentageAt20yrs and uncertainty fields"
+        },
+        {
+          "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx",
+          "relationship": "described_asset",
+          "selector": "Sheet1: RefID, AbsoluteCLoss, PercLossCompIntactFor, Cpool, forest/degradation and uncertainty fields"
+        },
+        {
+          "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx",
+          "relationship": "documentation"
+        }
+      ]
+    },
+    {
+      "row_id": 8,
+      "status": "partial",
+      "evidence": "Five CO2 text files provide 8,294 sample records at ALF/RBA/SAN/TAB/TEF during 2010-2018, with UTC times, sample coordinates, altitude and QC flags; local metadata cites the exact PANGAEA dataset.",
+      "limitations": "The description includes carbon monoxide; no CO concentration asset was identified. Sample records are not equivalent to 590 profiles and profile reconstruction remains unvalidated. The TAB-to-TEF replacement explains five file labels versus four contemporaneous sites. Manifest site/file mapping, ALF end date and nominal site coordinates are inconsistent. Rejection flags and the 23-token schema need handling.",
+      "assets": [
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/Gatti-etal_2021.tab",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/co2_alf_aircraft_sample_2010_2018.co2",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/co2_rba_aircraft_sample_2010_2018.co2",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/co2_san_aircraft_sample_2010_2018.co2",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/co2_tab_aircraft_sample_2010_2018.co2",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "Gatti-etal_2021_allfiles/co2_tef_aircraft_sample_2010_2018.co2",
+          "relationship": "partial_or_processed"
+        }
+      ]
+    },
+    {
+      "row_id": 9,
+      "status": "partial",
+      "evidence": "All 28 suitability CSVs were individually assigned: current species/group tables and future complete/migratory/sedentary tables for 245/585 and 2030/2050/2070/2090. Species-coded continuous suitability values and coordinate-enriched files match the substance of the row.",
+      "limitations": "Delivered format is tabular grids, not a supplied raster distribution map. Binary presence/absence and thresholds are not identified. Current CSVs use mixed delimiters and not all include explicit latitude/longitude. Paper baseline dates and scenario-year semantics require preservation separately from filenames.",
+      "assets": [
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/0-functions_network_creation.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp.xml",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET_FUTURE_SUITABILITY.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2090.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2090.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean_mig.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean_sedent.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mean_coord.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2090.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2090.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2090.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2030.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2050.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2070.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2090.csv",
+          "relationship": "partial_or_processed"
+        }
+      ]
+    },
+    {
+      "row_id": 10,
+      "status": "not_located",
+      "evidence": "The network, suitability inputs and part_3 script are present, but no final suitability-weighted connectivity layer was found. Both ZIP directories were checked and contain network/basin components, not final RCIsuit outputs.",
+      "limitations": "Raw network CSI fields are not proof of RCIsuit. Scripts reference generated output/compilado/062025_habitat_index_complete.csv and .shp, which are not in this package. Rows 10 and 11 overlap in metric/scenario meaning and may describe the same product family.",
+      "assets": [
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/0-functions_network_creation.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp.xml",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET_FUTURE_SUITABILITY.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_3_habitat_calculating_idx.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 11,
+      "status": "not_located",
+      "evidence": "The part_3 script calculates suitability-weighted normalized connectivity and writes a final habitat-index table/layer; those products were not found among the 64 local files or the two archive member lists.",
+      "limitations": "Same overlapping product family as row 10; future and baseline setup must be reconciled before treating the rows as separate assets. Code availability does not mean outputs are already present or reproducible without additional setup.",
+      "assets": [
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/0-functions_network_creation.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp.xml",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET_FUTURE_SUITABILITY.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_3_habitat_calculating_idx.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 12,
+      "status": "not_located",
+      "evidence": "562 barrier locations/status/source records and a barrier-index calculation script are present. No dCCI or mean-impact-ranking fields occur in the supplied barrier DBF, and no generated ranking table was found.",
+      "limitations": "The barrier point dataset is an input, not the requested ranking. part_4 writes 062025_barrier_index_complete.csv and summary products absent locally; archive members do not supply them.",
+      "assets": [
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/0-functions_network_creation.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.dbf",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.prj",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbn",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp.xml",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shx",
+          "relationship": "sidecar"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+          "relationship": "related_input",
+          "selector": "Container only; see archived_assets for network/basin member roles"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET_FUTURE_SUITABILITY.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_FUTURE_SET.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_4_barrier_calculating_idx.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 13,
+      "status": "matched",
+      "evidence": "rspb20220726_si_002.xlsx / Supplement Table 2_Year Trends_ contains 121 region-year rows with the exact landings/diversity/trait/economic metrics described. Metadata sheet defines variables.",
+      "limitations": "Delivered as a nonspatial table of six named regions, not a vector layer. Geometry needs a deliberate regional join. Source traits/common names are in the other workbook; raw regional annual taxon-landings CSVs referenced by code are not supplied.",
+      "assets": [
+        {
+          "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+          "relationship": "described_asset",
+          "selector": "Supplement Table 2_Year Trends_: all region-year metrics; Metadata defines fields"
+        },
+        {
+          "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_003.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 14,
+      "status": "not_located",
+      "evidence": "GEE scripts produce the 2020/2025 classifications and training/reference polygons are present. No final classification image is included among the 24 local files.",
+      "limitations": "Script3 expects classified2020/classified2025 Earth Engine assets under placeholder projects/username paths. The training GeoJSONs are not classified regional maps. Script2 incorporates a 2023-2025 SWIR predictor into its 2020-labelled model; temporal lineage needs clarification.",
+      "assets": [
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Consociated.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/FullSun.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Managed.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Pasture.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Primary_forest.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Secondary_forest.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Urban.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Water.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/study_area.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/GEE/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/GEE/Script1.js",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/GEE/Script2.js",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 15,
+      "status": "not_located",
+      "evidence": "An eCognition workflow workbook and training/reference data support the fine-scale classification methodology, but no PlanetScope image or final classified raster was found.",
+      "limitations": "The workbook is procedural documentation, not the requested map. Related field measurements and spectral summaries must not be substituted for the classification product.",
+      "assets": [
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Consociated.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/FullSun.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Managed.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Pasture.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Primary_forest.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Secondary_forest.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Urban.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/Water.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Assets/study_area.geojson",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/GEE/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Plots&eCognition/eCognition ruleset.xlsx",
+          "relationship": "documentation"
+        }
+      ]
+    },
+    {
+      "row_id": 16,
+      "status": "partial",
+      "evidence": "FieldPlot_data.xlsx / Tree Data and Cover contain ecological field measurements and Plot_ID; tree_stats.csv is a field-metric subset. There are 363 dated tree rows and 24 cover rows from 2025-08-25 to 2025-09-04.",
+      "limitations": "Sheet says 23 plots but local data have IDs 1-24. Field sheets have no coordinate columns. Training polygons do not establish a GPS point-to-Plot_ID join. Metadata records estimated heights for Plot_ID 6 and a units row beneath the Cover header.",
+      "assets": [
+        {
+          "relative_path": "Cacao Frontiers - SM/GEE/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Plots&eCognition/AGB.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Plots&eCognition/FieldPlot_data.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Tree Data and Cover sheets; Metadata for units/caveats; exclude embedded illustrative photos as observations"
+        },
+        {
+          "relative_path": "Cacao Frontiers - SM/Plots&eCognition/tree_stats.csv",
+          "relationship": "partial_or_processed"
+        }
+      ]
+    },
+    {
+      "row_id": 35,
+      "status": "matched",
+      "evidence": "data_all_joined.csv contains total richness for seven biodiversity groups in 310 site records; data_rich_forest_sp.csv supplies forest-species richness. Taxon-by-transect tables are associated inputs.",
+      "limitations": "The sheet calls the environment coordinates lat/long; the actual fields are UTM_X/UTM_Y. UTM zone/datum and join-key consistency need validation. Survey years 2010/2011 come from the sheet rather than explicit dates in these tables.",
+      "assets": [
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/.gitignore",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LULC_transitions.Rproj",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.html",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs_Forest_sp.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_effect_sizes.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_graphs_transition_rates.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_organising_data.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_panels.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_qGAM.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_relationship_LULCT.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Ants_PGM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Ants_STM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Bees_PGM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Birds.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Dung_beetles.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Lianas_PGM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Lianas_STM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Saplings_PGM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Saplings_STM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Transect_classification.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Trees_PGM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Trees_STM.txt",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+          "relationship": "described_asset",
+          "selector": "Region/Transect_code and ant_rich,bird_rich,db_rich,liana_rich,sap_rich,tree_rich,bee_rich"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_rich_forest_sp.csv",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment_all.txt",
+          "relationship": "related_input"
+        }
+      ]
+    },
+    {
+      "row_id": 36,
+      "status": "matched",
+      "evidence": "Carbon_all_PGM.txt, Carbon_all_STM.txt and data_all_joined.csv directly contain Aboveground_pool, Litter_pool, Dead_pool and Soil_pool_new keyed by transect.",
+      "limitations": "Site metrics are present, but survey-date/units provenance and coordinate CRS need reconciliation before spatial publication. UTM coordinates are not longitude/latitude.",
+      "assets": [
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/.gitignore",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LULC_transitions.Rproj",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.html",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs_Forest_sp.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_effect_sizes.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_graphs_transition_rates.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_organising_data.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_panels.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_qGAM.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_relationship_LULCT.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_PGM.txt",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_STM.txt",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Transect_classification.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+          "relationship": "described_asset",
+          "selector": "Region/Transect_code and Aboveground_pool,Litter_pool,Dead_pool,Soil_pool_new"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment_all.txt",
+          "relationship": "related_input"
+        }
+      ]
+    },
+    {
+      "row_id": 37,
+      "status": "partial",
+      "evidence": "Soil_PGM.csv and Soil_STM.csv directly provide site-level pH, Nperc, P, K, Na, CaMg and Al; joined/environment tables provide soil-carbon metrics and supporting covariates.",
+      "limitations": "Raw five-point, depth-increment and intact-core bulk-density measurements described by the row were not identified. The available match is aggregated soil properties, not complete raw sampling records; UTM CRS is unresolved.",
+      "assets": [
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/.gitignore",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LULC_transitions.Rproj",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.html",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs_Forest_sp.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_effect_sizes.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_graphs_transition_rates.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_organising_data.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_panels.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_qGAM.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_relationship_LULCT.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Soil_PGM.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Soil_STM.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Transect_classification.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+          "relationship": "partial_or_processed",
+          "selector": "Region/Transect_code and pH,Nperc,P,K,Na,CaMg,Al,Soil_pool_new"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment_all.txt",
+          "relationship": "related_input"
+        }
+      ]
+    },
+    {
+      "row_id": 38,
+      "status": "matched",
+      "evidence": "TreeDensity.asc is the explicit ASCII raster export named in TreeDiversityScript.R for tree density, individuals per hectare; header cell size is approximately 0.1.",
+      "limitations": "CRS is absent in the ASCII header and no PRJ is supplied; degree-like values do not establish datum. Tree-diversity TIFF posters are figures, not alternate geospatial products. Observation period is unresolved.",
+      "assets": [
+        {
+          "relative_path": "22786166/AmazonLowLandForestRaisg.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/SoterRaisg.asc",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/TreeDensity.asc",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster01.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster02.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityScript.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 39,
+      "status": "matched",
+      "evidence": "TreeDiversity.asc is the explicit ASCII raster export named in TreeDiversityScript.R for tree alpha-diversity (Fisher's alpha); header cell size is approximately 0.1.",
+      "limitations": "CRS is absent in the ASCII header and no PRJ is supplied; degree-like values do not establish datum. Tree-diversity TIFF posters are figures, not alternate geospatial products. Observation period is unresolved.",
+      "assets": [
+        {
+          "relative_path": "22786166/AmazonLowLandForestRaisg.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/SoterRaisg.asc",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/TreeDiversity.asc",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster01.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster02.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityScript.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 40,
+      "status": "matched",
+      "evidence": "TreeRichness_ha.asc is the explicit ASCII raster export named in TreeDiversityScript.R for tree richness per hectare; header cell size is approximately 0.1.",
+      "limitations": "CRS is absent in the ASCII header and no PRJ is supplied; degree-like values do not establish datum. Tree-diversity TIFF posters are figures, not alternate geospatial products. Observation period is unresolved.",
+      "assets": [
+        {
+          "relative_path": "22786166/AmazonLowLandForestRaisg.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/SoterRaisg.asc",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster01.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityPoster02.tif",
+          "relationship": "figure"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityScript.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "22786166/TreeRichness_ha.asc",
+          "relationship": "described_asset"
+        }
+      ]
+    },
+    {
+      "row_id": 41,
+      "status": "matched",
+      "evidence": "PlotData.csv provides 2,046 plot records with coordinates, metadata, density/diversity/richness and references. PlotsAbiotic.csv contains matching plot-keyed environmental covariates.",
+      "limitations": "year_est is establishment year, not demonstrated measurement date. Coordinate datum and citation parsing require clarification. Additional environmental values are supporting data rather than the gridded outputs.",
+      "assets": [
+        {
+          "relative_path": "22786166/PlotData.csv",
+          "relationship": "described_asset"
+        },
+        {
+          "relative_path": "22786166/PlotsAbiotic.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "22786166/TreeDiversityScript.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 45,
+      "status": "partial",
+      "evidence": "data_plot_PGM.csv and data_plot_STM.csv provide classifications for 117+98=215 plots, matching the plot universe. Individual census records were not found.",
+      "limitations": "The requested 25,313 large and 30,070 small tree measurements are absent from the supplied tables; diversity estimates and 72 diversity matrices are separate analytical products and are explicitly left unmatched. A candidate cross-study join matches 206/215 region+plot keys to LULC environment_all.txt; identity and UTM CRS remain unverified.",
+      "assets": [
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/.gitignore",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/LICENSE",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.html",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/tree_diversity_GCB.Rproj",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/data_plot_PGM.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/data_plot_STM.csv",
+          "relationship": "partial_or_processed"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_composition.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_diversity.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_figure_4_and_5.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_heatmaps_composition.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_sensitivity_analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/adonis_OmegaSq.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 46,
+      "status": "not_located",
+      "evidence": "No individual/species table containing the 20 named functional traits was found among the 96 files. Scripts and functional-diversity summaries demonstrate analysis of traits but do not supply the requested measurements.",
+      "limitations": "Functional-diversity average/dissimilarity matrices are not bark/leaf/chemical trait records and are recorded as unmatched scientific products. A potential plot-coordinate join cannot reconstruct missing trait values.",
+      "assets": [
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/.gitignore",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/LICENSE",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.html",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/tree_diversity_GCB.Rproj",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_composition.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_diversity.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_figure_4_and_5.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_heatmaps_composition.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_sensitivity_analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/adonis_OmegaSq.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 48,
+      "status": "partial",
+      "evidence": "NetworkDataPollinationNew.csv contains 5,201 species and 15 pollinator-group fields; Final_Query_Genera.csv provides 804 genus rows with pollinator fields. PollinationData.xlsx and the genus publication table provide underlying visitation records.",
+      "limitations": "Exact paper totals differ from simple local counts: genus source table has 6,868 rows with original count sum 13,989; Final_Query_Genera has 804 genera and Count_Pollination sum 6,336. Script applies count recoding/aggregation, so 14,076 genus and 9,619 species interactions require version/filter reconciliation. Bootstrap sampling-diversity outputs are not the described matrices.",
+      "assets": [
+        {
+          "relative_path": "28417586/Final_Query_Genera.csv",
+          "relationship": "partial_or_processed",
+          "selector": "Genus and pollinator-group columns; do not use Count_Pollination as the published interaction total without reconciliation"
+        },
+        {
+          "relative_path": "28417586/NetworkDataPollinationNew.csv",
+          "relationship": "partial_or_processed",
+          "selector": "species/taxonomy and pollinator-group block ant through wind"
+        },
+        {
+          "relative_path": "28417586/NetworkFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "28417586/NetworksFinal.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "28417586/PollinationData.xlsx",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "28417586/Pollination_Data_Amazon_genera.csv",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "28417586/Publications.xlsx",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "28417586/plotweb_modified.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 49,
+      "status": "matched",
+      "evidence": "NetworkDataPollinationNew.csv directly contains dispersal modes, seedmass and Fleshy for 5,201 species; R comments identify two dispersal-source blocks.",
+      "limitations": "Unassisted appears twice in separate source blocks; use column position plus source semantics. This is a nonspatial species trait table, not occurrence geometry.",
+      "assets": [
+        {
+          "relative_path": "28417586/NetworkDataPollinationNew.csv",
+          "relationship": "described_asset",
+          "selector": "species, seedmass, Fleshy and dispersal blocks; distinguish both Unassisted columns"
+        },
+        {
+          "relative_path": "28417586/NetworkFunctions.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "28417586/NetworksFinal.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "28417586/plotweb_modified.R",
+          "relationship": "code"
+        }
+      ]
+    },
+    {
+      "row_id": 72,
+      "status": "partial",
+      "evidence": "TMS_data.xlsx contains plotID, DateTime, Soil_temp, Surface_temp, Air_temp and volMoist; PooledData.xlsx contains plot-level means/minima/maxima and moisture.",
+      "limitations": "No distinct iButton series at 1.5 m was identified. Full large-workbook timestamp range/interval coverage was not exhaustively scanned, and only 25 pooled plots are present. Remote ECOSTRESS temperatures are a related source, not the described field-sensor measurements.",
+      "assets": [
+        {
+          "relative_path": "30258298/Analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "30258298/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/Ecostress_Peru.xlsx",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/PooledData.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet 1: Air_temp, Surface_temp, Soil_temp, volMoist and *_max/*_min"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/TMS_data.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet 1: plotID, DateTime, Soil_temp, Surface_temp, Air_temp, volMoist"
+        }
+      ]
+    },
+    {
+      "row_id": 73,
+      "status": "partial",
+      "evidence": "DungBeetles.xlsx contains specimen/barcode, Count, Season, Trap and Plot data for 26 plot IDs; PooledData.xlsx contains richness and abundance for 25 plots.",
+      "limitations": "Local 513 specimen rows sum to 6,001 in Count and 103 distinct nonempty BINs, versus the sheet 4,937 individuals/104 BINs. Filtering/version differences must be reconciled, not labelled corruption. Per-bait biomass is not explicit in the supplied workbook.",
+      "assets": [
+        {
+          "relative_path": "30258298/Analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "30258298/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/DungBeetles.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet1: Sampleid, Match.BIN/taxonomy, Count, Season, Trap, Plot"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/PooledData.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet 1: Plot, Richness, Abundance"
+        }
+      ]
+    },
+    {
+      "row_id": 74,
+      "status": "partial",
+      "evidence": "PooledData.xlsx contains a MamMass covariate for 25 plots, and Analysis.R uses it in dung-beetle models.",
+      "limitations": "No raw mammal detection, camera ID, timestamp, effort, species-abundance or species-richness asset was identified in this seven-file package. The one derived biomass column does not satisfy the full camera-trap dataset description.",
+      "assets": [
+        {
+          "relative_path": "30258298/Analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "30258298/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/PooledData.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet 1: Plot, MamMass only"
+        }
+      ]
+    },
+    {
+      "row_id": 75,
+      "status": "partial",
+      "evidence": "ThermalLimits.xlsx contains 113 assay records with coordinates, plot and season: 64 numeric CTmax and 49 numeric CTmin. PooledData contains predicted thermal limits.",
+      "limitations": "The row specifies 125 upper-limit individuals/31 BINs; local CTmax sample count differs and no BIN column is supplied. Lower limits are additional data not described by this row. Assay/specimen joins and filtering/version need reconciliation.",
+      "assets": [
+        {
+          "relative_path": "30258298/Analysis.R",
+          "relationship": "code"
+        },
+        {
+          "relative_path": "30258298/README.md",
+          "relationship": "documentation"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/Ecostress_Peru.xlsx",
+          "relationship": "related_input"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/PooledData.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet 1: Plot, pred_CTmax (pred_CTmin is additional)"
+        },
+        {
+          "relative_path": "30258298/Repository_figshare/ThermalLimits.xlsx",
+          "relationship": "partial_or_processed",
+          "selector": "Sheet1: CTmax plus Sample_ID, Plot, Season, Latitude, Longitude, Elevation; CTmin is not the upper-limit variable"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "relative_path": "22786166/AmazonLowLandForestRaisg.csv",
+      "disposition": "related_input",
+      "row_ids": [
+        38,
+        39,
+        40
+      ],
+      "reason": "Forest-type/region prediction-grid input used in the raster workflow."
+    },
+    {
+      "relative_path": "22786166/AreaDiversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Forest-type area and mean/median diversity summaries for Figure S26; no sheet row describes this aggregated product."
+    },
+    {
+      "relative_path": "22786166/PlotData.csv",
+      "disposition": "matched_data",
+      "row_ids": [
+        41
+      ],
+      "reason": "Plot metadata and measured diversity/density/richness."
+    },
+    {
+      "relative_path": "22786166/PlotsAbiotic.csv",
+      "disposition": "related_input",
+      "row_ids": [
+        41
+      ],
+      "reason": "Plot-keyed abiotic covariates supplement the described plot metadata."
+    },
+    {
+      "relative_path": "22786166/SoterRaisg.asc",
+      "disposition": "related_input",
+      "row_ids": [
+        38,
+        39,
+        40
+      ],
+      "reason": "Soil classification grid read by the raster workflow."
+    },
+    {
+      "relative_path": "22786166/TreeDensity.asc",
+      "disposition": "matched_data",
+      "row_ids": [
+        38
+      ],
+      "reason": "Explicit density raster export."
+    },
+    {
+      "relative_path": "22786166/TreeDiversity.asc",
+      "disposition": "matched_data",
+      "row_ids": [
+        39
+      ],
+      "reason": "Explicit Fisher-alpha raster export."
+    },
+    {
+      "relative_path": "22786166/TreeDiversityFunctions.R",
+      "disposition": "code",
+      "row_ids": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "reason": "Analysis/helper code supporting the four described data products."
+    },
+    {
+      "relative_path": "22786166/TreeDiversityPoster01.tif",
+      "disposition": "figure",
+      "row_ids": [
+        38,
+        39,
+        40
+      ],
+      "reason": "TIFF poster exported by R plotting device; presentation, not spatial raster."
+    },
+    {
+      "relative_path": "22786166/TreeDiversityPoster02.tif",
+      "disposition": "figure",
+      "row_ids": [
+        38,
+        39,
+        40
+      ],
+      "reason": "TIFF poster exported by R plotting device; presentation, not spatial raster."
+    },
+    {
+      "relative_path": "22786166/TreeDiversityScript.R",
+      "disposition": "code",
+      "row_ids": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "reason": "Analysis/helper code supporting the four described data products."
+    },
+    {
+      "relative_path": "22786166/TreeRichness_ha.asc",
+      "disposition": "matched_data",
+      "row_ids": [
+        40
+      ],
+      "reason": "Explicit richness-per-hectare raster export."
+    },
+    {
+      "relative_path": "28417586/Bootstrap_PD.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Bootstrap/observed/SD pollinator-diversity sampling-analysis output; neither row 48 nor row 49 describes this scientific product."
+    },
+    {
+      "relative_path": "28417586/Final_Query_Genera.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        48
+      ],
+      "reason": "Genus pollination matrix/traits, with 804 local rows; published interaction totals unresolved."
+    },
+    {
+      "relative_path": "28417586/NetworkDataPollinationNew.csv",
+      "disposition": "matched_data",
+      "row_ids": [
+        48,
+        49
+      ],
+      "reason": "Species table supplies interaction and dispersal-trait column blocks; row 48 totals remain partial."
+    },
+    {
+      "relative_path": "28417586/NetworkFunctions.R",
+      "disposition": "code",
+      "row_ids": [
+        48,
+        49
+      ],
+      "reason": "Analysis and plotting helpers; no claim that every output is a described asset."
+    },
+    {
+      "relative_path": "28417586/NetworksFinal.R",
+      "disposition": "code",
+      "row_ids": [
+        48,
+        49
+      ],
+      "reason": "Analysis and plotting helpers; no claim that every output is a described asset."
+    },
+    {
+      "relative_path": "28417586/PDobs.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Bootstrap/observed/SD pollinator-diversity sampling-analysis output; neither row 48 nor row 49 describes this scientific product."
+    },
+    {
+      "relative_path": "28417586/PDsd.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Bootstrap/observed/SD pollinator-diversity sampling-analysis output; neither row 48 nor row 49 describes this scientific product."
+    },
+    {
+      "relative_path": "28417586/PollinationData.xlsx",
+      "disposition": "related_input",
+      "row_ids": [
+        48
+      ],
+      "reason": "Literature visitation records used to aggregate interaction matrices; not final paper totals."
+    },
+    {
+      "relative_path": "28417586/Pollination_Data_Amazon_genera.csv",
+      "disposition": "related_input",
+      "row_ids": [
+        48
+      ],
+      "reason": "Literature visitation records used to aggregate interaction matrices; not final paper totals."
+    },
+    {
+      "relative_path": "28417586/Publications.xlsx",
+      "disposition": "documentation",
+      "row_ids": [
+        48
+      ],
+      "reason": "PubNr-linked literature citation lookup for visitation records."
+    },
+    {
+      "relative_path": "28417586/plotweb_modified.R",
+      "disposition": "code",
+      "row_ids": [
+        48,
+        49
+      ],
+      "reason": "Analysis and plotting helpers; no claim that every output is a described asset."
+    },
+    {
+      "relative_path": "30258298/Analysis.R",
+      "disposition": "code",
+      "row_ids": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "reason": "Analysis code for the described observations and derived predictors."
+    },
+    {
+      "relative_path": "30258298/README.md",
+      "disposition": "documentation",
+      "row_ids": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "reason": "Variable dictionary and study documentation."
+    },
+    {
+      "relative_path": "30258298/Repository_figshare/DungBeetles.xlsx",
+      "disposition": "partial_data",
+      "row_ids": [
+        73
+      ],
+      "reason": "Specimen/count/barcode table; published count and biomass coverage not fully matched."
+    },
+    {
+      "relative_path": "30258298/Repository_figshare/Ecostress_Peru.xlsx",
+      "disposition": "related_input",
+      "row_ids": [
+        72,
+        75
+      ],
+      "reason": "ECOSTRESS satellite surface-temperature table cited as an existing source; not field sensors or thermal assay data."
+    },
+    {
+      "relative_path": "30258298/Repository_figshare/PooledData.xlsx",
+      "disposition": "partial_data",
+      "row_ids": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "reason": "Multiple derived plot predictors/outcomes; use explicit variable selectors per row."
+    },
+    {
+      "relative_path": "30258298/Repository_figshare/TMS_data.xlsx",
+      "disposition": "partial_data",
+      "row_ids": [
+        72
+      ],
+      "reason": "Field TMS measurements; separate iButton stream not identified."
+    },
+    {
+      "relative_path": "30258298/Repository_figshare/ThermalLimits.xlsx",
+      "disposition": "partial_data",
+      "row_ids": [
+        75
+      ],
+      "reason": "CTmax observations are the requested variable; CTmin is additional data and total differs."
+    },
+    {
+      "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_accumulation_forest_type_current_v2.xlsx",
+      "disposition": "matched_data",
+      "row_ids": [
+        2
+      ],
+      "reason": "Direct synthesis observations for carbon loss or accumulation; preserve all variables and study IDs."
+    },
+    {
+      "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx",
+      "disposition": "matched_data",
+      "row_ids": [
+        2
+      ],
+      "reason": "Direct synthesis observations for carbon loss or accumulation; preserve all variables and study IDs."
+    },
+    {
+      "relative_path": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx",
+      "disposition": "documentation",
+      "row_ids": [
+        2
+      ],
+      "reason": "Reference/citation lookup; RefID 96 is ambiguous between two studies."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/0-functions_network_creation.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbn",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.sbx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "River/basin geometry or barrier locations are inputs, not the final weighted-index/ranking product."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/HydroRIVERS_v10_sa.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "README or GIS metadata; .qmd is QGIS XML metadata."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.cpg",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.qmd",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "README or GIS metadata; .qmd is QGIS XML metadata."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "River/basin geometry or barrier locations are inputs, not the final weighted-index/ranking product."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "disposition": "archive_container",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Archive directory checked: network/basin shapefile components; member dispositions supplied separately."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "README or GIS metadata; .qmd is QGIS XML metadata."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "River/basin geometry or barrier locations are inputs, not the final weighted-index/ranking product."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbn",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.sbx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "River/basin geometry or barrier locations are inputs, not the final weighted-index/ranking product."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shp.xml",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "README or GIS metadata; .qmd is QGIS XML metadata."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Shapefile attribute/projection/encoding/spatial-index component; maintain with its parent SHP."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "disposition": "archive_container",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Archive directory checked: network/basin shapefile components; member dispositions supplied separately."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_CURRENT_SET_FUTURE_SUITABILITY.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_2_add_suitability_FUTURE_SET.R",
+      "disposition": "code",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_3_habitat_calculating_idx.R",
+      "disposition": "code",
+      "row_ids": [
+        10,
+        11
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_4_barrier_calculating_idx.R",
+      "disposition": "code",
+      "row_ids": [
+        12
+      ],
+      "reason": "Connectivity/suitability pipeline code; generated indices are not supplied."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_245_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_complete_585_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean_mig.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_current_mean_sedent.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mean_coord.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_245_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_mig_585_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_245_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2030.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2050.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2070.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/suit_sedent_585_2090.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        9
+      ],
+      "reason": "Continuous current/future suitability grid table; no binary raster product demonstrated."
+    },
+    {
+      "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx",
+      "disposition": "related_input",
+      "row_ids": [
+        13
+      ],
+      "reason": "Taxonomic/common-name and regional trait/price inputs used to construct annual metrics."
+    },
+    {
+      "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+      "disposition": "matched_data",
+      "row_ids": [
+        13
+      ],
+      "reason": "Annual regional results sheet contains exactly the described metrics."
+    },
+    {
+      "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_003.R",
+      "disposition": "code",
+      "row_ids": [
+        13
+      ],
+      "reason": "Empirical annual landings/diversity analysis."
+    },
+    {
+      "relative_path": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_004.R",
+      "disposition": "code",
+      "row_ids": [],
+      "reason": "Theoretical community/fishery-collapse simulation; no sheet row describes its simulated dataset."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Consociated.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Dirt_roads.geojson",
+      "disposition": "related_input",
+      "row_ids": [],
+      "reason": "Road reference input for proximity analysis; that analysis is not described in sheet rows 14-16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Federal_roads.geojson",
+      "disposition": "related_input",
+      "row_ids": [],
+      "reason": "Road reference input for proximity analysis; that analysis is not described in sheet rows 14-16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/FullSun.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Managed.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Pasture.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Primary_forest.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Secondary_forest.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Urban.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/Water.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Assets/study_area.geojson",
+      "disposition": "related_input",
+      "row_ids": [
+        14,
+        15
+      ],
+      "reason": "Training/reference polygons or study boundary; not final regional/fine-scale classifications."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/GEE/README.md",
+      "disposition": "documentation",
+      "row_ids": [
+        14,
+        15,
+        16
+      ],
+      "reason": "Study title, GEE workflow and source-assets explanation."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/GEE/Script1.js",
+      "disposition": "code",
+      "row_ids": [
+        14
+      ],
+      "reason": "Code producing regional LULC classifications; outputs absent locally."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/GEE/Script2.js",
+      "disposition": "code",
+      "row_ids": [
+        14
+      ],
+      "reason": "Code producing regional LULC classifications; outputs absent locally."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/GEE/Script3.js",
+      "disposition": "code",
+      "row_ids": [],
+      "reason": "Transition/proximity or spectral-summary analysis code; those specific products are not described by rows 14-16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/AGB.R",
+      "disposition": "code",
+      "row_ids": [
+        16
+      ],
+      "reason": "Transforms supplied DBH/height measurements into aboveground biomass; extra output is not described by row 16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/FieldPlot_data.xlsx",
+      "disposition": "partial_data",
+      "row_ids": [
+        16
+      ],
+      "reason": "Field tree/cover measurements or derived column subset; GPS join and 23/24-plot discrepancy unresolved."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/LAI.R",
+      "disposition": "code",
+      "row_ids": [],
+      "reason": "Transition/proximity or spectral-summary analysis code; those specific products are not described by rows 14-16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/LAI_mean.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Spectral-index/reflectance summary by objects or land use; no row describes this scientific output, and it is not a classification map or field measurement."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/NDVI.R",
+      "disposition": "code",
+      "row_ids": [],
+      "reason": "Transition/proximity or spectral-summary analysis code; those specific products are not described by rows 14-16."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/NDVI_mean.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Spectral-index/reflectance summary by objects or land use; no row describes this scientific output, and it is not a classification map or field measurement."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/eCognition ruleset.xlsx",
+      "disposition": "documentation",
+      "row_ids": [
+        15
+      ],
+      "reason": "Descriptive object-based classification workflow, not map data."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/swir_by_landuse (1).csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Spectral-index/reflectance summary by objects or land use; no row describes this scientific output, and it is not a classification map or field measurement."
+    },
+    {
+      "relative_path": "Cacao Frontiers - SM/Plots&eCognition/tree_stats.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        16
+      ],
+      "reason": "Field tree/cover measurements or derived column subset; GPS join and 23/24-plot discrepancy unresolved."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/Gatti-etal_2021.tab",
+      "disposition": "documentation",
+      "row_ids": [
+        8
+      ],
+      "reason": "PANGAEA dataset citation/rights and flawed Event-to-Binary manifest; retain mismatch warning."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/co2_alf_aircraft_sample_2010_2018.co2",
+      "disposition": "partial_data",
+      "row_ids": [
+        8
+      ],
+      "reason": "CO2 sample record stream; carbon-monoxide measurements absent."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/co2_rba_aircraft_sample_2010_2018.co2",
+      "disposition": "partial_data",
+      "row_ids": [
+        8
+      ],
+      "reason": "CO2 sample record stream; carbon-monoxide measurements absent."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/co2_san_aircraft_sample_2010_2018.co2",
+      "disposition": "partial_data",
+      "row_ids": [
+        8
+      ],
+      "reason": "CO2 sample record stream; carbon-monoxide measurements absent."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/co2_tab_aircraft_sample_2010_2018.co2",
+      "disposition": "partial_data",
+      "row_ids": [
+        8
+      ],
+      "reason": "CO2 sample record stream; carbon-monoxide measurements absent."
+    },
+    {
+      "relative_path": "Gatti-etal_2021_allfiles/co2_tef_aircraft_sample_2010_2018.co2",
+      "disposition": "partial_data",
+      "row_ids": [
+        8
+      ],
+      "reason": "CO2 sample record stream; carbon-monoxide measurements absent."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/.gitignore",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Ants_PGM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Ants_STM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Bees_PGM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Birds.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_PGM.txt",
+      "disposition": "matched_data",
+      "row_ids": [
+        36
+      ],
+      "reason": "Direct site-level aboveground/dead/litter/soil carbon pools."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_STM.txt",
+      "disposition": "matched_data",
+      "row_ids": [
+        36
+      ],
+      "reason": "Direct site-level aboveground/dead/litter/soil carbon pools."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Dung_beetles.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Lianas_PGM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Lianas_STM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Saplings_PGM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Saplings_STM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Soil_PGM.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        37
+      ],
+      "reason": "Aggregated site chemistry, not raw depth/core bulk-density observations."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Soil_STM.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        37
+      ],
+      "reason": "Aggregated site chemistry, not raw depth/core bulk-density observations."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Transect_classification.csv",
+      "disposition": "related_input",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Environmental/site-classification keys and projected coordinates support joins and analyses; CRS requires confirmation."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Transition_rates.txt",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Area/rate of land-cover transitions; no sheet row describes this dataset family."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Trees_PGM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Trees_STM.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35
+      ],
+      "reason": "Taxon-by-transect counts feed species-richness computation; counts are not final richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+      "disposition": "matched_data",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Joined site metrics cover richness/carbon/soil; use variable subsets for each row."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_rich_forest_sp.csv",
+      "disposition": "matched_data",
+      "row_ids": [
+        35
+      ],
+      "reason": "Direct forest-species richness metrics."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment.csv",
+      "disposition": "related_input",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Environmental/site-classification keys and projected coordinates support joins and analyses; CRS requires confirmation."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/environment_all.txt",
+      "disposition": "related_input",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Environmental/site-classification keys and projected coordinates support joins and analyses; CRS requires confirmation."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/transitions_rates_MapBiomas.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Area/rate of land-cover transitions; no sheet row describes this dataset family."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Data/transitions_rates_Matricardi.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Area/rate of land-cover transitions; no sheet row describes this dataset family."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+      "disposition": "documentation",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Study documentation, code explanation or repository license evidence."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/LULC_transitions.Rproj",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.html",
+      "disposition": "documentation",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Study documentation, code explanation or repository license evidence."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/README.md",
+      "disposition": "documentation",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Study documentation, code explanation or repository license evidence."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/efsize_bio.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/efsize_bio_forest.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/efsize_carbon_soil.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/efsize_data.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/efsize_median.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/mean_values_table.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/model_data.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/model_data_bio.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/model_data_bio_forest.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/model_data_carbon_soil.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/qGAM_efsize_data.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Results/qGAM_model_data.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Model/effect-size/estimated-mean output by class or transition; rows 35-37 describe site measurements, not these inferential products."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs_Forest_sp.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_effect_sizes.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_graphs_transition_rates.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_organising_data.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_panels.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_qGAM.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-LULC_transitions-c501bd5/Script_relationship_LULCT.R",
+      "disposition": "code",
+      "row_ids": [
+        35,
+        36,
+        37
+      ],
+      "reason": "Analysis script, R project or repository configuration; may also generate unlisted effect-size outputs."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/.gitignore",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_FD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_FD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_FD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_PD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_PD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_PD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_TD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_TD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_PGM_TD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_FD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_FD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_FD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_PD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_PD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_PD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_TD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_TD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/large_STM_TD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_FD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_FD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_FD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_PD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_PD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_PD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_TD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_TD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_PGM_TD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_FD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_FD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_FD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_PD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_PD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_PD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_TD_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_TD_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_averages/small_STM_TD_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_FD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_FD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_FD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_PD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_PD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_PD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_TD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_TD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_PGM_TD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_FD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_FD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_FD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_PD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_PD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_PD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_TD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_TD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/large_STM_TD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_FD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_FD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_FD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_PD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_PD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_PD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_TD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_TD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_PGM_TD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_FD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_FD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_FD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_PD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_PD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_PD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_TD_C_q0.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_TD_C_q1.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/Matrices_dissimilarity/small_STM_TD_C_q2.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/data_plot_PGM.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        45
+      ],
+      "reason": "Plot identifiers and forest classes match 215-plot universe, but no individual-tree measurements."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/data_plot_STM.csv",
+      "disposition": "partial_data",
+      "row_ids": [
+        45
+      ],
+      "reason": "Plot identifiers and forest classes match 215-plot universe, but no individual-tree measurements."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Data/diversity_all_inext3d.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/LICENSE",
+      "disposition": "documentation",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Study/methods/license context; does not supply missing census/trait measurements."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.html",
+      "disposition": "documentation",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Study/methods/license context; does not supply missing census/trait measurements."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/README.md",
+      "disposition": "documentation",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Study/methods/license context; does not supply missing census/trait measurements."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/R2_composition.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/R2_diversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/effect_size_permanova.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/efsize_diversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/emmeans_comparison_composition.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/emmeans_comparison_stem_diversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/emmeans_facet_diversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/emmeans_qvalue_composition.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/estimates_diversity.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Results/estimates_omega.csv",
+      "disposition": "unmatched_data",
+      "row_ids": [],
+      "reason": "Diversity estimate/matrix/statistical result. Rows 45-46 describe raw tree census and functional-trait measurements, so this distinct analytical product remains unmatched."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_composition.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_diversity.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_figure_4_and_5.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_heatmaps_composition.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/Script_sensitivity_analysis.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/Scripts/adonis_OmegaSq.R",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    },
+    {
+      "relative_path": "cassioalencarnunes-tree_diversity_GCB-b8419e5/tree_diversity_GCB.Rproj",
+      "disposition": "code",
+      "row_ids": [
+        45,
+        46
+      ],
+      "reason": "Analytical/configuration code applied to diversity summaries, not a raw data asset."
+    }
+  ],
+  "archived_assets": [
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.cpg",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.qmd",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/amazonhydro4_join_no_confluence_final.zip",
+      "member_path": "amazonhydro4_join_no_confluence_final.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.dbf",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.prj",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.sbn",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.sbx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.shp",
+      "disposition": "related_input",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.shp.xml",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "hybas_sa_lev03_v1c.shx",
+      "disposition": "sidecar",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    },
+    {
+      "archive_path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/hybas_sa_lev03_v1c.zip",
+      "member_path": "HydroBASINS_TechDoc_v1c.pdf",
+      "disposition": "documentation",
+      "row_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Source network/basin component or technical metadata; not final RCIsuit/dCCI. Archive directory inspected without extraction."
+    }
+  ]
+}

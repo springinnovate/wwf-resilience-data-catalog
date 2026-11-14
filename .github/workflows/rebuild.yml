@@ -1,0 +1,25 @@
+name: Rebuild and validate matching tables
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  rebuild:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python scripts/check_inputs.py
+      - run: python scripts/build_reconciliation.py --output-dir build/rebuilt
+      - run: python scripts/validate_reconciliation.py --output-dir build/rebuilt
+      - run: python scripts/compare_outputs.py build/rebuilt
+      - run: python -m unittest discover -s tests -v

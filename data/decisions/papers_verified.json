@@ -1,0 +1,568 @@
+[
+  {
+    "paper_id": "paper-001",
+    "title_as_supplied": "A first glimpse into the Selva: stingless bee diversity and plant-bee links inferred from adhered pollen in the Peruvian Amazon",
+    "sheet_year": "2026",
+    "verified_title": "A first glimpse into the Selva: stingless bee diversity and plant-bee links inferred from adhered pollen in the Peruvian Amazon",
+    "article_doi": "10.1007/s11829-026-10257-2",
+    "publisher_url": "https://link.springer.com/article/10.1007/s11829-026-10257-2",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://link.springer.com/article/10.1007/s11829-026-10257-2"
+    ],
+    "notes": [
+      "Publisher page gives publication on 18 June 2026, Arthropod-Plant Interactions volume 20, article 48."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-002",
+    "title_as_supplied": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
+    "sheet_year": "2026",
+    "verified_title": "A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration",
+    "article_doi": "10.1126/sciadv.adz1923",
+    "publisher_url": "https://www.science.org/doi/10.1126/sciadv.adz1923",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13330863/"
+    ],
+    "notes": [
+      "Published research article archived in PMC gives Science Advances 12(27), eadz1923, 3 July 2026 and this DOI. Direct Science access returned HTTP 403."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-003",
+    "title_as_supplied": "Amazon dieback beyond the 21st century under high-emission scenarios by Earth System models",
+    "sheet_year": "2025",
+    "verified_title": "Amazon dieback beyond the 21st century under high-emission scenarios by Earth System models",
+    "article_doi": "10.1038/s43247-025-02606-5",
+    "publisher_url": "https://www.nature.com/articles/s43247-025-02606-5",
+    "verified_year": 2025,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s43247-025-02606-5"
+    ],
+    "notes": [
+      "Publisher gives publication on 20 August 2025, Communications Earth & Environment 6, article 670."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-004",
+    "title_as_supplied": "Amazon forest loss: An all-sky biophysical top-of-atmosphere cooling feedback",
+    "sheet_year": "2026",
+    "verified_title": "Amazon forest loss: An all-sky biophysical top-of-atmosphere cooling feedback",
+    "article_doi": "10.1126/science.adz8296",
+    "publisher_url": "https://www.science.org/doi/10.1126/science.adz8296",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://csl.noaa.gov/groups/csl9/datasets/"
+    ],
+    "notes": [
+      "Author institution NOAA lists the exact title, authors Dror and Feingold, Science, article DOI and 2026 publication year. Its supporting dataset is a separate linked object."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-005",
+    "title_as_supplied": "Amazonia as a carbon source linked to deforestation and climate change",
+    "sheet_year": "2021",
+    "verified_title": "Amazonia as a carbon source linked to deforestation and climate change",
+    "article_doi": "10.1038/s41586-021-03629-6",
+    "publisher_url": "https://www.nature.com/articles/s41586-021-03629-6",
+    "verified_year": 2021,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s41586-021-03629-6",
+      "https://doi.pangaea.de/10.1594/PANGAEA.926834"
+    ],
+    "notes": [
+      "Nature identifies publication on 14 July 2021 and explicitly links the supporting vertical-profile dataset at PANGAEA.926834.",
+      "The article DOI and data DOI are different identifiers for different objects; preserve both with roles.",
+      "Direct publisher opening hit a cookie redirect; publisher search-index text and PANGAEA supplement-to citation independently exposed the title, year and article DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-006",
+    "title_as_supplied": "Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change",
+    "sheet_year": "2026",
+    "verified_title": "Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change",
+    "article_doi": "10.1111/gcb.70685",
+    "publisher_url": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.70685",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12759175/"
+    ],
+    "notes": [
+      "Publisher PDF and published article archived in PMC give Global Change Biology 32(1), e70685, 2026. Zenodo.18000863 is the supporting dataset DOI, not the article DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-007",
+    "title_as_supplied": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
+    "sheet_year": "2022",
+    "verified_title": "Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin",
+    "article_doi": "10.1098/rspb.2022.0726",
+    "publisher_url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726",
+    "verified_year": 2022,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://archimer.ifremer.fr/doc/00776/88847/94474.pdf"
+    ],
+    "notes": [
+      "Published article held by author institution Ifremer confirms Proceedings of the Royal Society B 289, 20220726, 2022, and this DOI. Figshare collection c.6033812 is supplementary material, not the paper DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-008",
+    "title_as_supplied": "Contested Frontiers Within the Cocoa Socio-Biodiversity Economy: A Gradient Approach to LULC Transitions and Land Use Practices in the Brazilian Amazon",
+    "sheet_year": "2026",
+    "verified_title": "Contested Frontiers Within the Cocoa Socio-Biodiversity Economy: A Gradient Approach to LULC Transitions and Land Use Practices in the Brazilian Amazon",
+    "article_doi": "10.3390/land15071322",
+    "publisher_url": "https://www.mdpi.com/2073-445X/15/7/1322",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.mdpi.com/2073-445X/15/7/1322"
+    ],
+    "notes": [
+      "Publisher gives publication on 22 July 2026, Land 15(7), article 1322."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-009",
+    "title_as_supplied": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+    "sheet_year": "2021",
+    "verified_title": "Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon",
+    "article_doi": "10.1038/s43247-021-00275-8",
+    "publisher_url": "https://www.nature.com/articles/s43247-021-00275-8",
+    "verified_year": 2021,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s43247-021-00275-8"
+    ],
+    "notes": [
+      "Publisher gives publication on 1 October 2021, Communications Earth & Environment 2, article 207."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-010",
+    "title_as_supplied": "Detecting vulnerability of humid tropical forests to multiple stressors",
+    "sheet_year": "2021",
+    "verified_title": "Detecting vulnerability of humid tropical forests to multiple stressors",
+    "article_doi": "10.1016/j.oneear.2021.06.002",
+    "publisher_url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+    "verified_year": 2021,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://researchportal.scu.edu.au/esploro/outputs/journalArticle/Detecting-vulnerability-of-humid-tropical-forests/991012961199002368",
+      "https://www.bgc-jena.mpg.de/5432341/1629904400"
+    ],
+    "notes": [
+      "Author-institution publication records confirm One Earth 4(7), 988-1003, 23 July 2021 and article DOI. The publisher URL is the observed HTTP redirect target of the verified article DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-011",
+    "title_as_supplied": "Ecosystem-based management of Amazon fisheries and wetlands",
+    "sheet_year": "2019",
+    "verified_title": "Ecosystem-based management of Amazon fisheries and wetlands",
+    "article_doi": "10.1111/faf.12328",
+    "publisher_url": "https://onlinelibrary.wiley.com/doi/10.1111/faf.12328",
+    "verified_year": 2019,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://onlinelibrary.wiley.com/doi/10.1111/faf.12328"
+    ],
+    "notes": [
+      "Year 2019 is the journal issue/citation year, Fish and Fisheries 20(1), 138-158. Publisher explicitly gives first online publication on 3 October 2018; this is a date-basis difference, not a sheet error.",
+      "Dataset DOI 10.5063/F1TB152P is explicitly linked in the paper and remains separate from the article DOI."
+    ],
+    "publication_year_mismatch": false,
+    "first_online_date": "2018-10-03",
+    "issue_year": 2019,
+    "publication_year_basis": "journal issue/citation year"
+  },
+  {
+    "paper_id": "paper-012",
+    "title_as_supplied": "Global forests risk to climate and land-use change",
+    "sheet_year": "2026",
+    "verified_title": "Global forests risk to climate and land-use change",
+    "article_doi": "10.1016/j.biocon.2026.111816",
+    "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0006320726001278",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S0006320726001278"
+    ],
+    "notes": [
+      "Publisher indexed metadata identifies Biological Conservation volume 318, June 2026, article 111816 and this DOI. Direct opening returned HTTP 403; indexed publisher metadata was readable."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-013",
+    "title_as_supplied": "Hot droughts in the Amazon provide a window to a future hypertropical climate",
+    "sheet_year": "2026",
+    "verified_title": "Hot droughts in the Amazon provide a window to a future hypertropical climate",
+    "article_doi": "10.1038/s41586-025-09728-y",
+    "publisher_url": "https://www.nature.com/articles/s41586-025-09728-y",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/nature/volumes/649/issues/8099"
+    ],
+    "notes": [
+      "Year 2026 is the journal issue/citation year: Nature 649, 1190-1196. Publisher gives first online publication on 10 December 2025; the issue is dated 29 January 2026. This is a date-basis difference, not a sheet error.",
+      "Publisher indexed article metadata was readable; direct opening encountered a cookie redirect."
+    ],
+    "publication_year_mismatch": false,
+    "first_online_date": "2025-12-10",
+    "issue_year": 2026,
+    "publication_year_basis": "journal issue/citation year"
+  },
+  {
+    "paper_id": "paper-014",
+    "title_as_supplied": "Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon basin",
+    "sheet_year": "2025",
+    "verified_title": "Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon basin",
+    "article_doi": "10.1073/pnas.2418189122",
+    "publisher_url": "https://www.pnas.org/doi/10.1073/pnas.2418189122",
+    "verified_year": 2025,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://doi.org/10.1073/pnas.2418189122"
+    ],
+    "notes": [
+      "Publisher indexed metadata gives publication on 28 July 2025, PNAS 122(31), e2418189122."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-015",
+    "title_as_supplied": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+    "sheet_year": "2022",
+    "verified_title": "Linking land-use and land-cover transitions to their ecological impact in the Amazon",
+    "article_doi": "10.1073/pnas.2202310119",
+    "publisher_url": "https://www.pnas.org/doi/10.1073/pnas.2202310119",
+    "verified_year": 2022,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://research-information.bris.ac.uk/ws/portalfiles/portal/329964201/Full_text_PDF_final_published_version_.pdf",
+      "https://e-space.mmu.ac.uk/629979/1/pnas.2202310119.pdf"
+    ],
+    "notes": [
+      "Published article held by author institutions gives publication on 27 June 2022, PNAS 119(27), e2202310119. It separately identifies data/code at Zenodo.6347560 and the authors GitHub repository."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-016",
+    "title_as_supplied": "Mapping density, diversity and species-richness of the Amazon tree flora",
+    "sheet_year": "2023",
+    "verified_title": "Mapping density, diversity and species-richness of the Amazon tree flora",
+    "article_doi": "10.1038/s42003-023-05514-6",
+    "publisher_url": "https://www.nature.com/articles/s42003-023-05514-6",
+    "verified_year": 2023,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s42003-023-05514-6"
+    ],
+    "notes": [
+      "Publisher gives publication on 8 November 2023, Communications Biology 6, article 1130."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-017",
+    "title_as_supplied": "Mapping Resilient Landscapes to Climate Change in a Megadiverse Country",
+    "sheet_year": "2025",
+    "verified_title": "Mapping Resilient Landscapes to Climate Change in a Megadiverse Country",
+    "article_doi": "10.1111/gcb.70544",
+    "publisher_url": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70544",
+    "verified_year": 2025,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70544",
+      "https://zenodo.org/records/13320277"
+    ],
+    "notes": [
+      "Wiley gives first publication as 10 October 2025 and explicitly links supporting data at Zenodo.13320277.",
+      "The cited Zenodo record is a 2024 v1.0 dataset, not the article; it lists Landscape_Heterogeneity_V01.zip, Landscape_Resilience_V01.zip and Local_Connectedness_V01.zip."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-018",
+    "title_as_supplied": "Multifaceted Assessment of Amazonian Tree Diversity Reveals Pervasive Impacts of Human Modification",
+    "sheet_year": "2025",
+    "verified_title": "Multifaceted Assessment of Amazonian Tree Diversity Reveals Pervasive Impacts of Human Modification",
+    "article_doi": "10.1111/gcb.70595",
+    "publisher_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.70595",
+    "verified_year": 2025,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.70595"
+    ],
+    "notes": [
+      "Publisher gives first publication on 10 November 2025, Global Change Biology 31(11), e70595."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-019",
+    "title_as_supplied": "Patterns of understorey bird diversity across Amazonian forests: survey effort and range maps predict local species richness",
+    "sheet_year": "2026",
+    "verified_title": "Patterns of understorey bird diversity across Amazonian forests: survey effort and range maps predict local species richness",
+    "article_doi": "10.1002/ecog.07625",
+    "publisher_url": "https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/ecog.07625",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://ueaeprints.uea.ac.uk/id/eprint/102860/"
+    ],
+    "notes": [
+      "Publisher gives first publication on 22 January 2026, Ecography volume 2026, issue 3, article 07625. The article DOI prefix is 10.1002; the Dryad DOI identifies supporting data."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-020",
+    "title_as_supplied": "Pollination and dispersal networks in the Amazonian tree flora",
+    "sheet_year": "2026",
+    "verified_title": "Pollination and dispersal networks in the Amazonian tree flora",
+    "article_doi": "10.1038/s42003-026-09896-1",
+    "publisher_url": "https://www.nature.com/articles/s42003-026-09896-1",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s42003-026-09896-1.pdf",
+      "https://repository.naturalis.nl/pub/801967"
+    ],
+    "notes": [
+      "Publisher PDF and author-institution Naturalis record confirm the exact title, article DOI and 6 April 2026 publication, Communications Biology 9."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-021",
+    "title_as_supplied": "Post-agreement acceleration of habitat loss and landscape connectivity decline in and around Colombian protected areas",
+    "sheet_year": "2026",
+    "verified_title": "Post-agreement acceleration of habitat loss and landscape connectivity decline in and around Colombian protected areas",
+    "article_doi": "10.1088/2515-7620/ae69a5",
+    "publisher_url": "https://iopscience.iop.org/article/10.1088/2515-7620/ae69a5",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://pure.urosario.edu.co/en/publications/post-agreement-acceleration-of-habitat-loss-and-landscape-connect/"
+    ],
+    "notes": [
+      "Author institution Universidad del Rosario gives the exact title, DOI, Environmental Research Communications 8(5) and publication in May 2026. Publisher URL uses the verified IOP article DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-022",
+    "title_as_supplied": "Pronounced loss of Amazon rainforest resilience since the early 2000s",
+    "sheet_year": "2022",
+    "verified_title": "Pronounced loss of Amazon rainforest resilience since the early 2000s",
+    "article_doi": "10.1038/s41558-022-01287-8",
+    "publisher_url": "https://www.nature.com/articles/s41558-022-01287-8",
+    "verified_year": 2022,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s41558-022-01287-8"
+    ],
+    "notes": [
+      "Nature Climate Change shows publication on 7 March 2022.",
+      "Data availability lists multiple external inputs including VOD, NDVI, MODIS land cover, CHIRPS, basin geometry, roads and SST; these should not be conflated with a single study-derived dataset DOI."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-023",
+    "title_as_supplied": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
+    "sheet_year": "2026",
+    "verified_title": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
+    "article_doi": "10.1029/2025AV001658",
+    "publisher_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://research-portal.uu.nl/ws/files/283711679/AGU_Advances_-_2026_-_Bot_a_-_Reduced_Vegetation_Uptake_During_the_Extreme_2023_Drought_Turns_the_Amazon_Into_a_Weak_Carbon.pdf"
+    ],
+    "notes": [
+      "Published article held by author institution Utrecht University confirms AGU Advances 7, e2025AV001658, 2026. The 2025 string in the DOI is not the publication year. Dataset DOI 10.17617/3.OU3KYA identifies a different object."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-024",
+    "title_as_supplied": "Reducing adverse impacts of Amazon hydropower expansion",
+    "sheet_year": "2022",
+    "verified_title": "Reducing adverse impacts of Amazon hydropower expansion",
+    "article_doi": "10.1126/science.abj4017",
+    "publisher_url": "https://www.science.org/doi/10.1126/science.abj4017",
+    "verified_year": 2022,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.cs.cornell.edu/gomes/udiscoverit/amazon-ecovistas/",
+      "https://doi.org/10.1126/science.abj4017",
+      "https://cals.cornell.edu/news/2022/02/ai-enables-strategic-hydropower-planning-across-amazon-basin"
+    ],
+    "notes": [
+      "Authors project page cites Science 375(6582):753-760 (2022) with this article DOI.",
+      "The software DOI 10.7298/qh5x-6f22 comes from the inspected local ParetoFrontier_README.txt and identifies the software package, not the Science paper.",
+      "Local README describes the article as under review in 2021; the published paper year is 2022.",
+      "Science article opening returned HTTP 403; no paywall bypass attempted."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-025",
+    "title_as_supplied": "Spatially explicit valuation of the Brazilian Amazon Forest's Ecosystem Services",
+    "sheet_year": "2018",
+    "verified_title": "Spatially explicit valuation of the Brazilian Amazon Forest’s Ecosystem Services",
+    "article_doi": "10.1038/s41893-018-0175-0",
+    "publisher_url": "https://www.nature.com/articles/s41893-018-0175-0",
+    "verified_year": 2018,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s41893-018-0175-0"
+    ],
+    "notes": [
+      "Publisher gives publication on 13 November 2018, Nature Sustainability 1, 657-664. Publisher title uses a typographic apostrophe; the supplied wording is otherwise the same."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-026",
+    "title_as_supplied": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+    "sheet_year": "2024",
+    "verified_title": "Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters",
+    "article_doi": "10.1038/s43247-024-01738-4",
+    "publisher_url": "https://www.nature.com/articles/s43247-024-01738-4",
+    "verified_year": 2024,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.nature.com/articles/s43247-024-01738-4"
+    ],
+    "notes": [
+      "Publisher indexed article metadata gives publication and version of record on 18 November 2024, Communications Earth & Environment 5, article 648. Direct opening encountered a cookie redirect."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-027",
+    "title_as_supplied": "Temperature boosts and constrains dung beetle diversity along an Andean-Amazonian elevation gradient",
+    "sheet_year": "2026",
+    "verified_title": "Temperature boosts and constrains dung beetle diversity along an Andean–Amazonian elevation gradient",
+    "article_doi": "10.1098/rspb.2025.2792",
+    "publisher_url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2025.2792",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://cris.cayetano.edu.pe/en/publications/temperature-boosts-and-constrains-dung-beetle-diversity-along-an-/"
+    ],
+    "notes": [
+      "Author institution Universidad Peruana Cayetano Heredia gives publication on 25 March 2026, Proceedings of the Royal Society B 293(2067), 20252792 and the article DOI. The 2025 string in the DOI is not the publication year.",
+      "Published title uses an en dash in Andean-Amazonian; this is a typographic variant. Figshare.30258298 and supplementary collection c.8343742 are distinct data/supplement identifiers."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-028",
+    "title_as_supplied": "The drivers and impacts of Amazon forest degradation",
+    "sheet_year": "2022",
+    "verified_title": "The drivers and impacts of Amazon forest degradation",
+    "article_doi": "10.1126/science.abp8622",
+    "publisher_url": "https://www.science.org/doi/10.1126/science.abp8622",
+    "verified_year": 2023,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://www.giss.nasa.gov/pubs/abs/la00600i.html",
+      "https://doi.org/10.1126/science.abp8622"
+    ],
+    "notes": [
+      "NASA GISS identifies Science volume 379, issue 6630, eabp8622, year 2023 and this article DOI.",
+      "Reported spreadsheet year 2022 differs from the verified publication year 2023; preserve original sheet value and add a correction flag.",
+      "Science article opening returned HTTP 403; no paywall bypass attempted. Dataset/code identifiers should be stored separately and were not fully verified in this illustrative record."
+    ],
+    "publication_year_mismatch": true,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-029",
+    "title_as_supplied": "Weather disasters and their underreported transboundary impacts on Amazonian communities",
+    "sheet_year": "2025",
+    "verified_title": "Weather disasters and their underreported transboundary impacts on Amazonian communities",
+    "article_doi": "10.1088/1748-9326/ae20a7",
+    "publisher_url": "https://iopscience.iop.org/article/10.1088/1748-9326/ae20a7",
+    "verified_year": 2025,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://research-information.bris.ac.uk/en/publications/weather-disasters-and-their-underreported-transboundary-impacts-o/"
+    ],
+    "notes": [
+      "Bristol gives Environmental Research Letters 20(12), publication 5 December 2025, and this DOI.",
+      "Publisher access was blocked by robots/cache restrictions; year and DOI were checked against the author institution record rather than a directly opened publisher page."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  },
+  {
+    "paper_id": "paper-030",
+    "title_as_supplied": "Western Amazon Basin limits: conservation status and distribution of river dolphins (Inia geoffrensis and Sotalia fluviatilis) in Ecuador",
+    "sheet_year": "2026",
+    "verified_title": "Western Amazon Basin limits: conservation status and distribution of river dolphins (Inia geoffrensis and Sotalia fluviatilis) in Ecuador",
+    "article_doi": "10.7717/peerj.21586",
+    "publisher_url": "https://peerj.com/articles/21586/",
+    "verified_year": 2026,
+    "verification_status": "verified_primary_source",
+    "evidence_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13428540/"
+    ],
+    "notes": [
+      "Published research article archived in PMC gives publication on 29 July 2026, PeerJ 14, e21586 and this DOI. Direct publisher opening returned HTTP 403."
+    ],
+    "publication_year_mismatch": false,
+    "publication_year_basis": "publisher or author-institution publication/citation year"
+  }
+]

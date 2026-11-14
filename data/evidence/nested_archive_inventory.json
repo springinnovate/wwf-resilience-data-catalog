@@ -1,0 +1,752 @@
+[
+  {
+    "archive": "HotDroughts/ess_dive_51355cc1a961737_20241028T151516926939.zip",
+    "nested_member": "data/BIONTE_dataset_20221118213529.zip",
+    "files": [
+      {
+        "member_path": "BIONTE_mortality-rates_1991-2019.csv",
+        "size_bytes": 10386,
+        "crc32": "decefd8b",
+        "header_line": "YEAR,T0T1T2T3,T0,T1,T2,T3,T0B1,T0B2,T0B4,T1B2,T1B1,T1B4,T2B1,T2B2,T2B4,T3B1,T3B2,T3B4"
+      },
+      {
+        "member_path": "BIONTE_mortality-rates_headers.txt",
+        "size_bytes": 878,
+        "crc32": "ddef4da6",
+        "header_dictionary": "HEADERS\n\n- YEAR: census year\n\n- T0T1T2T3: mortality rate for treatments T0 through T3\n\n- T0: mortality rate for treatment T0\n\n- T1: mortality rate for treatment T1\n\n- T2: mortality rate for treatment T2\n\n- T3: mortality rate for treatment T3\n\n- T0B1: mortality rate for treatment T0 of block B1\n\n- T0B2: mortality rate for treatment T0 of block B2\n\n- T0B4: mortality rate for treatment T0 of block B4\n\n- T1B1: mortality rate for treatment T1 of block B1\n\n- T1B2: mortality rate for treatment T1 of block B2\n\n- T1B4: mortality rate for treatment T1 of block B4\n\n- T2B1: mortality rate for treatment T2 of block B1\n\n- T2B2: mortality rate for treatment T2 of block B2\n\n- T2B4: mortality rate for treatment T2 of block B4\n\n- T3B1: mortality rate for treatment T3 of block B1\n\n- T3B2: mortality rate for treatment T3 of block B2\n\n- T3B4: mortality rate for treatment T3 of block B4\n"
+      }
+    ]
+  },
+  {
+    "archive": "HotDroughts/ess_dive_6972c2140a6f4b9_20241028T151531002066.zip",
+    "nested_member": "data/Drought-Indices-Embrapa-Ducke_20230224025017.zip",
+    "files": [
+      {
+        "member_path": "Drought-Indices-Embrapa-Ducke_met_spi_headers.txt",
+        "size_bytes": 368,
+        "crc32": "3f24b4a7",
+        "header_dictionary": "HEADERS\n\n- DATE: date in form YYYY-MM-DD\n\n- TEMP_MAX: daily maximum temperature\n\n- TEMP_MIN: daily minimum temperature\n\n- RH: daily average relative humidity\n\n- PRECIP: daily total precipitation\n\n- SPI_180D_20YCAL_GAMMA: standardized precipitation index, computed daily for 180 day intervals, using 20 years of data \nfor calibration (1980-1999) and gamma distribution\n"
+      },
+      {
+        "member_path": "Drought-Indices-Embrapa-Ducke_met_spi_PRELIMINARY.csv",
+        "size_bytes": 710176,
+        "crc32": "b4cba658",
+        "header_line": "DATE,TEMP_MAX,TEMP_MIN,RH,PRECIP,SPI_180D_20YCAL_GAMMA"
+      }
+    ]
+  },
+  {
+    "archive": "HotDroughts/ess_dive_d47a5a9831e4b2b_20241028T151437940588.zip",
+    "nested_member": "data/Gimenez_etal_2019_Data_20191125194403.zip",
+    "files": [
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Direct_Solar_Radiation/Fig1-(C)_Direct_Solar_Radiation_Manaus.csv",
+        "size_bytes": 38593,
+        "crc32": "555e1fc8",
+        "header_line": "Date_Time_Direct_Solar_Rad,Direct_Solar_Radiation"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Direct_Solar_Radiation/Fig1-(D)_Direct_Solar_Radiation_Manaus.csv",
+        "size_bytes": 38576,
+        "crc32": "452fd6f0",
+        "header_line": "Date_Time,Direct Solar Radiation"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Direct_Solar_Radiation/Fig5(D)_Direct_Solar_Radiation.csv",
+        "size_bytes": 22999,
+        "crc32": "6cec078f",
+        "header_line": "Date_Time ,Direct_Solar_Radiation,Date_Time_Diurnal_Hysteresis_Morning,Direct_Solar_Radiation_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Direct_Solar_Radiation_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Direct_Solar_Radiation_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Direct_Solar_Radiation/Fig5(E)_Direct_Solar_Radiation.csv",
+        "size_bytes": 25088,
+        "crc32": "59890c07",
+        "header_line": "Date_Time ,Direct_Solar_Radiation,Date_Time_Diurnal_Hysteresis_Morning,Direct_Solar_Radiation_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Direct_Solar_Radiation_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Direct_Solar_Radiation_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Direct_Solar_Radiation/Fig5(F)_Direct_Solar_Radiation.csv",
+        "size_bytes": 25099,
+        "crc32": "55a1fd0b",
+        "header_line": "Date_Time ,Direct_Solar_Radiation,Date_Time_Diurnal_Hysteresis_Morning,Direct_Solar_Radiation_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Direct_Solar_Radiation_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Direct_Solar_Radiation_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig1-(A)_Leaf_Temp_E_cyathiformis_Manaus.csv",
+        "size_bytes": 22130,
+        "crc32": "2dbbbbad",
+        "header_line": "Date_Time_Leaf_Temp,Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig1-(D)_Tleaf__Manaus.csv",
+        "size_bytes": 38836,
+        "crc32": "fad77334",
+        "header_line": "Date_Time,Leaf_Temp_P_anomala"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig1-(E)_Leaf_Temp_Lecythis_Santarem.csv",
+        "size_bytes": 51767,
+        "crc32": "5824920e",
+        "header_line": "Date_Time_Leaf_Temp,Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig2_Tleaf_C_longipendula_(A)_(D).csv",
+        "size_bytes": 195593,
+        "crc32": "922d9e14",
+        "header_line": "Date_Time,Tleaf_C_longipendula (�C)"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig2_Tleaf_P_anomala_(B)_(E).csv",
+        "size_bytes": 195782,
+        "crc32": "f97303b9",
+        "header_line": "Date_Time,Tleaf_P_anomala (�C)"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig2_Tleaf_P_erythrochrysa_(C)_(F).csv",
+        "size_bytes": 349014,
+        "crc32": "78f1225c",
+        "header_line": "Date_Time,Tleaf_P_erythrochysa (�C)"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_C_longipendula_2015.csv",
+        "size_bytes": 212590,
+        "crc32": "179606e7",
+        "header_line": "Date_Time,Tleaf (�C),Normalized_Tleaf ,Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_C_longipendula_2017.csv",
+        "size_bytes": 157858,
+        "crc32": "4ec9bdae",
+        "header_line": "Date_Time,Tleaf (�C),Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_P_anomala_2015.csv",
+        "size_bytes": 212569,
+        "crc32": "d2b487f8",
+        "header_line": "Date_Time,Tleaf (�C),Normalized_Tleaf,Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_P_anomala_2017.csv",
+        "size_bytes": 157900,
+        "crc32": "72890140",
+        "header_line": "Date_Time,Tleaf (�C),Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_P_erythrochysa_2015.csv",
+        "size_bytes": 212339,
+        "crc32": "43069c78",
+        "header_line": "Date_Time,Tleaf (�C),Normalized_Tleaf,Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig3_Tleaf_P_erythrochysa_2017.csv",
+        "size_bytes": 157831,
+        "crc32": "25c957f4",
+        "header_line": "Date_Time,Tleaf (�C),Min Tleaf,Max Tleaf,Hour,Average_Normalized_Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_C_xinguensis_(E).csv",
+        "size_bytes": 22457,
+        "crc32": "f57aa2fe",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night,"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_E_cyathiformis_(A).csv",
+        "size_bytes": 22870,
+        "crc32": "65695d9f",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_E_uncinatum_(F).csv",
+        "size_bytes": 22243,
+        "crc32": "7a0cacab",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_Lecythis_sp_(D).csv",
+        "size_bytes": 22189,
+        "crc32": "d9f5ccba",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_P_anomala_(B).csv",
+        "size_bytes": 21826,
+        "crc32": "daf9c6d3",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig4_Tleaf_P_erythrochysa_(C).csv",
+        "size_bytes": 22187,
+        "crc32": "5245422c",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig6_Tleaf_E_cyathiformis.csv",
+        "size_bytes": 22870,
+        "crc32": "65695d9f",
+        "header_line": "Date_Time,Tleaf ,Date_Time_Diurnal_Hysteresis_Morning,Tleaf_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Tleaf_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Tleaf_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_E_cyathiformis_Dry_Season_2015.csv",
+        "size_bytes": 243691,
+        "crc32": "31ed9c2a",
+        "header_line": "Date_Time_Morning,Period,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_E_cyathiformis_Dry_Season_2017.csv",
+        "size_bytes": 277210,
+        "crc32": "def97717",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_P_anomala_Dry_Season_2015.csv",
+        "size_bytes": 143594,
+        "crc32": "ceb31ef8",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_P_anomala_Dry_Season_2017.csv",
+        "size_bytes": 141724,
+        "crc32": "3819b33f",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_P_erythrochysa_Dry_Season_2015.csv",
+        "size_bytes": 127894,
+        "crc32": "2c121ba3",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/Fig7_Tleaf_P_erythrochysa_Dry_Season_2017.csv",
+        "size_bytes": 120222,
+        "crc32": "cd7acf8f",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Normalized_Tleaf_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night,Normalized_Tleaf_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS3_Tleaf_Data_Manaus.csv",
+        "size_bytes": 50038,
+        "crc32": "a32e04ad",
+        "header_line": "Date_Time,Leaf_Thermocouple_1_P_anomala,Leaf_Thermocouple_2_P_anomala,Leaf_Thermocouple_3_P_anomala,Leaf_Thermocouple_4_P_anomala,Infrared_Radiometer_P_anomala"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS3_Tleaf_Data_Santarem.csv",
+        "size_bytes": 47116,
+        "crc32": "a02cb1c4",
+        "header_line": "Date_Time,Leaf_Thermocouple_1_Manilkara_sp,Leaf_Thermocouple_2_Manilkara_sp,Leaf_Thermocouple_3_Manilkara_sp,Leaf_Thermocouple_4_Manilkara_sp,Infrared_Radiometer_C_xinguensis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_C_xinguensis.csv",
+        "size_bytes": 448880,
+        "crc32": "43026287",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_E_cyathiformis.csv",
+        "size_bytes": 342841,
+        "crc32": "57322380",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_E_uncinatum.csv",
+        "size_bytes": 290516,
+        "crc32": "7665ce75",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_Lecythis_sp.csv",
+        "size_bytes": 290503,
+        "crc32": "c9b972b2",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_P_anomala.csv",
+        "size_bytes": 343825,
+        "crc32": "7dc067a6",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS4_Leaf_Temp_P_erythrochysa.csv",
+        "size_bytes": 366040,
+        "crc32": "2485db7f",
+        "header_line": "Date_Time_Leaf_Temp,Normalized_Leaf_Temp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_C_xinguensis.csv",
+        "size_bytes": 15706,
+        "crc32": "85d0ea89",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_E_cyathiformis.csv",
+        "size_bytes": 16684,
+        "crc32": "171222d9",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_E_uncinatum.csv",
+        "size_bytes": 16058,
+        "crc32": "e9423442",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_Lecythis_sp.csv",
+        "size_bytes": 16026,
+        "crc32": "3471441e",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_P_anomala.csv",
+        "size_bytes": 15341,
+        "crc32": "56082ff6",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS5_Tleaf_P_erythrochysa.csv",
+        "size_bytes": 16002,
+        "crc32": "3b35f426",
+        "header_line": "Date_Time,Tleaf "
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS6_Tleaf_Manaus.csv",
+        "size_bytes": 19763,
+        "crc32": "97065799",
+        "header_line": "Date_Time_1,Tleaf_1,Date_Time_2,Tleaf_2,Date_Time_3,Tleaf_3,Date_Time_4,Tleaf_4,Date_Time_5,Tleaf_5,Date_Time_6,Tleaf_6,Date_Time_7,Tleaf_7,Date_Time_8,Tleaf_8,Date_Time_9,Tleaf_9,Date_Time_10,Tleaf_10,Date_Time_11,Tleaf_11,Date_Time_12,Tleaf_12,Date_Time_13,Tleaf_13,Date_Time_14,Tleaf_14,Date_Time_15,Tleaf_15,Date_Time_16,Tleaf_16,Date_Time_17,Tleaf_17,Date_Time_18,Tleaf_18,Date_Time_19,Tleaf_19,Date_Time_20,Tleaf_20,Date_Time_21,Tleaf_21,Date_Time_22,Tleaf_22,Date_Time_23,Tleaf_23,Date_Time_24,Tleaf_24,Date_Time_25,Tleaf_25,Date_Time_26,Tleaf_26"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Temperature/FigS6_Tleaf_Santarem.csv",
+        "size_bytes": 164,
+        "crc32": "f071156a",
+        "header_line": "Date_Time_1,Tleaf_1"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Water_Potential/Fig8_LWP_SEPTEMBER_2015.csv",
+        "size_bytes": 558,
+        "crc32": "a1b03ebc",
+        "header_line": "Date,Time,Tree 4,Tree 5,Tree 3,Tree 1"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Leaf_Water_Potential/Fig8_LWP_SEPTEMBER_2017.csv",
+        "size_bytes": 887,
+        "crc32": "1e5f350a",
+        "header_line": "Date,Time,TREE 4,TREE 5,TREE 3,TREE 2,TREE 1,Observa��es"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig1-(A)_Sap_Velocity_E_cyathiformis_Manaus.csv",
+        "size_bytes": 9976,
+        "crc32": "95b24a1d",
+        "header_line": "Date_Time_Sap_Vel,Sap_Velocity_Outer_E_cyathiformis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig1-(B)_Sap_Velocity_E_cyathiformis_Manaus.csv",
+        "size_bytes": 9981,
+        "crc32": "87063416",
+        "header_line": "Date_Time_Sap_Velocity,Sap_Velocity_Outer_E_cyathiformis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig1-(C)_Sap_Velocity_P_anomala_Manaus.csv",
+        "size_bytes": 14242,
+        "crc32": "9e2756f4",
+        "header_line": "Date_Time_Sap_Vel_P_anomala,Sap_Vel_P_anomala"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig1-(E)_Sap_Velocity_Lecythis_Santarem.csv",
+        "size_bytes": 12997,
+        "crc32": "2e649789",
+        "header_line": "Date_Time_Sap_Velocity,Sap_Velocity_Lecythis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_C_xinguensis_(E).csv",
+        "size_bytes": 22446,
+        "crc32": "bf89d064",
+        "header_line": "Date_Time,Sap_Velocity_C_xinguensis,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_C_xinguensis_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_C_xinguensis_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_C_xinguensis_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_E_cyathiformis_(A).csv",
+        "size_bytes": 24129,
+        "crc32": "47d6893f",
+        "header_line": "Date_Time,Sap_Velocity_E_cyathiformis,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_E_cyathiformis_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_E_cyathiformis_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_E_cyathiformis_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_E_uncinatum_(F).csv",
+        "size_bytes": 22812,
+        "crc32": "16168378",
+        "header_line": "Date_Time,Sap_Velocity_E_uncinatum,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_E_uncinatum_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_E_uncinatum_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_E_uncinatum_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_Lecythis_sp_(D).csv",
+        "size_bytes": 22025,
+        "crc32": "685c9eee",
+        "header_line": "Date_Time,Sap_Velocity_Lecythis_sp,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_Lecythis_sp_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_Lecythis_sp_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_Lecythis_sp_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_P_anomala_(B).csv",
+        "size_bytes": 22447,
+        "crc32": "9a96aca3",
+        "header_line": "Date_Time,Sap_Velocity_P_anomala,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_anomala_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_anomala_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_anomala_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig4_Sap_Velocity_P_erythrochysa_(C).csv",
+        "size_bytes": 22929,
+        "crc32": "e4a89e25",
+        "header_line": "Date_Time,Sap_Velocity_P_erythrochysa,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_erythrochysa_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_erythrochysa_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_erythrochysa_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(A)_Sap_Velocity_E_cyathiformis.csv",
+        "size_bytes": 24189,
+        "crc32": "9960daf6",
+        "header_line": "Date_Time ,Sap_Velocity_E_cyathiformis,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_E_cyathiformis_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_E_cyathiformis_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_E_cyathiformis_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(B)_Sap_Velocity_P_anomala.csv",
+        "size_bytes": 26313,
+        "crc32": "4610574e",
+        "header_line": "Date_Time ,Sap_Velocity_P_anomala,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_anomala_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_anomala_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_anomala_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(C)_Sap_Velocity_P_erythrochysa.csv",
+        "size_bytes": 22908,
+        "crc32": "e3657dca",
+        "header_line": "Date_Time ,Sap_Velocity_P_erythrochysa,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_erythrochysa_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_erythrochysa_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_erythrochysa_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(D)_Sap_Velocity_E_cyathiformis.csv",
+        "size_bytes": 24226,
+        "crc32": "d3c48f9c",
+        "header_line": "Date_Time ,Sap_Velocity_E_cyathiformis,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_E_cyathiformis_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_E_cyathiformis_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_E_cyathiformis_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(E)_Sap_Velocity_P_anomala.csv",
+        "size_bytes": 24447,
+        "crc32": "b5be2ad2",
+        "header_line": "Date_Time ,Sap_Velocity_P_anomala,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_anomala_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_anomala_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_anomala_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig5(F)_Sap_Velocity_P_erythrochysa.csv",
+        "size_bytes": 25869,
+        "crc32": "281e6ac6",
+        "header_line": "Date_Time ,Sap_Velocity_P_erythrochysa,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_P_erythrochysa_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_P_erythrochysa_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_P_erythrochysa_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig6_Sap_Velocity_E_cyathiformis.csv",
+        "size_bytes": 24129,
+        "crc32": "47d6893f",
+        "header_line": "Date_Time,Sap_Velocity_E_cyathiformis,Date_Time_Diurnal_Hysteresis_Morning,Sap_Velocity_E_cyathiformis_Morning,Date_Time_Diurnal_Hysteresis_Afternoon,Sap_Velocity_E_cyathiformis_Afternoon,Date_Time_Diurnal_Hysteresis_Night,Sap_Velocity_E_cyathiformis_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_E_cyathiformis_Dry_Season_2015.csv",
+        "size_bytes": 227333,
+        "crc32": "c4d9ffd4",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_E_cyathiformis_Dry_Season_2017.csv",
+        "size_bytes": 218558,
+        "crc32": "efba3ec5",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_P_anomala_Dry_Season_2015.csv",
+        "size_bytes": 128793,
+        "crc32": "cfea79bb",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_P_anomala_Dry_Season_2017.csv",
+        "size_bytes": 126966,
+        "crc32": "7f9a4274",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_P_erythrochysa_Dry_Season_2015.csv",
+        "size_bytes": 110932,
+        "crc32": "dfa88c3b",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/Fig7_Sap_Velocity_P_erythrochysa_Dry_Season_2017.csv",
+        "size_bytes": 101537,
+        "crc32": "04694131",
+        "header_line": "Date_Time_Morning,Period,Normalized_Sap_Velocity_Morning,Date_Time_Afternoon_Night,Period,Normalized_Sap_Velocity_Afternoon_Night"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_C_xinguensis.csv",
+        "size_bytes": 151803,
+        "crc32": "4e749cb1",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_C_xinguensis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_E_cyathiformis.csv",
+        "size_bytes": 93514,
+        "crc32": "50f9b77a",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_E_cyathiformis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_E_uncinatum.csv",
+        "size_bytes": 96240,
+        "crc32": "fac6d0f2",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_E_uncinatum"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_Lecythis_sp.csv",
+        "size_bytes": 95302,
+        "crc32": "a64f82d1",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_Lecythis_sp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_P_anomala.csv",
+        "size_bytes": 115255,
+        "crc32": "3680b489",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_P_anomala"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS4_Sap_Velocity_P_erythrochysa.csv",
+        "size_bytes": 119604,
+        "crc32": "28f66a21",
+        "header_line": "Date_Time_Sap_Velocity,Normalized_Sap_Velocity_P_erythrochysa"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_C_xinguensis.csv",
+        "size_bytes": 16234,
+        "crc32": "43ec9acc",
+        "header_line": "Date_Time,Sap_Velocity_C_xinguensis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_E_cyathiformis.csv",
+        "size_bytes": 17715,
+        "crc32": "7adaec69",
+        "header_line": "Date_Time,Sap_Velocity_E_cyathiformis"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_E_uncinatum.csv",
+        "size_bytes": 16507,
+        "crc32": "377ccbbc",
+        "header_line": "Date_Time,Sap_Velocity_E_uncinatum"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_Lecythis_sp.csv",
+        "size_bytes": 15835,
+        "crc32": "5878df4e",
+        "header_line": "Date_Time,Sap_Velocity_Lecythis_sp"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_P_anomala.csv",
+        "size_bytes": 15840,
+        "crc32": "1bed10fa",
+        "header_line": "Date_Time,Sap_Velocity_P_anomala"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Sap_Velocity/FigS5_Sap_Velocity_P_erythrochysa.csv",
+        "size_bytes": 16596,
+        "crc32": "e2ad6a9f",
+        "header_line": "Date_Time,Sap_Velocity_P_erythrochysa"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Stomatal_Conductance/FigS6_Stomatal_Conductance_Manaus.csv",
+        "size_bytes": 20763,
+        "crc32": "7c3e2e87",
+        "header_line": "Date_Time_1,Cond_1,Date_Time_2,Cond_2,Date_Time_3,Cond_3,Date_Time_4,Cond_4,Date_Time_5,Cond_5,Date_Time_6,Cond_6,Date_Time_7,Cond_7,Date_Time_8,Cond_8,Date_Time_9,Cond_9,Date_Time_10,Cond_10,Date_Time_11,Cond_11,Date_Time_12,Cond_12,Date_Time_13,Cond_13,Date_Time_14,Cond_14,Date_Time_15,Cond_15,Date_Time_16,Cond_16,Date_Time_17,Cond_17,Date_Time_18,Cond_18,Date_Time_19,Cond_19,Date_Time_20,Cond_20,Date_Time_21,Cond_21,Date_Time_22,Cond_22,Date_Time_23,Cond_23,Date_Time_24,Cond_24,Date_Time_25,Cond_25,Date_Time_26,Cond_26"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Data_Gimenez_et.al_2019/Stomatal_Conductance/FigS6_Stomatal_Conductance_Santarem.csv",
+        "size_bytes": 179,
+        "crc32": "ae630df8",
+        "header_line": "Date_Time_1,Cond_1"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Brazilian_Amazon_V1.tif",
+        "size_bytes": 789488,
+        "crc32": "447ace61"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Brazilian_Amazon_V2.tif",
+        "size_bytes": 800386,
+        "crc32": "34b66937"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Figure 1 vs 1.0.tif",
+        "size_bytes": 37963208,
+        "crc32": "15b6cf51"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Flona_Tapajós_V1.tif",
+        "size_bytes": 54516924,
+        "crc32": "3d13ae5f"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Flona_Tapajós_V2.tif",
+        "size_bytes": 100985308,
+        "crc32": "5d81cd3a"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Flona_Tapajós_V3.tif",
+        "size_bytes": 83470948,
+        "crc32": "b610780a"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Mapa ArtigoZF2 - V1.tif",
+        "size_bytes": 13856942,
+        "crc32": "46783e82"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 1/Mapa ArtigoZF2 - V2.tif",
+        "size_bytes": 20785956,
+        "crc32": "fd4bf642"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Images/Supplementary_Figure 2/Figure 2_version2.tif",
+        "size_bytes": 4584352,
+        "crc32": "ed4e7e47"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/cr1000_manual.pdf",
+        "size_bytes": 22205183,
+        "crc32": "27976945"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/CR3000_manual.pdf",
+        "size_bytes": 25681488,
+        "crc32": "bb14a8f6"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/CS650 and CS655 SWC.pdf",
+        "size_bytes": 1340656,
+        "crc32": "c082126e"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/diurnal_gas_exchange_v1.pdf",
+        "size_bytes": 42145,
+        "crc32": "c4f9f193"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/diurnal_protocols_V2.docx",
+        "size_bytes": 21752,
+        "crc32": "5ab91d0c"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/diurnal_protocols_V2.pdf",
+        "size_bytes": 415859,
+        "crc32": "2e101b28"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/Em50_datalogger.pdf",
+        "size_bytes": 1234233,
+        "crc32": "ff9b20ef"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/FLIR_E5_manual.pdf",
+        "size_bytes": 2710083,
+        "crc32": "407af376"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/Granier_Install.pdf",
+        "size_bytes": 1489808,
+        "crc32": "dfd9370b"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/hc2s3_manual.pdf",
+        "size_bytes": 2162721,
+        "crc32": "59f1b6df"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/LI6400XT_Manual_v6.2.pdf",
+        "size_bytes": 14219821,
+        "crc32": "130f1cf3"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/LWP_manual.pdf",
+        "size_bytes": 1251156,
+        "crc32": "08479688"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/porometer_manual.pdf",
+        "size_bytes": 5472151,
+        "crc32": "fb42971a"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/SFM1-manual.pdf",
+        "size_bytes": 7274087,
+        "crc32": "b5efe9b0"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/SI-111.pdf",
+        "size_bytes": 561320,
+        "crc32": "975231a8"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/SI-400-manual.pdf",
+        "size_bytes": 2703719,
+        "crc32": "20b857a3"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/SPN1_Manual2.pdf",
+        "size_bytes": 2049825,
+        "crc32": "5f6c1b46"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Manuals/Thermocouple_manual.pdf",
+        "size_bytes": 5205428,
+        "crc32": "f2432075"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Metadata/Data_Column_Description_Gimenez_20191112.xlsx",
+        "size_bytes": 5770503,
+        "crc32": "d8c5969f"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Metadata/E-Field_Log_Gimenez_20191112.xlsx",
+        "size_bytes": 634634,
+        "crc32": "029c508e"
+      },
+      {
+        "member_path": "Dados_Gimenez_2019_Final/Metadata/File_Submission_Metadata_Gimenez_20191112.xlsx",
+        "size_bytes": 86242,
+        "crc32": "f89aa794"
+      }
+    ]
+  },
+  {
+    "archive": "HotDroughts/ess_dive_ef078c287315bce_20241028T151532175830.zip",
+    "nested_member": "data/CESM2-CMIP6_forcing_K34-Manaus_dataset_20230210202200.zip",
+    "files": [
+      {
+        "member_path": "CESM2-CMIP6_forcing_K34-Manaus_headers.txt",
+        "size_bytes": 2544,
+        "crc32": "806d99b3",
+        "header_dictionary": "HEADERS\n\n# File: hist_ssp_hus.csv\n# Description: historical and projected specific humidity (kg kg-1), 1980-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- hus: specific humidity (kg kg-1)\n\n\n# File: hist_ssp_ps_ta.csv\n# Description: historical and projected air temperature (K) and atmospheric pressure (Pa), 1850-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- ta: air temperature (K)\n- ps: atmospheric pressure (Pa)\n\n\n# File: ssp126_allvariable.csv\n# Description: scenario SSP126, projected air temperature (K and degC), atmospheric pressure (Pa), specific humidity (kg kg-1), relative humidity (%), and vapor pressure deficit (kPa), 2015-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- ta: air temperature (K)\n- hus: specific humidity (kg kg-1)\n- ps: atmospheric pressure (Pa)\n- Ta: air temperature (degC)\n- RH: relative humidity (%)\n- VPD: vapor pressure deficit (kPa)\n\n\n# File: ssp245_allvariable.csv\n# Description: scenario SSP245, projected air temperature (K and degC), atmospheric pressure (Pa), specific humidity (kg kg-1), relative humidity (%), and vapor pressure deficit (kPa), 2015-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- ta: air temperature (K)\n- hus: specific humidity (kg kg-1)\n- ps: atmospheric pressure (Pa)\n- Ta: air temperature (degC)\n- RH: relative humidity (%)\n- VPD: vapor pressure deficit (kPa)\n\n\n# File: ssp370_allvariable.csv\n# Description: scenario SSP370, projected air temperature (K and degC), atmospheric pressure (Pa), specific humidity (kg kg-1), relative humidity (%), and vapor pressure deficit (kPa), 2015-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- ta: air temperature (K)\n- hus: specific humidity (kg kg-1)\n- ps: atmospheric pressure (Pa)\n- Ta: air temperature (degC)\n- RH: relative humidity (%)\n- VPD: vapor pressure deficit (kPa)\n\n\n# File: ssp585_allvariable.csv\n# Description: scenario SSP585, projected air temperature (K and degC), atmospheric pressure (Pa), specific humidity (kg kg-1), relative humidity (%), and vapor pressure deficit (kPa), 2015-2100\n- time: timestamp (YYYY-MM-DD HH:MM:SS)\n- lat: latitude [-90, 90]\n- lon: longitude [0, 360]\n- ta: air temperature (K)\n- hus: specific humidity (kg kg-1)\n- ps: atmospheric pressure (Pa)\n- Ta: air temperature (degC)\n- RH: relative humidity (%)\n- VPD: vapor pressure deficit (kPa)\n"
+      },
+      {
+        "member_path": "hist_ssp_hus.csv",
+        "size_bytes": 10040746,
+        "crc32": "440ebba0",
+        "header_line": "time,lat,lon,hus"
+      },
+      {
+        "member_path": "hist_ssp_ps_ta.csv",
+        "size_bytes": 23644773,
+        "crc32": "51db2b82",
+        "header_line": "time,lat,lon,ta,ps"
+      },
+      {
+        "member_path": "ssp126_allvariable.csv",
+        "size_bytes": 13269420,
+        "crc32": "f189d20f",
+        "header_line": "time,lat,lon,ta,hus,ps,Ta,RH,VPD"
+      },
+      {
+        "member_path": "ssp245_allvariable.csv",
+        "size_bytes": 13271859,
+        "crc32": "fff611e1",
+        "header_line": "time,lat,lon,ta,hus,ps,Ta,RH,VPD"
+      },
+      {
+        "member_path": "ssp370_allvariable.csv",
+        "size_bytes": 13271363,
+        "crc32": "5eb63edf",
+        "header_line": "time,lat,lon,ta,hus,ps,Ta,RH,VPD"
+      },
+      {
+        "member_path": "ssp585_allvariable.csv",
+        "size_bytes": 13270559,
+        "crc32": "85091a7e",
+        "header_line": "time,lat,lon,ta,hus,ps,Ta,RH,VPD"
+      }
+    ]
+  }
+]

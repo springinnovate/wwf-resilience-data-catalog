@@ -1,0 +1,42 @@
+{
+  "generated_utc": "2026-11-14T01:37:43.093848+00:00",
+  "source_sha256": "60d713a723995d2566ee1f32823868089e1aafa04fa4ec7c8973bfa976201632",
+  "sheet_rows": 78,
+  "papers": 30,
+  "publisher_links_verified": 30,
+  "study_folders": 23,
+  "standalone_files": 1882,
+  "os_artifacts_excluded": 1344,
+  "status_counts": {
+    "No local match": 21,
+    "Matched": 19,
+    "Partial match": 29,
+    "Related inputs/code only": 8,
+    "Different product": 1
+  },
+  "file_disposition_counts": {
+    "related_input": 595,
+    "unmatched_data": 625,
+    "matched_data": 86,
+    "code": 131,
+    "figure": 65,
+    "documentation": 43,
+    "archive_container": 14,
+    "partial_data": 230,
+    "sidecar": 91,
+    "unresolved_data": 2
+  },
+  "archived_assets": 683,
+  "zip_members_classified": 327,
+  "asset_links": 2937,
+  "unmatched_sheet_entries": 30,
+  "review_gap_entries": 59,
+  "unmatched_local_entries": 670,
+  "unmatched_local_by_level": {
+    "standalone_file": 627,
+    "geodatabase_layer": 8,
+    "nested_archive_member": 10,
+    "archive_member": 25
+  },
+  "scope": "All supplied sheet rows and substantive local files classified. Scientific matching is evidence-based and conservative, not a complete scientific validation or STAC catalog. Article identifiers are distinct from download/repository identifiers."
+}

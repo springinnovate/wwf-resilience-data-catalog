@@ -1,0 +1,685 @@
+{
+  "archive": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+  "members": [
+    "SNAPP_Fish_Data.gdb\\a00000001.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000001.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000001.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000001.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000001.TablesByName.atx",
+    "SNAPP_Fish_Data.gdb\\a00000002.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000002.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000003.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000003.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000003.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000004.CatItemsByPhysicalName.atx",
+    "SNAPP_Fish_Data.gdb\\a00000004.CatItemsByType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000004.FDO_UUID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000004.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000004.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000004.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000004.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000004.spx",
+    "SNAPP_Fish_Data.gdb\\a00000005.CatItemTypesByName.atx",
+    "SNAPP_Fish_Data.gdb\\a00000005.CatItemTypesByParentTypeID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000005.CatItemTypesByUUID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000005.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000005.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000005.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000006.CatRelsByDestinationID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000006.CatRelsByOriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000006.CatRelsByType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000006.FDO_UUID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000006.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000006.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000006.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000006.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByBackwardLabel.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByDestItemTypeID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByForwardLabel.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByName.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByOriginItemTypeID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.CatRelTypesByUUID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000007.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000007.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000007.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000b.freelist",
+    "SNAPP_Fish_Data.gdb\\a0000000b.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000000b.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000000b.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000b.spx",
+    "SNAPP_Fish_Data.gdb\\a0000000c.freelist",
+    "SNAPP_Fish_Data.gdb\\a0000000c.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000000c.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000000c.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000c.spx",
+    "SNAPP_Fish_Data.gdb\\a0000000d.freelist",
+    "SNAPP_Fish_Data.gdb\\a0000000d.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000000d.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000000d.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000d.spx",
+    "SNAPP_Fish_Data.gdb\\a0000000e.freelist",
+    "SNAPP_Fish_Data.gdb\\a0000000e.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000000e.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000000e.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000e.spx",
+    "SNAPP_Fish_Data.gdb\\a0000000f.freelist",
+    "SNAPP_Fish_Data.gdb\\a0000000f.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000000f.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000000f.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000000f.spx",
+    "SNAPP_Fish_Data.gdb\\a00000010.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000010.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000011.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000011.spx",
+    "SNAPP_Fish_Data.gdb\\a00000012.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000013.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000013.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000013.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000013.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000013.spx",
+    "SNAPP_Fish_Data.gdb\\a00000036.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000036.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000036.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000036.spx",
+    "SNAPP_Fish_Data.gdb\\a00000044.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000044.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000044.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000044.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000044.GDB_78_IsRetired.atx",
+    "SNAPP_Fish_Data.gdb\\a00000044.spx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.G79multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000045.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000045.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000045.GDB_79_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000045.spx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.G80multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000046.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000046.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000046.GDB_80_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000046.spx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.G81multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000047.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000047.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000047.GDB_81_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000047.spx",
+    "SNAPP_Fish_Data.gdb\\a00000048.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000048.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000048.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000048.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000048.GDB_83_IsRetired.atx",
+    "SNAPP_Fish_Data.gdb\\a00000048.spx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.G84multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000049.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000049.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000049.GDB_84_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000049.spx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.G85multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000004a.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000004a.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.GDB_85_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004a.spx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.G86multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a0000004b.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a0000004b.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.GDB_86_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a0000004b.spx",
+    "SNAPP_Fish_Data.gdb\\a00000054.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.G100multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000055.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000055.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000055.GDB_100_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000055.spx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.G101multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000056.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000056.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000056.GDB_101_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000056.spx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.DestClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.DestID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.OriginClassID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.OriginID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.TopoRuleID.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.G102multi.TopoRuleType.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.gdbindexes",
+    "SNAPP_Fish_Data.gdb\\a00000057.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000057.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000057.GDB_102_IsException.atx",
+    "SNAPP_Fish_Data.gdb\\a00000057.spx",
+    "SNAPP_Fish_Data.gdb\\gdb",
+    "SNAPP_Fish_Data.gdb\\_gdb.DD-PC.10832.7292.sr.lock",
+    "SNAPP_Fish_Data.gdb\\_gdb.DD-PC.3012.6876.sr.lock",
+    "SNAPP_Fish_Data.gdb",
+    "SNAPP_Fish_Data.gdb\\a00000011.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000011.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000011.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000012.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000012.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000012.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000012.spx",
+    "SNAPP_Fish_Data.gdb\\a00000054.freelist",
+    "SNAPP_Fish_Data.gdb\\a00000054.gdbtable",
+    "SNAPP_Fish_Data.gdb\\a00000054.gdbtablx",
+    "SNAPP_Fish_Data.gdb\\a00000054.GDB_99_IsRetired.atx",
+    "SNAPP_Fish_Data.gdb\\a00000054.spx",
+    "SNAPP_Fish_Data.gdb\\timestamps"
+  ],
+  "layers": [
+    {
+      "layer": "Goliath_Catfish_Migratory_Region",
+      "count": 3,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "Shape_Leng": "float",
+          "Area_Km2": "float",
+          "Life_Stage": "str:30",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.45444151299995,
+        -19.899877353999955,
+        -47.90694277599998,
+        5.28095497300005
+      ]
+    },
+    {
+      "layer": "Potential_Reproduction_Basins_Brachyplatystoma_rousseauxii",
+      "count": 1,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "LifeHist": "str:254",
+          "Area_Km2": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.45393786399995,
+        -19.899452506999978,
+        -59.09650698399995,
+        5.281300732000023
+      ]
+    },
+    {
+      "layer": "Interbasin_Migratory_Characiformes_Region_BL04",
+      "count": 62,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID_2": "int32",
+          "BL1_BL4_Id": "float",
+          "BL1": "str:30",
+          "BL2": "str:50",
+          "BL3": "str:50",
+          "BL4": "str:50",
+          "SUM_OR1_K": "float",
+          "SUM_OR2_K": "float",
+          "SUM_OR3_K": "float",
+          "SUM_OR4_K": "float",
+          "SUM_OR5_K": "float",
+          "SUM_OR6_K": "float",
+          "SUM_OR7_K": "float",
+          "SUM_OR8_K": "float",
+          "SUM_OR9_K": "float",
+          "SUM_OR10_K": "float",
+          "SUM_OR11_K": "float",
+          "SUM_TOT_K": "float",
+          "Area_km2": "float",
+          "Area_ha": "float",
+          "Classes": "str:30",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -77.82360824499995,
+        -12.406985091999957,
+        -52.27527593499997,
+        -0.7446720909999271
+      ]
+    },
+    {
+      "layer": "Interbasin_Migratory_Characiformes_Region_boundary",
+      "count": 1,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "Shape_Leng": "float",
+          "area_km2": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -77.82360824499995,
+        -12.406985091999957,
+        -52.27527593499994,
+        -0.7446720909999271
+      ]
+    },
+    {
+      "layer": "Interbasin_Migratory_Characiformes_Regions",
+      "count": 10,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "FishRegion": "str:40",
+          "Shape_Leng": "float",
+          "Area_km2": "float",
+          "Area_ha": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -77.82360824499995,
+        -12.406985091999957,
+        -52.27527593499997,
+        -0.7446720909999271
+      ]
+    },
+    {
+      "layer": "Twenty_principal_comercial_taxa_catch",
+      "count": 198,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "BL1_BL4_Id": "float",
+          "BL1": "str:30",
+          "BL2": "str:50",
+          "BL3": "str:50",
+          "BL4": "str:50",
+          "Area_km2": "float",
+          "Area_ha": "float",
+          "Piramutaba": "float",
+          "Curimatã": "float",
+          "Mapará": "float",
+          "Dourada": "float",
+          "Tambaqui": "float",
+          "Jaraqui": "float",
+          "Pacu": "float",
+          "Branquinha": "float",
+          "Pescada": "float",
+          "Tucunaré": "float",
+          "Aracu": "float",
+          "Sardinha": "float",
+          "Surubim": "float",
+          "Matrinchã": "float",
+          "Pirapiting": "float",
+          "Caparari": "float",
+          "Aruanã": "float",
+          "Acari": "float",
+          "Piraíba": "float",
+          "Charuto": "float",
+          "TonTot": "float",
+          "perc_tot": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.61694150799997,
+        -20.498210661999963,
+        -42.46360965999993,
+        5.280954973000071
+      ]
+    },
+    {
+      "layer": "Important_commercial_fishing_area",
+      "count": 16,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "area_ha": "float",
+          "area_KM2": "float",
+          "BL1": "str:50",
+          "BL2": "str:50",
+          "BL3": "str:50",
+          "BL4": "str:50",
+          "BL1_BL4_id": "int16",
+          "Shape_Leng": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -77.82360824599994,
+        -12.407377653999959,
+        -47.90694277599999,
+        1.324288464000035
+      ]
+    },
+    {
+      "layer": "Potential_Reproduction_Basins_Brachyplatystoma_rousseauxii_BL02",
+      "count": 10,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OBJECTID": "int32",
+          "Region": "str:30",
+          "BL2": "str:50",
+          "Shape_Leng": "float",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.45393786399995,
+        -19.899452506999978,
+        -59.096942327999976,
+        5.280954973000022
+      ]
+    },
+    {
+      "layer": "Dourado_Life_Cycle_Area_Routes",
+      "count": 3,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "Category": "str:30",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.45444151299995,
+        -19.899877353999955,
+        -47.90694277599998,
+        5.28095497300005
+      ]
+    },
+    {
+      "layer": "T_1_DirtyAreas",
+      "count": 1,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "IsRetired": "int32",
+          "DirtyArea_Length": "float",
+          "DirtyArea_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.45444154899997,
+        -19.899877389999972,
+        -47.90694273999998,
+        5.281300768000051
+      ]
+    },
+    {
+      "layer": "T_1_PointErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32"
+        },
+        "geometry": "Point"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_1_LineErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float"
+        },
+        "geometry": "MultiLineString"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_1_PolyErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_2_DirtyAreas",
+      "count": 1,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "IsRetired": "int32",
+          "DirtyArea_Length": "float",
+          "DirtyArea_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -77.82360828099996,
+        -12.406985127999974,
+        -52.27527589899995,
+        -0.7446720549999668
+      ]
+    },
+    {
+      "layer": "T_2_PointErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32"
+        },
+        "geometry": "Point"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_2_LineErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float"
+        },
+        "geometry": "MultiLineString"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_2_PolyErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_3_DirtyAreas",
+      "count": 1,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "IsRetired": "int32",
+          "DirtyArea_Length": "float",
+          "DirtyArea_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": [
+        -79.61694154399999,
+        -20.49821069799998,
+        -42.46360962399996,
+        5.280955009000024
+      ]
+    },
+    {
+      "layer": "T_3_PointErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32"
+        },
+        "geometry": "Point"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_3_LineErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float"
+        },
+        "geometry": "MultiLineString"
+      },
+      "bounds": null
+    },
+    {
+      "layer": "T_3_PolyErrors",
+      "count": 0,
+      "crs": "EPSG:4326",
+      "schema": {
+        "properties": {
+          "OriginClassID": "int32",
+          "OriginID": "int32",
+          "DestClassID": "int32",
+          "DestID": "int32",
+          "TopoRuleType": "int32",
+          "TopoRuleID": "int32",
+          "IsException": "int32",
+          "Shape_Length": "float",
+          "Shape_Area": "float"
+        },
+        "geometry": "MultiPolygon"
+      },
+      "bounds": null
+    }
+  ]
+}

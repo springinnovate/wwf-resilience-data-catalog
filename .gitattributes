@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.xlsx binary
+# Preserve tabular source text and conventional CSV CRLF bytes exactly.
+*.csv -text -whitespace
+data/source/source_sheet.tsv -text -whitespace
+outputs/** linguist-generated=true

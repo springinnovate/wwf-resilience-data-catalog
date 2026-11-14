@@ -1,0 +1,96 @@
+schema: eolab/item/v1
+id: wwf-forest-carbon-loss-gain-compilation
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: Tropical forest carbon loss and recovery compilation
+  description: 'Study-level carbon estimates in two workbooks: 212 loss rows and 214 recovery rows, with
+    a separate reference crosswalk. Original Excel formulas and cached values are retained.'
+  license: CC-BY-4.0
+  attribution: Heinrich, Holcomb et al. (2026)
+  doi: 10.5281/zenodo.19470704
+  categories:
+  - Nature's Contributions to People
+  statuses:
+  - Matched to sheet description
+  study_ids:
+  - paper-002
+  study_time: Literature compilation through January 2026; publication years are not measurement dates.
+  publications:
+  - id: paper-002
+    title: A meta-analysis of carbon losses and gains from tropical moist forest degradation and regeneration
+    doi: 10.1126/sciadv.adz1923
+    url: https://www.science.org/doi/10.1126/sciadv.adz1923
+    year: 2026
+  annotations:
+    row_ids:
+    - row-002
+    limitations:
+    - RefID 96 refers to two citations. Four in-preparation loss records have no cached RefID; citation
+      joins need review.
+    - Use the saved workbook values; formulas depend on external references and have not been recalculated.
+    temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+assets:
+  data:
+    location: local
+    path: carbon-losses.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    roles:
+    - data
+    metadata:
+      annotations:
+        sheet: Sheet1
+        rows: 212
+        key_fields:
+          Study: Study label; retain alongside RefID.
+          AbsoluteCLoss: Absolute carbon loss, Mg C per hectare.
+          PercLossCompIntactFor: Loss relative to intact forest, percent.
+          Cpool: Carbon pools included by the source study.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.5281/zenodo.19470704
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.science.org/doi/10.1126/sciadv.adz1923
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  carbon_recovery:
+    location: local
+    path: source/AGC_accumulation_forest_type_current_v2.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    roles:
+    - data
+    metadata:
+      title: Carbon recovery workbook
+      annotations:
+        sheet: Sheet1
+        rows: 214
+        key_fields:
+          GrowthRate: Annual carbon gain, Mg C per hectare per year.
+          PercentageAt20yrs: Recovery relative to intact forest after 20 years, percent.
+  references:
+    location: local
+    path: source/references_info_v2.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    roles:
+    - metadata
+    metadata:
+      title: Study reference crosswalk

@@ -1,0 +1,15 @@
+{
+  "destination": "processed-evidence-data/matched",
+  "datasets_added": 21,
+  "files_copied": 107,
+  "copied_hashes_match": true,
+  "existing_pilot_files_unchanged": 21,
+  "publication_method": "Verified sibling staging copy, then directory rename; existing pilot retained.",
+  "existing_pilot_items_identical": true,
+  "existing_pilot_item_count": 3,
+  "root_review_files": [
+    "README.md",
+    "datasets.csv",
+    "study_coverage.csv"
+  ]
+}

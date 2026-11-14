@@ -1,0 +1,96 @@
+schema: eolab/item/v1
+id: wwf-amazon-terrestrial-resistance
+kind: raster
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: Amazon terrestrial ecosystem resistance
+  description: Relative resistance to terrestrial ecological connectivity across the Amazon basin. Higher
+    scores indicate stronger barriers from human impacts and natural features. The supplied grid ranges
+    from 1 to 34.
+  license: CC-BY-4.0
+  attribution: Ritter et al. (2025)
+  doi: 10.6084/m9.figshare.28089815.v1
+  citation: Ritter, C. D. (2025). Amazon Basin data and code to replicate analyses. Version 1. Figshare.
+    https://doi.org/10.6084/m9.figshare.28089815.v1
+  categories:
+  - Nature
+  statuses:
+  - Matched to sheet description
+  study_ids:
+  - paper-014
+  study_time: Input layers represent different dates, spanning 2001-2023; this is a composite resistance
+    surface.
+  publications:
+  - id: paper-014
+    title: Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon
+      basin
+    doi: 10.1073/pnas.2418189122
+    url: https://www.pnas.org/doi/10.1073/pnas.2418189122
+    year: 2025
+  annotations:
+    row_ids:
+    - row-033
+    limitations:
+    - Relative resistance scores are not probabilities or measured movement rates.
+    - The delivered grid starts at 1; values have not been shifted to the paper's conceptual zero-impact
+      baseline.
+    temporal_note: Catalog time is a source-file modification date; the component dates are described
+      in the linked evidence.
+    processing: Lossless COG conversion in native EPSG:5641; grid, values and mask preserved.
+assets:
+  data:
+    location: local
+    path: amazon-terrestrial-resistance.tif
+    media_type: image/tiff; application=geotiff; profile=cloud-optimized
+    roles:
+    - data
+    metadata:
+      annotations:
+        band: 1
+        meaning: Terrestrial resistance to ecological connectivity
+        unit: '1'
+        unit_description: dimensionless relative resistance score
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.28089815.v1
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.pnas.org/doi/10.1073/pnas.2418189122
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original_archive:
+    location: local
+    path: source/_2SPAnew2024_Resistance_analysis_DATASET.zip
+    media_type: application/zip
+    roles:
+    - data
+    metadata:
+      title: Original resistance-analysis package
+  source_code:
+    location: local
+    path: source/_2SPAnew2024_Resistance_analysis.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original resistance-generation script
+source:
+  format: geotiff

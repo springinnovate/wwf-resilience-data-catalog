@@ -1,0 +1,100 @@
+schema: eolab/item/v1
+id: wwf-amazon-tree-richness
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: Amazon tree species richness
+  description: Estimated species richness per hectare across Amazon lowland forests on the published 0.1-degree
+    grid, interpolated from inventory plots by forest type. The original grid is available for download;
+    map display awaits CRS confirmation.
+  license: CC-BY-4.0
+  attribution: ter Steege et al. (2023)
+  doi: 10.6084/m9.figshare.22786166.v2
+  citation: ter Steege et al. (2023). Mapping density, diversity and species-richness of the Amazon tree
+    flora. Version2. Figshare. https://doi.org/10.6084/m9.figshare.22786166.v2
+  categories:
+  - Nature
+  statuses:
+  - Matched to sheet description
+  - CRS confirmation needed
+  study_ids:
+  - paper-016
+  study_time: April 2023 ATDN compilation; the underlying plot census dates vary and do not establish
+    one map observation interval.
+  publications:
+  - id: paper-016
+    title: Mapping density, diversity and species-richness of the Amazon tree flora
+    doi: 10.1038/s42003-023-05514-6
+    url: https://www.nature.com/articles/s42003-023-05514-6
+    year: 2023
+  annotations:
+    row_ids:
+    - row-040
+    limitations:
+    - Based on old-growth forest plots and interpolated over the original lowland forest extent; this
+      is not a current forest-cover inventory.
+    temporal_note: Catalog time is the source-file modification date, not a measurement date.
+    processing: Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.
+assets:
+  data:
+    location: local
+    path: amazon-tree-richness.asc
+    media_type: text/plain
+    roles:
+    - data
+    metadata:
+      annotations:
+        meaning: Estimated species richness per hectare
+        unit: species ha-1
+        source_format: ESRI ASCII grid
+        tree_definition: Free-standing woody individuals with diameter at breast height at least 10 cm.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.22786166.v2
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s42003-023-05514-6
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  source_script:
+    location: local
+    path: source/TreeDiversityScript.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original map-generation script
+  source_functions:
+    location: local
+    path: source/TreeDiversityFunctions.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original interpolation functions
+  source_grid:
+    location: local
+    path: source/AmazonLowLandForestRaisg.csv
+    media_type: text/csv
+    roles:
+    - metadata
+    metadata:
+      title: Original interpolation-grid coordinates

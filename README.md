@@ -30,11 +30,11 @@ Paper 013, on Amazon hot droughts, came from the U.S. Department of Energy repos
 
 For the six outstanding papers, the [article-search findings](docs/article-downloads.md) give specific links to try. Manual access has not been verified. A listed full-text link is not a successful download, and an article PDF does not establish that its underlying dataset is present.
 
-## First datasets prepared for EOLab
+## Prepared evidence for EOLab
 
-A three-dataset pilot now prepares the biomass-vulnerability raster, Amazon barrier points, and 2023 ATTO monthly carbon-flux table with EOLab YAML sidecars. The spatial files retain their verified native CRS; the table remains nonspatial. Each includes a concise catalog description, paper/source references and original-file attachments. The full review history and detailed supporting evidence are preserved in a linked file.
+All **19 descriptions marked Matched** are now represented in the prepared collection. Together with the existing barrier-input pilot, there are **24 catalog entries: 7 maps, 8 tables/workbooks, and 9 native grids available for download while their CRS is confirmed**.
 
-See the [pilot results and files](docs/evidence-pilot.md). The barrier points are supporting inputs, not computed connectivity indices. The pilot also corrects the earlier interpretation of the ATTO table's date and coordinate columns.
+Start with the [prepared evidence results](docs/prepared-evidence.md), [dataset list](evidence/matched/reports/datasets.csv), or [description coverage table](evidence/matched/reports/study_coverage.csv). Each entry has a concise YAML description and a linked file containing the full review evidence and preparation checks. The processed collection is ready for an EOLab directory scan.
 
 ## How to use the workbook
 

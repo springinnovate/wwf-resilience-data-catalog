@@ -142,3 +142,5 @@ The existing [Apache-2.0 license](../LICENSE) is retained for this project's cod
 ## Prepare the EOLab evidence pilot
 
 The three-dataset preparation is separate from rebuilding the frozen matching review and article table. It requires the actual study files and GIS libraries. See [pilot results and rebuilding instructions](evidence-pilot.md#rebuild-the-prepared-files). Its reviewed inputs are in `evidence/pilot/`; it does not alter the historical matching snapshot under `data/`.
+
+For the expanded EOLab evidence collection, see [prepared results and rebuilding](prepared-evidence.md).

@@ -1,0 +1,89 @@
+schema: eolab/item/v1
+id: wwf-chaglla-hydropower-knn
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: 'Chaglla hydropower: mean and firm power scenarios'
+  description: 'Mean and firm power estimates for 16 land-management configurations under KNN-downscaled
+    climate scenarios. Contains 336 rows: three historical model combinations and 18 future combinations
+    per configuration.'
+  license: CC-BY-4.0
+  attribution: Ding et al. (2024)
+  doi: 10.5281/zenodo.8161594
+  categories:
+  - Nature's Contributions to People
+  statuses:
+  - Matched to sheet description
+  study_ids:
+  - paper-026
+  study_time: Historical and three future climatology groups; exact period bounds differ between the paper
+    and supplied code.
+  publications:
+  - id: paper-026
+    title: Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon
+      headwaters
+    doi: 10.1038/s43247-024-01738-4
+    url: https://www.nature.com/articles/s43247-024-01738-4
+    year: 2024
+  annotations:
+    row_ids:
+    - row-067
+    limitations:
+    - Management and climatology codes retain the source labels; their complete mapping to paper scenario
+      names and periods needs confirmation.
+    - These are modeled summary power estimates, not a daily power series or measured generation.
+    temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+assets:
+  data:
+    location: local
+    path: chaglla-hydropower-knn.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      annotations:
+        encoding: UTF-8
+        units:
+          Average_Energy_MW: MW
+          Firm_Energy_MW: MW
+        key_fields:
+          land_management: Original E0/E1/E2/E4 management-file code.
+          scenario: 'Source climate label: his or historical, ssp126, ssp585.'
+          climatology: 'Source period code: 0 historical; 1, 2, 3 future groups.'
+          DS: Climate model and KNN downscaling method.
+          Firm_Energy_MW: Modeled firm power, MW; the reliability criterion needs confirmation.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.5281/zenodo.8161594
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s43247-024-01738-4
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  originals:
+    location: local
+    path: source/original-tables-and-code.zip
+    media_type: application/zip
+    roles:
+    - data
+    - metadata
+    metadata:
+      title: Original scenario tables and preparation code

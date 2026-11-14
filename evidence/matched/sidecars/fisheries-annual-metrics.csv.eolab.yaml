@@ -1,0 +1,92 @@
+schema: eolab/item/v1
+id: wwf-amazon-fisheries-annual-metrics
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: interval
+  start_datetime: '1984-01-01T00:00:00Z'
+  end_datetime: '2016-12-31T23:59:59Z'
+metadata:
+  title: 'Amazon fisheries: annual landings and diversity'
+  description: Annual landings, diversity and biomass-weighted trait metrics for six Amazon fishing regions.
+    Contains 121 region-year records spanning 1984-2016.
+  license: CC-BY-4.0
+  attribution: Heilpern et al. (2022)
+  doi: 10.6084/m9.figshare.20013551.v1
+  categories:
+  - Nature
+  statuses:
+  - Matched to sheet description
+  study_ids:
+  - paper-007
+  study_time: Annual records, 1984-2016; coverage differs among the six regions.
+  publications:
+  - id: paper-007
+    title: Biodiversity underpins fisheries resilience to exploitation in the Amazon river basin
+    doi: 10.1098/rspb.2022.0726
+    url: https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726
+    year: 2022
+  annotations:
+    row_ids:
+    - row-013
+    limitations:
+    - These are regional summary metrics. Raw annual taxon-landings records and region geometries are
+      not supplied.
+assets:
+  data:
+    location: local
+    path: fisheries-annual-metrics.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      annotations:
+        rows: 121
+        encoding: UTF-8
+        missing_value: NA
+        key_fields:
+          Total Landings (tonnes): Annual landed biomass, tonnes.
+          Mean Body Size: Landings biomass-weighted total body length, cm.
+          Jaccard Dissimilarity: Change from the first year of each regional series.
+          Mean Price Index / Mean Revenue Index: Source economic indices; definitions are in the linked
+            review evidence.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.20013551.v1
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://royalsocietypublishing.org/doi/10.1098/rspb.2022.0726
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original:
+    location: local
+    path: source/rspb20220726_si_002.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    roles:
+    - data
+    metadata:
+      title: Original results workbook
+  traits:
+    location: local
+    path: source/rspb20220726_si_001.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    roles:
+    - data
+    metadata:
+      title: Source traits and field definitions

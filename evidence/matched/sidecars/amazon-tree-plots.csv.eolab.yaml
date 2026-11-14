@@ -1,0 +1,104 @@
+schema: eolab/item/v1
+id: wwf-amazon-tree-plot-metadata
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: 'Amazon Tree Diversity Network: plot metadata'
+  description: Metadata, tree density, diversity, richness and references for 2,046 inventory plots. Includes
+    original coordinate values and plot establishment years.
+  license: CC-BY-4.0
+  attribution: ter Steege et al. (2023)
+  doi: 10.6084/m9.figshare.22786166.v2
+  categories:
+  - Nature
+  statuses:
+  - Matched to sheet description
+  study_ids:
+  - paper-016
+  study_time: Plot establishment years 1934-2021; these do not establish the dates of the reported measurements.
+  publications:
+  - id: paper-016
+    title: Mapping density, diversity and species-richness of the Amazon tree flora
+    doi: 10.1038/s42003-023-05514-6
+    url: https://www.nature.com/articles/s42003-023-05514-6
+    year: 2023
+  annotations:
+    row_ids:
+    - row-041
+    limitations:
+    - Coordinate datum is not documented in the inspected sources; this delivery is a table without inferred
+      map geometry.
+    - The paper reports establishment through 2020, while three supplied records have year_est=2021.
+    temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+assets:
+  data:
+    location: local
+    path: amazon-tree-plots.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      annotations:
+        encoding: UTF-8
+        key: PlotCode
+        key_fields:
+          D: Tree density, trees per hectare.
+          S: Observed plot species richness.
+          fa.plots: Fisher's alpha diversity index.
+          S.ha: Estimated species richness per hectare.
+          S.500: Richness standardized to 500 trees.
+          year_est: Plot establishment year.
+        sample_definition: Free-standing woody stems with diameter at breast height (DBH) at least 10
+          cm.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.22786166.v2
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s42003-023-05514-6
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original:
+    location: local
+    path: source/PlotData.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Original plot table
+      annotations:
+        encoding: ISO-8859-1; Windows-1252 gives identical text for the bytes present.
+  environment:
+    location: local
+    path: source/PlotsAbiotic.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Plot environmental covariates
+  analysis_code:
+    location: local
+    path: source/TreeDiversityScript.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Tree-diversity analysis code

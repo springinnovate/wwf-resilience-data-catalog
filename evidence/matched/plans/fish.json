@@ -1,0 +1,566 @@
+{
+  "records": [
+    {
+      "id": "wwf-amazon-commercial-fish-catch",
+      "directory": "amazon-commercial-fish-catch",
+      "kind": "vector",
+      "row_ids": [
+        "row-023"
+      ],
+      "readiness": "Map ready; source license wording needs clarification",
+      "output_file": "amazon-commercial-fish-catch.gpkg",
+      "expected_features": 198,
+      "operation": {
+        "type": "vector_gdb_archive",
+        "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+        "geodatabase": "SNAPP_Fish_Data.gdb",
+        "layer": "Twenty_principal_comercial_taxa_catch",
+        "output_layer": "catch"
+      },
+      "source_files": {
+        "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5",
+        "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml": "9f3b75c6e632b67db7577d13ae74f89d79048ede90baf7cd732a08b9bae596c0"
+      },
+      "attachments": [
+        {
+          "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+          "path": "source/SNAPP_Fish_Data.rar"
+        },
+        {
+          "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml",
+          "path": "source/science-metadata.xml"
+        }
+      ],
+      "descriptor": {
+        "schema": "eolab/item/v1",
+        "id": "wwf-amazon-commercial-fish-catch",
+        "kind": "vector",
+        "primary_asset": "data",
+        "temporal": {
+          "mode": "interval",
+          "start_datetime": "1976-01-01T00:00:00Z",
+          "end_datetime": "2013-12-31T23:59:59Z"
+        },
+        "metadata": {
+          "title": "Historical maximum commercial fish catch by Amazon sub-basin",
+          "description": "Catch summaries for 20 commercial fish taxa across 198 Amazon sub-basins and mainstem sections. Values sum city-level historical annual maxima in tonnes/year; the study uses them as a proxy for known fish biomass.",
+          "attribution": "Venticinque, Goulding, Barthem and colleagues; Amazon Waters Expert Working Group, supported by SNAPP.",
+          "doi": "10.5063/F1TB152P",
+          "citation": "Venticinque et al. SNAPP Western Amazon Fish Database. https://doi.org/10.5063/F1TB152P",
+          "categories": [
+            "Nature"
+          ],
+          "statuses": [
+            "Matched to sheet description"
+          ],
+          "study_ids": [
+            "paper-011"
+          ],
+          "study_time": "Contributing catch observations span 1976-2013; coverage differs by city.",
+          "publications": [
+            {
+              "id": "paper-011",
+              "title": "Ecosystem-based management of Amazon fisheries and wetlands",
+              "doi": "10.1111/faf.12328",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/faf.12328",
+              "year": 2019
+            }
+          ],
+          "annotations": {
+            "row_ids": [
+              "row-023"
+            ],
+            "limitations": [
+              "Historical maxima are not observations for a common year or estimates of current stocks.",
+              "Source area and length attributes are retained; they are not recalculated from repaired geometry."
+            ],
+            "license_note": "The source names CC-BY-4.0 but also says share alike; redistribution terms need clarification.",
+            "processing": "Converted to GeoPackage with polygon-validity repair; all 198 records and their attribute values retained."
+          }
+        },
+        "assets": {
+          "data": {
+            "location": "local",
+            "path": "amazon-commercial-fish-catch.gpkg",
+            "media_type": "application/geopackage+sqlite3",
+            "roles": [
+              "data"
+            ],
+            "metadata": {
+              "annotations": {
+                "catch_units": "tonnes/year",
+                "key_fields": {
+                  "BL1_BL4_Id": "Source basin identifier.",
+                  "taxon_columns": "Twenty named commercial fish taxa; full list in the linked evidence.",
+                  "TonTot": "Source total catch field."
+                }
+              }
+            }
+          },
+          "review_context": {
+            "location": "local",
+            "path": "review-context.json",
+            "media_type": "application/json",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Full review evidence and source history"
+            }
+          },
+          "original": {
+            "location": "local",
+            "path": "source/SNAPP_Fish_Data.rar",
+            "media_type": "application/vnd.rar",
+            "roles": [
+              "data"
+            ],
+            "metadata": {
+              "title": "Original geodatabase archive"
+            }
+          },
+          "source_metadata": {
+            "location": "local",
+            "path": "source/science-metadata.xml",
+            "media_type": "application/xml",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Original dataset metadata and rights"
+            }
+          },
+          "source_repository": {
+            "location": "external",
+            "href": "https://doi.org/10.5063/F1TB152P",
+            "media_type": "text/html",
+            "roles": [
+              "metadata"
+            ],
+            "metadata": {
+              "title": "Original dataset repository"
+            }
+          }
+        },
+        "source": {
+          "format": "geopackage",
+          "layer": "catch"
+        }
+      },
+      "review_context": {
+        "metadata_evidence": [
+          {
+            "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml",
+            "locator": "dataset/title, creators, intellectualRights, methods and dataTable",
+            "supports": "Dataset identity, attribution, original rights wording, capture coverage 1976-2013, incomplete city records, annual maximum aggregation and the native archive."
+          },
+          {
+            "source": "outputs/matches.csv",
+            "locator": "row-023",
+            "supports": "Paper association, t/year units and requested product."
+          },
+          {
+            "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+            "locator": "SNAPP_Fish_Data.gdb / Twenty_principal_comercial_taxa_catch",
+            "supports": "198 records, 32 attributes, explicit WGS84 CRS and native geometry; read again using the recorded GIS runtime."
+          },
+          {
+            "source": "https://shapely.readthedocs.io/en/stable/reference/shapely.make_valid.html",
+            "locator": "structure algorithm and keep_collapsed",
+            "supports": "Repair reasons from shell/hole structure; collapsed line-only pieces can be omitted. Checks quantify area/extent changes and reject material differences."
+          }
+        ],
+        "rights": "The EML names and links CC-BY-4.0 but adds share alike. The named license and contradictory text are preserved in the original XML; the concise sidecar does not assert a resolved license.",
+        "source_taxon_fields": [
+          "Piramutaba",
+          "Curimatã",
+          "Mapará",
+          "Dourada",
+          "Tambaqui",
+          "Jaraqui",
+          "Pacu",
+          "Branquinha",
+          "Pescada",
+          "Tucunaré",
+          "Aracu",
+          "Sardinha",
+          "Surubim",
+          "Matrinchã",
+          "Pirapiting",
+          "Caparari",
+          "Aruanã",
+          "Acari",
+          "Piraíba",
+          "Charuto"
+        ],
+        "earlier_pilot_inspection": {
+          "layer": "Twenty_principal_comercial_taxa_catch",
+          "count": 198,
+          "schema": {
+            "properties": {
+              "OBJECTID": "int32",
+              "BL1_BL4_Id": "float",
+              "BL1": "str:30",
+              "BL2": "str:50",
+              "BL3": "str:50",
+              "BL4": "str:50",
+              "Area_km2": "float",
+              "Area_ha": "float",
+              "Piramutaba": "float",
+              "CurimatÃ£": "float",
+              "MaparÃ¡": "float",
+              "Dourada": "float",
+              "Tambaqui": "float",
+              "Jaraqui": "float",
+              "Pacu": "float",
+              "Branquinha": "float",
+              "Pescada": "float",
+              "TucunarÃ©": "float",
+              "Aracu": "float",
+              "Sardinha": "float",
+              "Surubim": "float",
+              "MatrinchÃ£": "float",
+              "Pirapiting": "float",
+              "Caparari": "float",
+              "AruanÃ£": "float",
+              "Acari": "float",
+              "PiraÃ­ba": "float",
+              "Charuto": "float",
+              "TonTot": "float",
+              "perc_tot": "float",
+              "Shape_Length": "float",
+              "Shape_Area": "float"
+            },
+            "geometry": "MultiPolygon"
+          },
+          "crs": "EPSG:4326",
+          "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+          "bounds": [
+            -79.61694150799997,
+            -20.498210661999963,
+            -42.46360965999993,
+            5.280954973000071
+          ],
+          "fiona_version": "1.10.1",
+          "gdal_version": "3.12.3",
+          "missing_geometry": 0,
+          "invalid_geometry": 147,
+          "field_codepoints": {
+            "CurimatÃ£": "0x43 0x75 0x72 0x69 0x6d 0x61 0x74 0xe3",
+            "MaparÃ¡": "0x4d 0x61 0x70 0x61 0x72 0xe1",
+            "TucunarÃ©": "0x54 0x75 0x63 0x75 0x6e 0x61 0x72 0xe9",
+            "MatrinchÃ£": "0x4d 0x61 0x74 0x72 0x69 0x6e 0x63 0x68 0xe3",
+            "AruanÃ£": "0x41 0x72 0x75 0x61 0x6e 0xe3",
+            "PiraÃ­ba": "0x50 0x69 0x72 0x61 0xed 0x62 0x61"
+          },
+          "null_counts": {
+            "OBJECTID": 0,
+            "BL1_BL4_Id": 0,
+            "BL1": 0,
+            "BL2": 0,
+            "BL3": 0,
+            "BL4": 0,
+            "Area_km2": 0,
+            "Area_ha": 0,
+            "Piramutaba": 0,
+            "CurimatÃ£": 0,
+            "MaparÃ¡": 0,
+            "Dourada": 0,
+            "Tambaqui": 0,
+            "Jaraqui": 0,
+            "Pacu": 0,
+            "Branquinha": 0,
+            "Pescada": 0,
+            "TucunarÃ©": 0,
+            "Aracu": 0,
+            "Sardinha": 0,
+            "Surubim": 0,
+            "MatrinchÃ£": 0,
+            "Pirapiting": 0,
+            "Caparari": 0,
+            "AruanÃ£": 0,
+            "Acari": 0,
+            "PiraÃ­ba": 0,
+            "Charuto": 0,
+            "TonTot": 0,
+            "perc_tot": 0,
+            "Shape_Length": 0,
+            "Shape_Area": 0
+          },
+          "numeric_ranges": {
+            "OBJECTID": [
+              1,
+              198
+            ],
+            "BL1_BL4_Id": [
+              1.0,
+              199.0
+            ],
+            "Area_km2": [
+              655.79534,
+              124082.02
+            ],
+            "Area_ha": [
+              65579.534,
+              12408202.0
+            ],
+            "Piramutaba": [
+              0.0,
+              16520.997
+            ],
+            "CurimatÃ£": [
+              0.0,
+              5671.89124
+            ],
+            "MaparÃ¡": [
+              0.0,
+              7054.022231
+            ],
+            "Dourada": [
+              0.0,
+              3756.37765
+            ],
+            "Tambaqui": [
+              0.0,
+              5366.977191
+            ],
+            "Jaraqui": [
+              0.0,
+              3934.698889
+            ],
+            "Pacu": [
+              0.0,
+              2030.108837
+            ],
+            "Branquinha": [
+              0.0,
+              2452.44466
+            ],
+            "Pescada": [
+              0.0,
+              2176.387
+            ],
+            "TucunarÃ©": [
+              0.0,
+              1354.247
+            ],
+            "Aracu": [
+              0.0,
+              1020.395895
+            ],
+            "Sardinha": [
+              0.0,
+              1149.746046
+            ],
+            "Surubim": [
+              0.0,
+              1142.445
+            ],
+            "MatrinchÃ£": [
+              0.0,
+              522.176097
+            ],
+            "Pirapiting": [
+              0.0,
+              842.523518
+            ],
+            "Caparari": [
+              0.0,
+              1208.230618
+            ],
+            "AruanÃ£": [
+              0.0,
+              702.651224
+            ],
+            "Acari": [
+              0.0,
+              1009.10791
+            ],
+            "PiraÃ­ba": [
+              0.0,
+              406.4173
+            ],
+            "Charuto": [
+              0.0,
+              428.064
+            ],
+            "TonTot": [
+              0.0,
+              30485.411416
+            ],
+            "perc_tot": [
+              0.0,
+              19.542838
+            ],
+            "Shape_Length": [
+              1.9016665890000426,
+              79.56499685001914
+            ],
+            "Shape_Area": [
+              0.053298606894103484,
+              10.232162375975665
+            ]
+          },
+          "output_schema": {
+            "properties": {
+              "OBJECTID": "int32",
+              "BL1_BL4_Id": "float",
+              "BL1": "str:30",
+              "BL2": "str:50",
+              "BL3": "str:50",
+              "BL4": "str:50",
+              "Area_km2": "float",
+              "Area_ha": "float",
+              "Piramutaba": "float",
+              "CurimatÃ£": "float",
+              "MaparÃ¡": "float",
+              "Dourada": "float",
+              "Tambaqui": "float",
+              "Jaraqui": "float",
+              "Pacu": "float",
+              "Branquinha": "float",
+              "Pescada": "float",
+              "TucunarÃ©": "float",
+              "Aracu": "float",
+              "Sardinha": "float",
+              "Surubim": "float",
+              "MatrinchÃ£": "float",
+              "Pirapiting": "float",
+              "Caparari": "float",
+              "AruanÃ£": "float",
+              "Acari": "float",
+              "PiraÃ­ba": "float",
+              "Charuto": "float",
+              "TonTot": "float",
+              "perc_tot": "float",
+              "Shape_Length": "float",
+              "Shape_Area": "float"
+            },
+            "geometry": "MultiPolygon"
+          },
+          "output_crs": "EPSG:4326",
+          "output_count": 198,
+          "properties_identical": true,
+          "geometry_coordinates_identical": true,
+          "archive_sha256": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5"
+        },
+        "earlier_pilot_curation": {
+          "pilot_id": "amazon-commercial-fish-catch",
+          "row_id": "row-023",
+          "paper_id": "paper-011",
+          "title": "Historical maximum commercial fish catch by Amazon sub-basin",
+          "description": "Maximum annual commercial catches for 20 principal fish taxa, aggregated to Amazon sub-basins and mainstem sections as a proxy for known fish biomass. This is a historical spatial summary, not a time series or an estimate of current stocks.",
+          "source_archive": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+          "source_geodatabase": "SNAPP_Fish_Data.gdb",
+          "source_layer": "Twenty_principal_comercial_taxa_catch",
+          "source_metadata": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml",
+          "dataset_title": "SNAPP Western Amazon Fish Database",
+          "dataset_doi": "10.5063/F1TB152P",
+          "dataset_url": "https://doi.org/10.5063/F1TB152P",
+          "creators": [
+            "Eduardo Venticinque",
+            "Michael Goulding",
+            "Ronaldo B. Barthem",
+            "Bruce Forsberg",
+            "Mauro L. de B. Ribeiro",
+            "Urbano Lopes da Silva-Junior",
+            "Paulo Petry",
+            "Carlos CaÃ±as",
+            "Polliana Santos Ferraz"
+          ],
+          "attribution": "Amazon Waters Expert Working Group, supported by the Science for Nature and People Partnership (SNAPP); dataset creators as listed in the source EML.",
+          "license": "CC-BY-4.0",
+          "license_note": "The source EML explicitly names CC BY 4.0 and links to that license, but also includes the phrase \"and share alike\". Preserve this discrepancy; the source text has not been silently rewritten.",
+          "paper": {
+            "title": "Ecosystem-based management of Amazon fisheries and wetlands",
+            "doi": "10.1111/faf.12328",
+            "url": "https://onlinelibrary.wiley.com/doi/10.1111/faf.12328",
+            "year": 2019,
+            "notes": [
+              "Journal issue year2019; first online3October2018. The article PDF was not available locally during this preparation."
+            ]
+          },
+          "temporal": {
+            "start_datetime": "1976-01-01T00:00:00Z",
+            "end_datetime": "2013-12-31T23:59:59Z",
+            "precision": "year",
+            "note": "Source EML methods report capture data from1976â€“2013. No city has complete records for all years; most cities have fewer than four continuous years. These bounds describe contributing observations, not a continuous annual series."
+          },
+          "categories": [
+            "Fisheries"
+          ],
+          "units": {
+            "taxon_catch_fields": "tonnes/year, following source sheet row023; aggregation not independently recomputed",
+            "Area_km2": "square kilometres, from field name; not independently recomputed",
+            "Area_ha": "hectares, from field name; not independently recomputed",
+            "perc_tot": "Not independently defined in source EML; retain source values without assuming normalization",
+            "Shape_Length": "Source geometry bookkeeping field; not a recomputed metric length",
+            "Shape_Area": "Source geometry bookkeeping field; not a recomputed metric area"
+          },
+          "evidence_references": [
+            {
+              "source": "metadata/science-metadata.xml",
+              "locator": "dataset/title; dataset/creator; dataset/intellectualRights",
+              "supports": [
+                "dataset identity",
+                "creators",
+                "attribution",
+                "license text"
+              ]
+            },
+            {
+              "source": "metadata/science-metadata.xml",
+              "locator": "dataset/methods/methodStep/description/section[title=\"Development of a spatially oriented database\"]",
+              "supports": [
+                "1976â€“2013 observation coverage",
+                "incomplete city-year coverage",
+                "maximum annual catch aggregation",
+                "188 ports /67cities /four countries"
+              ]
+            },
+            {
+              "source": "metadata/science-metadata.xml",
+              "locator": "dataset/dataTable/entityDescription; dataset/dataTable/physical",
+              "supports": [
+                "20 most important commercial taxa",
+                "SNAPP_Fish_Data.rar /nativegeodatabase origin"
+              ]
+            },
+            {
+              "source": "outputs/matches.csv",
+              "locator": "row-023",
+              "supports": [
+                "original dataset description",
+                "t/year units",
+                "paper association",
+                "matchlimitations"
+              ]
+            },
+            {
+              "source": "SNAPP_Fish_Data.gdb",
+              "locator": "Twenty_principal_comercial_taxa_catch native layer schema and geometries",
+              "supports": [
+                "EPSG4326",
+                "198features",
+                "32sourcefields",
+                "native bounds",
+                "polygon validityassessment"
+              ]
+            }
+          ],
+          "limitations": [
+            "Historical catch maxima are a proxy, not measured standing biomass or current stocks.",
+            "Catch aggregation and taxon-field units were not independently reconstructed from port records.",
+            "147 of198 native polygons fail Shapely validity checks; source-preserving conversion alone is not a geometry repair.",
+            "The prior frozen fish_layers.json misdecoded the field PiraÃ­ba. Native-source inspection now confirms the accented spelling; preserve it in the output.",
+            "Do not map EML common names to scientific taxa automatically; the package taxonomic labels have not been reconciled."
+          ]
+        },
+        "new_inspection_note": "A fresh extraction read with GDAL 3.13.3 has 35 invalid geometries, while the earlier GDAL 3.12.3 trial had 147. This is a reader-dependent geometry interpretation, not a changed archive. This preparation uses a fresh extraction and reports its own per-feature repair checks.",
+        "repair_acceptance": "Retain all records, identifiers and attribute values. Valid decoded geometries must remain exact. Invalid polygons use make_valid(method=structure, keep_collapsed=False); reject empty/nonpolygon results, relative planar area change above 1e-8 or coordinate-bound changes above 1e-8 degrees. Area checks assess repair size, not ecological correctness.",
+        "taxon_note": "Current taxon-field names are read from the fresh native geodatabase and preserve their exact Unicode spelling. Earlier inspection and matching dictionaries remain verbatim historical evidence, including any encoding errors. No scientific-taxon reconciliation or catch reaggregation was performed.",
+        "field_encoding_note": "The prepared field names are read directly from the native geodatabase using UTF-8, with the recorded GDAL data configuration. Historical dictionaries below may contain misdecoded names; those are retained as history, not used to name output columns."
+      }
+    }
+  ]
+}

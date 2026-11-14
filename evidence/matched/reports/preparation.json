@@ -1,0 +1,1669 @@
+{
+  "plans": {
+    "fish.json": "0f6bcb713b62a4816b2ca1e8eb21803026f096b9d6f41bf2224c9c6bf6945a1f",
+    "spatial.json": "eefe30b7aa615c097e580da6a98c040dc0fbda205649c5fbf480acef0b536342",
+    "tables.json": "2fbc85254fdaa660f1dd0891567fac175bb9579d7e53fd2abc49813547512d9d"
+  },
+  "runtime": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "fiona": "1.10.1",
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0",
+    "openpyxl": "3.1.5",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0"
+  },
+  "datasets": [
+    {
+      "id": "wwf-amazon-commercial-fish-catch",
+      "directory": "amazon-commercial-fish-catch",
+      "kind": "vector",
+      "row_ids": [
+        "row-023"
+      ],
+      "readiness": "Map ready; source license wording needs clarification",
+      "primary": "amazon-commercial-fish-catch.gpkg",
+      "sidecar": "amazon-commercial-fish-catch.gpkg.eolab.yaml",
+      "source_files": {
+        "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5",
+        "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml": "9f3b75c6e632b67db7577d13ae74f89d79048ede90baf7cd732a08b9bae596c0"
+      },
+      "checks": {
+        "features": 198,
+        "fields": [
+          "OBJECTID",
+          "BL1_BL4_Id",
+          "BL1",
+          "BL2",
+          "BL3",
+          "BL4",
+          "Area_km2",
+          "Area_ha",
+          "Piramutaba",
+          "Curimatã",
+          "Mapará",
+          "Dourada",
+          "Tambaqui",
+          "Jaraqui",
+          "Pacu",
+          "Branquinha",
+          "Pescada",
+          "Tucunaré",
+          "Aracu",
+          "Sardinha",
+          "Surubim",
+          "Matrinchã",
+          "Pirapiting",
+          "Caparari",
+          "Aruanã",
+          "Acari",
+          "Piraíba",
+          "Charuto",
+          "TonTot",
+          "perc_tot",
+          "Shape_Length",
+          "Shape_Area"
+        ],
+        "crs": "EPSG:4326",
+        "bounds": [
+          -79.61694150799997,
+          -20.49821066199996,
+          -42.46360965999997,
+          5.280954973000064
+        ],
+        "attributes_identical": true,
+        "invalid_output_geometries": 0,
+        "repaired_features": 35,
+        "repair_method": "Shapely make_valid structure; keep_collapsed=False",
+        "repair_details": [
+          {
+            "source_id": "11",
+            "reason": "Ring Self-intersection[-70.4577752069999 -3.00571136299993]",
+            "original_vertices": 6060,
+            "prepared_vertices": 6062,
+            "relative_area_change": 2.551975446576864e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "20",
+            "reason": "Ring Self-intersection[-72.621108454 1.05928847400003]",
+            "original_vertices": 13286,
+            "prepared_vertices": 13288,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "22",
+            "reason": "Ring Self-intersection[-72.358608465 -7.13904453099997]",
+            "original_vertices": 13148,
+            "prepared_vertices": 13149,
+            "relative_area_change": 4.7866538402873646e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "24",
+            "reason": "Ring Self-intersection[-72.071941809 -8.78987779899995]",
+            "original_vertices": 15554,
+            "prepared_vertices": 15555,
+            "relative_area_change": 2.583320673317027e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "25",
+            "reason": "Ring Self-intersection[-60.539442271 -6.80154454399997]",
+            "original_vertices": 13165,
+            "prepared_vertices": 13169,
+            "relative_area_change": 6.615584335932311e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "31",
+            "reason": "Ring Self-intersection[-67.856108644 -13.313210951]",
+            "original_vertices": 9152,
+            "prepared_vertices": 9153,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "45",
+            "reason": "Ring Self-intersection[-69.1727752589999 -12.4607109849999]",
+            "original_vertices": 17007,
+            "prepared_vertices": 17008,
+            "relative_area_change": 1.4162952029405158e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "49",
+            "reason": "Ring Self-intersection[-63.505275485 -17.894044101]",
+            "original_vertices": 8884,
+            "prepared_vertices": 8887,
+            "relative_area_change": 1.9698878324979874e-14,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "55",
+            "reason": "Ring Self-intersection[-65.233608749 -15.651544191]",
+            "original_vertices": 9564,
+            "prepared_vertices": 9565,
+            "relative_area_change": 1.5882318067844245e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "57",
+            "reason": "Ring Self-intersection[-65.946108721 -11.6290443509999]",
+            "original_vertices": 5368,
+            "prepared_vertices": 5369,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "62",
+            "reason": "Ring Self-intersection[-77.2994416 -8.11904449199994]",
+            "original_vertices": 16895,
+            "prepared_vertices": 16896,
+            "relative_area_change": 1.3456571009739236e-14,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "63",
+            "reason": "Ring Self-intersection[-76.626941627 -6.23404456699996]",
+            "original_vertices": 6148,
+            "prepared_vertices": 6149,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "67",
+            "reason": "Ring Self-intersection[-77.144441606 -3.13487802499998]",
+            "original_vertices": 16614,
+            "prepared_vertices": 16616,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "68",
+            "reason": "Ring Self-intersection[-79.04694153 -3.54904467399996]",
+            "original_vertices": 11014,
+            "prepared_vertices": 11015,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "69",
+            "reason": "Ring Self-intersection[-75.3602750109999 -2.02071140199996]",
+            "original_vertices": 13393,
+            "prepared_vertices": 13394,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "72",
+            "reason": "Ring Self-intersection[-55.564442469 -1.00571144299994]",
+            "original_vertices": 11408,
+            "prepared_vertices": 11409,
+            "relative_area_change": 9.227598783267338e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "79",
+            "reason": "Ring Self-intersection[-54.285275854 -0.49154479699996]",
+            "original_vertices": 10040,
+            "prepared_vertices": 10041,
+            "relative_area_change": 1.9088217901141532e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "89",
+            "reason": "Ring Self-intersection[-74.157775059 -2.06237806699994]",
+            "original_vertices": 18035,
+            "prepared_vertices": 18037,
+            "relative_area_change": 3.730670999452458e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "106",
+            "reason": "Ring Self-intersection[-59.7886089679999 0.94678847900002]",
+            "original_vertices": 16404,
+            "prepared_vertices": 16408,
+            "relative_area_change": 1.6325198866388863e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "108",
+            "reason": "Ring Self-intersection[-67.154442006 -1.20821143499995]",
+            "original_vertices": 15333,
+            "prepared_vertices": 15337,
+            "relative_area_change": 6.284599091374438e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "110",
+            "reason": "Ring Self-intersection[-64.671108772 0.228455174000032]",
+            "original_vertices": 10022,
+            "prepared_vertices": 10023,
+            "relative_area_change": 1.678466925542791e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "116",
+            "reason": "Ring Self-intersection[-67.5194419919999 -8.72071113499993]",
+            "original_vertices": 7492,
+            "prepared_vertices": 7494,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "118",
+            "reason": "Ring Self-intersection[-66.3894420359999 -9.46821110399998]",
+            "original_vertices": 19623,
+            "prepared_vertices": 19624,
+            "relative_area_change": 5.7324327451122354e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "127",
+            "reason": "Ring Self-intersection[-58.3077756929999 -11.2423777]",
+            "original_vertices": 13579,
+            "prepared_vertices": 13580,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "128",
+            "reason": "Ring Self-intersection[-57.88027571 -10.4523777319999]",
+            "original_vertices": 6485,
+            "prepared_vertices": 6486,
+            "relative_area_change": 1.4450607489174577e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "137",
+            "reason": "Ring Self-intersection[-56.821942419 -8.44237781199996]",
+            "original_vertices": 6890,
+            "prepared_vertices": 6892,
+            "relative_area_change": 6.754369570703471e-15,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "146",
+            "reason": "Ring Self-intersection[-49.386942717 -7.74571117299996]",
+            "original_vertices": 5694,
+            "prepared_vertices": 5695,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "150",
+            "reason": "Ring Self-intersection[-49.333609386 -2.53237804899993]",
+            "original_vertices": 9165,
+            "prepared_vertices": 9166,
+            "relative_area_change": 1.6547391687131855e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "168",
+            "reason": "Ring Self-intersection[-73.4786084199999 -6.25904456599994]",
+            "original_vertices": 8824,
+            "prepared_vertices": 8825,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "171",
+            "reason": "Ring Self-intersection[-54.365275851 -7.30654452499994]",
+            "original_vertices": 12739,
+            "prepared_vertices": 12740,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "173",
+            "reason": "Ring Self-intersection[-53.909442536 -5.10987794599993]",
+            "original_vertices": 5174,
+            "prepared_vertices": 5175,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "186",
+            "reason": "Ring Self-intersection[-51.833609286 2.39178842100006]",
+            "original_vertices": 6586,
+            "prepared_vertices": 6587,
+            "relative_area_change": 1.342414149533044e-16,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "191",
+            "reason": "Ring Self-intersection[-43.8194429389999 -4.04071132199994]",
+            "original_vertices": 8277,
+            "prepared_vertices": 8278,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "192",
+            "reason": "Ring Self-intersection[-45.013609558 -1.87654474099998]",
+            "original_vertices": 7002,
+            "prepared_vertices": 7003,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          },
+          {
+            "source_id": "194",
+            "reason": "Ring Self-intersection[-44.4044429159999 -5.11237794499993]",
+            "original_vertices": 13175,
+            "prepared_vertices": 13177,
+            "relative_area_change": 0.0,
+            "max_bounds_change_degrees": 0.0
+          }
+        ],
+        "source_reader": "Fiona 1.10.1; GDAL 3.13.3"
+      },
+      "files": {
+        "amazon-commercial-fish-catch.gpkg": {
+          "sha256": "7d652650fa26668726d0e6682629b9f818a36d263e6fc0356116ae98e9c30a33",
+          "bytes": 51200000
+        },
+        "amazon-commercial-fish-catch.gpkg.eolab.yaml": {
+          "sha256": "12614125c5e6ee7b6d02e26617e32c928a39ab4dbad22b333fbbbb997fa38d80",
+          "bytes": 2891
+        },
+        "review-context.json": {
+          "sha256": "d3cb5e8c3603a2f5cb46ca9161c51ecfa21744fe770299856bde50f5aa5989c0",
+          "bytes": 40988
+        },
+        "source/science-metadata.xml": {
+          "sha256": "9f3b75c6e632b67db7577d13ae74f89d79048ede90baf7cd732a08b9bae596c0",
+          "bytes": 12558
+        },
+        "source/SNAPP_Fish_Data.rar": {
+          "sha256": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5",
+          "bytes": 13515615
+        }
+      }
+    },
+    {
+      "id": "wwf-tfvi-gpp-01deg",
+      "directory": "tfvi-gpp",
+      "kind": "raster",
+      "row_ids": [
+        "row-020"
+      ],
+      "readiness": "Map ready",
+      "primary": "tfvi-gpp-0.1deg.tif",
+      "sidecar": "tfvi-gpp-0.1deg.tif.eolab.yaml",
+      "source_files": {
+        "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_gpp_0.1deg.tif": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
+        "GeoTIFF_CSV/Figure05/geotiff_0.25deg/tfvi_gpp_0.25deg.tif": "f93ca2040eac73e47329bbc2c1586b09f81d72ba200f5c485bed96376c774617",
+        "GeoTIFF_CSV/FigureS12/geotiff_0.1deg/tfvi_gpp_0.1deg.tif": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
+        "GeoTIFF_CSV/FigureS12/geotiff_0.25deg/tfvi_gpp_0.25deg.tif": "f93ca2040eac73e47329bbc2c1586b09f81d72ba200f5c485bed96376c774617"
+      },
+      "checks": {
+        "crs": "EPSG:4326",
+        "width": 3599,
+        "height": 649,
+        "bands": 1,
+        "dtypes": [
+          "float32"
+        ],
+        "nodata": -3.3999999521443642e+38,
+        "bounds": [
+          -179.95,
+          -34.049999999999976,
+          179.94999999999993,
+          30.85
+        ],
+        "valid_pixels": [
+          159351
+        ],
+        "value_ranges": [
+          [
+            -2.020559787750244,
+            1.8859655857086182
+          ]
+        ],
+        "base_values_identical": true,
+        "masks_identical": true,
+        "overviews": [
+          2,
+          4,
+          8
+        ],
+        "transformation": "Lossless COG; native grid and CRS retained."
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "134d660d2aa3f671d5f5b9ddc81da7954534f6c871499893900b8bb619a4eb36",
+          "bytes": 20241
+        },
+        "source/tfvi_gpp_0.1deg.tif": {
+          "sha256": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
+          "bytes": 533326
+        },
+        "source/tfvi_gpp_0.25deg.tif": {
+          "sha256": "f93ca2040eac73e47329bbc2c1586b09f81d72ba200f5c485bed96376c774617",
+          "bytes": 99434
+        },
+        "tfvi-gpp-0.1deg.tif": {
+          "sha256": "c40a49fee0e2d59daeb217f0f05ee2e1d7d524284967d719f5ce25d3ed89df5b",
+          "bytes": 648751
+        },
+        "tfvi-gpp-0.1deg.tif.eolab.yaml": {
+          "sha256": "1482aac77eb8dd4417bd3d0c23eb8f980c16b2fb15ea7c0a24580f0d6234cb18",
+          "bytes": 3022
+        }
+      }
+    },
+    {
+      "id": "wwf-tfvi-aet-01deg",
+      "directory": "tfvi-aet",
+      "kind": "raster",
+      "row_ids": [
+        "row-021"
+      ],
+      "readiness": "Map ready",
+      "primary": "tfvi-aet-0.1deg.tif",
+      "sidecar": "tfvi-aet-0.1deg.tif.eolab.yaml",
+      "source_files": {
+        "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_aet_0.1deg.tif": "55cb25ee5a483046db2d48bcdc23a24d5622fe48024b740787ad52228e61e591",
+        "GeoTIFF_CSV/Figure05/geotiff_0.25deg/tfvi_aet_0.25deg.tif": "e72e6007d6e631ca4dcfdb602b56462e54a8478db7ddc639de4f2d563d013c79",
+        "GeoTIFF_CSV/FigureS13/geotiff_0.1deg/tfvi_aet_0.1deg.tif": "55cb25ee5a483046db2d48bcdc23a24d5622fe48024b740787ad52228e61e591",
+        "GeoTIFF_CSV/FigureS13/geotiff_0.25deg/tfvi_aet_0.25deg.tif": "e72e6007d6e631ca4dcfdb602b56462e54a8478db7ddc639de4f2d563d013c79"
+      },
+      "checks": {
+        "crs": "EPSG:4326",
+        "width": 3599,
+        "height": 649,
+        "bands": 1,
+        "dtypes": [
+          "float32"
+        ],
+        "nodata": -3.3999999521443642e+38,
+        "bounds": [
+          -179.95,
+          -34.049999999999976,
+          179.94999999999993,
+          30.85
+        ],
+        "valid_pixels": [
+          161991
+        ],
+        "value_ranges": [
+          [
+            -2.3245623111724854,
+            2.1120147705078125
+          ]
+        ],
+        "base_values_identical": true,
+        "masks_identical": true,
+        "overviews": [
+          2,
+          4,
+          8
+        ],
+        "transformation": "Lossless COG; native grid and CRS retained."
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "9809d175c45b09f879674120aded9691cf5d0a26998eb6dede97d02e5971208e",
+          "bytes": 20177
+        },
+        "source/tfvi_aet_0.1deg.tif": {
+          "sha256": "55cb25ee5a483046db2d48bcdc23a24d5622fe48024b740787ad52228e61e591",
+          "bytes": 627824
+        },
+        "source/tfvi_aet_0.25deg.tif": {
+          "sha256": "e72e6007d6e631ca4dcfdb602b56462e54a8478db7ddc639de4f2d563d013c79",
+          "bytes": 116725
+        },
+        "tfvi-aet-0.1deg.tif": {
+          "sha256": "905d8fcd5dcd99986d524e5e3ed4b4a2b2f901127963d11e78d2feaa94bf80bb",
+          "bytes": 773373
+        },
+        "tfvi-aet-0.1deg.tif.eolab.yaml": {
+          "sha256": "c9811ed9b7894f42a77e3c872a89a9ea47e6b3f911e2d5878ce094b19d692718",
+          "bytes": 3041
+        }
+      }
+    },
+    {
+      "id": "wwf-tfvi-lst-01deg",
+      "directory": "tfvi-lst",
+      "kind": "raster",
+      "row_ids": [
+        "row-022"
+      ],
+      "readiness": "Map ready",
+      "primary": "tfvi-lst-0.1deg.tif",
+      "sidecar": "tfvi-lst-0.1deg.tif.eolab.yaml",
+      "source_files": {
+        "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_lst_0.1deg.tif": "ff9a40ed33aab63fcd6e2a471497b75b018d03dd3cdfde264d02a489b889740b",
+        "GeoTIFF_CSV/Figure05/geotiff_0.25deg/tfvi_lst_0.25deg.tif": "cf253f8f46c152ab0d59989f46ed18a729a541222ce23bb8ae250c3e32eeb49a",
+        "GeoTIFF_CSV/FigureS14/geotiff_0.1deg/tfvi_lst_0.1deg.tif": "ff9a40ed33aab63fcd6e2a471497b75b018d03dd3cdfde264d02a489b889740b",
+        "GeoTIFF_CSV/FigureS14/geotiff_0.25deg/tfvi_lst_0.25deg.tif": "cf253f8f46c152ab0d59989f46ed18a729a541222ce23bb8ae250c3e32eeb49a"
+      },
+      "checks": {
+        "crs": "EPSG:4326",
+        "width": 3599,
+        "height": 649,
+        "bands": 1,
+        "dtypes": [
+          "float32"
+        ],
+        "nodata": -3.3999999521443642e+38,
+        "bounds": [
+          -179.95,
+          -34.049999999999976,
+          179.94999999999993,
+          30.85
+        ],
+        "valid_pixels": [
+          161991
+        ],
+        "value_ranges": [
+          [
+            -27.635353088378906,
+            22.88875961303711
+          ]
+        ],
+        "base_values_identical": true,
+        "masks_identical": true,
+        "overviews": [
+          2,
+          4,
+          8
+        ],
+        "transformation": "Lossless COG; native grid and CRS retained."
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "eaaf22bbae3864440f672d174b3d4730c29354dceaca7dac559abb7a17135e35",
+          "bytes": 21241
+        },
+        "source/tfvi_lst_0.1deg.tif": {
+          "sha256": "ff9a40ed33aab63fcd6e2a471497b75b018d03dd3cdfde264d02a489b889740b",
+          "bytes": 518821
+        },
+        "source/tfvi_lst_0.25deg.tif": {
+          "sha256": "cf253f8f46c152ab0d59989f46ed18a729a541222ce23bb8ae250c3e32eeb49a",
+          "bytes": 102137
+        },
+        "tfvi-lst-0.1deg.tif": {
+          "sha256": "54f4fa688d52cdb0f411270f39d3417f78348cba1d6fb6258efd5ed6b26d05fc",
+          "bytes": 630345
+        },
+        "tfvi-lst-0.1deg.tif.eolab.yaml": {
+          "sha256": "435ba9bc50095f983465407f12e6c6260c91c58a09a2ab806621fad8c83fad95",
+          "bytes": 3084
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-terrestrial-resistance",
+      "directory": "amazon-terrestrial-resistance",
+      "kind": "raster",
+      "row_ids": [
+        "row-033"
+      ],
+      "readiness": "Map ready",
+      "primary": "amazon-terrestrial-resistance.tif",
+      "sidecar": "amazon-terrestrial-resistance.tif.eolab.yaml",
+      "source_files": {
+        "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip": "a484ed30bd4215f433a0a7960e18eaa47dd88cfb18d822941016be094201169e",
+        "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip": "db2fe4c33c3f129c04ac3f5c4a9d7bc89a84d0571fe56a3883a64b6764ac736f",
+        "28089815/_2SPAnew2024_Resistance_analysis.R": "81be817ede9cfc3e5d1e45ac1db0f316ad40e4ac54e63ed475d0ce49b9c403a3"
+      },
+      "checks": {
+        "crs": "EPSG:5641",
+        "width": 11937,
+        "height": 10871,
+        "bands": 1,
+        "dtypes": [
+          "uint8"
+        ],
+        "nodata": 255.0,
+        "bounds": [
+          883668.9087134702,
+          7624640.847800701,
+          4221371.802092984,
+          10664279.630906062
+        ],
+        "valid_pixels": [
+          76240582
+        ],
+        "value_ranges": [
+          [
+            1.0,
+            34.0
+          ]
+        ],
+        "base_values_identical": true,
+        "masks_identical": true,
+        "overviews": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "transformation": "Lossless COG; native grid and CRS retained."
+      },
+      "files": {
+        "amazon-terrestrial-resistance.tif": {
+          "sha256": "a0a20161b1f1e6cd223d84066c76fc5a5aae43b7a08b3ebd5d94c4d8993b1610",
+          "bytes": 19865064
+        },
+        "amazon-terrestrial-resistance.tif.eolab.yaml": {
+          "sha256": "de677385bcb2cec3fe7bb2e13084fdf4b78cce06ac65b992fcfdaddfb1a68cfe",
+          "bytes": 3045
+        },
+        "review-context.json": {
+          "sha256": "3ff85c943876a9401aaf8615578b8302a0565dcaf3b29f87314b3c0a8d916d59",
+          "bytes": 174203
+        },
+        "source/_2SPAnew2024_Resistance_analysis.R": {
+          "sha256": "81be817ede9cfc3e5d1e45ac1db0f316ad40e4ac54e63ed475d0ce49b9c403a3",
+          "bytes": 6553
+        },
+        "source/_2SPAnew2024_Resistance_analysis_DATASET.zip": {
+          "sha256": "a484ed30bd4215f433a0a7960e18eaa47dd88cfb18d822941016be094201169e",
+          "bytes": 59591179
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-hist-forested",
+      "directory": "wbgt-hist-forested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-hist-forested.nc",
+      "sidecar": "wbgt-hist-forested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_hist_comflor.nc": "e1200832a05fe0d1dfd9b0106eda7d191c74d9fdb5c8255d8dc3e3f0275e0b97"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "e9da64895d2fb773d57f89c496665d4f9bc3572686c09ef0a73a2a279e4b483b",
+          "bytes": 19286
+        },
+        "wbgt-hist-forested.nc": {
+          "sha256": "e1200832a05fe0d1dfd9b0106eda7d191c74d9fdb5c8255d8dc3e3f0275e0b97",
+          "bytes": 257660
+        },
+        "wbgt-hist-forested.nc.eolab.yaml": {
+          "sha256": "6b8c791fed5ea15349770e951353525316e927fa95ed4789cf9d472bdd87c798",
+          "bytes": 2533
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-hist-deforested",
+      "directory": "wbgt-hist-deforested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-hist-deforested.nc",
+      "sidecar": "wbgt-hist-deforested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_hist_se6flor.nc": "be61004103699ad2c2e9678d1719b71c03269c61712c320456ba23ba63b9d46e"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "03f8fbd445a36c0423a90f4eb88f481c3efe0249428774fe4b082a861f42a6a8",
+          "bytes": 19287
+        },
+        "wbgt-hist-deforested.nc": {
+          "sha256": "be61004103699ad2c2e9678d1719b71c03269c61712c320456ba23ba63b9d46e",
+          "bytes": 257660
+        },
+        "wbgt-hist-deforested.nc.eolab.yaml": {
+          "sha256": "14a140d3343c944bdd4c3b168375781f885882cf1863522192d0fe1f93a6c147",
+          "bytes": 2543
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-rcp4-forested",
+      "directory": "wbgt-rcp4-forested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-rcp4-forested.nc",
+      "sidecar": "wbgt-rcp4-forested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp4_comflor.nc": "65661be9b60f821e61347258dd60fcb76273217e57b594dabf132017a0d235fa"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "8d94aa53b30c296e397336d1921e40736d0a53555c958b4621f30a615e27a95c",
+          "bytes": 19286
+        },
+        "wbgt-rcp4-forested.nc": {
+          "sha256": "65661be9b60f821e61347258dd60fcb76273217e57b594dabf132017a0d235fa",
+          "bytes": 257660
+        },
+        "wbgt-rcp4-forested.nc.eolab.yaml": {
+          "sha256": "e8cea5bb7d9c888933702eaa96c5dea4a6af2055fe3111143416db5a57a65a5c",
+          "bytes": 2521
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-rcp4-deforested",
+      "directory": "wbgt-rcp4-deforested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-rcp4-deforested.nc",
+      "sidecar": "wbgt-rcp4-deforested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp4_se6flor.nc": "d6058ac664713e5f519f8dcfcffc089bc8700bedba2489e166b44e2885f98131"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "9bf9b997250c071fb80c3c865f3d807887ee7ae8479563c5e0b5c880e56f6029",
+          "bytes": 19287
+        },
+        "wbgt-rcp4-deforested.nc": {
+          "sha256": "d6058ac664713e5f519f8dcfcffc089bc8700bedba2489e166b44e2885f98131",
+          "bytes": 257660
+        },
+        "wbgt-rcp4-deforested.nc.eolab.yaml": {
+          "sha256": "8d651c699643a2663ff693328ca25e7e37c068742baddf607d57943c838a1b62",
+          "bytes": 2531
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-rcp8-forested",
+      "directory": "wbgt-rcp8-forested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-rcp8-forested.nc",
+      "sidecar": "wbgt-rcp8-forested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp8_comflor.nc": "ca3d4fdb1c636af9987522139bee30191530b2ab2e30d3ce8f0f025ad317e8d5"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "dc8999dddac8eb6c3eb6b52b3e98d72284ca36e1868b7f9748c7922a1d80608c",
+          "bytes": 19286
+        },
+        "wbgt-rcp8-forested.nc": {
+          "sha256": "ca3d4fdb1c636af9987522139bee30191530b2ab2e30d3ce8f0f025ad317e8d5",
+          "bytes": 257660
+        },
+        "wbgt-rcp8-forested.nc.eolab.yaml": {
+          "sha256": "ac8e791f20a51ac90d7a4154533ad43b447e2d8443e20410e979d59ec90a889d",
+          "bytes": 2521
+        }
+      }
+    },
+    {
+      "id": "wwf-wbgt-rcp8-deforested",
+      "directory": "wbgt-rcp8-deforested",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-017"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "wbgt-rcp8-deforested.nc",
+      "sidecar": "wbgt-rcp8-deforested.nc.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp8_se6flor.nc": "a69897e56c3f822ead443cd3da3da3cba282bc571678231c43dda71626a57fb2"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "efb2ad7253e1f362af00770d35f7d9e04c357414ca988d228b3b74288e176123",
+          "bytes": 19287
+        },
+        "wbgt-rcp8-deforested.nc": {
+          "sha256": "a69897e56c3f822ead443cd3da3da3cba282bc571678231c43dda71626a57fb2",
+          "bytes": 257660
+        },
+        "wbgt-rcp8-deforested.nc.eolab.yaml": {
+          "sha256": "3cb006a5121b3b83fccae1edb281cc60d9e95f3112bde0ccd3df91f71cfdde49",
+          "bytes": 2531
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-tree-density",
+      "directory": "amazon-tree-density",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-038"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "amazon-tree-density.asc",
+      "sidecar": "amazon-tree-density.asc.eolab.yaml",
+      "source_files": {
+        "22786166/TreeDensity.asc": "a363b243a027d6f9298179cb5dcd933fb56947911f80dd4521171e4d143afa3f",
+        "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+        "22786166/TreeDiversityFunctions.R": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+        "22786166/AmazonLowLandForestRaisg.csv": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "amazon-tree-density.asc": {
+          "sha256": "a363b243a027d6f9298179cb5dcd933fb56947911f80dd4521171e4d143afa3f",
+          "bytes": 1069099
+        },
+        "amazon-tree-density.asc.eolab.yaml": {
+          "sha256": "d31f7343dcebd7b74a236caee9719d9314e6bbfd87e8b45b422e251dfc17a08b",
+          "bytes": 3124
+        },
+        "review-context.json": {
+          "sha256": "d8cf5072e06543b68b9cfd33fc522f4479de52ae6136cbba2893ef9bbfda38bc",
+          "bytes": 25016
+        },
+        "source/AmazonLowLandForestRaisg.csv": {
+          "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
+          "bytes": 1185111
+        },
+        "source/TreeDiversityFunctions.R": {
+          "sha256": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+          "bytes": 25701
+        },
+        "source/TreeDiversityScript.R": {
+          "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+          "bytes": 35264
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-tree-diversity",
+      "directory": "amazon-tree-diversity",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-039"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "amazon-tree-diversity.asc",
+      "sidecar": "amazon-tree-diversity.asc.eolab.yaml",
+      "source_files": {
+        "22786166/TreeDiversity.asc": "cdf29dc0a8a82b4bfc00ffbcfa9168f2d7fd176c9b43a4064077cfb973647d93",
+        "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+        "22786166/TreeDiversityFunctions.R": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+        "22786166/AmazonLowLandForestRaisg.csv": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "amazon-tree-diversity.asc": {
+          "sha256": "cdf29dc0a8a82b4bfc00ffbcfa9168f2d7fd176c9b43a4064077cfb973647d93",
+          "bytes": 1074642
+        },
+        "amazon-tree-diversity.asc.eolab.yaml": {
+          "sha256": "be90e10feb0080bdce37e5cac751ebabdec453cbcbe8968a6322e8c378c7ddbb",
+          "bytes": 3123
+        },
+        "review-context.json": {
+          "sha256": "d69d5dc86ebce6cb927c20a8996c434dc3342172db21bf9c1a342695574c92e9",
+          "bytes": 24914
+        },
+        "source/AmazonLowLandForestRaisg.csv": {
+          "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
+          "bytes": 1185111
+        },
+        "source/TreeDiversityFunctions.R": {
+          "sha256": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+          "bytes": 25701
+        },
+        "source/TreeDiversityScript.R": {
+          "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+          "bytes": 35264
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-tree-richness",
+      "directory": "amazon-tree-richness",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-040"
+      ],
+      "readiness": "Download only: CRS confirmation needed",
+      "primary": "amazon-tree-richness.asc",
+      "sidecar": "amazon-tree-richness.asc.eolab.yaml",
+      "source_files": {
+        "22786166/TreeRichness_ha.asc": "8841fb87f5d712677ccaddfd0991c3df423da9463ea166b2cd30eb022d0104c1",
+        "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+        "22786166/TreeDiversityFunctions.R": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+        "22786166/AmazonLowLandForestRaisg.csv": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "amazon-tree-richness.asc": {
+          "sha256": "8841fb87f5d712677ccaddfd0991c3df423da9463ea166b2cd30eb022d0104c1",
+          "bytes": 1047911
+        },
+        "amazon-tree-richness.asc.eolab.yaml": {
+          "sha256": "6b97918efb79bf969c901c16f9ffde695a092fcad75ff8bbbd14429ab16a39ae",
+          "bytes": 3159
+        },
+        "review-context.json": {
+          "sha256": "c77909c4fa13a57bf69cda627364df9ee83d11d06006b708010abd23cb05b432",
+          "bytes": 24735
+        },
+        "source/AmazonLowLandForestRaisg.csv": {
+          "sha256": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c",
+          "bytes": 1185111
+        },
+        "source/TreeDiversityFunctions.R": {
+          "sha256": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+          "bytes": 25701
+        },
+        "source/TreeDiversityScript.R": {
+          "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+          "bytes": 35264
+        }
+      }
+    },
+    {
+      "id": "wwf-forest-carbon-loss-gain-compilation",
+      "directory": "forest-carbon-loss-gain-compilation",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-002"
+      ],
+      "readiness": "table-ready",
+      "primary": "carbon-losses.xlsx",
+      "sidecar": "carbon-losses.xlsx.eolab.yaml",
+      "source_files": {
+        "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx": "fd163b691c6254bb2bc24ddeac943dc39d533614f93eec36c93877f982499a12",
+        "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_accumulation_forest_type_current_v2.xlsx": "8322dee016f3f606f5e8c34dd6af3dbe0bbba3b08a94063b26b14639e37876df",
+        "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx": "f059bc0207eb406adfe198b61bb23a065fe02e4d0c58744ff207bb4fd8faecbc"
+      },
+      "checks": {
+        "source_bytes_identical": true
+      },
+      "files": {
+        "carbon-losses.xlsx": {
+          "sha256": "fd163b691c6254bb2bc24ddeac943dc39d533614f93eec36c93877f982499a12",
+          "bytes": 107709
+        },
+        "carbon-losses.xlsx.eolab.yaml": {
+          "sha256": "3e45927df9b0145a12310b489e65c91cece80525de6868c0e3bd6597de7ccaf6",
+          "bytes": 3209
+        },
+        "review-context.json": {
+          "sha256": "10f16fbece9238cb7fd4609addd2362220fdf9fa4e8e63629cf37dd8c23d19ed",
+          "bytes": 18023
+        },
+        "source/AGC_accumulation_forest_type_current_v2.xlsx": {
+          "sha256": "8322dee016f3f606f5e8c34dd6af3dbe0bbba3b08a94063b26b14639e37876df",
+          "bytes": 84774
+        },
+        "source/references_info_v2.xlsx": {
+          "sha256": "f059bc0207eb406adfe198b61bb23a065fe02e4d0c58744ff207bb4fd8faecbc",
+          "bytes": 35326
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-fisheries-annual-metrics",
+      "directory": "amazon-fisheries-annual-metrics",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-013"
+      ],
+      "readiness": "table-ready",
+      "primary": "fisheries-annual-metrics.csv",
+      "sidecar": "fisheries-annual-metrics.csv.eolab.yaml",
+      "source_files": {
+        "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx": "71365e3e2c142a77764456afa81bc6a3c6f4333020f82541fe04029bead4d214",
+        "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx": "ca789522ea146afa4567ea6931e7425e1b0e3f73bf50689560ccd0963d3ca4f7"
+      },
+      "checks": {
+        "rows": 121,
+        "columns": [
+          "Region",
+          "Year",
+          "Total Landings (tonnes)",
+          "Species Richness",
+          "Shannon Diversity",
+          "Evenness",
+          "Jaccard Dissimilarity",
+          "Mean Body Size",
+          "Mean Trophic Level",
+          "Mean Price Index",
+          "Mean Revenue Index"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_sheet": "Supplement Table 2_Year Trends_",
+        "header_row": 1
+      },
+      "files": {
+        "fisheries-annual-metrics.csv": {
+          "sha256": "1757c34e7e5682f2f348d7e3277f0fda7d6c52c7943123678aff733367d8db25",
+          "bytes": 13408
+        },
+        "fisheries-annual-metrics.csv.eolab.yaml": {
+          "sha256": "37a5ebf9f0e2b5c2bb58c39c24e5aa76cdb94bf66e7c34b6291178d80226c4b1",
+          "bytes": 2828
+        },
+        "review-context.json": {
+          "sha256": "67c58ab1534a2a262ba8ff814d990caa4171a7b88dccaedb02082202bd6cc4b4",
+          "bytes": 14833
+        },
+        "source/rspb20220726_si_001.xlsx": {
+          "sha256": "ca789522ea146afa4567ea6931e7425e1b0e3f73bf50689560ccd0963d3ca4f7",
+          "bytes": 40343
+        },
+        "source/rspb20220726_si_002.xlsx": {
+          "sha256": "71365e3e2c142a77764456afa81bc6a3c6f4333020f82541fe04029bead4d214",
+          "bytes": 30303
+        }
+      }
+    },
+    {
+      "id": "wwf-brazil-heat-stress-exposure",
+      "directory": "brazil-heat-stress-exposure",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-018"
+      ],
+      "readiness": "table-ready",
+      "primary": "heat-stress-exposed-population.csv",
+      "sidecar": "heat-stress-exposed-population.csv.eolab.yaml",
+      "source_files": {
+        "DeforestationAndClimate/15128679/number_population_figure3.csv": "19574586063c985f021db02025db1ba0abbf48f7bce952f8efbc9769fd0d48a7",
+        "DeforestationAndClimate/15128679/Figure 3.R": "9958d7a61474d9e3695e73908f3fb48c4a260de0059921420f9f3967a9a67ef8",
+        "DeforestationAndClimate/15128679/outdoor_pop.csv": "ee38fc0a5f61ba51789ce81d158bfa4dbd1356856ee73372b611ad95c9ffe79c",
+        "DeforestationAndClimate/15128679/threshold_34_pop.csv": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a",
+        "DeforestationAndClimate/15128688/munic_WbgtMaxMed-id.txt": "c5a235d7514bda4c10ed96f3e683ddae40e9574e6e88375ca2071dfa5ade4eb9",
+        "DeforestationAndClimate/15128688/Figure 4.R": "4a4a6cf5f938024484718f3cff8b0e97b90082599fb28ffe3817d272f97ccbc3",
+        "DeforestationAndClimate/15128688/outdoor_pop.csv": "ee38fc0a5f61ba51789ce81d158bfa4dbd1356856ee73372b611ad95c9ffe79c",
+        "DeforestationAndClimate/15128688/threshold_34_pop.csv": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a"
+      },
+      "checks": {
+        "rows": 12,
+        "columns": [
+          "WBGT",
+          "periodo",
+          "pop",
+          "tip"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_encoding": "cp1252",
+        "source_delimiter": ";",
+        "decimal_comma_normalized_columns": [
+          "pop"
+        ]
+      },
+      "files": {
+        "heat-stress-exposed-population.csv": {
+          "sha256": "dc47ed088518b1684f163998c7d0fba6d74625a8c1c28877b92b0bfe27ea9666",
+          "bytes": 734
+        },
+        "heat-stress-exposed-population.csv.eolab.yaml": {
+          "sha256": "57b7c77aa17b4c2091173064ec48e383f9ba7df10517157a53c614894e9199e6",
+          "bytes": 4057
+        },
+        "review-context.json": {
+          "sha256": "1fe037662cdcb0b1dbb363dd4567a119bb8b4afded8bc3d83176f096a75a7922",
+          "bytes": 19727
+        },
+        "source/Figure 3.R": {
+          "sha256": "9958d7a61474d9e3695e73908f3fb48c4a260de0059921420f9f3967a9a67ef8",
+          "bytes": 941
+        },
+        "source/Figure 4.R": {
+          "sha256": "4a4a6cf5f938024484718f3cff8b0e97b90082599fb28ffe3817d272f97ccbc3",
+          "bytes": 10107
+        },
+        "source/munic_WbgtMaxMed-id.txt": {
+          "sha256": "c5a235d7514bda4c10ed96f3e683ddae40e9574e6e88375ca2071dfa5ade4eb9",
+          "bytes": 657768
+        },
+        "source/number_population_figure3.csv": {
+          "sha256": "19574586063c985f021db02025db1ba0abbf48f7bce952f8efbc9769fd0d48a7",
+          "bytes": 735
+        },
+        "source/outdoor_pop.csv": {
+          "sha256": "ee38fc0a5f61ba51789ce81d158bfa4dbd1356856ee73372b611ad95c9ffe79c",
+          "bytes": 701398
+        },
+        "source/threshold_34_pop.csv": {
+          "sha256": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a",
+          "bytes": 1055910
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-land-use-biodiversity-carbon",
+      "directory": "amazon-land-use-biodiversity-carbon",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-035",
+        "row-036"
+      ],
+      "readiness": "table-ready",
+      "primary": "site-biodiversity-carbon.csv",
+      "sidecar": "site-biodiversity-carbon.csv.eolab.yaml",
+      "source_files": {
+        "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv": "84ef2ff7156bf700eeeb5f2fa3815112cf3f17b1dd8d835eb98cb8d94bc77464",
+        "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_rich_forest_sp.csv": "8e3ad6e62f8f7a94a520b2aa4fa5fdbdc5d0e2aee4def716f8cb616ee32c301e",
+        "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_PGM.txt": "d1add744e00269abff1e2eee97ccfbfb1a176fd9e3a619d29e897eb742450580",
+        "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_STM.txt": "1b610d16d9fce83c48243e6b8499c3f561b88281eb2c820d2d26484b4fb45ccf",
+        "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "cassioalencarnunes-LULC_transitions-c501bd5/README.md": "d6440dd8223aa91baab45a7c1d15bfb37ab26554fb19fd09224f3d2329d4e0bf",
+        "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R": "b8ce7fc0e600ff27bb52090f221160669d6c33af23d8f0171b21750c132b484e"
+      },
+      "checks": {
+        "rows": 310,
+        "columns": [
+          "Region",
+          "Catchment",
+          "Transect",
+          "Transect_code",
+          "LU_UF",
+          "ant_rich",
+          "bird_rich",
+          "db_rich",
+          "liana_rich",
+          "sap_rich",
+          "tree_rich",
+          "bee_rich",
+          "Aboveground_pool",
+          "Litter_pool",
+          "Dead_pool",
+          "Soil_pool_new"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_encoding": "utf-8",
+        "source_delimiter": ",",
+        "source_column_indices_zero_based": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          27,
+          11,
+          12,
+          13,
+          14
+        ],
+        "source_headers": [
+          "Region",
+          "Catchment",
+          "Transect",
+          "Transect_code",
+          "LU_UF",
+          "ant_rich",
+          "bird_rich",
+          "db_rich",
+          "liana_rich",
+          "sap_rich",
+          "tree_rich",
+          "bee_rich",
+          "Aboveground_pool",
+          "Litter_pool",
+          "Dead_pool",
+          "Soil_pool_new"
+        ]
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "0e0631cde491a1789ed25135f2150bf2700dccb061a44625f2b2099d4ce24382",
+          "bytes": 52021
+        },
+        "site-biodiversity-carbon.csv": {
+          "sha256": "9a375f6bcd197c31af617aa5f91a69b3334fb60255bbb2bf4e26298b12a322ca",
+          "bytes": 23465
+        },
+        "site-biodiversity-carbon.csv.eolab.yaml": {
+          "sha256": "bd1980e1b02d7c27dbc56cecc0d2ef94abab7871b8df830f7ff496d80a8062ba",
+          "bytes": 4226
+        },
+        "source/Carbon_all_PGM.txt": {
+          "sha256": "d1add744e00269abff1e2eee97ccfbfb1a176fd9e3a619d29e897eb742450580",
+          "bytes": 9349
+        },
+        "source/Carbon_all_STM.txt": {
+          "sha256": "1b610d16d9fce83c48243e6b8499c3f561b88281eb2c820d2d26484b4fb45ccf",
+          "bytes": 7606
+        },
+        "source/data_all_joined.csv": {
+          "sha256": "84ef2ff7156bf700eeeb5f2fa3815112cf3f17b1dd8d835eb98cb8d94bc77464",
+          "bytes": 59894
+        },
+        "source/data_rich_forest_sp.csv": {
+          "sha256": "8e3ad6e62f8f7a94a520b2aa4fa5fdbdc5d0e2aee4def716f8cb616ee32c301e",
+          "bytes": 30538
+        },
+        "source/LICENSE": {
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        "source/README.md": {
+          "sha256": "d6440dd8223aa91baab45a7c1d15bfb37ab26554fb19fd09224f3d2329d4e0bf",
+          "bytes": 1930
+        },
+        "source/Script_LMMs.R": {
+          "sha256": "b8ce7fc0e600ff27bb52090f221160669d6c33af23d8f0171b21750c132b484e",
+          "bytes": 7139
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-tree-plot-metadata",
+      "directory": "amazon-tree-plot-metadata",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-041"
+      ],
+      "readiness": "table-ready",
+      "primary": "amazon-tree-plots.csv",
+      "sidecar": "amazon-tree-plots.csv.eolab.yaml",
+      "source_files": {
+        "22786166/PlotData.csv": "67625f51f5fac612271050f553140fe9a3685afb9e0fc1cb1fe5d81a9c31c959",
+        "22786166/PlotsAbiotic.csv": "62b4b2fa72fd596f0371a9948021e0a3ff4c5beefe8b9bfe32c5b6065b25c776",
+        "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f"
+      },
+      "checks": {
+        "rows": 2046,
+        "columns": [
+          "PlotCode",
+          "Country",
+          "Subdivision",
+          "longitude",
+          "latitude",
+          "region",
+          "forest",
+          "year_est",
+          "ColD",
+          "PlotSize",
+          "N",
+          "D",
+          "S",
+          "fa.plots",
+          "S.ha",
+          "S.500",
+          "Owner/contact",
+          "reference from Endnote (J Ecol US)"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_encoding": "latin-1",
+        "source_delimiter": ","
+      },
+      "files": {
+        "amazon-tree-plots.csv": {
+          "sha256": "d82056415c498a9097262207d1412b22e1a129d812feec1ff06aceec7cef1604",
+          "bytes": 588259
+        },
+        "amazon-tree-plots.csv.eolab.yaml": {
+          "sha256": "eb223035a45c9ef5bcddb6484c0dfa3547e794e6806e63309a6ddf0a20a39d9d",
+          "bytes": 3131
+        },
+        "review-context.json": {
+          "sha256": "61b4ccb7cd56018a7518a0cf63b0031bf1f4d3fb999a53342330cf264f4c1ed5",
+          "bytes": 12084
+        },
+        "source/PlotData.csv": {
+          "sha256": "67625f51f5fac612271050f553140fe9a3685afb9e0fc1cb1fe5d81a9c31c959",
+          "bytes": 584577
+        },
+        "source/PlotsAbiotic.csv": {
+          "sha256": "62b4b2fa72fd596f0371a9948021e0a3ff4c5beefe8b9bfe32c5b6065b25c776",
+          "bytes": 270468
+        },
+        "source/TreeDiversityScript.R": {
+          "sha256": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+          "bytes": 35264
+        }
+      }
+    },
+    {
+      "id": "wwf-amazon-tree-dispersal-traits",
+      "directory": "amazon-tree-dispersal-traits",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-049"
+      ],
+      "readiness": "table-ready",
+      "primary": "tree-dispersal-traits.csv",
+      "sidecar": "tree-dispersal-traits.csv.eolab.yaml",
+      "source_files": {
+        "28417586/NetworkDataPollinationNew.csv": "be83b280e685e14fbdf758e1cfcd33921897a60353b8461146cb3ef1a1eb7bb1",
+        "28417586/NetworksFinal.R": "6998ef05b26da4bc4636411c3df4dd1b295ff2c6a22d7e627310bcc6dad75465",
+        "28417586/Publications.xlsx": "f219b4f2ac22062fd015b7efb9eca9cb278e18e3c9c6a5cef76745918851d3b2"
+      },
+      "checks": {
+        "rows": 5201,
+        "columns": [
+          "species",
+          "family",
+          "genus",
+          "seedmass",
+          "Fleshy",
+          "Anemochory",
+          "Hydrochory",
+          "Explosive dehiscence",
+          "Unassisted_Stevenson_Correa",
+          "Endozoochory",
+          "Synzoochory",
+          "Epizoochory",
+          "Myrmecochory",
+          "Wind",
+          "Explosive",
+          "Water",
+          "Unassisted_McGlone",
+          "Ant",
+          "GroundM",
+          "ArboralD"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_encoding": "utf-8",
+        "source_delimiter": ",",
+        "source_column_indices_zero_based": [
+          0,
+          1,
+          2,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "source_headers": [
+          "species",
+          "family",
+          "genus",
+          "seedmass",
+          "Fleshy",
+          "Anemochory",
+          "Hydrochory",
+          "Explosive dehiscence",
+          "Unassisted",
+          "Endozoochory",
+          "Synzoochory",
+          "Epizoochory",
+          "Myrmecochory",
+          "Wind",
+          "Explosive",
+          "Water",
+          "Unassisted",
+          "Ant",
+          "GroundM",
+          "ArboralD"
+        ]
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "7f9cf4d4baf51abd68fb0fad811983466e2c396b28ffb9c5dedd9a21489bccb0",
+          "bytes": 16503
+        },
+        "source/NetworkDataPollinationNew.csv": {
+          "sha256": "be83b280e685e14fbdf758e1cfcd33921897a60353b8461146cb3ef1a1eb7bb1",
+          "bytes": 995032
+        },
+        "source/NetworksFinal.R": {
+          "sha256": "6998ef05b26da4bc4636411c3df4dd1b295ff2c6a22d7e627310bcc6dad75465",
+          "bytes": 49974
+        },
+        "source/Publications.xlsx": {
+          "sha256": "f219b4f2ac22062fd015b7efb9eca9cb278e18e3c9c6a5cef76745918851d3b2",
+          "bytes": 49755
+        },
+        "tree-dispersal-traits.csv": {
+          "sha256": "c956bef9ca38539e5569b5e1e63879bba7b17ba1daba3592afa78aa238816d84",
+          "bytes": 387495
+        },
+        "tree-dispersal-traits.csv.eolab.yaml": {
+          "sha256": "60c2e5fdf58e8aa34684b7d5e6d6c9975fc0af3878603697bf64b0d569daef68",
+          "bytes": 3090
+        }
+      }
+    },
+    {
+      "id": "wwf-chaglla-hydropower-knn",
+      "directory": "chaglla-hydropower-knn",
+      "kind": "nonspatial",
+      "row_ids": [
+        "row-067"
+      ],
+      "readiness": "table-ready",
+      "primary": "chaglla-hydropower-knn.csv",
+      "sidecar": "chaglla-hydropower-knn.csv.eolab.yaml",
+      "source_files": {
+        "Data repository/Results/energy/energy_E0_PF0.csv": "dd321c225c076bc0c366607dbee46c3514c2011b76322b3b22dfdbd952d576e7",
+        "Data repository/Results/energy/energy_E1-a_PF0.csv": "4937b71f9202c81817276516f6536b779ee067ec1d2009881c14082eb9cad924",
+        "Data repository/Results/energy/energy_E1-b_PF0.csv": "c58a8a0d23624775a4d946c2e2227d6d411bc334159972382dca4e990768f3e7",
+        "Data repository/Results/energy/energy_E1-c_PF0.csv": "bbad2c70379aa65c7d94448be377c3212f672d12057e21d4e118293259963c11",
+        "Data repository/Results/energy/energy_E1-d_PF0.csv": "da0778e0f5e00c2e96f35a6af42b37c521bd1b2d82d09f3119fd85afdb553f77",
+        "Data repository/Results/energy/energy_E1-e_PF0.csv": "1bf5dd6c6f4df2c70456b15c9c4a23f7a23a338cd6129f5f4a6e5abb6df30d31",
+        "Data repository/Results/energy/energy_E2-a_PF0.csv": "4d1c4cf1a1a1e4af56fb73a153705083fa1949996ac16fba9eac466175b66f03",
+        "Data repository/Results/energy/energy_E2-b_PF0.csv": "f40481d3eac3400dbbf418a6fecb2c9ee8a3e1be2ca491056400bdf8e151966c",
+        "Data repository/Results/energy/energy_E2-c_PF0.csv": "a5e7e67572fc6807e808c3a970db4188a1a53b122f2f2c7ffaa31edaf8217f41",
+        "Data repository/Results/energy/energy_E2-d_PF0.csv": "0882bb33400093b095048123fbb294d02c499b88291486d1a4444bd0e9a6b6c8",
+        "Data repository/Results/energy/energy_E2-e_PF0.csv": "77da8264de43171e8f1782d393f577573901b5e4af9b2f84deb7cfd6fa23f08f",
+        "Data repository/Results/energy/energy_E4-a_PF0.csv": "fb3ca566ffee6cd3f959fec5ac7103a54de823a27e09c003d0b395c103f1821c",
+        "Data repository/Results/energy/energy_E4-b_PF0.csv": "2355bb0d00e046f3055ec23d85f6ef3b9f24daf3e7822169aea2b961863635c2",
+        "Data repository/Results/energy/energy_E4-c_PF0.csv": "e6b713e02194abbd57e8bb4d11a7d60dc313b3ddd9978d00d4e42aa100ba64ab",
+        "Data repository/Results/energy/energy_E4-d_PF0.csv": "e385c197f2f59f859973081dee62fe0210ead937a0a55d39e0abae7c4c683e9d",
+        "Data repository/Results/energy/energy_E4-e_PF0.csv": "1209b82aceae5c9e308d15cf0af45bbf8fb75983be2c487d88c70808e45737cf",
+        "Data repository/SRC/SWAT/Run_landuse_analysis.R": "c73554c88a3ad1e4322c0a0efd202b7b095554b815e7b00fe1e5456ad1ec959c",
+        "Data repository/SRC/Robust_Decision_Analysis/script_parallelCoordinatesPlot_v5_1_Deltas.R": "0eeb3fa4aa56f319754cbbf5623a52eb703c547ef3f8f202a5976fcd541439b6"
+      },
+      "checks": {
+        "rows": 336,
+        "columns": [
+          "land_management",
+          "scenario",
+          "climatology",
+          "DS",
+          "Average_Energy_MW",
+          "Firm_Energy_MW"
+        ],
+        "selected_cells_preserved": true,
+        "encoding": "UTF-8",
+        "source_row_counts": {
+          "Data repository/Results/energy/energy_E0_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E1-a_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E1-b_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E1-c_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E1-d_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E1-e_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E2-a_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E2-b_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E2-c_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E2-d_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E2-e_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E4-a_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E4-b_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E4-c_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E4-d_PF0.csv": 21,
+          "Data repository/Results/energy/energy_E4-e_PF0.csv": 21
+        },
+        "selection": {
+          "column": "DS",
+          "endswith": "_KNN"
+        },
+        "added_column": "land_management from the source filename",
+        "selected_columns": [
+          "land_management",
+          "scenario",
+          "climatology",
+          "DS",
+          "Average_Energy_MW",
+          "Firm_Energy_MW"
+        ],
+        "supporting_archives": {
+          "source/original-tables-and-code.zip": {
+            "energy_E0_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E0_PF0.csv",
+              "sha256": "dd321c225c076bc0c366607dbee46c3514c2011b76322b3b22dfdbd952d576e7",
+              "bytes": 2460
+            },
+            "energy_E1-a_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E1-a_PF0.csv",
+              "sha256": "4937b71f9202c81817276516f6536b779ee067ec1d2009881c14082eb9cad924",
+              "bytes": 2504
+            },
+            "energy_E1-b_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E1-b_PF0.csv",
+              "sha256": "c58a8a0d23624775a4d946c2e2227d6d411bc334159972382dca4e990768f3e7",
+              "bytes": 2502
+            },
+            "energy_E1-c_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E1-c_PF0.csv",
+              "sha256": "bbad2c70379aa65c7d94448be377c3212f672d12057e21d4e118293259963c11",
+              "bytes": 2391
+            },
+            "energy_E1-d_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E1-d_PF0.csv",
+              "sha256": "da0778e0f5e00c2e96f35a6af42b37c521bd1b2d82d09f3119fd85afdb553f77",
+              "bytes": 2396
+            },
+            "energy_E1-e_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E1-e_PF0.csv",
+              "sha256": "1bf5dd6c6f4df2c70456b15c9c4a23f7a23a338cd6129f5f4a6e5abb6df30d31",
+              "bytes": 2502
+            },
+            "energy_E2-a_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E2-a_PF0.csv",
+              "sha256": "4d1c4cf1a1a1e4af56fb73a153705083fa1949996ac16fba9eac466175b66f03",
+              "bytes": 2494
+            },
+            "energy_E2-b_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E2-b_PF0.csv",
+              "sha256": "f40481d3eac3400dbbf418a6fecb2c9ee8a3e1be2ca491056400bdf8e151966c",
+              "bytes": 2507
+            },
+            "energy_E2-c_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E2-c_PF0.csv",
+              "sha256": "a5e7e67572fc6807e808c3a970db4188a1a53b122f2f2c7ffaa31edaf8217f41",
+              "bytes": 2415
+            },
+            "energy_E2-d_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E2-d_PF0.csv",
+              "sha256": "0882bb33400093b095048123fbb294d02c499b88291486d1a4444bd0e9a6b6c8",
+              "bytes": 2421
+            },
+            "energy_E2-e_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E2-e_PF0.csv",
+              "sha256": "77da8264de43171e8f1782d393f577573901b5e4af9b2f84deb7cfd6fa23f08f",
+              "bytes": 2496
+            },
+            "energy_E4-a_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E4-a_PF0.csv",
+              "sha256": "fb3ca566ffee6cd3f959fec5ac7103a54de823a27e09c003d0b395c103f1821c",
+              "bytes": 2503
+            },
+            "energy_E4-b_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E4-b_PF0.csv",
+              "sha256": "2355bb0d00e046f3055ec23d85f6ef3b9f24daf3e7822169aea2b961863635c2",
+              "bytes": 2508
+            },
+            "energy_E4-c_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E4-c_PF0.csv",
+              "sha256": "e6b713e02194abbd57e8bb4d11a7d60dc313b3ddd9978d00d4e42aa100ba64ab",
+              "bytes": 2486
+            },
+            "energy_E4-d_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E4-d_PF0.csv",
+              "sha256": "e385c197f2f59f859973081dee62fe0210ead937a0a55d39e0abae7c4c683e9d",
+              "bytes": 2486
+            },
+            "energy_E4-e_PF0.csv": {
+              "source": "Data repository/Results/energy/energy_E4-e_PF0.csv",
+              "sha256": "1209b82aceae5c9e308d15cf0af45bbf8fb75983be2c487d88c70808e45737cf",
+              "bytes": 2500
+            },
+            "Run_landuse_analysis.R": {
+              "source": "Data repository/SRC/SWAT/Run_landuse_analysis.R",
+              "sha256": "c73554c88a3ad1e4322c0a0efd202b7b095554b815e7b00fe1e5456ad1ec959c",
+              "bytes": 2486
+            },
+            "script_parallelCoordinatesPlot_v5_1_Deltas.R": {
+              "source": "Data repository/SRC/Robust_Decision_Analysis/script_parallelCoordinatesPlot_v5_1_Deltas.R",
+              "sha256": "0eeb3fa4aa56f319754cbbf5623a52eb703c547ef3f8f202a5976fcd541439b6",
+              "bytes": 11922
+            }
+          }
+        }
+      },
+      "files": {
+        "chaglla-hydropower-knn.csv": {
+          "sha256": "3dac73c287bb94e7cac7a965dd45aaae7c9c6a82f05c2b666c0f4bf3e4da48cb",
+          "bytes": 15810
+        },
+        "chaglla-hydropower-knn.csv.eolab.yaml": {
+          "sha256": "293e0a40f675d691d5c5975c22f10de3d60d3df7286d25db58b0fa76ff0098d4",
+          "bytes": 2898
+        },
+        "review-context.json": {
+          "sha256": "24a291573131035f2809c3bde4b30de5094fedbf68c4d8e4c130b04a6e6bda10",
+          "bytes": 453752
+        },
+        "source/original-tables-and-code.zip": {
+          "sha256": "c219463dd419d5d6e12debf4d81d9f29f922d4186bdfe79986c6da3165e7e3e5",
+          "bytes": 18379
+        }
+      }
+    }
+  ],
+  "metadata_review": "Final reviewed descriptions applied before publication; operations, assets and scientific payload checks unchanged."
+}

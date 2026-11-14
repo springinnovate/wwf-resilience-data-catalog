@@ -1,0 +1,274 @@
+{
+  "eolab_contract": {
+    "schema": "eolab/item/v1",
+    "repository": "https://github.com/springinnovate/eolab",
+    "merged_revision": "cee788e82e7577afb57681cc962acd764a67f3b6",
+    "validated_source_revision": "73215e7d91dac57edad0882a388989e9c6bdf8a6"
+  },
+  "records_sha256": "fc6932584ab263cd7961480df8a24ee60b00fdc1a0c1b065c47f7ce300a0d672",
+  "runtime": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "fiona": "1.10.1",
+    "pyproj": "3.8.0",
+    "shapely": "2.2.0",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0"
+  },
+  "gdal_version": "3.13.3",
+  "datasets": [
+    {
+      "id": "wwf-tfvi-agb-01deg",
+      "kind": "raster",
+      "directory": "tfvi-agb",
+      "primary": "tfvi-agb-0.1deg.tif",
+      "sidecar": "tfvi-agb-0.1deg.tif.eolab.yaml",
+      "source_files": {
+        "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe"
+      },
+      "files": {
+        "review-context.json": {
+          "sha256": "4ec1966f393881aa2ba7081af07d6f46e8f3fb493d8792931cadaa486e145a38",
+          "bytes": 7724
+        },
+        "source/tfvi_agb_0.1deg.tif": {
+          "sha256": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe",
+          "bytes": 230794
+        },
+        "tfvi-agb-0.1deg.tif": {
+          "sha256": "8f836073ff16c2d09fe65ad106678c937747a10ac830e18287f0753aed0a604c",
+          "bytes": 518159
+        },
+        "tfvi-agb-0.1deg.tif.eolab.yaml": {
+          "sha256": "d52e4aa75d1d02710388efed85d0a63d4ba8711bede29b31c7cdfa07660a7d83",
+          "bytes": 10114
+        }
+      },
+      "checks": {
+        "crs": "EPSG:4326",
+        "width": 3599,
+        "height": 649,
+        "bands": 1,
+        "dtype": "float32",
+        "nodata": -3.3999999521443642e+38,
+        "valid_pixels": 161864,
+        "minimum": -143.2269744873047,
+        "maximum": 250.39346313476562,
+        "bounds": [
+          -179.95,
+          -34.049999999999976,
+          179.94999999999993,
+          30.85
+        ],
+        "overviews": [
+          2,
+          4,
+          8
+        ],
+        "base_values_identical": true,
+        "masks_identical": true,
+        "transformation": "Lossless COG encoding; nearest-neighbour display overviews; no reprojection."
+      }
+    },
+    {
+      "id": "wwf-amazon-barrier-locations",
+      "kind": "vector",
+      "directory": "amazon-barriers",
+      "primary": "amazon-barriers.gpkg",
+      "sidecar": "amazon-barriers.gpkg.eolab.yaml",
+      "source_files": {
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp": "460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx": "7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf": "341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd": "c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md": "6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R": "7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a",
+        "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R": "dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc"
+      },
+      "files": {
+        "amazon-barriers.gpkg": {
+          "sha256": "fca72b64a5b394955bccd2080ff3f039bff1b60d7a59de9a2df91187ceb0f586",
+          "bytes": 299008
+        },
+        "amazon-barriers.gpkg.eolab.yaml": {
+          "sha256": "b545d883535ef8c1cef35875e148baff42476d5828b537cfbcb2d3e899140371",
+          "bytes": 22288
+        },
+        "review-context.json": {
+          "sha256": "1ee2219a7da7295cb985de5ea4662e06d805aa4feb47b94e7971ec604275de35",
+          "bytes": 30637
+        },
+        "source/barriers_all_validas4326.cpg": {
+          "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+          "bytes": 5
+        },
+        "source/barriers_all_validas4326.dbf": {
+          "sha256": "341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f",
+          "bytes": 3615810
+        },
+        "source/barriers_all_validas4326.prj": {
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+          "bytes": 145
+        },
+        "source/barriers_all_validas4326.qmd": {
+          "sha256": "c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a",
+          "bytes": 715
+        },
+        "source/barriers_all_validas4326.shp": {
+          "sha256": "460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca",
+          "bytes": 15836
+        },
+        "source/barriers_all_validas4326.shx": {
+          "sha256": "7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0",
+          "bytes": 4596
+        },
+        "source/part_1_add_barriers_CURRENT_SET.R": {
+          "sha256": "7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a",
+          "bytes": 17807
+        },
+        "source/part_1_add_barriers_FUTURE_SET.R": {
+          "sha256": "dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc",
+          "bytes": 14690
+        },
+        "source/README.md": {
+          "sha256": "6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb",
+          "bytes": 4311
+        }
+      },
+      "checks": {
+        "features": 562,
+        "fields": 31,
+        "crs": "EPSG:4326",
+        "geometry": "Point",
+        "bounds": [
+          -79.33125,
+          -20.018073,
+          -51.775,
+          4.585417
+        ],
+        "source_schema": {
+          "properties": {
+            "id": "int:10",
+            "Barrier_Ca": "str:254",
+            "GIS_name": "str:254",
+            "Country": "str:254",
+            "MTRIB_MN": "str:254",
+            "MTRIB_CD": "str:254",
+            "SBD_NM": "str:254",
+            "SBD_CD": "str:254",
+            "Orig_long": "str:254",
+            "Orig_lat": "str:254",
+            "POINT_X": "float:24.15",
+            "POINT_Y": "float:24.15",
+            "Join_Hydro": "bool",
+            "riv_id": "str:254",
+            "HydroID": "str:254",
+            "Dam_Stage_": "str:254",
+            "Dam_Stag_1": "str:254",
+            "Dam_Stag_2": "str:254",
+            "Source": "str:254",
+            "Nb_Source": "str:254",
+            "Type_Sourc": "str:254",
+            "Dam_Size_U": "str:254",
+            "Lehner_Con": "str:254",
+            "Nao_encont": "str:254",
+            "obs": "str:254",
+            "Xm6933": "str:254",
+            "Ym6933": "str:254",
+            "scenario": "str:254",
+            "aneel": "str:254",
+            "x_manual": "float:11.10",
+            "y_manual": "float:11.10"
+          },
+          "geometry": "Point"
+        },
+        "output_schema": {
+          "properties": {
+            "id": "int",
+            "Barrier_Ca": "str:254",
+            "GIS_name": "str:254",
+            "Country": "str:254",
+            "MTRIB_MN": "str:254",
+            "MTRIB_CD": "str:254",
+            "SBD_NM": "str:254",
+            "SBD_CD": "str:254",
+            "Orig_long": "str:254",
+            "Orig_lat": "str:254",
+            "POINT_X": "float",
+            "POINT_Y": "float",
+            "Join_Hydro": "bool",
+            "riv_id": "str:254",
+            "HydroID": "str:254",
+            "Dam_Stage_": "str:254",
+            "Dam_Stag_1": "str:254",
+            "Dam_Stag_2": "str:254",
+            "Source": "str:254",
+            "Nb_Source": "str:254",
+            "Type_Sourc": "str:254",
+            "Dam_Size_U": "str:254",
+            "Lehner_Con": "str:254",
+            "Nao_encont": "str:254",
+            "obs": "str:254",
+            "Xm6933": "str:254",
+            "Ym6933": "str:254",
+            "scenario": "str:254",
+            "aneel": "str:254",
+            "x_manual": "float",
+            "y_manual": "float"
+          },
+          "geometry": "Point"
+        },
+        "attributes_identical": true,
+        "coordinates_identical": true,
+        "invalid_geometries": 0,
+        "transformation": "Shapefile to GeoPackage; no reprojection, geometry repair or field renaming."
+      }
+    },
+    {
+      "id": "wwf-atto-monthly-carbon-fluxes-2023",
+      "kind": "nonspatial",
+      "directory": "atto-fluxes-2023",
+      "primary": "atto-monthly-carbon-fluxes-2023.csv",
+      "sidecar": "atto-monthly-carbon-fluxes-2023.csv.eolab.yaml",
+      "source_files": {
+        "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921"
+      },
+      "files": {
+        "atto-monthly-carbon-fluxes-2023.csv": {
+          "sha256": "b719e994de0dbbf9a07abdaf4feae834ed72711a2f9b3655e2d6088ddfaa0ecf",
+          "bytes": 966
+        },
+        "atto-monthly-carbon-fluxes-2023.csv.eolab.yaml": {
+          "sha256": "3eda7fbb61fd4abe6e5567e5fef7c0576740fb3d20ac6e92c70ff8e41982e650",
+          "bytes": 8179
+        },
+        "review-context.json": {
+          "sha256": "be9d7393b8f16782408b5973bfbc94a2a2920ed88fe4852240e04fee8b3b37b1",
+          "bytes": 8324
+        },
+        "source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv": {
+          "sha256": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921",
+          "bytes": 15334
+        }
+      },
+      "checks": {
+        "source_rows": 119,
+        "rows": 12,
+        "columns": [
+          "Time",
+          "Year",
+          "Month",
+          "NEE_gCper_m2_month",
+          "GPP_gCper_m2_month",
+          "Reco_gCper_m2_month"
+        ],
+        "year": 2023,
+        "selected_strings_identical": true,
+        "geometry": null,
+        "transformation": "Select Year=2023 and six named columns; preserve original numeric strings."
+      }
+    }
+  ]
+}

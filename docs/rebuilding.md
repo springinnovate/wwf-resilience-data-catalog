@@ -138,3 +138,7 @@ The workbook presents short summaries in **Study review** and **Other available 
 The report rebuild does not generate a STAC catalog, establish stable public asset hosting or grant rights to the scientific data. The [readiness notes](stac-readiness.md) identify the remaining product, metadata and publication questions.
 
 The existing [Apache-2.0 license](../LICENSE) is retained for this project's code and original annotations. It does not establish redistribution rights for referenced papers, descriptions or third-party study datasets. Preserve their attribution and applicable licenses, and confirm permissions before publishing source data as catalog assets. Bulk data, article PDFs and sampled scientific observations are not included here.
+
+## Prepare the EOLab evidence pilot
+
+The three-dataset preparation is separate from rebuilding the frozen matching review and article table. It requires the actual study files and GIS libraries. See [pilot results and rebuilding instructions](evidence-pilot.md#rebuild-the-prepared-files). Its reviewed inputs are in `evidence/pilot/`; it does not alter the historical matching snapshot under `data/`.

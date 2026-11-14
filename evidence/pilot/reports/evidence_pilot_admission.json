@@ -1,0 +1,40 @@
+{
+  "eolab_source_revision": "73215e7d91dac57edad0882a388989e9c6bdf8a6",
+  "eolab_merged_revision": "cee788e82e7577afb57681cc962acd764a67f3b6",
+  "descriptor_module_sha256": "477ea688db10de87af6811b460ccb651f63bfb224e1a4c13bb8036841bc4d6ab",
+  "schema_matches": true,
+  "discovery_errors": 0,
+  "repeated_discovery_identical": true,
+  "public_paths_are_catalog_identities": true,
+  "database_published": false,
+  "scope": "Real filesystem discovery, native raster/vector readers, sidecar admission and public metadata projection. No running HTTP/pgSTAC service was exercised.",
+  "datasets": [
+    {
+      "id": "wwf-amazon-barrier-locations",
+      "kind": "vector",
+      "collection": "eolab-mounted-vectors",
+      "item_id": "geopackage-332ac9b3fad2d687a9903529",
+      "assets": 13,
+      "annotations_preserved": true,
+      "temporal_mode": "modified"
+    },
+    {
+      "id": "wwf-atto-monthly-carbon-fluxes-2023",
+      "kind": "nonspatial",
+      "collection": "eolab-described-nonspatial",
+      "item_id": "wwf-atto-monthly-carbon-fluxes-2023",
+      "assets": 5,
+      "annotations_preserved": true,
+      "temporal_mode": "interval"
+    },
+    {
+      "id": "wwf-tfvi-agb-01deg",
+      "kind": "raster",
+      "collection": "eolab-mounted-geotiffs",
+      "item_id": "geotiff-078e371b1ec6f32fb43ab389",
+      "assets": 5,
+      "annotations_preserved": true,
+      "temporal_mode": "modified"
+    }
+  ]
+}

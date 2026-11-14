@@ -1,0 +1,183 @@
+schema: eolab/item/v1
+id: wwf-atto-monthly-carbon-fluxes-2023
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: interval
+  start_datetime: '2023-01-01T00:00:00Z'
+  end_datetime: '2023-12-31T23:59:59Z'
+metadata:
+  title: ATTO monthly carbon fluxes, 2023
+  description: Monthly net ecosystem exchange, gross primary productivity and ecosystem respiration at
+    ATTO during 2023. This is a twelve-month subset of the deposited flux table, with six columns retained
+    without changing their values.
+  license: CC0-1.0
+  attribution: Botia et al. (2026), supporting datasets deposited in Edmond.
+  doi: 10.17617/3.OU3KYA
+  citation: Botia et al. (2026). Supporting datasets for Carbon cycle response to Amazon drought in 2023.
+    Version 1.0. Edmond. https://doi.org/10.17617/3.OU3KYA
+  categories:
+  - Nature
+  statuses:
+  - Matched
+  study_ids:
+  - paper-023
+  study_time: Monthly flux totals for January through December 2023; Time is a month-end label.
+  publications:
+  - id: paper-023
+    title: Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon
+      Source
+    doi: 10.1029/2025AV001658
+    citation: null
+    url: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658
+    authors: []
+    year: 2026
+    notes: []
+    annotations: {}
+  annotations:
+    row_ids:
+    - row-053
+    product_role: described_product
+    preparation_status: Prepared and checked for the EOLab pilot; scientific limitations remain.
+    limitations:
+    - Monthly derived flux totals only; underlying half-hourly observations and quality flags are absent
+      from this file.
+    - The pilot does not reproduce original filtering, gap-filling, or partitioning.
+    - No geographic footprint is assigned to the table. finalLat/finalLon are trajectory endpoints and
+      must not be interpreted as fixed tower coordinates.
+    - Original source series lacks May 2021; the selected 2023 year is complete.
+    - Supporting Information Text S5 was not separately reviewed in this pilot inspection.
+    source_sheet_annotations:
+    - row_id: row-053
+      study_objective: Here, we evaluate the response of the Amazon carbon cycle to this extreme event
+        across different spatial scales.
+      study_location: the biogeographic Amazon
+      dataset_description: The monthly totals of NEE, GPP and Reco at ATTO, obtained from filtered high-quality
+        half-hourly turbulent eddy covariance CO2 fluxes measured at 81 m above ground level, with gap-filling
+        and EC-NEE partitioning to Gross Primary Productivity (GPP) and Ecosystem Respiration (Reco)
+      asset_or_risk: ASSET
+      typology_category: Nature
+      typology_dimension: Ecosystem function
+      relationship_description: Strong negative correlations between spatial anomalies in GPP and VPD
+        (r = -0.69, p < 0.001), a moderate but significant negative correlation between TER and temperature
+        anomalies (r = -0.48, p < 0.001), and significant negative correlations of both GPP (r = -0.58,
+        p < 0.001) and TER (r = -0.55, p < 0.001) with CWD.
+      threshold_description: ''
+      time: '2023'
+      Notes: 'BCK: hmm maybe not - I thought it could be useful for validating/adjusting global climate
+        data but if it''s only one site can we even use it for that'
+      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': ''
+    metadata_evidence:
+    - source: Source CSV header and all 119 records
+      supports: Column names, units embedded in flux names, month-end labels, twelve 2023 rows, missing
+        2021-05, no explicit quality flag columns.
+    - source: https://edmond.mpg.de/api/datasets/:persistentId/?persistentId=doi:10.17617/3.OU3KYA
+      locator: latestVersion.license; latestVersion.files[dataFile.id=333872]; citation.dsDescription
+      supports: CC0-1.0, version 1.0, exact file identity, STILT endpoint coordinate meanings.
+    - source: paper-023_amazon-carbon-source-2023.pdf
+      locator: Section 2.2, printed pages 4-5 (PDF pages 5-6)
+      supports: ATTO eddy covariance measured at 81 m; filtered half-hourly fluxes used for NEE, gap-filling,
+        and partitioning; full processing details referred to Supporting Information Text S5.
+    - source: paper-023_amazon-carbon-source-2023.pdf
+      locator: Data Availability Statement, printed page 17 (PDF page 18)
+      supports: Monthly totals of NEE, GPP, Reco and monthly mean regional deltaCO2 are supplied by dataset
+        DOI.
+    doi_scope: The dataset DOI identifies the original deposited package. This preparation has no separately
+      registered DOI.
+    processing:
+    - Select Year=2023.
+    - Retain Time, Year, Month and the three monthly carbon-flux columns.
+    - Preserve original numeric strings; no new flux calculation or spatial inference.
+    pilot_corrections:
+    - Existing matches.csv calls the date column TimeYearMonth, but the source header is Time with separate
+      Year and Month columns.
+    - Existing matching evidence labels finalLat/finalLon station coordinates; authoritative dataset description
+      says mean STILT ending locations.
+    source_version: '1.0'
+    sources:
+    - base: evidence_data
+      path: doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv
+      sha256: ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921
+assets:
+  data:
+    location: local
+    path: atto-monthly-carbon-fluxes-2023.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: ATTO monthly carbon fluxes, 2023
+      annotations:
+        columns:
+        - name: Time
+          type: date
+          description: Month-end label for the monthly aggregation, retained from the source table; not
+            an instantaneous sample time.
+        - name: Year
+          type: integer
+          description: Calendar year.
+        - name: Month
+          type: integer
+          description: Calendar month, 1 through 12.
+        - name: NEE_gCper_m2_month
+          type: number
+          unit: g C m-2 month-1
+          description: Monthly net ecosystem exchange. Selected values satisfy NEE = Reco - GPP; negative
+            values indicate net uptake.
+        - name: GPP_gCper_m2_month
+          type: number
+          unit: g C m-2 month-1
+          description: Monthly gross primary productivity from partitioned eddy-covariance fluxes.
+        - name: Reco_gCper_m2_month
+          type: number
+          unit: g C m-2 month-1
+          description: Monthly ecosystem respiration from partitioned eddy-covariance fluxes.
+        rows: 12
+        delimiter: ','
+        encoding: UTF-8
+        decimal_separator: .
+        time_label: month end
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Original descriptions and matching evidence
+  source_repository:
+    location: external
+    href: https://doi.org/10.17617/3.OU3KYA
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original:
+    location: local
+    path: source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Complete original 2014-2023 table
+      annotations:
+        rows: 119
+        missing_months:
+        - 2021-05
+        additional_columns:
+          ? ''
+          : Unnamed row index, 0 through 118; not a scientific variable.
+          finalLat: Mean ending latitude of STILT backward trajectories, not ATTO station latitude.
+          finalLon: Mean ending longitude of STILT backward trajectories, not ATTO station longitude.
+          deltaCO2_ppm: Monthly averaged regional CO2 signal, parts per million.
+        column_correction: The date column is Time, not TimeYearMonth. finalLat/finalLon are STILT trajectory
+          endpoints, not station coordinates.

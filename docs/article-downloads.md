@@ -2,7 +2,7 @@
 
 **24 of the 30 papers were downloaded as PDFs.** Five more have identified full-text routes that blocked automated retrieval. For one paper, no open article copy was located in the sources checked. These are the recorded results of the 13 November 2026 search, not a guarantee of current access.
 
-Open the [article download workbook](../reports/article_downloads.xlsx) or [CSV table](../reports/article_downloads.csv) for the full paper list, source links, filenames, versions and access notes. The actual PDFs are in `C:\Users\richp\Downloads\wwf-resilience-articles`; they are not stored in Git.
+Open the [article download workbook](../reports/article_downloads.xlsx) or [CSV table](../reports/article_downloads.csv) for the full paper list, source links, filenames, versions and access notes. Article filenames are relative to the repository. The `wwf-resilience-articles/` folder is ignored by Git; PDFs are not included in this repository.
 
 ## The six outstanding papers
 
@@ -23,6 +23,6 @@ A downloaded entry identifies a saved PDF checked as an article or manuscript. A
 
 Versions matter. **Paper 013, Hot droughts in the Amazon provide a window to a future hypertropical climate, was obtained as an author manuscript from [OSTI](https://www.osti.gov/biblio/3017041).** OSTI labels it an Accepted Manuscript. The 54-page file uses the earlier title *Hot droughts in the Amazon: A window to a future hypertropical climate* and includes an internal editing/backup note. Its authors and the repository DOI identify the paper, but the file does not print the final article DOI. It is not the final publisher PDF. Other version differences and appended supplementary material are noted per paper in the report.
 
-The article search is separate from the dataset review. Finding a paper does not establish that its described data are available locally, resolve a scientific discrepancy or grant redistribution rights. Article PDFs remain outside Git; the repository contains the search results and links needed to follow up.
+The article search is separate from the dataset review. Finding a paper does not establish that its described data are available locally, resolve a scientific discrepancy or grant redistribution rights. Article PDFs remain untracked in the ignored local folder; the repository contains the search results and links needed to follow up.
 
 The findings and attempted URLs are preserved in [`data/articles/article_search.json`](../data/articles/article_search.json), alongside the [paper identity registry](../outputs/papers.csv). For regenerating the tables or recording a later download, see the [rebuilding guide](rebuilding.md#rebuild-the-article-download-table).

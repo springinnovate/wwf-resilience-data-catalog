@@ -7,9 +7,10 @@ import hashlib
 import io
 import json
 import os
-from pathlib import Path, PureWindowsPath
+from pathlib import Path, PurePosixPath, PureWindowsPath
+import posixpath
 import re
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 import zipfile
 
 os.environ['OPENPYXL_LXML'] = 'False'
@@ -28,6 +29,11 @@ def require(condition, message):
 
 def load_records(input_path, verify_local):
     snapshot = json.loads(input_path.read_text(encoding='utf-8'))
+    directory = snapshot['local_directory']
+    require(directory and not urlsplit(directory).scheme and not PureWindowsPath(directory).anchor
+            and not PurePosixPath(directory).is_absolute() and '\\' not in directory
+            and '..' not in PurePosixPath(directory).parts,
+            'Article directory must be a repository-relative path with forward slashes.')
     with (REPO / 'outputs/papers.csv').open(encoding='utf-8-sig', newline='') as handle:
         papers = {r['paper_id']: r for r in csv.DictReader(handle)}
     records = snapshot['records']
@@ -51,10 +57,10 @@ def load_records(input_path, verify_local):
             require(re.fullmatch('[0-9a-f]{64}', record['sha256']) and record['pages'] >= 2
                     and record['size_bytes'] > 0 and record['download_url'], f'Incomplete download evidence: {pid}')
             if verify_local:
-                path = Path(snapshot['local_directory']) / filename
+                path = REPO / snapshot['local_directory'] / filename
                 body = path.read_bytes()
                 require(body.startswith(b'%PDF-') and len(body) == record['size_bytes']
-                        and hashlib.sha256(body).hexdigest() == record['sha256'], f'Local PDF changed: {path}')
+                        and hashlib.sha256(body).hexdigest() == record['sha256'], f'Local PDF changed: {filename}')
         else:
             require(not record['filename'] and not record['sha256'] and record['human_url'],
                     f'Blocked/missing paper needs a human follow-up link and no saved-file claim: {pid}')
@@ -65,12 +71,17 @@ def export_records(snapshot, papers):
     rows = []
     for record in sorted(snapshot['records'], key=lambda r: r['paper_id']):
         paper = papers[record['paper_id']]
-        local = str(PureWindowsPath(snapshot['local_directory']) / record['filename']) if record['filename'] else ''
+        local = str(PurePosixPath(snapshot['local_directory']) / record['filename']) if record['filename'] else ''
         rows.append(dict(paper_id=record['paper_id'], paper=paper['verified_title'], year=paper['verified_year'],
                          status=record['status'], where_found=record['source_name'], source_url=record['found_url'],
                          local_file=local, human_download_link=record['human_url'], copy_version=record['copy_version'],
                          notes=record['reader_note'], doi=paper['article_doi'], publisher_url=paper['publisher_url']))
     return rows
+
+
+def workbook_file_link(local_file):
+    # Exports retain the canonical reports/ layout, including comparison builds.
+    return quote(posixpath.relpath(local_file, start='reports'), safe='/')
 
 
 def save_workbook(path, rows, snapshot):
@@ -83,8 +94,8 @@ def save_workbook(path, rows, snapshot):
     merged_text(sheet, 1, 'Article downloads', size=20, bold=True, height=34)
     merged_text(sheet, 2, f'{counts["Downloaded"]} downloaded | {counts["Download blocked"]} download blocked | '
                 f'{counts["No open copy found"]} no open copy found | Checked {checked.day} {checked:%B %Y}', height=25)
-    merged_text(sheet, 3, 'Local PDFs: ' + snapshot['local_directory'], height=25)
-    merged_text(sheet, 4, 'Paper titles link to publishers. Open PDF opens a local file. Try download links may require manual access; the CSV lists exact file paths.', height=30)
+    merged_text(sheet, 3, 'Article folder (relative to repository): ' + snapshot['local_directory'], height=25)
+    merged_text(sheet, 4, 'Paper titles link to publishers. PDF links are relative to reports/. CSV file paths are relative to the repository. Try download may require manual access.', height=30)
     headers = ['No.', 'Paper', 'Result', 'Where found', 'Local file', 'If not downloaded', 'Notes about this copy / next step']
     values = []
     for record in rows:
@@ -99,7 +110,7 @@ def save_workbook(path, rows, snapshot):
         external(sheet.cell(number, 2), record['publisher_url'])
         external(sheet.cell(number, 4), record['source_url'])
         if record['local_file']:
-            external(sheet.cell(number, 5), PureWindowsPath(record['local_file']).as_uri())
+            external(sheet.cell(number, 5), workbook_file_link(record['local_file']))
         else:
             external(sheet.cell(number, 6), record['human_download_link'])
         cell = sheet.cell(number, 3)
@@ -135,7 +146,7 @@ def save_workbook(path, rows, snapshot):
                     f'Article workbook row {number} differs.')
             record = rows[number-6]
             expected_links = {2: record['publisher_url'], 4: record['source_url']}
-            expected_links[5 if record['local_file'] else 6] = (PureWindowsPath(record['local_file']).as_uri()
+            expected_links[5 if record['local_file'] else 6] = (workbook_file_link(record['local_file'])
                 if record['local_file'] else record['human_download_link'])
             for col, url in expected_links.items():
                 require(actual.cell(number, col).hyperlink.target == url, f'Article workbook link differs at row {number}.')

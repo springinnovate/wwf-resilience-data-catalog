@@ -1,12 +1,26 @@
 """Check the frozen input checksums, or deliberately refresh them after review."""
 import argparse
 import hashlib
+import os
 from pathlib import Path
 
 
 def manifest(root):
+    """Hash frozen inputs, pruning the top-level local scientific data folder."""
+    root = Path(root)
+    files = []
+
+    def reject_walk_error(error):
+        raise error
+
+    for directory, directories, names in os.walk(root, onerror=reject_walk_error):
+        current = Path(directory)
+        if current == root:
+            directories[:] = [name for name in directories if name != 'evidence_data']
+        files.extend(current / name for name in names
+                     if name != 'checksums.sha256' and (current / name).is_file())
     return {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in sorted(root.rglob('*')) if p.is_file() and p.name != 'checksums.sha256'}
+            for p in sorted(files)}
 
 
 def main():

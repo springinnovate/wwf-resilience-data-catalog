@@ -22,7 +22,11 @@ The [public STAC preview](../evidence/pilot/reports/evidence_pilot_stac.json) is
 
 ## Metadata and remaining questions
 
-The versioned [records](../evidence/pilot/records.json) describe exact inputs, preparation steps and sidecar content. The [sidecar copies](../evidence/pilot/sidecars/) make the generated YAML reviewable in Git. Each dataset also carries `review-context.json`, preserving the original spreadsheet descriptions and earlier matching records. New pilot findings are explicitly distinguished from those earlier notes.
+The [sidecar copies](../evidence/pilot/sidecars/) contain the catalog description, references, rights, variable meanings and essential limitations. “Matched to sheet description” and “Supporting input for sheet descriptions” describe the association with the original workbook; they do not certify scientific validity or suitability for a particular analysis.
+
+Each dataset links to **Full review evidence and source history** (`review-context.json`). This preserves the original spreadsheet rows and matching records. Its `pilot_sidecar_snapshot` also preserves every field from the first pilot sidecar: detailed source citations, processing notes, checksums, technical inventories, complete field dictionaries, limitations and corrections. It is labeled as historical evidence so old comments and readiness judgments can be read in context. For ATTO, `pilot_sidecar_snapshot.metadata.annotations.pilot_corrections` explains the corrected date-column and coordinate interpretations.
+
+The versioned [records](../evidence/pilot/records.json) are the authoring source for both the YAML and linked review context. Edit those records and regenerate the files together. Supporting-file declarations remain in the YAML so EOLab groups the originals with their prepared dataset instead of importing them again.
 
 - **Raster time:** biomass response inputs span 2000–2018, while broader study/stressor records span 1982–2018. Neither is silently asserted to be an exact map observation interval. EOLab uses the original file modification time, explicitly labeled as such, while the scientific periods remain in the metadata.
 - **Vector time and meaning:** current/future are source scenario labels, not verified observation dates. EOLab again uses a disclosed source-modification timestamp. The points are study inputs, not final connectivity outputs.
@@ -35,7 +39,7 @@ The fisheries catch polygons were considered for the vector example but deferred
 
 Use a GIS-enabled Python 3.12 environment with `requirements-evidence.txt`. EOLab's vector admission also needs the `osgeo` Python bindings matched to its native GDAL library. A conda-forge environment containing `python=3.12`, `gdal`, `rasterio`, `fiona`, `pyproj`, `shapely`, `numpy`, `pyyaml`, `pydantic`, `jsonschema` and `ijson` is suitable. Record actual versions from the preparation report; GeoPackage byte hashes can change with library versions even when coordinates and values are unchanged.
 
-Set `WWF_EVIDENCE_SOURCE`, `WWF_EVIDENCE_OUTPUT` and `EOLAB_SOURCE` in your local environment. They identify the original `evidence_data/` collection, a **new** output directory, and an EOLab checkout containing the merged sidecar importer. Keep these machine-specific settings untracked.
+Set `WWF_EVIDENCE_SOURCE`, `WWF_EVIDENCE_OUTPUT` and `EOLAB_SOURCE` in your local environment. They identify the source collection, a **new** output directory, and an EOLab checkout containing the merged sidecar importer. The source collection is currently under `data/evidence_data/`, which is Git-ignored. Keep these machine-specific settings untracked; source paths in the records remain relative to that collection. The workbook checksum checker excludes only this local source directory from its frozen input inventory.
 
 From the repository root, in PowerShell:
 
@@ -48,6 +52,19 @@ python -m unittest discover -s tests/evidence -v
 The `--report` option writes both JSON detail and a CSV summary; summary paths are relative to the pilot output directory.
 
 The preparer refuses to overwrite an existing output directory and publishes the three datasets together after its checks pass. Give a rebuild a fresh destination; compare the reported content checks before replacing an earlier delivery.
+
+### Refresh descriptions on an existing delivery
+
+After editing the records, set `WWF_EVIDENCE_OUTPUT` to the existing pilot directory and run:
+
+```powershell
+python scripts/prepare_evidence_pilot.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_OUTPUT" --refresh-metadata --report build/evidence-pilot.json --sidecar-dir evidence/pilot/sidecars
+python scripts/validate_evidence_pilot.py --data-root "$env:WWF_EVIDENCE_OUTPUT" --eolab-source "$env:EOLAB_SOURCE" --report build/evidence-admission.json --items build/evidence-stac.json
+```
+
+The refresh verifies source and delivered-file hashes before replacing the YAMLs, linked review-context files and preparation report. Scientific files retain their bytes and modification times. The report keeps the original transformation checks and records the metadata refresh separately. If files have changed unexpectedly, it stops for review. Changes to data selection or processing require a fresh build; the refresh also refuses changes to temporal declarations or local asset locations. Files are replaced individually, with rollback on reported errors. Wait for the refresh and validation to finish before rescanning.
+
+After validation, use **Scan directories** in EOLab. The same dataset paths and identifiers are retained. A metadata refresh prepares the files for rescanning; it does not itself update the running catalog.
 
 The [schema snapshot](../evidence/pilot/eolab-item-v1.schema.json) was exported from EOLab's `descriptor_contract` module. It is EOLab's Apache-2.0-licensed authoring contract, not a new sidecar format maintained here. The recorded merged revision is `cee788e82e7577afb57681cc962acd764a67f3b6`; the reviewed PR source `73215e7d91dac57edad0882a388989e9c6bdf8a6` has identical file content. Use EOLab's own validator and readers again when adopting a later contract.
 

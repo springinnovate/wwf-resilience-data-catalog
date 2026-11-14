@@ -35,7 +35,7 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
     require(sys.version_info >= (3, 12), 'EOLab admission requires Python 3.12 or newer.')
     data_root, eolab_source = data_root.resolve(strict=True), eolab_source.resolve(strict=True)
     sys.path.insert(0, str(eolab_source / 'src'))
-    from eolab_app.catalog.descriptor_contract import descriptor_json_schema
+    from eolab_app.catalog.descriptor_contract import CatalogDescriptor, descriptor_json_schema
     from eolab_app.catalog.descriptors import publish_descriptor_assets
     from eolab_app.catalog.discovery import FilesystemDatasetDiscovery
     from eolab_app.catalog.handlers import create_default_dataset_handler_registry
@@ -70,10 +70,12 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
         record = records[identifier]
         declaration = record['descriptor']
         require(props['title'] == declaration['metadata']['title'], 'Dataset title was not retained.')
-        require(props['eolab:metadata']['annotations'] == declaration['metadata']['annotations'],
-                'Curated annotations were not retained exactly.')
-        require(props['eolab:metadata']['publications'] == declaration['metadata']['publications'],
-                'Publication references changed during admission.')
+        expected_metadata = CatalogDescriptor.model_validate(declaration).metadata.model_dump(mode='json')
+        require(props['eolab:metadata'] == expected_metadata,
+                'Curated metadata or publication references changed during admission.')
+        context_path = data_root / record['directory'] / declaration['assets']['review_context']['path']
+        require(json.loads(context_path.read_text(encoding='utf-8')) == record['review_context'],
+                'Linked supporting evidence differs from the reviewed record.')
         for key, asset in declaration['assets'].items():
             admitted = item['assets'][key]
             if asset['location'] == 'local':
@@ -92,6 +94,7 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
             require(item['geometry'] is not None and props['proj:epsg'] == 4326, 'Spatial metadata differs.')
         summaries.append(dict(id=identifier, kind=record['kind'], collection=item['collection'],
                               item_id=item['id'], assets=len(item['assets']), annotations_preserved=True,
+                              supporting_evidence_preserved=True,
                               temporal_mode=temporal['mode']))
     text = json.dumps(items, ensure_ascii=False)
     require('file://' not in text and str(data_root) not in text and data_root.as_posix() not in text,

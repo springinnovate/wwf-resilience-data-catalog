@@ -21,7 +21,7 @@
         },
         "metadata": {
           "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
-          "description": "Tropical Forest Vulnerability Index for above-ground biomass, supplied with Saatchi et al. (2021). Negative values indicate vulnerability toward sustained biomass loss; positive values indicate vulnerability toward higher biomass. Values near zero indicate relative stability. This is a modeled, standardized index, not a biomass stock map or a probability.",
+          "description": "Pan-tropical, 0.1-degree Tropical Forest Vulnerability Index for above-ground biomass. Negative values indicate vulnerability toward biomass loss; positive values toward higher biomass; values near zero indicate relative stability.",
           "license": "CC-BY-4.0",
           "attribution": "Saatchi et al. (2021)",
           "doi": "10.5281/zenodo.5115158",
@@ -30,7 +30,7 @@
             "Nature"
           ],
           "statuses": [
-            "Matched"
+            "Matched to sheet description"
           ],
           "study_ids": [
             "paper-010"
@@ -43,158 +43,19 @@
               "doi": "10.1016/j.oneear.2021.06.002",
               "citation": "Saatchi, S., et al. (2021). Detecting vulnerability of humid tropical forests to multiple stressors. One Earth 4(7), 988-1003. https://doi.org/10.1016/j.oneear.2021.06.002",
               "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
-              "authors": [],
-              "year": 2021,
-              "notes": [],
-              "annotations": {}
+              "year": 2021
             }
           ],
           "annotations": {
             "row_ids": [
               "row-019"
             ],
-            "product_role": "described_product",
-            "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
             "limitations": [
-              "This pilot preserves the published pan-tropical grid; it is not an Amazon-only subset.",
-              "The native file contains substantial negative and positive extremes. These must not be clipped, converted to percentages or interpreted as probabilities.",
-              "The 0.1-degree source is not the 0.25-degree visualization shown in the main paper. A second 0.1-degree file in FigureS11 is an exact duplicate and should not become a second dataset.",
-              "The paper treats the findings as correlational. The model assumes stationary sensitivities and resilience and does not estimate societal impacts.",
-              "The paper specifically notes weaker consistency between AGB vulnerability and variance patterns, potentially related to shorter/annual biomass records.",
-              "The scientific analysis was not rerun. Format conversion verifies data preservation, not the correctness of the study model.",
-              "Exact map observation dates are not embedded. Preserve documented input/study periods separately and label any file-modification temporal fallback."
+              "Standardized index; values are not probabilities, percentages or biomass stocks.",
+              "Exact map observation dates are unresolved. Results describe correlations and assume stable model relationships over time."
             ],
-            "source_sheet_annotations": [
-              {
-                "row_id": "row-019",
-                "study_objective": "Here, we develop a tropical forest vulnerability index (TFVI) to detect and evaluate the vulnerability of global tropical forests to threats across space and time.",
-                "study_location": "the tropical and subtropical moist forests (HTFs); the study domain for the tropical moist forests is more than 2,000 Mha covering all three continents",
-                "dataset_description": "Maps of vulnerability of humid tropical forests derived from the hybrid autoregression model (hybrid AR1) for above-ground biomass; the absolute magnitude of TFVI represents the risk of critical transitions that would result in abrupt decreases or increases of the response variable given long-term trends in the stressors.",
-                "asset_or_risk": "RISK",
-                "typology_category": "Nature",
-                "typology_dimension": "Regulating",
-                "relationship_description": "We then used additive regression AR1 models to simultaneously assess the relationship of temporal autocorrelation to multiple stressors.",
-                "threshold_description": "",
-                "time": "1982 to 2018",
-                "Notes": "BCK: yes lots of geotiffs to ingest here; I just need to figure out which are the ones we want from like 12 different folders!",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
-              }
-            ],
-            "metadata_evidence": [
-              {
-                "source": "source_raster_header",
-                "locator": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
-                "supports": "Physical grid, CRS, type, nodata, single-band layout. Full array checked for pixel count and numeric range."
-              },
-              {
-                "source": "paper",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF p. 7 / printed p. 993; PDF p. 10 / printed p. 996, Figure 5",
-                "supports": "TFVI sign and magnitude interpretation; Figure 5 depicts 0.25-degree versions for visualization, while the distributed pilot is the 0.1-degree source product."
-              },
-              {
-                "source": "paper",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF p. 11 / printed p. 997, Resource availability and Datasets used",
-                "supports": "Published output/code archive DOI; 0.1-degree latitude-longitude standard grid and broader 1982-2018 study period."
-              },
-              {
-                "source": "paper",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF p. 12 / printed p. 998, Forest response variables",
-                "supports": "Annual above-ground biomass inputs span 2000-2018."
-              },
-              {
-                "source": "paper",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF pp. 13-14 / printed pp. 999-1000, Long-term TFVI, Equations 8-10",
-                "supports": "Response variables standardized to Z scores, index definition and sign semantics."
-              },
-              {
-                "source": "paper",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF pp. 10-11 / printed pp. 996-997, Discussion",
-                "supports": "AGB vulnerability robustness caveat, correlational interpretation, stationarity assumption and excluded societal consequences."
-              },
-              {
-                "source": "paper_supplement",
-                "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
-                "locator": "PDF p. 29 / supplement p. 11, Figure S11",
-                "supports": "AGB vulnerability and model coefficient maps; figure displays values different from zero at 95% confidence."
-              },
-              {
-                "source": "dataset_repository",
-                "url": "https://zenodo.org/api/records/5115158",
-                "locator": "metadata.license, metadata.description, files",
-                "supports": "CC-BY-4.0 dataset license; GeoTIFF_CSV.txz archive identity and checksum."
-              },
-              {
-                "source": "published_code",
-                "url": "https://zenodo.org/records/5115158/files/Scripts.txz?download=1",
-                "locator": "Scripts/02_TFVI/calc_tfvi.r, lines 1808-1830, 2194-2200, 4178-4179",
-                "supports": "AR1 response fit retains finite paired observations; long-term stress trends are computed separately; TFVI formula uses autocorrelation denominator; plot labels omit physical units."
-              }
-            ],
-            "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
-            "scientific_periods": [
-              {
-                "role": "above_ground_biomass_response_inputs",
-                "start_year": 2000,
-                "end_year": 2018,
-                "evidence": "Paper, PDF p. 12 / printed p. 998, Forest response variables."
-              },
-              {
-                "role": "broader_study_and_stressor_records",
-                "start_year": 1982,
-                "end_year": 2018,
-                "evidence": "Paper, PDF p. 11 / printed p. 997, Datasets used."
-              }
-            ],
-            "temporal_note": "Catalog time is the preserved source-file modification time, not the observation period.",
-            "processing": [
-              "Lossless COG encoding with nearest-neighbour display overviews.",
-              "Native CRS, grid, full-resolution values and mask retained."
-            ],
-            "source_technical_metadata": {
-              "crs": "EPSG:4326",
-              "width": 3599,
-              "height": 649,
-              "bands": 1,
-              "dtype": "float32",
-              "nodata": -3.3999999521443642e+38,
-              "transform": [
-                0.09999999999999998,
-                0.0,
-                -179.95,
-                0.0,
-                -0.09999999999999996,
-                30.85
-              ],
-              "bounds": [
-                -179.95,
-                -34.049999999999976,
-                179.94999999999993,
-                30.85
-              ],
-              "source_compression": "DEFLATE",
-              "source_tiled": false,
-              "source_overviews": [],
-              "valid_pixels": 161864,
-              "minimum": -143.2269744873047,
-              "maximum": 250.39346313476562,
-              "embedded_band_description": null,
-              "embedded_units": null,
-              "band_meaning": "Tropical Forest Vulnerability Index for above-ground biomass",
-              "units": "dimensionless standardized index",
-              "units_basis": "Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag."
-            },
-            "sources": [
-              {
-                "base": "evidence_data",
-                "path": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
-                "sha256": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe"
-              }
-            ]
+            "temporal_note": "Catalog time is the source-file modification date. Documented scientific periods are listed under study time.",
+            "processing": "Lossless COG conversion; original grid, full-resolution values and mask preserved."
           }
         },
         "assets": {
@@ -206,13 +67,11 @@
               "data"
             ],
             "metadata": {
-              "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
               "annotations": {
                 "band": 1,
                 "meaning": "Tropical Forest Vulnerability Index for above-ground biomass",
                 "unit": "1",
                 "unit_description": "dimensionless standardized index",
-                "unit_basis": "Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag.",
                 "zero_is_valid": true
               }
             }
@@ -225,7 +84,7 @@
               "metadata"
             ],
             "metadata": {
-              "title": "Original descriptions and matching evidence"
+              "title": "Full review evidence and source history"
             }
           },
           "source_repository": {
@@ -352,7 +211,6 @@
           "first_online_date": "",
           "issue_year": ""
         },
-        "note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
         "asset_links": [
           {
             "row_id": "row-019",
@@ -367,7 +225,265 @@
             "decision_source": "row decision",
             "publisher_link": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444"
           }
-        ]
+        ],
+        "original_note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
+        "note": "Historical supporting evidence. The current adjacent YAML describes the prepared dataset. The original sheet rows and matching records below are preserved verbatim. pilot_sidecar_snapshot preserves the complete first-pilot metadata, including detailed source citations, processing notes, limitations, technical inventories and field definitions. Its metadata.annotations.pilot_corrections, when present, correct the earlier matching records.",
+        "pilot_sidecar_revision": "a1509e704b74d1a7782134588a6941b963b61b51",
+        "pilot_sidecar_snapshot": {
+          "schema": "eolab/item/v1",
+          "id": "wwf-tfvi-agb-01deg",
+          "kind": "raster",
+          "primary_asset": "data",
+          "temporal": {
+            "mode": "modified"
+          },
+          "metadata": {
+            "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
+            "description": "Tropical Forest Vulnerability Index for above-ground biomass, supplied with Saatchi et al. (2021). Negative values indicate vulnerability toward sustained biomass loss; positive values indicate vulnerability toward higher biomass. Values near zero indicate relative stability. This is a modeled, standardized index, not a biomass stock map or a probability.",
+            "license": "CC-BY-4.0",
+            "attribution": "Saatchi et al. (2021)",
+            "doi": "10.5281/zenodo.5115158",
+            "citation": "Saatchi et al. (2021). Supporting scripts for 'Detecting Vulnerability of Humid Tropical Forests to Multiple Stressors'. Zenodo. https://doi.org/10.5281/zenodo.5115158",
+            "categories": [
+              "Nature"
+            ],
+            "statuses": [
+              "Matched"
+            ],
+            "study_ids": [
+              "paper-010"
+            ],
+            "study_time": "Above-ground biomass response observations: 2000-2018. Broader study and long-term stressor records: 1982-2018.",
+            "publications": [
+              {
+                "id": "paper-010",
+                "title": "Detecting vulnerability of humid tropical forests to multiple stressors",
+                "doi": "10.1016/j.oneear.2021.06.002",
+                "citation": "Saatchi, S., et al. (2021). Detecting vulnerability of humid tropical forests to multiple stressors. One Earth 4(7), 988-1003. https://doi.org/10.1016/j.oneear.2021.06.002",
+                "url": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+                "authors": [],
+                "year": 2021,
+                "notes": [],
+                "annotations": {}
+              }
+            ],
+            "annotations": {
+              "row_ids": [
+                "row-019"
+              ],
+              "product_role": "described_product",
+              "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
+              "limitations": [
+                "This pilot preserves the published pan-tropical grid; it is not an Amazon-only subset.",
+                "The native file contains substantial negative and positive extremes. These must not be clipped, converted to percentages or interpreted as probabilities.",
+                "The 0.1-degree source is not the 0.25-degree visualization shown in the main paper. A second 0.1-degree file in FigureS11 is an exact duplicate and should not become a second dataset.",
+                "The paper treats the findings as correlational. The model assumes stationary sensitivities and resilience and does not estimate societal impacts.",
+                "The paper specifically notes weaker consistency between AGB vulnerability and variance patterns, potentially related to shorter/annual biomass records.",
+                "The scientific analysis was not rerun. Format conversion verifies data preservation, not the correctness of the study model.",
+                "Exact map observation dates are not embedded. Preserve documented input/study periods separately and label any file-modification temporal fallback."
+              ],
+              "source_sheet_annotations": [
+                {
+                  "row_id": "row-019",
+                  "study_objective": "Here, we develop a tropical forest vulnerability index (TFVI) to detect and evaluate the vulnerability of global tropical forests to threats across space and time.",
+                  "study_location": "the tropical and subtropical moist forests (HTFs); the study domain for the tropical moist forests is more than 2,000 Mha covering all three continents",
+                  "dataset_description": "Maps of vulnerability of humid tropical forests derived from the hybrid autoregression model (hybrid AR1) for above-ground biomass; the absolute magnitude of TFVI represents the risk of critical transitions that would result in abrupt decreases or increases of the response variable given long-term trends in the stressors.",
+                  "asset_or_risk": "RISK",
+                  "typology_category": "Nature",
+                  "typology_dimension": "Regulating",
+                  "relationship_description": "We then used additive regression AR1 models to simultaneously assess the relationship of temporal autocorrelation to multiple stressors.",
+                  "threshold_description": "",
+                  "time": "1982 to 2018",
+                  "Notes": "BCK: yes lots of geotiffs to ingest here; I just need to figure out which are the ones we want from like 12 different folders!",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
+                }
+              ],
+              "metadata_evidence": [
+                {
+                  "source": "source_raster_header",
+                  "locator": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
+                  "supports": "Physical grid, CRS, type, nodata, single-band layout. Full array checked for pixel count and numeric range."
+                },
+                {
+                  "source": "paper",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF p. 7 / printed p. 993; PDF p. 10 / printed p. 996, Figure 5",
+                  "supports": "TFVI sign and magnitude interpretation; Figure 5 depicts 0.25-degree versions for visualization, while the distributed pilot is the 0.1-degree source product."
+                },
+                {
+                  "source": "paper",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF p. 11 / printed p. 997, Resource availability and Datasets used",
+                  "supports": "Published output/code archive DOI; 0.1-degree latitude-longitude standard grid and broader 1982-2018 study period."
+                },
+                {
+                  "source": "paper",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF p. 12 / printed p. 998, Forest response variables",
+                  "supports": "Annual above-ground biomass inputs span 2000-2018."
+                },
+                {
+                  "source": "paper",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF pp. 13-14 / printed pp. 999-1000, Long-term TFVI, Equations 8-10",
+                  "supports": "Response variables standardized to Z scores, index definition and sign semantics."
+                },
+                {
+                  "source": "paper",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF pp. 10-11 / printed pp. 996-997, Discussion",
+                  "supports": "AGB vulnerability robustness caveat, correlational interpretation, stationarity assumption and excluded societal consequences."
+                },
+                {
+                  "source": "paper_supplement",
+                  "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+                  "locator": "PDF p. 29 / supplement p. 11, Figure S11",
+                  "supports": "AGB vulnerability and model coefficient maps; figure displays values different from zero at 95% confidence."
+                },
+                {
+                  "source": "dataset_repository",
+                  "url": "https://zenodo.org/api/records/5115158",
+                  "locator": "metadata.license, metadata.description, files",
+                  "supports": "CC-BY-4.0 dataset license; GeoTIFF_CSV.txz archive identity and checksum."
+                },
+                {
+                  "source": "published_code",
+                  "url": "https://zenodo.org/records/5115158/files/Scripts.txz?download=1",
+                  "locator": "Scripts/02_TFVI/calc_tfvi.r, lines 1808-1830, 2194-2200, 4178-4179",
+                  "supports": "AR1 response fit retains finite paired observations; long-term stress trends are computed separately; TFVI formula uses autocorrelation denominator; plot labels omit physical units."
+                }
+              ],
+              "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+              "scientific_periods": [
+                {
+                  "role": "above_ground_biomass_response_inputs",
+                  "start_year": 2000,
+                  "end_year": 2018,
+                  "evidence": "Paper, PDF p. 12 / printed p. 998, Forest response variables."
+                },
+                {
+                  "role": "broader_study_and_stressor_records",
+                  "start_year": 1982,
+                  "end_year": 2018,
+                  "evidence": "Paper, PDF p. 11 / printed p. 997, Datasets used."
+                }
+              ],
+              "temporal_note": "Catalog time is the preserved source-file modification time, not the observation period.",
+              "processing": [
+                "Lossless COG encoding with nearest-neighbour display overviews.",
+                "Native CRS, grid, full-resolution values and mask retained."
+              ],
+              "source_technical_metadata": {
+                "crs": "EPSG:4326",
+                "width": 3599,
+                "height": 649,
+                "bands": 1,
+                "dtype": "float32",
+                "nodata": -3.3999999521443642e+38,
+                "transform": [
+                  0.09999999999999998,
+                  0.0,
+                  -179.95,
+                  0.0,
+                  -0.09999999999999996,
+                  30.85
+                ],
+                "bounds": [
+                  -179.95,
+                  -34.049999999999976,
+                  179.94999999999993,
+                  30.85
+                ],
+                "source_compression": "DEFLATE",
+                "source_tiled": false,
+                "source_overviews": [],
+                "valid_pixels": 161864,
+                "minimum": -143.2269744873047,
+                "maximum": 250.39346313476562,
+                "embedded_band_description": null,
+                "embedded_units": null,
+                "band_meaning": "Tropical Forest Vulnerability Index for above-ground biomass",
+                "units": "dimensionless standardized index",
+                "units_basis": "Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag."
+              },
+              "sources": [
+                {
+                  "base": "evidence_data",
+                  "path": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
+                  "sha256": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe"
+                }
+              ]
+            }
+          },
+          "assets": {
+            "data": {
+              "location": "local",
+              "path": "tfvi-agb-0.1deg.tif",
+              "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Tropical forest biomass vulnerability (TFVI), 0.1-degree grid",
+                "annotations": {
+                  "band": 1,
+                  "meaning": "Tropical Forest Vulnerability Index for above-ground biomass",
+                  "unit": "1",
+                  "unit_description": "dimensionless standardized index",
+                  "unit_basis": "Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag.",
+                  "zero_is_valid": true
+                }
+              }
+            },
+            "review_context": {
+              "location": "local",
+              "path": "review-context.json",
+              "media_type": "application/json",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original descriptions and matching evidence"
+              }
+            },
+            "source_repository": {
+              "location": "external",
+              "href": "https://doi.org/10.5281/zenodo.5115158",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original dataset repository"
+              }
+            },
+            "publication": {
+              "location": "external",
+              "href": "https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Research article"
+              }
+            },
+            "original": {
+              "location": "local",
+              "path": "source/tfvi_agb_0.1deg.tif",
+              "media_type": "image/tiff; application=geotiff",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Unchanged source GeoTIFF"
+              }
+            }
+          },
+          "source": {
+            "format": "geotiff"
+          }
+        }
       },
       "attachments": [
         {
@@ -395,8 +511,8 @@
           "mode": "modified"
         },
         "metadata": {
-          "title": "Amazon river barriers: supplied current and future locations",
-          "description": "562 supplied barrier locations used as inputs to the Amazon fish-connectivity study: 359 dams and 203 waterfalls. The file includes 293 current and 269 future scenario records. It contains locations and source attributes, not the computed connectivity indices or barrier-impact rankings.",
+          "title": "Amazon river barriers: current and future scenarios",
+          "description": "Locations of 359 dams and 203 waterfalls used in the Amazon fish-connectivity study (562 points). Includes 293 current and 269 future scenario records.",
           "license": "CC-BY-4.0",
           "attribution": "Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly",
           "doi": "10.5281/zenodo.18000863",
@@ -406,12 +522,12 @@
             "Drivers & Pressures"
           ],
           "statuses": [
-            "Supporting input"
+            "Supporting input for sheet descriptions"
           ],
           "study_ids": [
             "paper-006"
           ],
-          "study_time": "Current and future barrier scenarios; feature-level observation and commissioning dates are not established. The deposited package is version v1, published 20 December 2025; this release date is not an observation date.",
+          "study_time": "Current and future barrier scenarios; observation and commissioning dates unknown.",
           "publications": [
             {
               "id": "paper-006",
@@ -419,10 +535,7 @@
               "doi": "10.1111/gcb.70685",
               "citation": "Yofukuji et al. (2026). Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change. Global Change Biology 32:e70685. https://doi.org/10.1111/gcb.70685",
               "url": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685",
-              "authors": [],
-              "year": 2026,
-              "notes": [],
-              "annotations": {}
+              "year": 2026
             }
           ],
           "annotations": {
@@ -432,201 +545,13 @@
               "row-011",
               "row-012"
             ],
-            "product_role": "supporting_input",
-            "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
             "limitations": [
-              "These are supporting input locations, not the missing RCIsuit connectivity or dCCI/impact-ranking outputs.",
-              "Current and future are source scenario labels. Feature observation dates and commissioning dates are not established.",
-              "Several auxiliary field definitions and the relationships among the three dam-status columns remain unresolved.",
-              "One Country value is null. Source spelling, capitalization, status labels and nulls are retained.",
-              "The authors report checking barriers against imagery and planning documents; that verification was not repeated in this pilot."
+              "Connectivity indices and barrier-impact rankings are absent.",
+              "Some auxiliary field definitions and relationships between dam-status columns are unresolved."
             ],
-            "source_sheet_annotations": [
-              {
-                "row_id": "row-009",
-                "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
-                "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
-                "dataset_description": "Climatic-environmental suitability and presence-absence potential distribution of 52 frugivorous fish species of socioeconomic value, projected on the hydrographic network of the Amazon River basin for both the present and the future under two climatic scenarios (moderate: SSP2-4.5 and pessimistic: SSP5-8.5).",
-                "asset_or_risk": "ASSET",
-                "typology_category": "Nature",
-                "typology_dimension": "Biodiversity",
-                "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
-                "threshold_description": "",
-                "time": "1970-2000; 2030-2100",
-                "Notes": "SR: Yes, spatial asset file for presence/absence of fish of socioeconomic value (current and projectec)",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
-              },
-              {
-                "row_id": "row-010",
-                "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
-                "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
-                "dataset_description": "Reach Connectivity Index weighted by suitability (RCIsuit) for every river reach of the Amazon basin, integrating the accessibility of habitats and their climatic-environmental suitability, under the baseline, current barrier and future barrier setups for migratory, sedentary and combined fish groups.",
-                "asset_or_risk": "ASSET",
-                "typology_category": "Nature",
-                "typology_dimension": "Ecosystem structure",
-                "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
-                "threshold_description": "",
-                "time": "2024; 2090",
-                "Notes": "SR: Yes, spatial asset file with local data",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
-              },
-              {
-                "row_id": "row-011",
-                "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
-                "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
-                "dataset_description": "Integrated index (RCIsuit) obtained by multiplying the RCI values by the mean suitability predicted for each fish group, reflecting both the accessibility of habitats (RCI) and their climatic-environmental suitability, for combined, migratory and sedentary fish groups",
-                "asset_or_risk": "ASSET",
-                "typology_category": "Nature",
-                "typology_dimension": "Ecosystem structure",
-                "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
-                "threshold_description": "",
-                "time": "2024; 2030, 2050, 2070, and 2090",
-                "Notes": "SR: Yes, spatial asset file with local data",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
-              },
-              {
-                "row_id": "row-012",
-                "study_objective": "We applied a novel framework that combined predictions of species distribution models with a river connectivity index to identify accessible and climatic-environmental suitable habitats for frugivorous and socioeconomically important fish in the Amazon basin. We also ranked dams based on their potential for river fragmentation and blocking access to climate refuge for fish species.",
-                "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
-                "dataset_description": "Mean ranking of reservoir impact for individual current and future barriers, considering their potential for hydrological fragmentation and blocking access to climate refuge areas for fish, obtained from the leave-one-out barrier prioritization simulation (dCCI) across climate scenarios and fish groups.",
-                "asset_or_risk": "RISK",
-                "typology_category": "Drivers & Pressures",
-                "typology_dimension": "Land/water/sea use/cover change",
-                "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
-                "threshold_description": "",
-                "time": "2024; 2090",
-                "Notes": "SR: Yes, spatial asset file with local data",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
-              }
-            ],
-            "metadata_evidence": [
-              {
-                "source": "https://zenodo.org/records/18000863",
-                "locator": "Files entries for barriers_all_validas4326.{shp,shx,dbf,prj,cpg,qmd}; Rights; Details",
-                "supports": [
-                  "exact deposited source components and matching MD5 checksums",
-                  "CC-BY-4.0",
-                  "dataset DOI/version/creators/release date"
-                ]
-              },
-              {
-                "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
-                "locator": "Input Data Structure; Phase1 Steps1–2; Phase2 Steps3–4; Phase3 Steps5–6",
-                "supports": [
-                  "barrier locations are workflow inputs",
-                  "current/future workflow distinction",
-                  "indices and rankings are downstream products"
-                ]
-              },
-              {
-                "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
-                "locator": "lines40–50",
-                "supports": [
-                  "barrier file input",
-                  "scenario current filter",
-                  "Barrier_Ca and GIS_name interpretation"
-                ]
-              },
-              {
-                "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
-                "locator": "lines35–43",
-                "supports": [
-                  "same barrier file input with no current-only filter"
-                ]
-              },
-              {
-                "source": "paper-006_fish-access-climate-change.pdf",
-                "locator": "page3, Section2.2 Spatial Framework",
-                "supports": [
-                  "natural and anthropogenic barriers",
-                  "author validation with imagery and official planning documents"
-                ]
-              },
-              {
-                "source": "paper-006_fish-access-climate-change.pdf",
-                "locator": "page11, Data Availability Statement",
-                "supports": [
-                  "article-to-dataset DOI association"
-                ]
-              },
-              {
-                "source": "outputs/matches.csv",
-                "locator": "row-012; related rows010–011",
-                "supports": [
-                  "562 barrier records identified as supporting inputs",
-                  "no supplied dCCI or mean impact ranking output"
-                ]
-              },
-              {
-                "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
-                "locator": "native layer/schema read and GeoPackage round-trip",
-                "supports": [
-                  "562features",
-                  "EPSG4326",
-                  "31attributes",
-                  "359dams/203waterfalls",
-                  "293current/269future",
-                  "valid geometries and exact decoded-value preservation"
-                ]
-              }
-            ],
-            "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
-            "processing": [
-              "Convert all 562 records from the supplied UTF-8 Shapefile to one GeoPackage layer.",
-              "Preserve native WGS84 (EPSG:4326) coordinates, record order, all 31 attributes, nulls, category spelling, current/future labels and per-record source references.",
-              "No reprojection, filtering, geometry repair, snapping, status harmonization, connectivity calculation or barrier ranking.",
-              "GeoPackage stores numeric values in native SQLite numeric types rather than Shapefile display widths/decimal declarations; decoded values must remain exactly equal."
-            ],
-            "source_version": "v1",
-            "license_note": "The Zenodo record lists Creative Commons Attribution 4.0 International for this deposited package. Retain original per-record Source attribution fields.",
-            "temporal_note": "Catalog time uses the preserved Shapefile modification time; source scenario labels are not observation dates.",
-            "sources": [
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
-                "sha256": "460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
-                "sha256": "7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
-                "sha256": "341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
-                "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
-                "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
-                "sha256": "c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
-                "sha256": "6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
-                "sha256": "7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a"
-              },
-              {
-                "base": "evidence_data",
-                "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
-                "sha256": "dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc"
-              }
-            ]
+            "temporal_note": "Catalog time is the source-file modification date, not an observation or scenario date.",
+            "processing": "Converted Shapefile to GeoPackage; all coordinates and 31 attributes retained.",
+            "attribution_note": "Retain the per-record Source attribution when reusing the data."
           }
         },
         "assets": {
@@ -638,237 +563,13 @@
               "data"
             ],
             "metadata": {
-              "title": "Amazon river barriers: supplied current and future locations",
               "annotations": {
-                "fields": [
-                  {
-                    "name": "id",
-                    "source_type": "int:10",
-                    "description": "Identifier supplied with the barrier record.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Barrier_Ca",
-                    "source_type": "str:254",
-                    "description": "Source barrier category. Observed values: Dam (359) and waterfall (203).",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "GIS_name",
-                    "source_type": "str:254",
-                    "description": "Barrier name as supplied.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Country",
-                    "source_type": "str:254",
-                    "description": "Country label as supplied; one record has no label.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "MTRIB_MN",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "MTRIB_CD",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "SBD_NM",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "SBD_CD",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Orig_long",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Orig_lat",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "POINT_X",
-                    "source_type": "float:24.15",
-                    "description": "Stored x-coordinate attribute; retained without replacing the actual point geometry.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "POINT_Y",
-                    "source_type": "float:24.15",
-                    "description": "Stored y-coordinate attribute; retained without replacing the actual point geometry.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Join_Hydro",
-                    "source_type": "bool",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "riv_id",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "HydroID",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Dam_Stage_",
-                    "source_type": "str:254",
-                    "description": "Original source status field; values and capitalization are retained.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Dam_Stag_1",
-                    "source_type": "str:254",
-                    "description": "Additional source status field; retained separately from Dam_Stage_.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Dam_Stag_2",
-                    "source_type": "str:254",
-                    "description": "Source status-change/provenance field; observed values include no_change and RAISG_2023. Meaning is not otherwise reconciled.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Source",
-                    "source_type": "str:254",
-                    "description": "Source reference recorded with the barrier; preserved verbatim.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "Nb_Source",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Type_Sourc",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Dam_Size_U",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Lehner_Con",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Nao_encont",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "obs",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Xm6933",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "Ym6933",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "scenario",
-                    "source_type": "str:254",
-                    "description": "Source scenario label: current (293) or future (269). The current R workflow filters current; the future workflow uses both groups.",
-                    "definition_status": "documented_or_directly_inspected"
-                  },
-                  {
-                    "name": "aneel",
-                    "source_type": "str:254",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "x_manual",
-                    "source_type": "float:11.10",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  },
-                  {
-                    "name": "y_manual",
-                    "source_type": "float:11.10",
-                    "description": null,
-                    "definition_status": "source_field_preserved_definition_unresolved"
-                  }
-                ],
-                "source_counts": {
-                  "Barrier_Ca": {
-                    "Dam": 359,
-                    "waterfall": 203
-                  },
-                  "scenario": {
-                    "current": 293,
-                    "future": 269
-                  },
-                  "Country": {
-                    "Ecuador": 28,
-                    "Peru": 96,
-                    "Brazil": 405,
-                    "Bolivia": 17,
-                    "Guyana": 4,
-                    "Colombia": 11,
-                    "None": 1
-                  },
-                  "Dam_Stage_": {
-                    "Operational": 80,
-                    "Under_Construction": 16,
-                    "WATERFALLNO_STATUS": 203,
-                    "Planned": 241,
-                    "operational": 1,
-                    "Proposed": 18,
-                    "NO_STATUS": 2,
-                    "Under_construction": 1
-                  },
-                  "Dam_Stag_1": {
-                    "Operational": 90,
-                    "WATERFALLNO_STATUS": 203,
-                    "Planned": 227,
-                    "Proposed": 16,
-                    "Under_Construction": 26
-                  },
-                  "Dam_Stag_2": {
-                    "no_change": 331,
-                    "RAISG_2023": 27,
-                    "NA": 203,
-                    "None": 1
-                  }
+                "key_fields": {
+                  "Barrier_Ca": "Barrier category: Dam or waterfall.",
+                  "GIS_name": "Barrier name as supplied.",
+                  "Country": "Country label; one record has no value.",
+                  "scenario": "Current or future scenario. The future workflow uses both groups.",
+                  "Source": "Original source reference for each barrier."
                 }
               }
             }
@@ -881,7 +582,7 @@
               "metadata"
             ],
             "metadata": {
-              "title": "Original descriptions and matching evidence"
+              "title": "Full review evidence and source history"
             }
           },
           "source_repository": {
@@ -1289,7 +990,6 @@
           "first_online_date": "",
           "issue_year": ""
         },
-        "note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
         "asset_links": [
           {
             "row_id": "row-009",
@@ -1343,7 +1043,635 @@
             "decision_source": "row decision",
             "publisher_link": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685"
           }
-        ]
+        ],
+        "original_note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
+        "note": "Historical supporting evidence. The current adjacent YAML describes the prepared dataset. The original sheet rows and matching records below are preserved verbatim. pilot_sidecar_snapshot preserves the complete first-pilot metadata, including detailed source citations, processing notes, limitations, technical inventories and field definitions. Its metadata.annotations.pilot_corrections, when present, correct the earlier matching records.",
+        "pilot_sidecar_revision": "a1509e704b74d1a7782134588a6941b963b61b51",
+        "pilot_sidecar_snapshot": {
+          "schema": "eolab/item/v1",
+          "id": "wwf-amazon-barrier-locations",
+          "kind": "vector",
+          "primary_asset": "data",
+          "temporal": {
+            "mode": "modified"
+          },
+          "metadata": {
+            "title": "Amazon river barriers: supplied current and future locations",
+            "description": "562 supplied barrier locations used as inputs to the Amazon fish-connectivity study: 359 dams and 203 waterfalls. The file includes 293 current and 269 future scenario records. It contains locations and source attributes, not the computed connectivity indices or barrier-impact rankings.",
+            "license": "CC-BY-4.0",
+            "attribution": "Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly",
+            "doi": "10.5281/zenodo.18000863",
+            "citation": "Yofukuji, K., Fabrin, T., Mioto Stabile, B. H., and Bailly, D. (2025). River Connectivity Analysis Pipeline (v1). Zenodo. https://doi.org/10.5281/zenodo.18000863",
+            "categories": [
+              "Nature",
+              "Drivers & Pressures"
+            ],
+            "statuses": [
+              "Supporting input"
+            ],
+            "study_ids": [
+              "paper-006"
+            ],
+            "study_time": "Current and future barrier scenarios; feature-level observation and commissioning dates are not established. The deposited package is version v1, published 20 December 2025; this release date is not an observation date.",
+            "publications": [
+              {
+                "id": "paper-006",
+                "title": "Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change",
+                "doi": "10.1111/gcb.70685",
+                "citation": "Yofukuji et al. (2026). Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of Climate Change. Global Change Biology 32:e70685. https://doi.org/10.1111/gcb.70685",
+                "url": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685",
+                "authors": [],
+                "year": 2026,
+                "notes": [],
+                "annotations": {}
+              }
+            ],
+            "annotations": {
+              "row_ids": [
+                "row-009",
+                "row-010",
+                "row-011",
+                "row-012"
+              ],
+              "product_role": "supporting_input",
+              "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
+              "limitations": [
+                "These are supporting input locations, not the missing RCIsuit connectivity or dCCI/impact-ranking outputs.",
+                "Current and future are source scenario labels. Feature observation dates and commissioning dates are not established.",
+                "Several auxiliary field definitions and the relationships among the three dam-status columns remain unresolved.",
+                "One Country value is null. Source spelling, capitalization, status labels and nulls are retained.",
+                "The authors report checking barriers against imagery and planning documents; that verification was not repeated in this pilot."
+              ],
+              "source_sheet_annotations": [
+                {
+                  "row_id": "row-009",
+                  "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
+                  "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
+                  "dataset_description": "Climatic-environmental suitability and presence-absence potential distribution of 52 frugivorous fish species of socioeconomic value, projected on the hydrographic network of the Amazon River basin for both the present and the future under two climatic scenarios (moderate: SSP2-4.5 and pessimistic: SSP5-8.5).",
+                  "asset_or_risk": "ASSET",
+                  "typology_category": "Nature",
+                  "typology_dimension": "Biodiversity",
+                  "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
+                  "threshold_description": "",
+                  "time": "1970-2000; 2030-2100",
+                  "Notes": "SR: Yes, spatial asset file for presence/absence of fish of socioeconomic value (current and projectec)",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
+                },
+                {
+                  "row_id": "row-010",
+                  "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
+                  "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
+                  "dataset_description": "Reach Connectivity Index weighted by suitability (RCIsuit) for every river reach of the Amazon basin, integrating the accessibility of habitats and their climatic-environmental suitability, under the baseline, current barrier and future barrier setups for migratory, sedentary and combined fish groups.",
+                  "asset_or_risk": "ASSET",
+                  "typology_category": "Nature",
+                  "typology_dimension": "Ecosystem structure",
+                  "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
+                  "threshold_description": "",
+                  "time": "2024; 2090",
+                  "Notes": "SR: Yes, spatial asset file with local data",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
+                },
+                {
+                  "row_id": "row-011",
+                  "study_objective": "The goal of our study was to evaluate the interplay of climate change and barrier-driven river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the accessibility of suitable areas in the years to come.",
+                  "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
+                  "dataset_description": "Integrated index (RCIsuit) obtained by multiplying the RCI values by the mean suitability predicted for each fish group, reflecting both the accessibility of habitats (RCI) and their climatic-environmental suitability, for combined, migratory and sedentary fish groups",
+                  "asset_or_risk": "ASSET",
+                  "typology_category": "Nature",
+                  "typology_dimension": "Ecosystem structure",
+                  "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
+                  "threshold_description": "",
+                  "time": "2024; 2030, 2050, 2070, and 2090",
+                  "Notes": "SR: Yes, spatial asset file with local data",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
+                },
+                {
+                  "row_id": "row-012",
+                  "study_objective": "We applied a novel framework that combined predictions of species distribution models with a river connectivity index to identify accessible and climatic-environmental suitable habitats for frugivorous and socioeconomically important fish in the Amazon basin. We also ranked dams based on their potential for river fragmentation and blocking access to climate refuge for fish species.",
+                  "study_location": "the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador, Guyana, and Peru",
+                  "dataset_description": "Mean ranking of reservoir impact for individual current and future barriers, considering their potential for hydrological fragmentation and blocking access to climate refuge areas for fish, obtained from the leave-one-out barrier prioritization simulation (dCCI) across climate scenarios and fish groups.",
+                  "asset_or_risk": "RISK",
+                  "typology_category": "Drivers & Pressures",
+                  "typology_dimension": "Land/water/sea use/cover change",
+                  "relationship_description": "The distribution of the species was modeled as a function of bioclimatic and hydrological variables (Table S4) covering the Amazon hydrographic network.",
+                  "threshold_description": "",
+                  "time": "2024; 2090",
+                  "Notes": "SR: Yes, spatial asset file with local data",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": "1"
+                }
+              ],
+              "metadata_evidence": [
+                {
+                  "source": "https://zenodo.org/records/18000863",
+                  "locator": "Files entries for barriers_all_validas4326.{shp,shx,dbf,prj,cpg,qmd}; Rights; Details",
+                  "supports": [
+                    "exact deposited source components and matching MD5 checksums",
+                    "CC-BY-4.0",
+                    "dataset DOI/version/creators/release date"
+                  ]
+                },
+                {
+                  "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+                  "locator": "Input Data Structure; Phase1 Steps1–2; Phase2 Steps3–4; Phase3 Steps5–6",
+                  "supports": [
+                    "barrier locations are workflow inputs",
+                    "current/future workflow distinction",
+                    "indices and rankings are downstream products"
+                  ]
+                },
+                {
+                  "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+                  "locator": "lines40–50",
+                  "supports": [
+                    "barrier file input",
+                    "scenario current filter",
+                    "Barrier_Ca and GIS_name interpretation"
+                  ]
+                },
+                {
+                  "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+                  "locator": "lines35–43",
+                  "supports": [
+                    "same barrier file input with no current-only filter"
+                  ]
+                },
+                {
+                  "source": "paper-006_fish-access-climate-change.pdf",
+                  "locator": "page3, Section2.2 Spatial Framework",
+                  "supports": [
+                    "natural and anthropogenic barriers",
+                    "author validation with imagery and official planning documents"
+                  ]
+                },
+                {
+                  "source": "paper-006_fish-access-climate-change.pdf",
+                  "locator": "page11, Data Availability Statement",
+                  "supports": [
+                    "article-to-dataset DOI association"
+                  ]
+                },
+                {
+                  "source": "outputs/matches.csv",
+                  "locator": "row-012; related rows010–011",
+                  "supports": [
+                    "562 barrier records identified as supporting inputs",
+                    "no supplied dCCI or mean impact ranking output"
+                  ]
+                },
+                {
+                  "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+                  "locator": "native layer/schema read and GeoPackage round-trip",
+                  "supports": [
+                    "562features",
+                    "EPSG4326",
+                    "31attributes",
+                    "359dams/203waterfalls",
+                    "293current/269future",
+                    "valid geometries and exact decoded-value preservation"
+                  ]
+                }
+              ],
+              "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+              "processing": [
+                "Convert all 562 records from the supplied UTF-8 Shapefile to one GeoPackage layer.",
+                "Preserve native WGS84 (EPSG:4326) coordinates, record order, all 31 attributes, nulls, category spelling, current/future labels and per-record source references.",
+                "No reprojection, filtering, geometry repair, snapping, status harmonization, connectivity calculation or barrier ranking.",
+                "GeoPackage stores numeric values in native SQLite numeric types rather than Shapefile display widths/decimal declarations; decoded values must remain exactly equal."
+              ],
+              "source_version": "v1",
+              "license_note": "The Zenodo record lists Creative Commons Attribution 4.0 International for this deposited package. Retain original per-record Source attribution fields.",
+              "temporal_note": "Catalog time uses the preserved Shapefile modification time; source scenario labels are not observation dates.",
+              "sources": [
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+                  "sha256": "460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+                  "sha256": "7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+                  "sha256": "341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+                  "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+                  "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+                  "sha256": "c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+                  "sha256": "6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+                  "sha256": "7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a"
+                },
+                {
+                  "base": "evidence_data",
+                  "path": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+                  "sha256": "dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc"
+                }
+              ]
+            }
+          },
+          "assets": {
+            "data": {
+              "location": "local",
+              "path": "amazon-barriers.gpkg",
+              "media_type": "application/geopackage+sqlite3",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Amazon river barriers: supplied current and future locations",
+                "annotations": {
+                  "fields": [
+                    {
+                      "name": "id",
+                      "source_type": "int:10",
+                      "description": "Identifier supplied with the barrier record.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Barrier_Ca",
+                      "source_type": "str:254",
+                      "description": "Source barrier category. Observed values: Dam (359) and waterfall (203).",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "GIS_name",
+                      "source_type": "str:254",
+                      "description": "Barrier name as supplied.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Country",
+                      "source_type": "str:254",
+                      "description": "Country label as supplied; one record has no label.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "MTRIB_MN",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "MTRIB_CD",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "SBD_NM",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "SBD_CD",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Orig_long",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Orig_lat",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "POINT_X",
+                      "source_type": "float:24.15",
+                      "description": "Stored x-coordinate attribute; retained without replacing the actual point geometry.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "POINT_Y",
+                      "source_type": "float:24.15",
+                      "description": "Stored y-coordinate attribute; retained without replacing the actual point geometry.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Join_Hydro",
+                      "source_type": "bool",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "riv_id",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "HydroID",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Dam_Stage_",
+                      "source_type": "str:254",
+                      "description": "Original source status field; values and capitalization are retained.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Dam_Stag_1",
+                      "source_type": "str:254",
+                      "description": "Additional source status field; retained separately from Dam_Stage_.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Dam_Stag_2",
+                      "source_type": "str:254",
+                      "description": "Source status-change/provenance field; observed values include no_change and RAISG_2023. Meaning is not otherwise reconciled.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Source",
+                      "source_type": "str:254",
+                      "description": "Source reference recorded with the barrier; preserved verbatim.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "Nb_Source",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Type_Sourc",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Dam_Size_U",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Lehner_Con",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Nao_encont",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "obs",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Xm6933",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "Ym6933",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "scenario",
+                      "source_type": "str:254",
+                      "description": "Source scenario label: current (293) or future (269). The current R workflow filters current; the future workflow uses both groups.",
+                      "definition_status": "documented_or_directly_inspected"
+                    },
+                    {
+                      "name": "aneel",
+                      "source_type": "str:254",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "x_manual",
+                      "source_type": "float:11.10",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    },
+                    {
+                      "name": "y_manual",
+                      "source_type": "float:11.10",
+                      "description": null,
+                      "definition_status": "source_field_preserved_definition_unresolved"
+                    }
+                  ],
+                  "source_counts": {
+                    "Barrier_Ca": {
+                      "Dam": 359,
+                      "waterfall": 203
+                    },
+                    "scenario": {
+                      "current": 293,
+                      "future": 269
+                    },
+                    "Country": {
+                      "Ecuador": 28,
+                      "Peru": 96,
+                      "Brazil": 405,
+                      "Bolivia": 17,
+                      "Guyana": 4,
+                      "Colombia": 11,
+                      "None": 1
+                    },
+                    "Dam_Stage_": {
+                      "Operational": 80,
+                      "Under_Construction": 16,
+                      "WATERFALLNO_STATUS": 203,
+                      "Planned": 241,
+                      "operational": 1,
+                      "Proposed": 18,
+                      "NO_STATUS": 2,
+                      "Under_construction": 1
+                    },
+                    "Dam_Stag_1": {
+                      "Operational": 90,
+                      "WATERFALLNO_STATUS": 203,
+                      "Planned": 227,
+                      "Proposed": 16,
+                      "Under_Construction": 26
+                    },
+                    "Dam_Stag_2": {
+                      "no_change": 331,
+                      "RAISG_2023": 27,
+                      "NA": 203,
+                      "None": 1
+                    }
+                  }
+                }
+              }
+            },
+            "review_context": {
+              "location": "local",
+              "path": "review-context.json",
+              "media_type": "application/json",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original descriptions and matching evidence"
+              }
+            },
+            "source_repository": {
+              "location": "external",
+              "href": "https://doi.org/10.5281/zenodo.18000863",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original dataset repository"
+              }
+            },
+            "publication": {
+              "location": "external",
+              "href": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Research article"
+              }
+            },
+            "source_shp": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.shp",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Original Shapefile SHP component"
+              }
+            },
+            "source_shx": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.shx",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Original Shapefile SHX component"
+              }
+            },
+            "source_dbf": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.dbf",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Original Shapefile DBF component"
+              }
+            },
+            "source_prj": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.prj",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original Shapefile PRJ component"
+              }
+            },
+            "source_cpg": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.cpg",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original Shapefile CPG component"
+              }
+            },
+            "source_qmd": {
+              "location": "local",
+              "path": "source/barriers_all_validas4326.qmd",
+              "media_type": "application/octet-stream",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original Shapefile QMD component"
+              }
+            },
+            "source_readme": {
+              "location": "local",
+              "path": "source/README.md",
+              "media_type": "text/plain",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Source workflow README.md"
+              }
+            },
+            "source_current_code": {
+              "location": "local",
+              "path": "source/part_1_add_barriers_CURRENT_SET.R",
+              "media_type": "text/plain",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Source workflow part_1_add_barriers_CURRENT_SET.R"
+              }
+            },
+            "source_future_code": {
+              "location": "local",
+              "path": "source/part_1_add_barriers_FUTURE_SET.R",
+              "media_type": "text/plain",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Source workflow part_1_add_barriers_FUTURE_SET.R"
+              }
+            }
+          },
+          "source": {
+            "format": "geopackage",
+            "layer": "barriers"
+          }
+        }
       },
       "attachments": [
         {
@@ -1415,7 +1743,7 @@
         },
         "metadata": {
           "title": "ATTO monthly carbon fluxes, 2023",
-          "description": "Monthly net ecosystem exchange, gross primary productivity and ecosystem respiration at ATTO during 2023. This is a twelve-month subset of the deposited flux table, with six columns retained without changing their values.",
+          "description": "Monthly net ecosystem exchange (NEE), gross primary productivity (GPP) and ecosystem respiration (Reco) at ATTO. Contains the twelve months of 2023, selected from the deposited 2014-2023 table.",
           "license": "CC0-1.0",
           "attribution": "Botia et al. (2026), supporting datasets deposited in Edmond.",
           "doi": "10.17617/3.OU3KYA",
@@ -1424,7 +1752,7 @@
             "Nature"
           ],
           "statuses": [
-            "Matched"
+            "Matched to sheet description"
           ],
           "study_ids": [
             "paper-023"
@@ -1435,82 +1763,19 @@
               "id": "paper-023",
               "title": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
               "doi": "10.1029/2025AV001658",
-              "citation": null,
               "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658",
-              "authors": [],
-              "year": 2026,
-              "notes": [],
-              "annotations": {}
+              "year": 2026
             }
           ],
           "annotations": {
             "row_ids": [
               "row-053"
             ],
-            "product_role": "described_product",
-            "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
             "limitations": [
-              "Monthly derived flux totals only; underlying half-hourly observations and quality flags are absent from this file.",
-              "The pilot does not reproduce original filtering, gap-filling, or partitioning.",
-              "No geographic footprint is assigned to the table. finalLat/finalLon are trajectory endpoints and must not be interpreted as fixed tower coordinates.",
-              "Original source series lacks May 2021; the selected 2023 year is complete.",
-              "Supporting Information Text S5 was not separately reviewed in this pilot inspection."
+              "Underlying half-hourly measurements and quality flags are not included.",
+              "The source table's finalLat/finalLon describe air-trajectory endpoints, not the tower location."
             ],
-            "source_sheet_annotations": [
-              {
-                "row_id": "row-053",
-                "study_objective": "Here, we evaluate the response of the Amazon carbon cycle to this extreme event across different spatial scales.",
-                "study_location": "the biogeographic Amazon",
-                "dataset_description": "The monthly totals of NEE, GPP and Reco at ATTO, obtained from filtered high-quality half-hourly turbulent eddy covariance CO2 fluxes measured at 81 m above ground level, with gap-filling and EC-NEE partitioning to Gross Primary Productivity (GPP) and Ecosystem Respiration (Reco)",
-                "asset_or_risk": "ASSET",
-                "typology_category": "Nature",
-                "typology_dimension": "Ecosystem function",
-                "relationship_description": "Strong negative correlations between spatial anomalies in GPP and VPD (r = -0.69, p < 0.001), a moderate but significant negative correlation between TER and temperature anomalies (r = -0.48, p < 0.001), and significant negative correlations of both GPP (r = -0.58, p < 0.001) and TER (r = -0.55, p < 0.001) with CWD.",
-                "threshold_description": "",
-                "time": "2023",
-                "Notes": "BCK: hmm maybe not - I thought it could be useful for validating/adjusting global climate data but if it's only one site can we even use it for that",
-                "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": ""
-              }
-            ],
-            "metadata_evidence": [
-              {
-                "source": "Source CSV header and all 119 records",
-                "supports": "Column names, units embedded in flux names, month-end labels, twelve 2023 rows, missing 2021-05, no explicit quality flag columns."
-              },
-              {
-                "source": "https://edmond.mpg.de/api/datasets/:persistentId/?persistentId=doi:10.17617/3.OU3KYA",
-                "locator": "latestVersion.license; latestVersion.files[dataFile.id=333872]; citation.dsDescription",
-                "supports": "CC0-1.0, version 1.0, exact file identity, STILT endpoint coordinate meanings."
-              },
-              {
-                "source": "paper-023_amazon-carbon-source-2023.pdf",
-                "locator": "Section 2.2, printed pages 4-5 (PDF pages 5-6)",
-                "supports": "ATTO eddy covariance measured at 81 m; filtered half-hourly fluxes used for NEE, gap-filling, and partitioning; full processing details referred to Supporting Information Text S5."
-              },
-              {
-                "source": "paper-023_amazon-carbon-source-2023.pdf",
-                "locator": "Data Availability Statement, printed page 17 (PDF page 18)",
-                "supports": "Monthly totals of NEE, GPP, Reco and monthly mean regional deltaCO2 are supplied by dataset DOI."
-              }
-            ],
-            "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
-            "processing": [
-              "Select Year=2023.",
-              "Retain Time, Year, Month and the three monthly carbon-flux columns.",
-              "Preserve original numeric strings; no new flux calculation or spatial inference."
-            ],
-            "pilot_corrections": [
-              "Existing matches.csv calls the date column TimeYearMonth, but the source header is Time with separate Year and Month columns.",
-              "Existing matching evidence labels finalLat/finalLon station coordinates; authoritative dataset description says mean STILT ending locations."
-            ],
-            "source_version": "1.0",
-            "sources": [
-              {
-                "base": "evidence_data",
-                "path": "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv",
-                "sha256": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921"
-              }
-            ]
+            "processing": "Selected 2023 and six columns; original values and numeric precision preserved."
           }
         },
         "assets": {
@@ -1522,13 +1787,12 @@
               "data"
             ],
             "metadata": {
-              "title": "ATTO monthly carbon fluxes, 2023",
               "annotations": {
                 "columns": [
                   {
                     "name": "Time",
                     "type": "date",
-                    "description": "Month-end label for the monthly aggregation, retained from the source table; not an instantaneous sample time."
+                    "description": "Month-end label for the monthly total."
                   },
                   {
                     "name": "Year",
@@ -1559,11 +1823,7 @@
                     "description": "Monthly ecosystem respiration from partitioned eddy-covariance fluxes."
                   }
                 ],
-                "rows": 12,
-                "delimiter": ",",
-                "encoding": "UTF-8",
-                "decimal_separator": ".",
-                "time_label": "month end"
+                "rows": 12
               }
             }
           },
@@ -1575,7 +1835,7 @@
               "metadata"
             ],
             "metadata": {
-              "title": "Original descriptions and matching evidence"
+              "title": "Full review evidence and source history"
             }
           },
           "source_repository": {
@@ -1615,12 +1875,10 @@
                   "2021-05"
                 ],
                 "additional_columns": {
-                  "": "Unnamed row index, 0 through 118; not a scientific variable.",
-                  "finalLat": "Mean ending latitude of STILT backward trajectories, not ATTO station latitude.",
-                  "finalLon": "Mean ending longitude of STILT backward trajectories, not ATTO station longitude.",
-                  "deltaCO2_ppm": "Monthly averaged regional CO2 signal, parts per million."
-                },
-                "column_correction": "The date column is Time, not TimeYearMonth. finalLat/finalLon are STILT trajectory endpoints, not station coordinates."
+                  "unnamed_first_column": "Original row index, 0 through 118.",
+                  "finalLat / finalLon": "Mean ending latitude / longitude of STILT backward trajectories.",
+                  "deltaCO2_ppm": "Monthly mean regional CO2 signal, parts per million."
+                }
               }
             }
           }
@@ -1712,7 +1970,6 @@
           "first_online_date": "",
           "issue_year": ""
         },
-        "note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
         "asset_links": [
           {
             "row_id": "row-052",
@@ -1740,7 +1997,233 @@
             "decision_source": "row decision",
             "publisher_link": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658"
           }
-        ]
+        ],
+        "original_note": "Original review records are retained here. Pilot corrections, where present, are stated in the sidecar and take precedence for this prepared product.",
+        "note": "Historical supporting evidence. The current adjacent YAML describes the prepared dataset. The original sheet rows and matching records below are preserved verbatim. pilot_sidecar_snapshot preserves the complete first-pilot metadata, including detailed source citations, processing notes, limitations, technical inventories and field definitions. Its metadata.annotations.pilot_corrections, when present, correct the earlier matching records.",
+        "pilot_sidecar_revision": "a1509e704b74d1a7782134588a6941b963b61b51",
+        "pilot_sidecar_snapshot": {
+          "schema": "eolab/item/v1",
+          "id": "wwf-atto-monthly-carbon-fluxes-2023",
+          "kind": "nonspatial",
+          "primary_asset": "data",
+          "temporal": {
+            "mode": "interval",
+            "start_datetime": "2023-01-01T00:00:00Z",
+            "end_datetime": "2023-12-31T23:59:59Z"
+          },
+          "metadata": {
+            "title": "ATTO monthly carbon fluxes, 2023",
+            "description": "Monthly net ecosystem exchange, gross primary productivity and ecosystem respiration at ATTO during 2023. This is a twelve-month subset of the deposited flux table, with six columns retained without changing their values.",
+            "license": "CC0-1.0",
+            "attribution": "Botia et al. (2026), supporting datasets deposited in Edmond.",
+            "doi": "10.17617/3.OU3KYA",
+            "citation": "Botia et al. (2026). Supporting datasets for Carbon cycle response to Amazon drought in 2023. Version 1.0. Edmond. https://doi.org/10.17617/3.OU3KYA",
+            "categories": [
+              "Nature"
+            ],
+            "statuses": [
+              "Matched"
+            ],
+            "study_ids": [
+              "paper-023"
+            ],
+            "study_time": "Monthly flux totals for January through December 2023; Time is a month-end label.",
+            "publications": [
+              {
+                "id": "paper-023",
+                "title": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
+                "doi": "10.1029/2025AV001658",
+                "citation": null,
+                "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658",
+                "authors": [],
+                "year": 2026,
+                "notes": [],
+                "annotations": {}
+              }
+            ],
+            "annotations": {
+              "row_ids": [
+                "row-053"
+              ],
+              "product_role": "described_product",
+              "preparation_status": "Prepared and checked for the EOLab pilot; scientific limitations remain.",
+              "limitations": [
+                "Monthly derived flux totals only; underlying half-hourly observations and quality flags are absent from this file.",
+                "The pilot does not reproduce original filtering, gap-filling, or partitioning.",
+                "No geographic footprint is assigned to the table. finalLat/finalLon are trajectory endpoints and must not be interpreted as fixed tower coordinates.",
+                "Original source series lacks May 2021; the selected 2023 year is complete.",
+                "Supporting Information Text S5 was not separately reviewed in this pilot inspection."
+              ],
+              "source_sheet_annotations": [
+                {
+                  "row_id": "row-053",
+                  "study_objective": "Here, we evaluate the response of the Amazon carbon cycle to this extreme event across different spatial scales.",
+                  "study_location": "the biogeographic Amazon",
+                  "dataset_description": "The monthly totals of NEE, GPP and Reco at ATTO, obtained from filtered high-quality half-hourly turbulent eddy covariance CO2 fluxes measured at 81 m above ground level, with gap-filling and EC-NEE partitioning to Gross Primary Productivity (GPP) and Ecosystem Respiration (Reco)",
+                  "asset_or_risk": "ASSET",
+                  "typology_category": "Nature",
+                  "typology_dimension": "Ecosystem function",
+                  "relationship_description": "Strong negative correlations between spatial anomalies in GPP and VPD (r = -0.69, p < 0.001), a moderate but significant negative correlation between TER and temperature anomalies (r = -0.48, p < 0.001), and significant negative correlations of both GPP (r = -0.58, p < 0.001) and TER (r = -0.55, p < 0.001) with CWD.",
+                  "threshold_description": "",
+                  "time": "2023",
+                  "Notes": "BCK: hmm maybe not - I thought it could be useful for validating/adjusting global climate data but if it's only one site can we even use it for that",
+                  "Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling": ""
+                }
+              ],
+              "metadata_evidence": [
+                {
+                  "source": "Source CSV header and all 119 records",
+                  "supports": "Column names, units embedded in flux names, month-end labels, twelve 2023 rows, missing 2021-05, no explicit quality flag columns."
+                },
+                {
+                  "source": "https://edmond.mpg.de/api/datasets/:persistentId/?persistentId=doi:10.17617/3.OU3KYA",
+                  "locator": "latestVersion.license; latestVersion.files[dataFile.id=333872]; citation.dsDescription",
+                  "supports": "CC0-1.0, version 1.0, exact file identity, STILT endpoint coordinate meanings."
+                },
+                {
+                  "source": "paper-023_amazon-carbon-source-2023.pdf",
+                  "locator": "Section 2.2, printed pages 4-5 (PDF pages 5-6)",
+                  "supports": "ATTO eddy covariance measured at 81 m; filtered half-hourly fluxes used for NEE, gap-filling, and partitioning; full processing details referred to Supporting Information Text S5."
+                },
+                {
+                  "source": "paper-023_amazon-carbon-source-2023.pdf",
+                  "locator": "Data Availability Statement, printed page 17 (PDF page 18)",
+                  "supports": "Monthly totals of NEE, GPP, Reco and monthly mean regional deltaCO2 are supplied by dataset DOI."
+                }
+              ],
+              "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+              "processing": [
+                "Select Year=2023.",
+                "Retain Time, Year, Month and the three monthly carbon-flux columns.",
+                "Preserve original numeric strings; no new flux calculation or spatial inference."
+              ],
+              "pilot_corrections": [
+                "Existing matches.csv calls the date column TimeYearMonth, but the source header is Time with separate Year and Month columns.",
+                "Existing matching evidence labels finalLat/finalLon station coordinates; authoritative dataset description says mean STILT ending locations."
+              ],
+              "source_version": "1.0",
+              "sources": [
+                {
+                  "base": "evidence_data",
+                  "path": "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv",
+                  "sha256": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921"
+                }
+              ]
+            }
+          },
+          "assets": {
+            "data": {
+              "location": "local",
+              "path": "atto-monthly-carbon-fluxes-2023.csv",
+              "media_type": "text/csv",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "ATTO monthly carbon fluxes, 2023",
+                "annotations": {
+                  "columns": [
+                    {
+                      "name": "Time",
+                      "type": "date",
+                      "description": "Month-end label for the monthly aggregation, retained from the source table; not an instantaneous sample time."
+                    },
+                    {
+                      "name": "Year",
+                      "type": "integer",
+                      "description": "Calendar year."
+                    },
+                    {
+                      "name": "Month",
+                      "type": "integer",
+                      "description": "Calendar month, 1 through 12."
+                    },
+                    {
+                      "name": "NEE_gCper_m2_month",
+                      "type": "number",
+                      "unit": "g C m-2 month-1",
+                      "description": "Monthly net ecosystem exchange. Selected values satisfy NEE = Reco - GPP; negative values indicate net uptake."
+                    },
+                    {
+                      "name": "GPP_gCper_m2_month",
+                      "type": "number",
+                      "unit": "g C m-2 month-1",
+                      "description": "Monthly gross primary productivity from partitioned eddy-covariance fluxes."
+                    },
+                    {
+                      "name": "Reco_gCper_m2_month",
+                      "type": "number",
+                      "unit": "g C m-2 month-1",
+                      "description": "Monthly ecosystem respiration from partitioned eddy-covariance fluxes."
+                    }
+                  ],
+                  "rows": 12,
+                  "delimiter": ",",
+                  "encoding": "UTF-8",
+                  "decimal_separator": ".",
+                  "time_label": "month end"
+                }
+              }
+            },
+            "review_context": {
+              "location": "local",
+              "path": "review-context.json",
+              "media_type": "application/json",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original descriptions and matching evidence"
+              }
+            },
+            "source_repository": {
+              "location": "external",
+              "href": "https://doi.org/10.17617/3.OU3KYA",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Original dataset repository"
+              }
+            },
+            "publication": {
+              "location": "external",
+              "href": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025AV001658",
+              "media_type": "text/html",
+              "roles": [
+                "metadata"
+              ],
+              "metadata": {
+                "title": "Research article"
+              }
+            },
+            "original": {
+              "location": "local",
+              "path": "source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv",
+              "media_type": "text/csv",
+              "roles": [
+                "data"
+              ],
+              "metadata": {
+                "title": "Complete original 2014-2023 table",
+                "annotations": {
+                  "rows": 119,
+                  "missing_months": [
+                    "2021-05"
+                  ],
+                  "additional_columns": {
+                    "": "Unnamed row index, 0 through 118; not a scientific variable.",
+                    "finalLat": "Mean ending latitude of STILT backward trajectories, not ATTO station latitude.",
+                    "finalLon": "Mean ending longitude of STILT backward trajectories, not ATTO station longitude.",
+                    "deltaCO2_ppm": "Monthly averaged regional CO2 signal, parts per million."
+                  },
+                  "column_correction": "The date column is Time, not TimeYearMonth. finalLat/finalLon are STILT trajectory endpoints, not station coordinates."
+                }
+              }
+            }
+          }
+        }
       },
       "attachments": [
         {

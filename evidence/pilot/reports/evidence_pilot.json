@@ -5,7 +5,7 @@
     "merged_revision": "cee788e82e7577afb57681cc962acd764a67f3b6",
     "validated_source_revision": "73215e7d91dac57edad0882a388989e9c6bdf8a6"
   },
-  "records_sha256": "e948d36e8a682530a4e4d36206d889a2055aa18aa41ec6101ed4dcd31373feb3",
+  "records_sha256": "478b184099fc50effba858007a8712cff985b53ef3c894e4ac386accd691c5f4",
   "runtime": {
     "numpy": "2.5.4",
     "rasterio": "1.5.2",
@@ -40,8 +40,8 @@
           "bytes": 518159
         },
         "tfvi-agb-0.1deg.tif.eolab.yaml": {
-          "sha256": "0bc7ffcca670210e564408f192be0e13b34125597ee2e2b9890e328e4aa450ba",
-          "bytes": 3100
+          "sha256": "7fb02b5d2f78418ba418ddbd027514669f31670f0ea72339310031fc52c0cd48",
+          "bytes": 3102
         }
       },
       "checks": {
@@ -272,7 +272,7 @@
     }
   ],
   "metadata_refresh": {
-    "previous_records_sha256": "fc6932584ab263cd7961480df8a24ee60b00fdc1a0c1b065c47f7ce300a0d672",
+    "previous_records_sha256": "e948d36e8a682530a4e4d36206d889a2055aa18aa41ec6101ed4dcd31373feb3",
     "method": "Metadata-only refresh; original transformation checks and runtime retained.",
     "source_checksums_verified": true,
     "delivered_checksums_verified": true,

@@ -34,7 +34,7 @@ metadata:
     row_ids:
     - row-019
     limitations:
-    - Dimensionless modeled index; magnitudes are not percentages or biomass stocks.
+    - Standardized index; values are not probabilities, percentages or biomass stocks.
     - Exact map observation dates are unresolved. Results describe correlations and assume stable model
       relationships over time.
     temporal_note: Catalog time is the source-file modification date. Documented scientific periods are

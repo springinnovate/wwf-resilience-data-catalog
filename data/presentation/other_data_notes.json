@@ -1,0 +1,66 @@
+[
+  {
+    "paper_id": "paper-003",
+    "summary": "Additional variables, periods and regional summaries beyond the requested GPP/dieback maps. Some climate-class files have invalid latitudes; one workbook's purpose is unclear."
+  },
+  {
+    "paper_id": "paper-008",
+    "summary": "Vegetation and reflectance summaries (LAI, NDVI and short-wave infrared). These derived indicators are distinct from the requested land-cover maps and field observations."
+  },
+  {
+    "paper_id": "paper-009",
+    "summary": "Heat-stress difference maps and regional daily/nighttime distributions extend beyond the requested products. Distribution tables lack embedded observation times and locations."
+  },
+  {
+    "paper_id": "paper-010",
+    "summary": "Trend maps, stress-response summaries, model parameter layers and uncertainty maps. These are additional results beyond the main forest-vulnerability maps described in the sheet."
+  },
+  {
+    "paper_id": "paper-011",
+    "summary": "Fish migration, reproduction, fishing-area and life-cycle map layers. They are present in the geodatabase but have no corresponding dataset description in the sheet."
+  },
+  {
+    "paper_id": "paper-013",
+    "summary": "Additional radiation and leaf-physiology observations, plus weather and an SPI drought index. The requested products use different measurements or SPEI, so these are not interchangeable."
+  },
+  {
+    "paper_id": "paper-014",
+    "summary": "Connectivity threshold tests, sensitivity results and aggregated analysis tables. These cover additional analyses or different thresholds, rather than the specific resistance maps and polygons requested."
+  },
+  {
+    "paper_id": "paper-015",
+    "summary": "Land-cover transition rates and statistical estimates of ecological effects. The sheet describes site measurements, rather than these derived transition and modeling results."
+  },
+  {
+    "paper_id": "paper-016",
+    "summary": "Forest-type area and average or median tree-diversity summaries. This aggregated result is additional to the datasets described in the sheet."
+  },
+  {
+    "paper_id": "paper-018",
+    "summary": "Derived tree-diversity estimates, matrices and statistical results. The sheet describes raw tree censuses and functional traits, rather than these analytical products."
+  },
+  {
+    "paper_id": "paper-019",
+    "summary": "Bird species traits and occurrence inferred from range maps. The sheet describes field captures, so these tables are different kinds of data."
+  },
+  {
+    "paper_id": "paper-020",
+    "summary": "Observed pollinator-diversity estimates, bootstrap results and variability summaries. These sampling-analysis outputs are not the products described in the sheet."
+  },
+  {
+    "paper_id": "paper-021",
+    "summary": "Habitat-loss and deforestation tables are separate from the requested connectivity metrics. Another file is named as connectivity results, but its contents have not been checked."
+  },
+  {
+    "paper_id": "paper-023",
+    "summary": "Amazon-wide carbon inversion estimates, fire counts and modeled fire emissions. These describe basin-wide processes, whereas the sheet requests measurements at the ATTO tower."
+  },
+  {
+    "paper_id": "paper-026",
+    "summary": "Outputs from a bundled 1981 hydrology run. The sheet describes a larger multi-scenario model and sediment retention; these local run outputs have not been shown to be those products."
+  },
+  {
+    "paper_id": "paper-028",
+    "summary": "Historical or coarse drought, forest-edge, fire and logging maps are present. The sheet describes future degradation scenarios; their relationship to these maps remains unconfirmed."
+  }
+]

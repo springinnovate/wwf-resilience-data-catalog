@@ -15,8 +15,10 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import urlsplit
+from zipfile import BadZipFile
 
 from openpyxl import load_workbook
+from openpyxl.utils.cell import coordinate_to_tuple
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -38,6 +40,11 @@ RELATIONSHIPS = {
 PRIMARY_RELATIONSHIPS = {"described_asset", "partial_or_processed", "different_product", "unresolved"}
 UNMATCHED_DISPOSITIONS = {"unmatched_data", "unresolved_data"}
 SHORTENED_SUFFIX = "\n[Display shortened. Full content is preserved in the corresponding CSV/JSON and AssetLinks.]"
+DISPLAY_STATUSES = {
+    "Matched": "Found", "Partial match": "Partly found",
+    "Related inputs/code only": "Supporting files only", "Different product": "Different data",
+    "No local match": "Not found locally", "Unresolved": "Unclear",
+}
 
 
 def require(condition, message):
@@ -162,10 +169,156 @@ def parse_source(input_dir, parsed):
     return digest, columns, records, by_id
 
 
-def validate_workbook(path, tables, source_columns):
+def internal_destination(cell):
+    """Return an internal (sheet, coordinate) target, or None for an external URL."""
+    if cell.hyperlink is None:
+        return None
+    location = cell.hyperlink.location
+    if not location and cell.hyperlink.target and cell.hyperlink.target.startswith("#"):
+        location = cell.hyperlink.target[1:]
+    if not location:
+        return None
+    require(not cell.hyperlink.target or cell.hyperlink.target.startswith("#"),
+            f"Internal workbook link also has an external target at {cell.parent.title}!{cell.coordinate}")
+    match = re.fullmatch(r"(?:'((?:[^']|'')+)'|([^!]+))!([A-Za-z$]+[0-9$]+)", location)
+    require(match is not None, f"Malformed internal workbook link at {cell.parent.title}!{cell.coordinate}: {location}")
+    name = (match.group(1) or match.group(2)).replace("''", "'")
+    return name, match.group(3).replace("$", "").upper()
+
+
+def require_internal(cell, sheet, coordinate):
+    equal(internal_destination(cell), (sheet, coordinate), f"Internal link at {cell.parent.title}!{cell.coordinate}")
+
+
+def prepare_presentation(input_dir, matches, papers, unmatched):
+    """Derive presentation records independently from reviewed text and canonical data."""
+    notes = []
+    for name in ("review_rows_001_041.json", "review_rows_042_078.json"):
+        notes.extend(read_json(input_dir / "presentation" / name))
+    note_by = index_unique(notes, "row_id", "presentation row")
+    exact_set(note_by, {m["row_id"] for m in matches}, "Presentation row coverage")
+    paper_by = index_unique(papers, "paper_id", "presentation paper")
+    review = []
+    for match in matches:
+        note, paper = note_by[match["row_id"]], paper_by[match["paper_id"]]
+        for field, limit in (("dataset_label", 65), ("found", 180), ("attention", 190)):
+            value = note.get(field)
+            require(isinstance(value, str) and bool(value.strip()), f"Presentation {match['row_id']} lacks {field}")
+            require(len(value) <= limit, f"Presentation {match['row_id']} {field} exceeds {limit} characters")
+        require(match["match_status"] in DISPLAY_STATUSES, f"No display status for {match['match_status']}")
+        review.append(dict(row_id=match["row_id"], dataset=note["dataset_label"],
+                           match_result=DISPLAY_STATUSES[match["match_status"]], what_we_found=note["found"],
+                           needs_checking=note["attention"], paper=paper["verified_title"] + " (" + str(paper["verified_year"]) + ")",
+                           publisher_link=paper["publisher_url"]))
+    other_notes = read_json(input_dir / "presentation" / "other_data_notes.json")
+    other_by = index_unique(other_notes, "paper_id", "other-data presentation")
+    grouped = {}
+    for item in unmatched:
+        grouped.setdefault(item["paper_id"], []).append(item)
+    exact_set(other_by, grouped, "Other-data paper summary coverage")
+    other = []
+    for pid, records in sorted(grouped.items()):
+        note, paper = other_by[pid], paper_by[pid]
+        value = note.get("summary")
+        require(isinstance(value, str) and bool(value.strip()) and len(value) <= 240,
+                f"Other-data summary for {pid} must contain 1-240 characters")
+        other.append(dict(paper_id=pid, paper=paper["verified_title"] + " (" + str(paper["verified_year"]) + ")",
+                          publisher_link=paper["publisher_url"], additional_data=value,
+                          files=sum(r["asset_level"] == "standalone_file" for r in records),
+                          archive_entries=sum(r["asset_level"] != "standalone_file" for r in records)))
+    return review, other
+
+
+def other_data_reference(unmatched):
+    """Workbook-only ordering; canonical JSON/CSV records retain their order."""
+    return sorted(unmatched, key=lambda r: (r["paper_id"], r["local_path"], r.get("selector", "")))
+
+
+def validate_presentation_workbook(workbook, review, other, matches, links, unmatched):
+    for name in ("Study review", "Details", "Other available data", "Guide"):
+        require(name in workbook.sheetnames, f"Workbook lacks {name} presentation sheet")
+        equal(workbook[name].sheet_state, "visible", f"Workbook {name} visibility")
+    equal(workbook.active.title, "Study review", "Workbook opening sheet")
+    require("UnmatchedSheet" not in workbook.sheetnames and "ReviewGaps" not in workbook.sheetnames,
+            "Removed duplicate review sheets remain in workbook")
+    review_sheet = workbook["Study review"]
+    status_counts = Counter(r["match_result"] for r in review)
+    shown_counts = str(review_sheet["A3"].value or "")
+    for label in DISPLAY_STATUSES.values():
+        found = re.search(re.escape(label) + r":\s*(\d+)", shown_counts)
+        if status_counts[label]:
+            require(found is not None and int(found.group(1)) == status_counts[label],
+                    f"Study review headline count differs for {label}")
+        elif found:
+            equal(int(found.group(1)), 0, f"Study review headline count for {label}")
+    expected_header = ["No.", "Data described", "Match", "What we found", "What needs checking", "Paper", "Details"]
+    equal([review_sheet.cell(5, n).value for n in range(1, 8)], expected_header, "Study review headers")
+    actual_numbers = [review_sheet.cell(n, 1).value for n in range(6, review_sheet.max_row + 1)
+                      if review_sheet.cell(n, 1).value is not None]
+    equal(actual_numbers, [int(r["row_id"][4:]) for r in review], "Study review row coverage/order")
+    first_link = {}
+    for position, link in enumerate(links, 2):
+        first_link.setdefault(link["row_id"], position)
+    cards = workbook["Details"]
+    for position, (record, match) in enumerate(zip(review, matches), 6):
+        number = int(record["row_id"][4:])
+        wanted = [number, record["dataset"], record["match_result"], record["what_we_found"],
+                  record["needs_checking"], record["paper"], "Open"]
+        for col, value in enumerate(wanted, 1):
+            equal(review_sheet.cell(position, col).value, value, f"Study review!{review_sheet.cell(position, col).coordinate}")
+        publisher = review_sheet.cell(position, 6)
+        require(publisher.hyperlink is not None and publisher.hyperlink.target == record["publisher_link"],
+                f"Study review!{publisher.coordinate} publisher link differs")
+        start = 4 + (number - 1) * 11
+        require_internal(review_sheet.cell(position, 7), "Details", f"A{start}")
+        heading = str(cards.cell(start, 1).value or "")
+        heading_number = re.search(r"\d+", heading)
+        require(record["dataset"] in heading and heading_number is not None and int(heading_number.group()) == number,
+                f"Details!A{start} does not identify row {number} and its dataset label")
+        expected_card = {1: record["paper"], 2: record["match_result"], 3: match["description"],
+                         4: record["what_we_found"], 5: record["needs_checking"], 6: match["evidence"],
+                         7: match["limitations"]}
+        for offset, value in expected_card.items():
+            equal(cards.cell(start + offset, 2).value or "", value, f"Details!B{start+offset} for {record['row_id']}")
+        paper_cell = cards.cell(start + 1, 2)
+        require(paper_cell.hyperlink is not None and paper_cell.hyperlink.target == record["publisher_link"],
+                f"Details!B{start+1} publisher link differs")
+        if record["row_id"] in first_link:
+            require_internal(cards.cell(start + 8, 2), "File links", f"A{first_link[record['row_id']]}")
+        else:
+            require(cards.cell(start + 8, 2).hyperlink is None,
+                    f"Details!B{start+8} links to files although no file links exist for this row")
+        reference = cards.cell(start + 9, 2)
+        require(record["row_id"] in str(reference.value) and match["paper_id"] in str(reference.value),
+                f"Details!B{start+9} lacks canonical source row/paper IDs")
+        require_internal(reference, "Source sheet", f"A{number+1}")
+    other_sheet = workbook["Other available data"]
+    expected_totals = (f"{len(other)} papers | {sum(r['files'] for r in other)} files + "
+                       f"{sum(r['archive_entries'] for r in other)} archived members/layers.")
+    require(str(other_sheet["A3"].value or "").startswith(expected_totals),
+            "Other available data headline counts differ from file/member dispositions")
+    other_header = ["Paper", "Additional data", "Files", "Archive entries", "Details"]
+    equal([other_sheet.cell(5, n).value for n in range(1, 6)], other_header, "Other available data headers")
+    actual_papers = [other_sheet.cell(n, 1).value for n in range(6, other_sheet.max_row + 1)
+                     if other_sheet.cell(n, 1).value is not None]
+    equal(actual_papers, [r["paper"] for r in other], "Other available data row coverage/order")
+    first_other = {}
+    for position, record in enumerate(other_data_reference(unmatched), 2):
+        first_other.setdefault(record["paper_id"], position)
+    for position, record in enumerate(other, 6):
+        wanted = [record["paper"], record["additional_data"], record["files"], record["archive_entries"], "Open"]
+        for col, value in enumerate(wanted, 1):
+            equal(other_sheet.cell(position, col).value, value, f"Other available data!{other_sheet.cell(position, col).coordinate}")
+        cell = other_sheet.cell(position, 1)
+        require(cell.hyperlink is not None and cell.hyperlink.target == record["publisher_link"],
+                f"Other available data!{cell.coordinate} publisher link differs")
+        require_internal(other_sheet.cell(position, 5), "Other data files", f"A{first_other[record['paper_id']]}")
+
+
+def validate_workbook(path, tables, source_columns, review, other, matches, links, unmatched):
     try:
         workbook = load_workbook(path, read_only=False, data_only=False)
-    except (OSError, ValueError, KeyError) as exc:
+    except (OSError, ValueError, KeyError, BadZipFile, EOFError) as exc:
         raise ValueError(f"Cannot open workbook {path}: {exc}") from exc
     shortened = []
     try:
@@ -173,10 +326,18 @@ def validate_workbook(path, tables, source_columns):
             for values in worksheet:
                 for cell in values:
                     require(cell.data_type != "f", f"Unexpected Excel formula in {worksheet.title}!{cell.coordinate}")
+                    destination = internal_destination(cell)
+                    if destination:
+                        name, coordinate = destination
+                        require(name in workbook.sheetnames, f"Broken internal workbook link at {worksheet.title}!{cell.coordinate}: unknown sheet {name}")
+                        row, col = coordinate_to_tuple(coordinate)
+                        require(1 <= row <= workbook[name].max_row and 1 <= col <= workbook[name].max_column,
+                                f"Broken internal workbook link at {worksheet.title}!{cell.coordinate}: out-of-range {name}!{coordinate}")
+        validate_presentation_workbook(workbook, review, other, matches, links, unmatched)
         for name, records in tables.items():
             require(name in workbook.sheetnames, f"Workbook lacks {name} sheet")
             worksheet = workbook[name]
-            columns = (["row_id", "paper_id"] + source_columns if name == "SourceSheet"
+            columns = (["row_id", "paper_id"] + source_columns if name == "Source sheet"
                        else list(dict.fromkeys(k for r in records for k in r)))
             equal(worksheet.max_row, len(records) + 1, f"Workbook {name} row count")
             if columns:
@@ -399,10 +560,13 @@ def validate(input_dir=REPO / "data", output_dir=REPO / "outputs"):
     }
     for name, records in tables.items():
         compare_csv(output_dir / (name + ".csv"), records)
-    workbook_tables = {"Matches": matches, "UnmatchedSheet": unmatched_sheet, "UnmatchedLocal": unmatched,
-                       "ReviewGaps": review, "Papers": papers, "AssetLinks": links, "AllLocalFiles": files,
-                       "ArchiveAssets": archives, "SourceSheet": source_rows}
-    shortened = validate_workbook(output_dir / "study_data_matches.xlsx", workbook_tables, columns)
+    presentation_review, presentation_other = prepare_presentation(input_dir, matches, papers, unmatched)
+    compare_csv(output_dir / "review_summary.csv", presentation_review)
+    compare_csv(output_dir / "other_data_summary.csv", presentation_other)
+    workbook_tables = {"Match records": matches, "Other data files": other_data_reference(unmatched), "Paper references": papers,
+                       "File links": links, "File inventory": files, "Archive contents": archives, "Source sheet": source_rows}
+    shortened = validate_workbook(output_dir / "study_data_matches.xlsx", workbook_tables, columns,
+                                  presentation_review, presentation_other, matches, links, unmatched)
     qa = read_json(output_dir / "validation.json")
     for key in ("sheet_rows_unique", "papers_unique", "all_files_accounted", "all_zip_members_accounted",
                 "workbook_reopened", "all_asset_foreign_keys_resolve", "all_parent_file_foreign_keys_resolve",

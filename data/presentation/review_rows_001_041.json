@@ -1,0 +1,248 @@
+[
+  {
+    "row_id": "row-001",
+    "dataset_label": "Peruvian stingless bee specimens and collection sites",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the bee specimen and locality data using the download references saved from the source sheet."
+  },
+  {
+    "row_id": "row-002",
+    "dataset_label": "Forest carbon losses and gains across published studies",
+    "found": "Two workbooks contain 208 carbon-loss records and 214 carbon-gain records; a third lists the cited studies.",
+    "attention": "RefID 96 points to two different studies. Resolve that conflict before linking carbon values to citations, and confirm units missing from the headers."
+  },
+  {
+    "row_id": "row-003",
+    "dataset_label": "Amazon dieback and gross primary production",
+    "found": "26 global grids show gross primary production for 13 models in 1859-1899 and 2259-2299; nine map files mark candidate dieback points.",
+    "attention": "Only 234 of 292 mapped points meet the stated >80% decline. Resolve the threshold and table ID offsets before treating these as dieback areas."
+  },
+  {
+    "row_id": "row-004",
+    "dataset_label": "Low-level cloud cover change after Amazon forest loss",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the cloud-cover change data in the study package using the saved download references."
+  },
+  {
+    "row_id": "row-005",
+    "dataset_label": "Low-level cloud top height change after forest loss",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the cloud-top height change data in the study package using the saved download references."
+  },
+  {
+    "row_id": "row-006",
+    "dataset_label": "Top-of-atmosphere shortwave change after forest loss",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the shortwave radiation data in the study package using the saved download references."
+  },
+  {
+    "row_id": "row-007",
+    "dataset_label": "Top-of-atmosphere longwave change after forest loss",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the longwave radiation data in the study package using the saved download references."
+  },
+  {
+    "row_id": "row-008",
+    "dataset_label": "Amazon aircraft carbon dioxide and carbon monoxide profiles",
+    "found": "Five carbon dioxide files contain 8,294 samples from 2010-2018, with times, coordinates, altitude and quality flags.",
+    "attention": "No carbon monoxide was found. Check how samples form the stated 590 profiles, and resolve conflicting site labels, dates and coordinates."
+  },
+  {
+    "row_id": "row-009",
+    "dataset_label": "Amazon fish habitat suitability, current and future",
+    "found": "28 CSVs contain continuous habitat-suitability values for current conditions and two future climate scenarios, covering species and fish groups.",
+    "attention": "Presence/absence results and thresholds were not found. Confirm coordinates, baseline dates and the meaning of scenario years before mapping the tables."
+  },
+  {
+    "row_id": "row-010",
+    "dataset_label": "Amazon river connectivity across barrier scenarios",
+    "found": "River networks, fish-suitability tables and calculation code were found; the final suitability-weighted connectivity map was not.",
+    "attention": "Obtain the final RCIsuit table or map. Check whether rows 010 and 011 describe separate scenario results or the same product."
+  },
+  {
+    "row_id": "row-011",
+    "dataset_label": "Amazon river connectivity weighted by fish suitability",
+    "found": "The calculation script describes a final habitat-connectivity table and map, but neither output was found in the files or archives.",
+    "attention": "Obtain the final RCIsuit output and clarify its baseline and future scenarios; this description overlaps with row 010."
+  },
+  {
+    "row_id": "row-012",
+    "dataset_label": "Ranked impacts of Amazon river barriers",
+    "found": "Locations and other records for 562 barriers were found, along with code to calculate their impacts; no ranking table was found.",
+    "attention": "Obtain the generated barrier-impact ranking. The supplied barrier locations do not contain the requested dCCI scores or mean ranks."
+  },
+  {
+    "row_id": "row-013",
+    "dataset_label": "Amazon fish landings: diversity, traits and value",
+    "found": "Supplement Table 2 in rspb20220726_si_002.xlsx has 121 region-year records with the requested diversity, trait and economic measures.",
+    "attention": "The table names six regions but has no geometry. Match those regions to verified boundaries; raw annual species-landings files were not supplied."
+  },
+  {
+    "row_id": "row-014",
+    "dataset_label": "Cacao region land-cover maps for 2020 and 2025",
+    "found": "Earth Engine scripts and training polygons were found; the final 2020 and 2025 land-cover maps were not.",
+    "attention": "Obtain the final maps. Resolve placeholder Earth Engine paths and why the 2020 model uses a shortwave-infrared predictor from 2023-2025."
+  },
+  {
+    "row_id": "row-015",
+    "dataset_label": "Fine-scale cacao and agroforestry land-cover map",
+    "found": "An eCognition workflow workbook and training data were found; neither the PlanetScope imagery nor the final classified map was found.",
+    "attention": "Obtain the final fine-scale land-cover map. The workflow workbook, field measurements and spectral summaries cannot substitute for it."
+  },
+  {
+    "row_id": "row-016",
+    "dataset_label": "Cacao field plots: trees and canopy cover",
+    "found": "FieldPlot_data.xlsx contains 363 tree records and 24 plot-cover records dated August-September 2025; tree_stats.csv contains selected field measures.",
+    "attention": "Resolve 24 local plot IDs versus 23 described plots, and obtain a verified coordinate join. Heights for plot 6 are estimated."
+  },
+  {
+    "row_id": "row-017",
+    "dataset_label": "Modeled in-shade heat stress under forest-loss scenarios",
+    "found": "Six NetCDFs map average daily maximum in-shade WBGT for the warmest months, across historical/future and forested/deforested scenarios.",
+    "attention": "All six files carry a nominal 1987 date, including future scenarios, and the temperature variable has no units. Confirm actual periods and units."
+  },
+  {
+    "row_id": "row-018",
+    "dataset_label": "Brazilian population exposed to extreme heat stress",
+    "found": "number_population_figure3.csv contains exposed-population and high-vulnerability totals; code identifies the population unit as millions.",
+    "attention": "Municipal tables are calculation inputs, not a final population-change map. Check decimal separators, duplicate copies and reuse rights."
+  },
+  {
+    "row_id": "row-019",
+    "dataset_label": "Forest vulnerability index: above-ground biomass",
+    "found": "tfvi_agb GeoTIFFs provide above-ground biomass vulnerability maps at 0.1 and 0.25 degrees; supplementary copies and figures are also present.",
+    "attention": "Confirm the years covered, meaning of index values and reuse license; select one copy where main and supplementary maps duplicate each other."
+  },
+  {
+    "row_id": "row-020",
+    "dataset_label": "Forest vulnerability index: gross primary production",
+    "found": "tfvi_gpp GeoTIFFs provide gross primary production vulnerability maps at 0.1 and 0.25 degrees; supplementary copies and figures are also present.",
+    "attention": "Confirm the years covered, meaning of index values and reuse license; select one copy where main and supplementary maps duplicate each other."
+  },
+  {
+    "row_id": "row-021",
+    "dataset_label": "Forest vulnerability index: evapotranspiration",
+    "found": "tfvi_aet GeoTIFFs provide evapotranspiration vulnerability maps at 0.1 and 0.25 degrees; AET in the filenames corresponds to ET in the sheet.",
+    "attention": "Confirm the years covered, meaning of index values and reuse license; select one copy where main and supplementary maps duplicate each other."
+  },
+  {
+    "row_id": "row-022",
+    "dataset_label": "Forest vulnerability index: land-surface temperature",
+    "found": "tfvi_lst GeoTIFFs provide land-surface temperature vulnerability maps at 0.1 and 0.25 degrees; supplementary copies and figures are also present.",
+    "attention": "Confirm the years covered, meaning of index values and reuse license; select one copy where main and supplementary maps duplicate each other."
+  },
+  {
+    "row_id": "row-023",
+    "dataset_label": "Historical maximum fish catch by Amazon sub-basin",
+    "found": "SNAPP_Fish_Data.gdb has a catch layer with 198 features, 20 taxon catch fields and total catch.",
+    "attention": "Check the historical-maximum calculation and units. test.rar duplicates the DATAnull archive; count the catch data once."
+  },
+  {
+    "row_id": "row-024",
+    "dataset_label": "Climate-change velocity and forest exposure",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the Global forests risk study package and its climate-change velocity data using the saved download references."
+  },
+  {
+    "row_id": "row-025",
+    "dataset_label": "Global forest risk from climate and land-use change",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the Global forests risk study package and its contemporary and future risk maps using the saved download references."
+  },
+  {
+    "row_id": "row-026",
+    "dataset_label": "Projected forest integrity in 2050",
+    "found": "No files for this study were found in the indexed folders.",
+    "attention": "Locate the Global forests risk study package and its projected forest-integrity data using the saved download references."
+  },
+  {
+    "row_id": "row-027",
+    "dataset_label": "Projected atmospheric drying at the Manaus K34 site",
+    "found": "Four scenario CSVs contain sub-daily vapor pressure deficit and weather variables; the accompanying headers state a 2015-2100 period.",
+    "attention": "Extreme-day counts and the threshold were not found. Check units and quality: samples include relative humidity above 100% and negative vapor pressure deficit."
+  },
+  {
+    "row_id": "row-028",
+    "dataset_label": "Daily precipitation-evapotranspiration drought index (SPEI)",
+    "found": "Daily weather and a precipitation-only drought index (SPI) were found in the Embrapa/Ducke archive.",
+    "attention": "No SPEI or potential-evapotranspiration data were found. The local precipitation-only SPI cannot replace the requested index."
+  },
+  {
+    "row_id": "row-029",
+    "dataset_label": "Manaus forest growth, mortality, wood density and biomass",
+    "found": "BIONTE_mortality-rates_1991-2019.csv contains 29 annual mortality records for logging treatments and blocks.",
+    "attention": "Growth, wood-density and biomass observations were not found. Obtain those records or describe the available data as mortality only."
+  },
+  {
+    "row_id": "row-030",
+    "dataset_label": "Manaus drought measurements: sap flow and plant water status",
+    "found": "The Gimenez archive contains 41 leaf-temperature CSVs and 35 sap-velocity CSVs; inspected samples and metadata indicate 2015-2017 observations.",
+    "attention": "No 2023 records, soil moisture or stem/soil water-potential measurements were found. The available series cover only part of the requested data."
+  },
+  {
+    "row_id": "row-031",
+    "dataset_label": "Connected wetland-area polygons in the Amazon",
+    "found": "wetlands_GOC_lat20k_0_voronoi.tif and code to convert the grid to polygons were found; the final polygons were not.",
+    "attention": "Obtain the final wetland polygons or document a new conversion from the supplied grid. The conversion code has not been run."
+  },
+  {
+    "row_id": "row-032",
+    "dataset_label": "Connected river-area polygons in the Amazon",
+    "found": "rivers_GOC_lattice_35_voronoi.tif and code to convert the grid to polygons were found; the final polygons were not.",
+    "attention": "Obtain the final river polygons or document a new conversion from the supplied grid. The conversion code has not been run."
+  },
+  {
+    "row_id": "row-033",
+    "dataset_label": "Amazon land resistance from human pressures and barriers",
+    "found": "resLand_EPSG5641.tif is present in the resistance-analysis archive, and the study script identifies how it is generated.",
+    "attention": "Check the impact weights and resistance calculations before reuse; their scientific accuracy was not independently tested."
+  },
+  {
+    "row_id": "row-034",
+    "dataset_label": "Terrestrial connectivity polygons and density map",
+    "found": "land_GOC_lattice_225_voronoi.tif and polygon-conversion code were found; the final polygons were not.",
+    "attention": "Obtain the polygons and confirm the centroid-based density map and stated 56 km spacing. The supplied code has not been run."
+  },
+  {
+    "row_id": "row-035",
+    "dataset_label": "Species richness at Amazon land-use study sites",
+    "found": "data_all_joined.csv contains richness for seven groups at 310 sites; data_rich_forest_sp.csv supplies forest-species richness.",
+    "attention": "Coordinates are UTM, not latitude/longitude. Confirm the coordinate system and site joins; survey years 2010-2011 are stated only in the sheet."
+  },
+  {
+    "row_id": "row-036",
+    "dataset_label": "Carbon stocks by pool at Amazon land-use study sites",
+    "found": "Carbon_all_PGM.txt, Carbon_all_STM.txt and data_all_joined.csv contain above-ground, dead-wood, litter and soil carbon stocks by transect.",
+    "attention": "Confirm units, survey dates and the UTM coordinate system before mapping. The coordinate columns are not longitude and latitude."
+  },
+  {
+    "row_id": "row-037",
+    "dataset_label": "Soil carbon, chemistry and bulk density by sampling depth",
+    "found": "Soil_PGM.csv and Soil_STM.csv contain site-level soil chemistry; joined tables add soil-carbon measures.",
+    "attention": "Raw depth-specific samples and core bulk densities were not found. The tables contain site summaries; their UTM coordinate system also needs confirmation."
+  },
+  {
+    "row_id": "row-038",
+    "dataset_label": "Amazon tree density map",
+    "found": "TreeDensity.asc stores the tree-density grid; the study script identifies values as trees per hectare.",
+    "attention": "The grid lacks a coordinate-system definition and confirmed observation dates. Check both before mapping or combining it with other layers."
+  },
+  {
+    "row_id": "row-039",
+    "dataset_label": "Amazon tree diversity map (Fisher's alpha)",
+    "found": "TreeDiversity.asc stores the tree-diversity grid; the study script identifies the measure as Fisher's alpha.",
+    "attention": "The grid lacks a coordinate-system definition and confirmed observation dates. Check both before mapping or combining it with other layers."
+  },
+  {
+    "row_id": "row-040",
+    "dataset_label": "Amazon tree species-richness map",
+    "found": "TreeRichness_ha.asc stores the tree species-richness grid; the study script identifies richness per hectare.",
+    "attention": "The grid lacks a coordinate-system definition and confirmed observation dates. Check both before mapping or combining it with other layers."
+  },
+  {
+    "row_id": "row-041",
+    "dataset_label": "Amazon Tree Diversity Network plot records",
+    "found": "PlotData.csv contains 2,046 plots with coordinates, density, diversity, richness and references; PlotsAbiotic.csv adds environmental measures.",
+    "attention": "year_est is the year a plot was established, not a confirmed measurement date. Check the coordinate system and reference links."
+  }
+]

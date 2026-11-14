@@ -1,0 +1,224 @@
+[
+  {
+    "row_id": "row-042",
+    "dataset_label": "Brazil landscape heterogeneity (90 m)",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed repository for the landscape heterogeneity layer and its version."
+  },
+  {
+    "row_id": "row-043",
+    "dataset_label": "Local habitat connectedness in Brazil",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed repository for the local connectedness layer and its version."
+  },
+  {
+    "row_id": "row-044",
+    "dataset_label": "Landscape resilience classes in Brazil",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed repository for the landscape resilience layer and its version."
+  },
+  {
+    "row_id": "row-045",
+    "dataset_label": "Tree census across 215 forest plots",
+    "found": "Classification tables cover all 215 plots; the individual tree census was not found.",
+    "attention": "The 25,313 large and 30,070 small tree records are missing. Possible location links cover 206 plots, but plot identity and the coordinate system need confirmation."
+  },
+  {
+    "row_id": "row-046",
+    "dataset_label": "Tree bark, leaf and chemical traits",
+    "found": "Analysis scripts and diversity summaries are present; no table of the 20 named traits was found.",
+    "attention": "Bark, leaf and chemical measurements are still needed. Diversity summaries cannot replace the individual or species trait records."
+  },
+  {
+    "row_id": "row-047",
+    "dataset_label": "Understorey bird captures across Amazon forests",
+    "found": "Filtered tables cover 211 terra-firme forest plots and a 190-species capture matrix, with plot coordinates.",
+    "attention": "The full 716-plot, 646-species compilation is missing. Use signed coordinates from Table S1; the analysis table uses absolute latitude."
+  },
+  {
+    "row_id": "row-048",
+    "dataset_label": "Tree flower visitors and pollination networks",
+    "found": "Tables have rows for 5,201 species and 804 genera, with 15 pollinator groups and source visitation records.",
+    "attention": "Counts do not reproduce the stated 14,076 genus and 9,619 species interactions; 804 genera are present versus 808 described. Check versions and filtering."
+  },
+  {
+    "row_id": "row-049",
+    "dataset_label": "Tree seed dispersal, seed mass and fruit fleshiness",
+    "found": "A 5,201-species table includes dispersal modes, seed mass and fruit fleshiness.",
+    "attention": "Two columns named Unassisted come from different sources; keep them distinct. This species table contains no occurrence locations."
+  },
+  {
+    "row_id": "row-050",
+    "dataset_label": "Habitat connectivity around Colombian protected areas",
+    "found": "Protected-area tables contain habitat connectivity metrics and changes, with habitat maps for 2009, 2016 and 2023.",
+    "attention": "Confirm all six dispersal distances and the 10/20 km buffers. The saved R object has not been inspected, and the C5KM shapefile lacks its .shx index."
+  },
+  {
+    "row_id": "row-051",
+    "dataset_label": "Monthly vegetation resilience indicators, 1991–2016",
+    "found": "Monthly maps contain vegetation optical depth, lag-1 autocorrelation and variance for 1991–2016.",
+    "attention": "Kendall-tau change maps and an Amazon-wide mean series were not found. Check decimal-year dates and 60-month window endpoints."
+  },
+  {
+    "row_id": "row-052",
+    "dataset_label": "ATTO atmospheric CO₂ and monthly delta-CO₂",
+    "found": "119 monthly delta-CO₂ records cover 2014–2023, with dates and station coordinates.",
+    "attention": "Continuous CO₂ concentrations were not found; May 2021 is missing from the monthly series."
+  },
+  {
+    "row_id": "row-053",
+    "dataset_label": "ATTO monthly carbon fluxes",
+    "found": "Monthly net carbon exchange, gross primary production and respiration totals include the requested 2023 data.",
+    "attention": "The match covers monthly totals, not verified half-hourly data or processing. The wider 2014-2023 series lacks May 2021."
+  },
+  {
+    "row_id": "row-054",
+    "dataset_label": "River connectivity under dam expansion",
+    "found": "Connectivity fields appear in Amazon inputs with 509 dam entries and Napo inputs with 24; two Napo tables list dam-combination results.",
+    "attention": "Results cover Napo only. Dam locations, units, normalization and equivalence to the described connectivity index remain unverified."
+  },
+  {
+    "row_id": "row-055",
+    "dataset_label": "Sediment transport and trapping at dams",
+    "found": "Sediment fields appear in Amazon inputs with 509 dam entries and Napo inputs with 24; two Napo tables list dam-combination results.",
+    "attention": "Results cover Napo only. Dam locations and the meanings, units and normalization of sediment values still need checking."
+  },
+  {
+    "row_id": "row-056",
+    "dataset_label": "Fish diversity near existing and proposed dams",
+    "found": "Biodiversity fields appear in Amazon inputs with 509 dam entries and Napo inputs with 24; two Napo tables list dam-combination results.",
+    "attention": "Results cover Napo only. Dam locations and equivalence to the described fish weighted-endemism measure remain unverified."
+  },
+  {
+    "row_id": "row-057",
+    "dataset_label": "Reservoir greenhouse gas emissions",
+    "found": "Greenhouse-gas fields appear in Amazon inputs with 509 dam entries and Napo inputs with 24; two Napo tables list dam-combination results.",
+    "attention": "Results cover Napo only. Confirm dam locations, units and which fields represent total emissions versus emissions per unit of electricity."
+  },
+  {
+    "row_id": "row-058",
+    "dataset_label": "River flow withheld by upstream dams",
+    "found": "Flow-regulation fields appear in Amazon inputs with 509 dam entries and Napo inputs with 24; two Napo tables list dam-combination results.",
+    "attention": "Results cover Napo only. Confirm dam locations and whether the values use the stated percentage of annual flow withheld upstream."
+  },
+  {
+    "row_id": "row-059",
+    "dataset_label": "Brazil nut collection value map",
+    "found": "No matching local files were found.",
+    "attention": "Check the source listed in the original sheet for downloadable maps, coverage and usage terms."
+  },
+  {
+    "row_id": "row-060",
+    "dataset_label": "Combined ecosystem-service value map",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed source for the combined value map and its 30-year, 5% discount assumptions."
+  },
+  {
+    "row_id": "row-061",
+    "dataset_label": "Value of avoided CO₂ emissions from deforestation",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed source for the scenario maps and how the 50 simulation runs were summarized."
+  },
+  {
+    "row_id": "row-062",
+    "dataset_label": "Livestock production value supported by standing forest",
+    "found": "No matching local files were found.",
+    "attention": "Check the source listed in the original sheet for downloadable maps, coverage and usage terms."
+  },
+  {
+    "row_id": "row-063",
+    "dataset_label": "Areas of biological importance in the Brazilian Amazon",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed source for biodiversity classes and their definitions; this layer has no monetary valuation."
+  },
+  {
+    "row_id": "row-064",
+    "dataset_label": "Rubber production value map",
+    "found": "No matching local files were found.",
+    "attention": "Check the source listed in the original sheet for downloadable maps, coverage and usage terms."
+  },
+  {
+    "row_id": "row-065",
+    "dataset_label": "Value of timber from reduced-impact logging",
+    "found": "No matching local files were found.",
+    "attention": "Check the source listed in the original sheet for downloadable maps, coverage and usage terms."
+  },
+  {
+    "row_id": "row-066",
+    "dataset_label": "Timber losses from forest fires, 2002–2041",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed source for the fire-loss maps and how the fire and timber models were combined."
+  },
+  {
+    "row_id": "row-067",
+    "dataset_label": "Chaglla Dam average generation and firm power",
+    "found": "16 scenario tables report average and firm power plus spills; each has 42 rows covering historical and future climate combinations.",
+    "attention": "Select the KNN subset to match the sheet. Confirm land-management codes and time periods; daily power time series were not found."
+  },
+  {
+    "row_id": "row-068",
+    "dataset_label": "Sediment retention under land-management scenarios",
+    "found": "Sediment-model scripts, four land-cover maps, soil erodibility and the InVEST parameter table are present.",
+    "attention": "Final retention/export results were not found. Scripts refer to an external drive; the bundled SWAT sediment output is a different product."
+  },
+  {
+    "row_id": "row-069",
+    "dataset_label": "Downscaled daily precipitation and temperature",
+    "found": "41 source climate files and downscaling scripts are present; the climate-results folder contains no data files.",
+    "attention": "The 18 future climatologies and four backcasts were not found. Check differing model names, the PISCO time axis and a 20-year GFDL temperature gap."
+  },
+  {
+    "row_id": "row-070",
+    "dataset_label": "Potato yield and total production by scenario",
+    "found": "Annual crop summaries cover 2000–2014 and 2019–2099 in 96 CSVs and 32 workbooks.",
+    "attention": "1985–1999 and 2100 are missing. Check crop weighting and units; CSV/workbook versions overlap and include both downscaling methods."
+  },
+  {
+    "row_id": "row-071",
+    "dataset_label": "Daily crop yield for 1,371 hydrologic response units",
+    "found": "Annual summaries overlap row 70. The model folder has 27 response-unit configurations for a one-year 1981 run.",
+    "attention": "Daily results and maps for all 1,371 units were not found. Annual summaries cannot recover them; avoid counting rows 70 and 71 twice."
+  },
+  {
+    "row_id": "row-072",
+    "dataset_label": "Plot temperature and soil moisture along elevation",
+    "found": "Time-stamped air, surface and soil temperatures and moisture are present, with summaries for 25 plots.",
+    "attention": "The 1.5 m iButton series was not found. Full date coverage and the stated 15-minute recording interval still need checking."
+  },
+  {
+    "row_id": "row-073",
+    "dataset_label": "Dung beetle catches, barcodes and plot diversity",
+    "found": "513 specimen rows span 26 plots; counts sum to 6,001 with 103 barcode groups. Plot summaries cover 25 plots.",
+    "attention": "The sheet says 4,937 beetles and 104 barcode groups. Check filtering/version differences; biomass by bait type was not identified."
+  },
+  {
+    "row_id": "row-074",
+    "dataset_label": "Camera-trap mammal activity and biomass",
+    "found": "A mammal-biomass estimate is recorded for 25 plots and used in the beetle analysis.",
+    "attention": "Camera observations, species counts, timestamps and effort were not found; the sheet describes 26 plots and 52,416 camera-hours."
+  },
+  {
+    "row_id": "row-075",
+    "dataset_label": "Upper heat tolerance of dung beetles",
+    "found": "Assays contain 64 upper and 49 lower thermal limits, with locations, plots and seasons; plot-level predictions are also present.",
+    "attention": "The sheet specifies 125 upper-limit beetles and 31 barcode groups. Only 64 upper-limit values are present, with no barcode-group field; check specimen links and filtering."
+  },
+  {
+    "row_id": "row-076",
+    "dataset_label": "Amazon forest degradation and carbon scenarios, 2019–2050",
+    "found": "Ten 900 m map files have BAU/GOV filenames for carbon, fire, logging, water deficit and forest edges.",
+    "attention": "Confirm band meanings, units and 2019–2050 timing; some required inputs are missing. The paper was published in 2023; the sheet says 2022."
+  },
+  {
+    "row_id": "row-077",
+    "dataset_label": "Weather disasters and losses across five Amazon countries",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed sources for the 2013–2023 reports, country harmonization and loss fields."
+  },
+  {
+    "row_id": "row-078",
+    "dataset_label": "River dolphin density in Ecuador, 2006–2024",
+    "found": "No matching local files were found.",
+    "attention": "Check the listed sources for river/year estimates, survey effort and uncertainty measures."
+  }
+]

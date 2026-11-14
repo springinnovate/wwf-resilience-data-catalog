@@ -8,7 +8,7 @@ The review covers 78 descriptions for 30 papers and all 1,882 substantive local 
 
 ## 1. Seven study packages were not found locally
 
-These seven papers account for all 21 **No local match** descriptions. Their article links were identified, but no corresponding local study package was found. This does not establish that the data are unavailable online. The original download references are preserved in `SourceSheet` for subsequent retrieval and checking.
+These seven papers account for all 21 **No local match** descriptions. Their article links were identified, but no corresponding local study package was found. This does not establish that the data are unavailable online. The original download references are preserved in **Source sheet** for subsequent retrieval and checking.
 
 | Paper | Description rows | Package to locate |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ Do not create one catalog dataset per file or per description automatically:
 
 ## 6. Practical publication sequence
 
-1. Choose the first products to publish and resolve their exact identity and scope using `Matches`, `ReviewGaps` and `AssetLinks`. Keep absent outputs and alternative products clearly labelled.
+1. Choose the first products to publish and resolve their exact identity and scope using **Study review**, **Details** and **File links**. Keep absent outputs and alternative products clearly labelled.
 2. Obtain missing packages or outputs where needed; inspect their contents and update the reconciliation. Record any new derivation as a separate provenance step.
 3. Complete each selected product's geometry/CRS, temporal coverage, units, variables, scenario/version, rights and attribution. Preserve unresolved fields instead of guessing.
 4. Select canonical assets and stable hosting, then verify access and checksums. Retain the inventory crosswalk and original source locators.

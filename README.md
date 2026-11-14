@@ -22,6 +22,14 @@ We also found **670 additional or unresolved scientific entries associated with 
 
 These are two different kinds of follow-up: locate requested data that are missing, and decide which additional data deserve their own descriptions in the catalog.
 
+## Article full text
+
+We also searched for full-text copies of the **30 papers**. **24 PDFs were downloaded**, **5 downloads were blocked**, and **no open copy was found for 1 paper**. The [article download workbook](reports/article_downloads.xlsx) and [CSV table](reports/article_downloads.csv) list each paper, its source, the copy obtained and any remaining access problem.
+
+The PDFs are stored locally in `C:\Users\richp\Downloads\wwf-resilience-articles`, outside Git. Paper 013, on Amazon hot droughts, came from the U.S. Department of Energy repository as an author manuscript with an earlier title and editing notes; the final publisher PDF was not obtained. Version differences are recorded in the table.
+
+For the six outstanding papers, the [article-search findings](docs/article-downloads.md) give specific links to try. Manual access has not been verified. A listed full-text link is not a successful download, and an article PDF does not establish that its underlying dataset is present.
+
 ## How to use the workbook
 
 Download the workbook and open it in Excel or another spreadsheet application. Start with these tabs:

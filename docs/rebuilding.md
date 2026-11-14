@@ -30,6 +30,32 @@ Scripts resolve their default locations relative to the checkout, so they can al
 
 Validation checks source-sheet hashes and exact text, record uniqueness, decision coverage, paper and asset references, archive coverage, unmatched-data sets, CSV/JSON/workbook agreement and literal treatment of spreadsheet text. It verifies the recorded reconciliation; it does not independently validate scientific calculations or recheck live publisher pages. The [CI workflow](../.github/workflows/rebuild.yml) runs the checksum, rebuild, validation, comparison and test commands on both operating systems.
 
+## Rebuild the article download table
+
+The article-search report is separate from the study-data review. [`scripts/build_article_report.py`](../scripts/build_article_report.py) reads [`data/articles/article_search.json`](../data/articles/article_search.json) and the paper registry to write **two files**: [`reports/article_downloads.xlsx`](../reports/article_downloads.xlsx) and [`reports/article_downloads.csv`](../reports/article_downloads.csv). The main study-data build still produces 15 files in `outputs/`.
+
+From the repository root:
+
+```sh
+python scripts/check_inputs.py
+python scripts/build_article_report.py
+```
+
+This reproduces the **recorded search results**. It does not search publishers, retry blocked links, download articles or confirm that a manual download will work. A normal report rebuild does not need the local PDFs. On the machine holding the files in the recorded local directory, optionally check each PDF's file signature, size and SHA256 hash with:
+
+```sh
+python scripts/build_article_report.py --verify-local
+```
+
+To compare an article-report rebuild with the committed report:
+
+```sh
+python scripts/build_article_report.py --output-dir build/article-report
+python scripts/compare_outputs.py build/article-report --expected reports
+```
+
+To record a later successful download, first confirm that the file is the intended full article or clearly labelled manuscript, rather than a supplement or access-error page. Update that paper's search record with the source, filename, version, validation metadata and any remaining caveat. Keep the PDF outside the repository. Review the changed record, refresh the input checksums with `python scripts/check_inputs.py --write`, then rebuild the article report and verify the local files. A report rebuild alone must not change an access result from blocked to downloaded.
+
 ## Inputs and their roles
 
 | Location | Contents |
@@ -38,8 +64,9 @@ Validation checks source-sheet hashes and exact text, record uniqueness, decisio
 | [`data/decisions/`](../data/decisions/) | Reviewed row/file/member decisions and the verified paper registry. These preserve the matching judgments and their limitations. |
 | [`data/evidence/`](../data/evidence/) | Fish layer schemas, nested-archive names/headers and the recorded local-folder parity check. Scientific sample values are excluded. |
 | [`data/presentation/`](../data/presentation/) | Short labels and summaries for readers. These explain the decisions without replacing the original descriptions or detailed evidence. |
+| [`data/articles/article_search.json`](../data/articles/article_search.json) | Recorded article searches, access results, version notes and metadata for the local PDFs. The PDFs themselves are outside Git. |
 | [`data/snapshot.json`](../data/snapshot.json) | Snapshot date, source hash, expected counts and explicit assessed/unmatched row IDs. |
-| [`data/checksums.sha256`](../data/checksums.sha256) | Checksums for the 17 input files: the 14 original snapshot files and three presentation files. The checksum file does not include itself. |
+| [`data/checksums.sha256`](../data/checksums.sha256) | Checksums for the 18 input files: the 14 original snapshot files, three presentation files and the article-search record. The checksum file does not include itself. |
 | [`scripts/`](../scripts/) | Rebuild, validation and optional local inspection tools. |
 
 The source was a **tab-delimited paste from Excel**, including five quoted multiline records, not an original `.xlsx` file. Parsing uses Python's strict CSV reader with a tab delimiter. The original bytes are retained; their SHA256 is `60d713a723995d2566ee1f32823868089e1aafa04fa4ec7c8973bfa976201632`. Machine-specific absolute paths were removed from metadata; relative study paths and all 33 source columns are preserved. Publisher identities were checked using publisher/article or author-institution records; supporting URLs and year distinctions remain in the paper registry.

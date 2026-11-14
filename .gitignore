@@ -4,6 +4,8 @@ __pycache__/
 .pytest_cache/
 build/
 local-data/
+wwf-resilience-articles/
+paper-*.pdf
 inspection/
 ~$*.xlsx
 .DS_Store

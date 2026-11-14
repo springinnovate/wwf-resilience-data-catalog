@@ -1,0 +1,495 @@
+schema: eolab/item/v1
+id: wwf-amazon-barrier-locations
+kind: vector
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: 'Amazon river barriers: supplied current and future locations'
+  description: '562 supplied barrier locations used as inputs to the Amazon fish-connectivity study: 359
+    dams and 203 waterfalls. The file includes 293 current and 269 future scenario records. It contains
+    locations and source attributes, not the computed connectivity indices or barrier-impact rankings.'
+  license: CC-BY-4.0
+  attribution: Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly
+  doi: 10.5281/zenodo.18000863
+  citation: Yofukuji, K., Fabrin, T., Mioto Stabile, B. H., and Bailly, D. (2025). River Connectivity
+    Analysis Pipeline (v1). Zenodo. https://doi.org/10.5281/zenodo.18000863
+  categories:
+  - Nature
+  - Drivers & Pressures
+  statuses:
+  - Supporting input
+  study_ids:
+  - paper-006
+  study_time: Current and future barrier scenarios; feature-level observation and commissioning dates
+    are not established. The deposited package is version v1, published 20 December 2025; this release
+    date is not an observation date.
+  publications:
+  - id: paper-006
+    title: Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of
+      Climate Change
+    doi: 10.1111/gcb.70685
+    citation: Yofukuji et al. (2026). Anthropogenic Barriers Limit Fish Access to Essential Habitats in
+      the Amazon in the Face of Climate Change. Global Change Biology 32:e70685. https://doi.org/10.1111/gcb.70685
+    url: https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685
+    authors: []
+    year: 2026
+    notes: []
+    annotations: {}
+  annotations:
+    row_ids:
+    - row-009
+    - row-010
+    - row-011
+    - row-012
+    product_role: supporting_input
+    preparation_status: Prepared and checked for the EOLab pilot; scientific limitations remain.
+    limitations:
+    - These are supporting input locations, not the missing RCIsuit connectivity or dCCI/impact-ranking
+      outputs.
+    - Current and future are source scenario labels. Feature observation dates and commissioning dates
+      are not established.
+    - Several auxiliary field definitions and the relationships among the three dam-status columns remain
+      unresolved.
+    - One Country value is null. Source spelling, capitalization, status labels and nulls are retained.
+    - The authors report checking barriers against imagery and planning documents; that verification was
+      not repeated in this pilot.
+    source_sheet_annotations:
+    - row_id: row-009
+      study_objective: The goal of our study was to evaluate the interplay of climate change and barrier-driven
+        river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the
+        accessibility of suitable areas in the years to come.
+      study_location: the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador,
+        Guyana, and Peru
+      dataset_description: 'Climatic-environmental suitability and presence-absence potential distribution
+        of 52 frugivorous fish species of socioeconomic value, projected on the hydrographic network of
+        the Amazon River basin for both the present and the future under two climatic scenarios (moderate:
+        SSP2-4.5 and pessimistic: SSP5-8.5).'
+      asset_or_risk: ASSET
+      typology_category: Nature
+      typology_dimension: Biodiversity
+      relationship_description: The distribution of the species was modeled as a function of bioclimatic
+        and hydrological variables (Table S4) covering the Amazon hydrographic network.
+      threshold_description: ''
+      time: 1970-2000; 2030-2100
+      Notes: 'SR: Yes, spatial asset file for presence/absence of fish of socioeconomic value (current
+        and projectec)'
+      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': '1'
+    - row_id: row-010
+      study_objective: The goal of our study was to evaluate the interplay of climate change and barrier-driven
+        river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the
+        accessibility of suitable areas in the years to come.
+      study_location: the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador,
+        Guyana, and Peru
+      dataset_description: Reach Connectivity Index weighted by suitability (RCIsuit) for every river
+        reach of the Amazon basin, integrating the accessibility of habitats and their climatic-environmental
+        suitability, under the baseline, current barrier and future barrier setups for migratory, sedentary
+        and combined fish groups.
+      asset_or_risk: ASSET
+      typology_category: Nature
+      typology_dimension: Ecosystem structure
+      relationship_description: The distribution of the species was modeled as a function of bioclimatic
+        and hydrological variables (Table S4) covering the Amazon hydrographic network.
+      threshold_description: ''
+      time: 2024; 2090
+      Notes: 'SR: Yes, spatial asset file with local data'
+      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': '1'
+    - row_id: row-011
+      study_objective: The goal of our study was to evaluate the interplay of climate change and barrier-driven
+        river fragmentation on frugivorous fisheries resources across the Amazon basin focused on the
+        accessibility of suitable areas in the years to come.
+      study_location: the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador,
+        Guyana, and Peru
+      dataset_description: Integrated index (RCIsuit) obtained by multiplying the RCI values by the mean
+        suitability predicted for each fish group, reflecting both the accessibility of habitats (RCI)
+        and their climatic-environmental suitability, for combined, migratory and sedentary fish groups
+      asset_or_risk: ASSET
+      typology_category: Nature
+      typology_dimension: Ecosystem structure
+      relationship_description: The distribution of the species was modeled as a function of bioclimatic
+        and hydrological variables (Table S4) covering the Amazon hydrographic network.
+      threshold_description: ''
+      time: 2024; 2030, 2050, 2070, and 2090
+      Notes: 'SR: Yes, spatial asset file with local data'
+      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': '1'
+    - row_id: row-012
+      study_objective: We applied a novel framework that combined predictions of species distribution
+        models with a river connectivity index to identify accessible and climatic-environmental suitable
+        habitats for frugivorous and socioeconomically important fish in the Amazon basin. We also ranked
+        dams based on their potential for river fragmentation and blocking access to climate refuge for
+        fish species.
+      study_location: the entire Amazon basin, including regions from Bolivia, Brazil, Colombia, Ecuador,
+        Guyana, and Peru
+      dataset_description: Mean ranking of reservoir impact for individual current and future barriers,
+        considering their potential for hydrological fragmentation and blocking access to climate refuge
+        areas for fish, obtained from the leave-one-out barrier prioritization simulation (dCCI) across
+        climate scenarios and fish groups.
+      asset_or_risk: RISK
+      typology_category: Drivers & Pressures
+      typology_dimension: Land/water/sea use/cover change
+      relationship_description: The distribution of the species was modeled as a function of bioclimatic
+        and hydrological variables (Table S4) covering the Amazon hydrographic network.
+      threshold_description: ''
+      time: 2024; 2090
+      Notes: 'SR: Yes, spatial asset file with local data'
+      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': '1'
+    metadata_evidence:
+    - source: https://zenodo.org/records/18000863
+      locator: Files entries for barriers_all_validas4326.{shp,shx,dbf,prj,cpg,qmd}; Rights; Details
+      supports:
+      - exact deposited source components and matching MD5 checksums
+      - CC-BY-4.0
+      - dataset DOI/version/creators/release date
+    - source: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md
+      locator: Input Data Structure; Phase1 Steps1–2; Phase2 Steps3–4; Phase3 Steps5–6
+      supports:
+      - barrier locations are workflow inputs
+      - current/future workflow distinction
+      - indices and rankings are downstream products
+    - source: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R
+      locator: lines40–50
+      supports:
+      - barrier file input
+      - scenario current filter
+      - Barrier_Ca and GIS_name interpretation
+    - source: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R
+      locator: lines35–43
+      supports:
+      - same barrier file input with no current-only filter
+    - source: paper-006_fish-access-climate-change.pdf
+      locator: page3, Section2.2 Spatial Framework
+      supports:
+      - natural and anthropogenic barriers
+      - author validation with imagery and official planning documents
+    - source: paper-006_fish-access-climate-change.pdf
+      locator: page11, Data Availability Statement
+      supports:
+      - article-to-dataset DOI association
+    - source: outputs/matches.csv
+      locator: row-012; related rows010–011
+      supports:
+      - 562 barrier records identified as supporting inputs
+      - no supplied dCCI or mean impact ranking output
+    - source: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp
+      locator: native layer/schema read and GeoPackage round-trip
+      supports:
+      - 562features
+      - EPSG4326
+      - 31attributes
+      - 359dams/203waterfalls
+      - 293current/269future
+      - valid geometries and exact decoded-value preservation
+    doi_scope: The dataset DOI identifies the original deposited package. This preparation has no separately
+      registered DOI.
+    processing:
+    - Convert all 562 records from the supplied UTF-8 Shapefile to one GeoPackage layer.
+    - Preserve native WGS84 (EPSG:4326) coordinates, record order, all 31 attributes, nulls, category
+      spelling, current/future labels and per-record source references.
+    - No reprojection, filtering, geometry repair, snapping, status harmonization, connectivity calculation
+      or barrier ranking.
+    - GeoPackage stores numeric values in native SQLite numeric types rather than Shapefile display widths/decimal
+      declarations; decoded values must remain exactly equal.
+    source_version: v1
+    license_note: The Zenodo record lists Creative Commons Attribution 4.0 International for this deposited
+      package. Retain original per-record Source attribution fields.
+    temporal_note: Catalog time uses the preserved Shapefile modification time; source scenario labels
+      are not observation dates.
+    sources:
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp
+      sha256: 460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx
+      sha256: 7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf
+      sha256: 341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj
+      sha256: a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg
+      sha256: 3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd
+      sha256: c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md
+      sha256: 6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R
+      sha256: 7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a
+    - base: evidence_data
+      path: AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R
+      sha256: dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc
+assets:
+  data:
+    location: local
+    path: amazon-barriers.gpkg
+    media_type: application/geopackage+sqlite3
+    roles:
+    - data
+    metadata:
+      title: 'Amazon river barriers: supplied current and future locations'
+      annotations:
+        fields:
+        - name: id
+          source_type: int:10
+          description: Identifier supplied with the barrier record.
+          definition_status: documented_or_directly_inspected
+        - name: Barrier_Ca
+          source_type: str:254
+          description: 'Source barrier category. Observed values: Dam (359) and waterfall (203).'
+          definition_status: documented_or_directly_inspected
+        - name: GIS_name
+          source_type: str:254
+          description: Barrier name as supplied.
+          definition_status: documented_or_directly_inspected
+        - name: Country
+          source_type: str:254
+          description: Country label as supplied; one record has no label.
+          definition_status: documented_or_directly_inspected
+        - name: MTRIB_MN
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: MTRIB_CD
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: SBD_NM
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: SBD_CD
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Orig_long
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Orig_lat
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: POINT_X
+          source_type: float:24.15
+          description: Stored x-coordinate attribute; retained without replacing the actual point geometry.
+          definition_status: documented_or_directly_inspected
+        - name: POINT_Y
+          source_type: float:24.15
+          description: Stored y-coordinate attribute; retained without replacing the actual point geometry.
+          definition_status: documented_or_directly_inspected
+        - name: Join_Hydro
+          source_type: bool
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: riv_id
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: HydroID
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Dam_Stage_
+          source_type: str:254
+          description: Original source status field; values and capitalization are retained.
+          definition_status: documented_or_directly_inspected
+        - name: Dam_Stag_1
+          source_type: str:254
+          description: Additional source status field; retained separately from Dam_Stage_.
+          definition_status: documented_or_directly_inspected
+        - name: Dam_Stag_2
+          source_type: str:254
+          description: Source status-change/provenance field; observed values include no_change and RAISG_2023.
+            Meaning is not otherwise reconciled.
+          definition_status: documented_or_directly_inspected
+        - name: Source
+          source_type: str:254
+          description: Source reference recorded with the barrier; preserved verbatim.
+          definition_status: documented_or_directly_inspected
+        - name: Nb_Source
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Type_Sourc
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Dam_Size_U
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Lehner_Con
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Nao_encont
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: obs
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Xm6933
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: Ym6933
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: scenario
+          source_type: str:254
+          description: 'Source scenario label: current (293) or future (269). The current R workflow filters
+            current; the future workflow uses both groups.'
+          definition_status: documented_or_directly_inspected
+        - name: aneel
+          source_type: str:254
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: x_manual
+          source_type: float:11.10
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        - name: y_manual
+          source_type: float:11.10
+          description: null
+          definition_status: source_field_preserved_definition_unresolved
+        source_counts:
+          Barrier_Ca:
+            Dam: 359
+            waterfall: 203
+          scenario:
+            current: 293
+            future: 269
+          Country:
+            Ecuador: 28
+            Peru: 96
+            Brazil: 405
+            Bolivia: 17
+            Guyana: 4
+            Colombia: 11
+            None: 1
+          Dam_Stage_:
+            Operational: 80
+            Under_Construction: 16
+            WATERFALLNO_STATUS: 203
+            Planned: 241
+            operational: 1
+            Proposed: 18
+            NO_STATUS: 2
+            Under_construction: 1
+          Dam_Stag_1:
+            Operational: 90
+            WATERFALLNO_STATUS: 203
+            Planned: 227
+            Proposed: 16
+            Under_Construction: 26
+          Dam_Stag_2:
+            no_change: 331
+            RAISG_2023: 27
+            NA: 203
+            None: 1
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Original descriptions and matching evidence
+  source_repository:
+    location: external
+    href: https://doi.org/10.5281/zenodo.18000863
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  source_shp:
+    location: local
+    path: source/barriers_all_validas4326.shp
+    media_type: application/octet-stream
+    roles:
+    - data
+    metadata:
+      title: Original Shapefile SHP component
+  source_shx:
+    location: local
+    path: source/barriers_all_validas4326.shx
+    media_type: application/octet-stream
+    roles:
+    - data
+    metadata:
+      title: Original Shapefile SHX component
+  source_dbf:
+    location: local
+    path: source/barriers_all_validas4326.dbf
+    media_type: application/octet-stream
+    roles:
+    - data
+    metadata:
+      title: Original Shapefile DBF component
+  source_prj:
+    location: local
+    path: source/barriers_all_validas4326.prj
+    media_type: application/octet-stream
+    roles:
+    - metadata
+    metadata:
+      title: Original Shapefile PRJ component
+  source_cpg:
+    location: local
+    path: source/barriers_all_validas4326.cpg
+    media_type: application/octet-stream
+    roles:
+    - metadata
+    metadata:
+      title: Original Shapefile CPG component
+  source_qmd:
+    location: local
+    path: source/barriers_all_validas4326.qmd
+    media_type: application/octet-stream
+    roles:
+    - metadata
+    metadata:
+      title: Original Shapefile QMD component
+  source_readme:
+    location: local
+    path: source/README.md
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Source workflow README.md
+  source_current_code:
+    location: local
+    path: source/part_1_add_barriers_CURRENT_SET.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Source workflow part_1_add_barriers_CURRENT_SET.R
+  source_future_code:
+    location: local
+    path: source/part_1_add_barriers_FUTURE_SET.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Source workflow part_1_add_barriers_FUTURE_SET.R
+source:
+  format: geopackage
+  layer: barriers

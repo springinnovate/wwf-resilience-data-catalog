@@ -9,10 +9,8 @@ from pathlib import Path
 from datetime import datetime, timezone
 import os
 os.environ['OPENPYXL_LXML']='False'
-from openpyxl import Workbook, load_workbook
-from openpyxl.styles import Alignment, Font, PatternFill
-from openpyxl.worksheet.table import Table, TableStyleInfo
-from openpyxl.utils import get_column_letter
+from openpyxl import load_workbook
+from workbook_presentation import read_presentation, build_workbook
 
 parser=argparse.ArgumentParser(description=__doc__)
 repo=Path(__file__).resolve().parents[1]
@@ -204,75 +202,11 @@ for name,records in [('matches',matches),('asset_links',links),('papers',papers)
     files=allfiles,archive_assets=archives,unmatched_local_data=unmatched),ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
 (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
 
-wb=Workbook();wb.remove(wb.active)
-colors={'Matched':'D9EAD3','Partial match':'FFF2CC','Related inputs/code only':'FCE5CD','No local match':'F4CCCC',
-        'Different product':'F4CCCC','Unresolved':'D9D2E9','Unmatched local data':'EADCF1','Unresolved local data':'D9D2E9'}
+review_rows, other_rows = read_presentation(inputs, matches, papers, unmatched)
+writecsv('review_summary.csv', review_rows)
+writecsv('other_data_summary.csv', other_rows)
+wb = build_workbook(matches, papers, links, allfiles, archives, source, unmatched, summary, review_rows, other_rows, snapshot)
 truncated=[]
-def sheet(name,records,cols=None):
-    ws=wb.create_sheet(name);cols=cols or list(dict.fromkeys(k for r in records for k in r));ws.append(cols)
-    for ri,r in enumerate(records,2):
-        vals=[]
-        for col in cols:
-            value=text(r.get(col,''))
-            if isinstance(value,str) and len(value)>32000:
-                truncated.append(dict(sheet=name,row=ri,column=col,original_chars=len(value)))
-                value=value[:31000]+'\n[Display shortened. Full content is preserved in the corresponding CSV/JSON and AssetLinks.]'
-            vals.append(value)
-        ws.append(vals)
-    ws.freeze_panes='C2' if name in ['Matches','UnmatchedSheet','ReviewGaps'] else 'B2'
-    ws.sheet_view.showGridLines=False
-    ws.row_dimensions[1].height=32
-    for cell in ws[1]:cell.fill=PatternFill('solid',fgColor='183D3D');cell.font=Font(color='FFFFFF',bold=True);cell.alignment=Alignment(wrap_text=True,vertical='center')
-    for ci,col in enumerate(cols,1):
-        width=18
-        if col in ['description','evidence','limitations','reason','notes','definition','value']:width=65
-        elif col in ['paper','verified_title','title_as_supplied']:width=50
-        elif col in ['local_files','local_path','relative_path','member_path','outer_path','asset_selectors','selector']:width=65
-        elif 'link' in col or 'url' in col:width=42
-        elif 'status' in col:width=25
-        ws.column_dimensions[get_column_letter(ci)].width=width
-    for row_cells in ws.iter_rows(min_row=2):
-        for c in row_cells:
-            c.alignment=Alignment(vertical='top',wrap_text=True)
-            # Treat all source text literally, including Excel-looking formulas.
-            if isinstance(c.value,str):c.data_type='s'
-            if isinstance(c.value,str) and c.value.startswith(('https://','http://')) and '\n' not in c.value and not c.value.startswith('['):
-                c.hyperlink=c.value;c.font=Font(color='0563C1',underline='single')
-        if 'match_status' in cols:
-            c=row_cells[cols.index('match_status')];c.fill=PatternFill('solid',fgColor=colors.get(c.value,'FFFFFF'));c.font=Font(bold=True)
-        ws.row_dimensions[row_cells[0].row].height=100 if name in ['Matches','UnmatchedSheet','ReviewGaps'] else 54
-    if records:
-        tab=Table(displayName='T'+name,ref=ws.dimensions)
-        tab.tableStyleInfo=TableStyleInfo(name='TableStyleMedium2',showRowStripes=True)
-        ws.add_table(tab)
-    ws.sheet_properties.pageSetUpPr.fitToPage=True
-    ws.page_setup.orientation='landscape';ws.page_setup.paperSize=ws.PAPERSIZE_A3;ws.page_setup.fitToWidth=1;ws.page_setup.fitToHeight=0
-    ws.print_title_rows='1:1'
-    return ws
-
-notes=[dict(topic='Purpose',value='Dataset-description reconciliation for a future STAC catalog. Start with Matches; filter match_status. This workbook is the reviewable result, not a generated STAC catalog.'),
- dict(topic='Coverage',value=f"{len(matches)} descriptions; {len(papers)} verified papers; {len(allfiles)} substantive local files in 23 folders. {len(unmatched)} additional/unresolved scientific file/member/layer entries are listed in UnmatchedLocal."),
- dict(topic='UnmatchedSheet',value='Rows with no confirmed described asset: No local match, Related inputs/code only, Different product or Unresolved. Partial matches are in Matches and ReviewGaps.'),
- dict(topic='ReviewGaps',value='Every row other than Matched, including partial content and stated coverage differences. Read the evidence and limitations before promoting an asset to STAC.'),
- dict(topic='AssetLinks',value='Expanded many-to-many links. asset_id references AllLocalFiles or ArchiveAssets; parent_file_id always references the physical file in AllLocalFiles; link_id uniquely identifies each row/asset/selector relationship. A selector qualifies the linked file or member. described_asset and partial_or_processed identify product links; different_product and unresolved retain rejected/uncertain candidates. related_input, code, documentation, figure, sidecar and archive_container describe supporting relationships, not scientific matches.'),
- dict(topic='AllLocalFiles',value='Complete one-record-per-substantive-file disposition. OS housekeeping files are excluded. No source files were moved, renamed or modified.'),
- dict(topic='ArchiveAssets',value='Complete non-directory ZIP coverage, nested drought payloads and fish geodatabase components/layers. The hash-identical test.rar shares the DATAnull member inventory. Directory entries are not datasets.'),
- dict(topic='Paper links',value='publisher_link is the article landing page, not the dataset download. DOI, primary evidence URLs, year corrections and supplied titles are retained in Papers. Original download references remain in SourceSheet.'),
- dict(topic='Evidence limits',value='Identification uses headers, bounded samples, README/EML metadata, source code and publisher records. Not every raster value or scientific derivation was validated; scripts/models were not executed. Unmatched means unmatched to this supplied sheet, not unrelated to its paper.'),
- dict(topic='Reproducibility',value='CSVs and reconciliation.json preserve full text and relations. scripts/build_reconciliation.py rebuilds from the committed data/source manifest and data/decisions JSON. Edit those inputs and rebuild; workbook edits are not imported. Source-sheet SHA256: '+source['source']['source_sha256']),
- dict(topic='Future catalog',value='Use paper_id, row_id and asset_id as crosswalk keys. Before creating STAC, resolve flagged product gaps and confirm asset hosting, licensing, spatial/temporal extent, units and variable names. Filesystem dates are not observation dates.'),
- dict(topic='Generated',value=summary['generated_utc'])]
-sheet('ReadMe',notes)
-sheet('Matches',matches)
-sheet('UnmatchedSheet',unmatched_sheet)
-sheet('UnmatchedLocal',unmatched)
-sheet('ReviewGaps',review)
-sheet('Papers',papers)
-sheet('AssetLinks',links)
-sheet('AllLocalFiles',allfiles)
-sheet('ArchiveAssets',archives)
-sheet('SourceSheet',source['rows'],['row_id','paper_id']+source['columns'])
-sheet('StatusDefinitions',[dict(status=k,definition=v) for k,v in definitions])
 wb.properties.title='WWF resilience data: study, paper and local-asset reconciliation'
 wb.properties.creator='richpsharp'
 wb.properties.description='All supplied descriptions and local files accounted for, with evidence and unresolved gaps.'
@@ -296,10 +230,10 @@ with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6
         archive_out.writestr(entry,payload)
 
 check=load_workbook(target,read_only=False,data_only=False)
-assert check['Matches'].max_row==len(matches)+1 and check['Papers'].max_row==len(papers)+1
-assert check['AllLocalFiles'].max_row==len(allfiles)+1
-assert all(check['Matches'].cell(i+2,2).value==m['description'] for i,m in enumerate(matches))
-assert all(check['Matches'].cell(i+2,4).hyperlink.target==m['publisher_link'] for i,m in enumerate(matches))
+assert check['Match records'].max_row==len(matches)+1 and check['Paper references'].max_row==len(papers)+1
+assert check['File inventory'].max_row==len(allfiles)+1
+assert all(check['Match records'].cell(i+2,2).value==m['description'] for i,m in enumerate(matches))
+assert all(check['Match records'].cell(i+2,4).hyperlink.target==m['publisher_link'] for i,m in enumerate(matches))
 assert not any(c.data_type=='f' for ws in check for row in ws for c in row), 'unexpected formula'
 check.close()
 qa=dict(sheet_rows_unique=len({m['row_id'] for m in matches})==snapshot['source_records'],papers_unique=len(paper_by)==snapshot['paper_count'],

@@ -8,6 +8,7 @@ import tempfile
 import unittest
 
 from openpyxl import load_workbook
+from openpyxl.worksheet.hyperlink import Hyperlink
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,10 +96,32 @@ class SnapshotCorruptionTests(unittest.TestCase):
     def test_workbook_formula_is_rejected(self):
         path = self.outputs / "study_data_matches.xlsx"
         workbook = load_workbook(path)
-        workbook["Matches"]["B2"] = '=HYPERLINK("https://example.invalid","changed")'
+        workbook["Match records"]["B2"] = '=HYPERLINK("https://example.invalid","changed")'
         workbook.save(path)
         workbook.close()
         self.rejected("Unexpected Excel formula")
+
+    def test_missing_presentation_row_is_rejected(self):
+        self.edit_json(self.data / "presentation" / "review_rows_001_041.json", lambda v: v.pop())
+        self.rejected("Presentation row coverage")
+
+    def test_front_view_cannot_change_the_canonical_result(self):
+        path = self.outputs / "study_data_matches.xlsx"
+        workbook = load_workbook(path)
+        cell = workbook["Study review"]["C6"]
+        cell.value = "Found" if cell.value != "Found" else "Not found locally"
+        workbook.save(path)
+        workbook.close()
+        self.rejected("Study review!C6")
+
+    def test_front_view_cannot_link_to_the_wrong_existing_card(self):
+        path = self.outputs / "study_data_matches.xlsx"
+        workbook = load_workbook(path)
+        cell = workbook["Study review"]["G6"]
+        cell.hyperlink = Hyperlink(ref=cell.coordinate, location="'Details'!A15")
+        workbook.save(path)
+        workbook.close()
+        self.rejected("Internal link at Study review!G6")
 
 
 if __name__ == "__main__":

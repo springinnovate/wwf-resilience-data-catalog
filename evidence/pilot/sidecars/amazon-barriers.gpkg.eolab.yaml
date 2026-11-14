@@ -5,9 +5,14 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: 'Amazon river barriers: current and future scenarios'
-  description: Locations of 359 dams and 203 waterfalls used in the Amazon fish-connectivity study (562
-    points). Includes 293 current and 269 future scenario records.
+  title: Amazon dams and waterfalls used to assess fish access to suitable habitat
+  description: 'Dams can block fish from reaching suitable habitat as the climate changes. A study combining
+    fish-distribution models with river connectivity found that the Amazon–Solimões corridor retains extensive
+    connected, suitable habitat, while planned hydropower expansion and climate change could reduce such
+    areas. This layer provides the dam and waterfall locations used to examine those risks and supports
+    inspection of barriers relevant to energy and river-conservation planning. It contains current barriers
+    and additional future-scenario records. The points are study inputs: the modeled habitat-access results
+    and dam-impact rankings are not included in this layer.'
   license: CC-BY-4.0
   attribution: Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly
   doi: 10.5281/zenodo.18000863
@@ -16,13 +21,12 @@ metadata:
   categories:
   - Nature
   - Drivers & Pressures
-  statuses:
-  - Supporting input for sheet descriptions
+  statuses: []
   study_ids:
-  - paper-006
+  - doi-10.1111-gcb.70685
   study_time: Current and future barrier scenarios; observation and commissioning dates unknown.
   publications:
-  - id: paper-006
+  - id: doi-10.1111-gcb.70685
     title: Anthropogenic Barriers Limit Fish Access to Essential Habitats in the Amazon in the Face of
       Climate Change
     doi: 10.1111/gcb.70685
@@ -31,17 +35,14 @@ metadata:
     url: https://onlinelibrary.wiley.com/doi/10.1111/gcb.70685
     year: 2026
   annotations:
-    row_ids:
-    - row-009
-    - row-010
-    - row-011
-    - row-012
     limitations:
     - Connectivity indices and barrier-impact rankings are absent.
     - Some auxiliary field definitions and relationships between dam-status columns are unresolved.
     temporal_note: Catalog time is the source-file modification date, not an observation or scenario date.
     processing: Converted Shapefile to GeoPackage; all coordinates and 31 attributes retained.
     attribution_note: Retain the per-record Source attribution when reusing the data.
+    evidence_type: Species-distribution and river-connectivity modeling
+    dataset_role: Barrier-location inputs to the study
 assets:
   data:
     location: local
@@ -153,6 +154,14 @@ assets:
     - metadata
     metadata:
       title: Source workflow part_1_add_barriers_FUTURE_SET.R
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources
 source:
   format: geopackage
   layer: barriers

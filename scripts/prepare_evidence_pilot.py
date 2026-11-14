@@ -27,6 +27,9 @@ from rasterio.shutil import copy as raster_copy
 from shapely.geometry import shape
 import yaml
 
+from evidence_notes import write_evidence_summary, pilot_evidence_context
+from evidence_sources import load_pilot_plan, inputs_sha256
+
 REPO = Path(__file__).resolve().parents[1]
 
 
@@ -152,7 +155,7 @@ def prepare(source_root: Path, output_root: Path, records_path: Path,
     require(not output_root.exists(), 'Output directory already exists; choose a new destination.')
     require(not output_root.is_relative_to(source_root), 'Output must be outside the original data collection.')
     require(not output_root.is_relative_to(REPO), 'Scientific outputs must remain outside the Git repository.')
-    plan = json.loads(records_path.read_text(encoding='utf-8'))
+    plan = load_pilot_plan(records_path)
     validator = Draft202012Validator(json.loads(schema_path.read_text(encoding='utf-8')))
     records = plan['records']
     require(sorted(r['kind'] for r in records) == ['nonspatial', 'raster', 'vector'], 'Pilot needs exactly three kinds.')
@@ -162,7 +165,7 @@ def prepare(source_root: Path, output_root: Path, records_path: Path,
         for name, checksum in record['source_files'].items():
             require(sha256(relative_file(source_root, name)) == checksum,
                     f"Source checksum differs for {record['id']}: {name}")
-    report = dict(eolab_contract=plan['eolab_contract'], records_sha256=sha256(records_path),
+    report = dict(eolab_contract=plan['eolab_contract'], records_sha256=inputs_sha256(records_path),
                   runtime={name: version(name) for name in ['numpy', 'rasterio', 'fiona', 'pyproj', 'shapely', 'PyYAML', 'jsonschema']},
                   gdal_version=rasterio.__gdal_version__, datasets=[])
     output_root.parent.mkdir(parents=True, exist_ok=True)
@@ -183,7 +186,8 @@ def prepare(source_root: Path, output_root: Path, records_path: Path,
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(relative_file(source_root, attachment['source']), destination)
                 require(sha256(destination) == record['source_files'][attachment['source']], 'Attachment copy changed.')
-            write_json(folder / 'review-context.json', record['review_context'])
+            write_json(folder / 'review-context.json', pilot_evidence_context(record))
+            write_evidence_summary(folder, record)
             sidecar = folder / (record['output_file'] + '.eolab.yaml')
             sidecar.write_text(yaml.safe_dump(record['descriptor'], allow_unicode=True, sort_keys=False,
                                                width=100), encoding='utf-8', newline='\n')
@@ -212,13 +216,24 @@ def refresh_metadata(source_root: Path, output_root: Path, records_path: Path,
     output_root = output_root.resolve(strict=True)
     require(not output_root.is_relative_to(source_root), 'Output must be outside the original data collection.')
     require(not output_root.is_relative_to(REPO), 'Scientific outputs must remain outside the Git repository.')
-    plan = json.loads(records_path.read_text(encoding='utf-8'))
+    plan = load_pilot_plan(records_path)
     validator = Draft202012Validator(json.loads(schema_path.read_text(encoding='utf-8')))
     records = plan['records']
     require(sorted(r['kind'] for r in records) == ['nonspatial', 'raster', 'vector'], 'Pilot needs exactly three kinds.')
     require(len({r['id'] for r in records}) == 3, 'Pilot identifiers are not unique.')
     report_path = output_root / 'preparation-report.json'
     previous = json.loads(report_path.read_text(encoding='utf-8'))
+    if all('scientific_note_text' in record or 'evidence_summary' in record for record in records):
+        from refresh_evidence_metadata import plan_collection, publish
+        require(previous['eolab_contract'] == plan['eolab_contract'], 'EOLab contract changed.')
+        for record in records:
+            for name, checksum in record['source_files'].items():
+                require(sha256(relative_file(source_root, name)) == checksum, 'Source checksum differs.')
+        report, replacements, before, payloads = plan_collection(
+            output_root, records, {r['id']: pilot_evidence_context(r) for r in records},
+            {'records_sha256': inputs_sha256(records_path)}, json.loads(schema_path.read_text(encoding='utf-8')))
+        publish(output_root, replacements, before, payloads)
+        return report
     report = deepcopy(previous)
     require(report['eolab_contract'] == plan['eolab_contract'], 'EOLab contract changed; prepare a new delivery.')
     require(len(report['datasets']) == 3 and {d['id'] for d in report['datasets']} == {r['id'] for r in records},
@@ -281,7 +296,7 @@ def refresh_metadata(source_root: Path, output_root: Path, records_path: Path,
 
     require({p.resolve() for p in output_root.rglob('*') if p.is_file()} == expected_files,
             'Delivered file list differs from the preparation report.')
-    report['records_sha256'] = sha256(records_path)
+    report['records_sha256'] = inputs_sha256(records_path)
     report['metadata_refresh'] = dict(
         previous_records_sha256=previous['records_sha256'],
         method='Metadata-only refresh; original transformation checks and runtime retained.',
@@ -336,7 +351,7 @@ def refresh_metadata(source_root: Path, output_root: Path, records_path: Path,
 
 def write_summary(path: Path, report: dict[str, Any], records_path: Path) -> None:
     """Write the three-row review table with paths relative to the pilot output."""
-    records = {record['id']: record for record in json.loads(records_path.read_text(encoding='utf-8'))['records']}
+    records = {record['id']: record for record in load_pilot_plan(records_path)['records']}
     rows = []
     for result in report['datasets']:
         record = records[result['id']]
@@ -363,7 +378,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-root', required=True, type=Path)
     parser.add_argument('--output-root', required=True, type=Path)
-    parser.add_argument('--records', type=Path, default=REPO/'evidence/pilot/records.json')
+    parser.add_argument('--records', type=Path, default=REPO/'evidence/pilot/recipes')
     parser.add_argument('--schema', type=Path, default=REPO/'evidence/pilot/eolab-item-v1.schema.json')
     parser.add_argument('--report', type=Path)
     parser.add_argument('--refresh-metadata', action='store_true',

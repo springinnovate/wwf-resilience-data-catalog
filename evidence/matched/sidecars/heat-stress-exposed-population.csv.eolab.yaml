@@ -1,0 +1,153 @@
+schema: eolab/item/v1
+id: wwf-brazil-heat-stress-exposure
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: 'Brazil: additional heat exposure under Amazon savannization'
+  description: A worst-case climate-model experiment replacing all Amazon rainforest with savanna increased
+    estimated human heat exposure, especially under high emissions. In the late-century RCP8.5 scenario,
+    the study estimated more than 11 million additional people exposed to extreme in-shade heat stress,
+    including about 5.7 million in highly vulnerable communities. These are conditional estimates using
+    2019 population, not forecasts of population growth or observed health outcomes. This table contains
+    the 12 published Figure 3 estimates across historical and future climates, heat-exposure settings
+    and vulnerability groups. It supports comparing the modeled human consequences of forest loss; the
+    high-vulnerability figures are subsets of the totals and must not be added to them.
+  license: CC-BY-4.0
+  attribution: Oliveira et al. (2021)
+  doi: 10.6084/m9.figshare.15128679.v1
+  categories:
+  - Climate
+  study_ids:
+  - doi-10.1038-s43247-021-00275-8
+  study_time: 2019 population applied to historical and late-century climate scenarios; no population-growth
+    projection.
+  publications:
+  - id: doi-10.1038-s43247-021-00275-8
+    title: Deforestation and climate change are projected to increase heat stress risk in the Brazilian
+      Amazon
+    doi: 10.1038/s43247-021-00275-8
+    url: https://www.nature.com/articles/s43247-021-00275-8
+    year: 2021
+  annotations:
+    limitations:
+    - Population is in millions. The high-vulnerability rows are part of the totals and must not be added
+      to them.
+    - These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent
+      start years for its climate periods.
+    temporal_note: Catalog time is the source-file modification date; it is not an observation date.
+    evidence_type: Climate-model scenario experiment with population exposure analysis
+    dataset_role: Published Figure 3 additional-exposure estimates, with municipal inputs retained as
+      supporting data.
+assets:
+  data:
+    location: local
+    path: heat-stress-exposed-population.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      annotations:
+        encoding: UTF-8
+        decimal_separator: .
+        columns:
+          WBGT: 'Exposure setting and threshold: in-shade >34 C or outdoor >40 C.'
+          periodo: Historical, RCP 4.5 or RCP 8.5.
+          pop: Additional people exposed due to Amazon deforestation, millions.
+          tip: Total Population or its High vulnerability subset.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.15128679.v1
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s43247-021-00275-8
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original:
+    location: local
+    path: source/number_population_figure3.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Original Figure 3 table
+      annotations:
+        encoding: Windows-1252
+        delimiter: ;
+        decimal_separator: ','
+  figure_code:
+    location: local
+    path: source/Figure 3.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Figure 3 source code
+  municipal_outdoor:
+    location: local
+    path: source/outdoor_pop.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Municipal outdoor-WBGT inputs
+      annotations:
+        delimiter: ;
+        decimal_separator: ','
+        encoding: Windows-1252
+  municipal_threshold:
+    location: local
+    path: source/threshold_34_pop.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Municipal threshold and vulnerability inputs
+      annotations:
+        delimiter: ;
+        decimal_separator: ','
+        encoding: Windows-1252
+  municipal_wbgt:
+    location: local
+    path: source/munic_WbgtMaxMed-id.txt
+    media_type: text/plain
+    roles:
+    - data
+    metadata:
+      title: Municipal WBGT input table
+      annotations:
+        delimiter: whitespace
+        decimal_separator: .
+  figure4_code:
+    location: local
+    path: source/Figure 4.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Municipal analysis source code
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

@@ -1,0 +1,71 @@
+{
+  "dataset_id": "wwf-tfvi-aet-01deg",
+  "metadata_evidence": [
+    {
+      "source": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p.7 / printed p.993; PDF p.10 / printed p.996, Figure 5",
+      "supports": "Index sign and magnitude; figure uses the separately supplied 0.25-degree grids."
+    },
+    {
+      "source": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF pp.12-13 / printed pp.998-999, Forest response variables",
+      "supports": "GPP enhanced global product (1982-2018); GLEAM v3.3a ET (1980-2018); MODIS Collection-6 daytime LST and aggregation to 0.1 degree."
+    },
+    {
+      "source": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF pp.13-14 / printed pp.999-1000, Equations 8-10",
+      "supports": "Standardized response, dimensionless TFVI, direction of change, and meaning of zero."
+    },
+    {
+      "source": "https://zenodo.org/records/5115158",
+      "locator": "license and files; verified during biomass pilot",
+      "supports": "CC-BY-4.0 and dataset reference."
+    },
+    {
+      "source": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_aet_0.1deg.tif",
+      "locator": "GeoTIFF header and complete array inspection",
+      "supports": "Explicit EPSG:4326; dtype, grid, nodata and value statistics."
+    }
+  ],
+  "decisions": [
+    "Use the supplied 0.1-degree grid as primary; retain the scientifically distinct 0.25-degree grid as a linked asset.",
+    "Do not publish byte-identical main/supplementary copies as additional Items.",
+    "Preserve all values including negative extremes and valid zero; no clipping or response-unit conversion."
+  ],
+  "limitations": [
+    "The broader study and input-source periods are not silently asserted to be an exact map observation interval.",
+    "The study model, uncertainty calculation and significance filtering were not rerun."
+  ],
+  "shared_index_evidence": [
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 7 / printed p. 993; PDF p. 10 / printed p. 996, Figure 5",
+      "supports": "TFVI sign and magnitude interpretation; Figure 5 depicts 0.25-degree versions for visualization, while the distributed pilot is the 0.1-degree source product."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 11 / printed p. 997, Resource availability and Datasets used",
+      "supports": "Published output/code archive DOI; 0.1-degree latitude-longitude standard grid and broader 1982-2018 study period."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF pp. 13-14 / printed pp. 999-1000, Long-term TFVI, Equations 8-10",
+      "supports": "Response variables standardized to Z scores, index definition and sign semantics."
+    },
+    {
+      "source": "dataset_repository",
+      "url": "https://zenodo.org/api/records/5115158",
+      "locator": "metadata.license, metadata.description, files",
+      "supports": "CC-BY-4.0 dataset license; GeoTIFF_CSV.txz archive identity and checksum."
+    },
+    {
+      "source": "published_code",
+      "url": "https://zenodo.org/records/5115158/files/Scripts.txz?download=1",
+      "locator": "Scripts/02_TFVI/calc_tfvi.r, lines 1808-1830, 2194-2200, 4178-4179",
+      "supports": "AR1 response fit retains finite paired observations; long-term stress trends are computed separately; TFVI formula uses autocorrelation denominator; plot labels omit physical units."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "dataset_id": "wwf-forest-carbon-loss-gain-compilation",
+  "metadata_evidence": [
+    {
+      "source": "https://zenodo.org/records/19470704",
+      "locator": "Version 1, license, file list and description",
+      "supports": "Dataset-paper association, CC-BY-4.0; creators request citation of both database and paper."
+    },
+    {
+      "source": "https://doi.org/10.1126/sciadv.adz1923",
+      "locator": "PDF pages 3 and 13, meta-analysis methods",
+      "supports": "Absolute carbon loss/gain units and distinction between publication dates and observation dates."
+    },
+    {
+      "source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx",
+      "locator": "Sheet1: populated Study cells and formula/cached-value inspection",
+      "supports": "212 Study rows, 208 cached RefID values. Rows 86-89 are Holcomb et al. in prep. and have uncached lookup formulas."
+    },
+    {
+      "source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx",
+      "locator": "Sheet1, RefID 96",
+      "supports": "The same ID occurs for Neves d Oliveira et al. 2024 and N Guessan et al. 2019."
+    }
+  ],
+  "decisions": [
+    "Retain XLSX rather than flattening or evaluating formulas. Preserve the separate reference workbook without resolving the ambiguous RefID automatically."
+  ],
+  "limitations": [
+    "RefID 96 refers to two citations. Four in-preparation loss records have no cached RefID; citation joins need review.",
+    "Use the saved workbook values; formulas depend on external references and have not been recalculated."
+  ],
+  "corrections": [
+    "The earlier 208-loss-record count counted cached RefIDs. There are 212 nonempty Study rows, including four in-preparation rows with uncached RefID lookups. They are preserved."
+  ],
+  "published_source_comparison": {
+    "record_version": "1",
+    "published": "2026-04-08",
+    "published_md5": {
+      "AGC_losses_forest_type_current_v2.xlsx": "39eecdeaa6a196561181ee6fcf54fe7b",
+      "AGC_accumulation_forest_type_current_v2.xlsx": "d2c3d2ace395cc39a1328c3cb1dc76f8",
+      "references_info_v2.xlsx": "c83e9ba19fc54bbe104dd3d1b260a1fb"
+    },
+    "result": "File bytes differ, but all populated literal values, formulas (including ArrayFormula text and range), and cached values match the published files. No scientific cell differences were found."
+  }
+}

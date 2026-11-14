@@ -1,0 +1,130 @@
+{
+  "dataset_id": "wwf-amazon-barrier-locations",
+  "metadata_evidence": [
+    {
+      "source": "https://zenodo.org/records/18000863",
+      "locator": "Files entries for barriers_all_validas4326.{shp,shx,dbf,prj,cpg,qmd}; Rights; Details",
+      "supports": [
+        "exact deposited source components and matching MD5 checksums",
+        "CC-BY-4.0",
+        "dataset DOI/version/creators/release date"
+      ]
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+      "locator": "Input Data Structure; Phase1 Steps1–2; Phase2 Steps3–4; Phase3 Steps5–6",
+      "supports": [
+        "barrier locations are workflow inputs",
+        "current/future workflow distinction",
+        "indices and rankings are downstream products"
+      ]
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+      "locator": "lines40–50",
+      "supports": [
+        "barrier file input",
+        "scenario current filter",
+        "Barrier_Ca and GIS_name interpretation"
+      ]
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+      "locator": "lines35–43",
+      "supports": [
+        "same barrier file input with no current-only filter"
+      ]
+    },
+    {
+      "source": "paper-006_fish-access-climate-change.pdf",
+      "locator": "page3, Section2.2 Spatial Framework",
+      "supports": [
+        "natural and anthropogenic barriers",
+        "author validation with imagery and official planning documents"
+      ]
+    },
+    {
+      "source": "paper-006_fish-access-climate-change.pdf",
+      "locator": "page11, Data Availability Statement",
+      "supports": [
+        "article-to-dataset DOI association"
+      ]
+    },
+    {
+      "source": "data/decisions/matching_tables.json",
+      "locator": "rows[row_id=12]; related rows with row_id 10 and 11",
+      "supports": [
+        "562 barrier records identified as supporting inputs",
+        "no supplied dCCI or mean impact ranking output"
+      ]
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+      "locator": "native layer/schema read and GeoPackage round-trip",
+      "supports": [
+        "562features",
+        "EPSG4326",
+        "31attributes",
+        "359dams/203waterfalls",
+        "293current/269future",
+        "valid geometries and exact decoded-value preservation"
+      ]
+    }
+  ],
+  "limitations": [
+    "These are supporting input locations, not the missing RCIsuit connectivity or dCCI/impact-ranking outputs.",
+    "Current and future are source scenario labels. Feature observation dates and commissioning dates are not established.",
+    "Several auxiliary field definitions and the relationships among the three dam-status columns remain unresolved.",
+    "One Country value is null. Source spelling, capitalization, status labels and nulls are retained.",
+    "The authors report checking barriers against imagery and planning documents; that verification was not repeated in this pilot."
+  ],
+  "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+  "temporal_note": "Catalog time uses the preserved Shapefile modification time; source scenario labels are not observation dates.",
+  "processing": [
+    "Convert all 562 records from the supplied UTF-8 Shapefile to one GeoPackage layer.",
+    "Preserve native WGS84 (EPSG:4326) coordinates, record order, all 31 attributes, nulls, category spelling, current/future labels and per-record source references.",
+    "No reprojection, filtering, geometry repair, snapping, status harmonization, connectivity calculation or barrier ranking.",
+    "GeoPackage stores numeric values in native SQLite numeric types rather than Shapefile display widths/decimal declarations; decoded values must remain exactly equal."
+  ],
+  "source_version": "v1",
+  "license_note": "The Zenodo record lists Creative Commons Attribution 4.0 International for this deposited package. Retain original per-record Source attribution fields.",
+  "field_definitions": {
+    "data": {
+      "id": "Identifier supplied with the barrier record.",
+      "Barrier_Ca": "Source barrier category. Observed values: Dam (359) and waterfall (203).",
+      "GIS_name": "Barrier name as supplied.",
+      "Country": "Country label as supplied; one record has no label.",
+      "POINT_X": "Stored x-coordinate attribute; retained without replacing the actual point geometry.",
+      "POINT_Y": "Stored y-coordinate attribute; retained without replacing the actual point geometry.",
+      "Dam_Stage_": "Original source status field; values and capitalization are retained.",
+      "Dam_Stag_1": "Additional source status field; retained separately from Dam_Stage_.",
+      "Dam_Stag_2": "Source status-change/provenance field; observed values include no_change and RAISG_2023. Meaning is not otherwise reconciled.",
+      "Source": "Source reference recorded with the barrier; preserved verbatim.",
+      "scenario": "Source scenario label: current (293) or future (269). The current R workflow filters current; the future workflow uses both groups."
+    }
+  },
+  "unresolved_fields": {
+    "data": [
+      "MTRIB_MN",
+      "MTRIB_CD",
+      "SBD_NM",
+      "SBD_CD",
+      "Orig_long",
+      "Orig_lat",
+      "Join_Hydro",
+      "riv_id",
+      "HydroID",
+      "Nb_Source",
+      "Type_Sourc",
+      "Dam_Size_U",
+      "Lehner_Con",
+      "Nao_encont",
+      "obs",
+      "Xm6933",
+      "Ym6933",
+      "aneel",
+      "x_manual",
+      "y_manual"
+    ]
+  }
+}

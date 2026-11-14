@@ -1,6 +1,8 @@
 # What remains before building the STAC catalog
 
-This note summarizes the reconciliation completed on 13 November 2026, from the supplied description sheet and local study packages. It records outstanding work; it does not certify scientific validity or permission to publish the source data. The detailed evidence, file paths, selectors and limitations remain in `study_data_matches.xlsx`, `matches.csv`, `asset_links.csv`, `unmatched_local_data.csv` and `reconciliation.json`.
+This note summarizes the reconciliation completed on 13 November 2026, from the supplied description sheet and local study packages. It records outstanding work; it does not certify scientific validity or permission to publish the source data. The detailed evidence, file paths, selectors and limitations are reproduced from the committed inputs in `study_data_matches.xlsx`, `matches.csv`, `asset_links.csv`, `unmatched_local_data.csv` and `reconciliation.json` under `build/reconciliation/`; see the [rebuilding guide](rebuilding.md).
+
+Subsequent preparation has resolved some of these initial questions for the matched datasets. See [prepared evidence](prepared-evidence.md) for current delivery limits and the committed [curation records](../evidence/curation/) for the detailed decisions. The historical reconciliation below remains unchanged.
 
 The review covers 78 descriptions for 30 papers and all 1,882 substantive local files in 23 study folders. It assigns 19 descriptions **Matched**, 29 **Partial match**, 8 **Related inputs/code only**, 21 **No local match**, and 1 **Different product**. These are product-identification decisions. **The 19 matched descriptions are not declarations of STAC readiness.** Some lack a confirmed CRS, measurement period, units, license or a publishable asset location.
 

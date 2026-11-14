@@ -1,0 +1,32 @@
+{
+  "sidecar": "matched/sidecars/amazon-commercial-fish-catch.gpkg.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-commercial-fish-catch.md",
+  "curation": "curation/wwf-amazon-commercial-fish-catch.json",
+  "directory": "amazon-commercial-fish-catch",
+  "row_ids": [
+    "row-023"
+  ],
+  "readiness": "Map ready; source license wording needs clarification",
+  "expected_features": 198,
+  "operation": {
+    "type": "vector_gdb_archive",
+    "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+    "geodatabase": "SNAPP_Fish_Data.gdb",
+    "layer": "Twenty_principal_comercial_taxa_catch",
+    "output_layer": "catch"
+  },
+  "source_files": {
+    "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull": "49fd055150bfa96826f4892d29d995eb9e90fa3f1786ace990527ab13a3474c5",
+    "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml": "9f3b75c6e632b67db7577d13ae74f89d79048ede90baf7cd732a08b9bae596c0"
+  },
+  "attachments": [
+    {
+      "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+      "path": "source/SNAPP_Fish_Data.rar"
+    },
+    {
+      "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml",
+      "path": "source/science-metadata.xml"
+    }
+  ]
+}

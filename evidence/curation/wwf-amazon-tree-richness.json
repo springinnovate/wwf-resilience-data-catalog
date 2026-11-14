@@ -1,0 +1,46 @@
+{
+  "dataset_id": "wwf-amazon-tree-richness",
+  "metadata_evidence": [
+    {
+      "source": "https://doi.org/10.1038/s42003-023-05514-6",
+      "locator": "PDF pp.8-9, Methods and Data availability",
+      "supports": "0.1-degree interpolation using longitude,latitude and forest/soil groups; variable meanings; no explicitdatum found."
+    },
+    {
+      "source": "22786166/TreeDiversityScript.R",
+      "locator": "lines281-284",
+      "supports": "Named ASCII export from rasterFromXYZ built from longitude and latitude; no explicitCRS assignment."
+    },
+    {
+      "source": "https://api.figshare.com/v2/articles/22786166",
+      "locator": "version2 record, license and file entries",
+      "supports": "CC-BY-4.0, version2, exact native grid/script/coordinate-file identities; no CRS definition in description."
+    },
+    {
+      "source": "22786166/TreeRichness_ha.asc",
+      "locator": "ASCII header; raster reader reports no CRS",
+      "supports": "Grid geometry and nodata, without datum declaration or accompanyingPRJ."
+    },
+    {
+      "source": "https://doi.org/10.1038/s42003-023-05514-6",
+      "locator": "PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns",
+      "supports": "April2023 ATDN compilation; old-growth/undisturbed forest plots; trees with DBH at least10cm; 0.5-2ha plots retained; richness standardized to hectare with Fisher-alpha formula."
+    }
+  ],
+  "decisions": [
+    "Keep the native spatial grid accessible through a geometry-null Item; nonspatial is catalog admission mode only.",
+    "No datum was inferred from coordinate ranges or software defaults.",
+    "The interpolated values describe the model surface; tree counts and species counts have not been rounded to integers."
+  ],
+  "limitations": [
+    "Published article, deposited scripts and repository metadata did not provide an explicitCRS/datum. Degree-like coordinates establish neither WGS84 nor another datum.",
+    "The original script may rely on package-default geographic handling; that is not an explicit author-supplied datum declaration.",
+    "Supplement PDF retrieval was attempted viaPMC and publisher static-content URLs but was unavailable in this environment; supplementary figures were not used as CRS evidence."
+  ],
+  "interpretation": {
+    "population": "Old-growth/undisturbed forest inventory plots; free-standing woody individuals with DBH >=10cm.",
+    "map_scope": "Interpolated attributes over the original lowland forest extent, not a current forest-cover map.",
+    "richness_basis": "Species richness per hectare uses Fisher alpha and trees per hectare to standardize plots of differing area."
+  },
+  "next_step": "Obtain an author or repository CRS statement and then losslessly encode the native grid as a GeoTIFF."
+}

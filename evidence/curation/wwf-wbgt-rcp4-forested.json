@@ -1,0 +1,44 @@
+{
+  "dataset_id": "wwf-wbgt-rcp4-forested",
+  "metadata_evidence": [
+    {
+      "source": "https://www.nature.com/articles/s43247-021-00275-8",
+      "locator": "Methods: Experimental design; Population analysis; Figure1",
+      "supports": "Six forested/deforested and historical/RCP4.5/RCP8.5 experiments; warmest-month climatology; degreesC; historical1981-2010 and future2071-2100."
+    },
+    {
+      "source": "https://api.figshare.com/v2/articles/15128664",
+      "locator": "license, version, description and files",
+      "supports": "Figure1 package, CC-BY-4.0, version1 and exact file MD5."
+    },
+    {
+      "source": "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp4_comflor.nc",
+      "locator": "Complete NetCDF attributes, dimensions and arrays",
+      "supports": "Coordinate axes and source array identity; nominal1987 timestamp; no grid_mapping,datum,spatial_ref or earth-radius metadata."
+    }
+  ],
+  "decisions": [
+    "Admit as a geometry-null catalog item for access to the original spatial grid; nonspatial is an admission mode and does not describe the scientific nature of the source.",
+    "Do not equate degrees_east/degrees_north with a documented geodetic datum.",
+    "Use Methods experiment periods rather than the dummy1987 timestamp. Some captions say1980-2010 and2073-2100; retain that inconsistency as a provenance note.",
+    "No conversion, longitude wrapping, row reordering, resampling or climate calculation has been applied."
+  ],
+  "limitations": [
+    "Georeferenced GeoTIFF preparation requires a confirmed geographic reference system or an explicitly reviewed assignment.",
+    "Source grid extends across South America; these are not clipped Amazon-only layers.",
+    "Paper/model descriptions and the repository record document angular grids but did not establish the datum of this deposited file."
+  ],
+  "future_conversion": {
+    "variable": "wbgt",
+    "selection": [
+      0,
+      0,
+      ":",
+      ":"
+    ],
+    "longitude_shift": -360,
+    "latitude_reverse": true,
+    "pixel_size_degrees": 0.25,
+    "crs": "Confirmation required; none assigned"
+  }
+}

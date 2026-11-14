@@ -1,0 +1,172 @@
+schema: eolab/item/v1
+id: wwf-amazon-land-use-biodiversity-carbon
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: interval
+  start_datetime: '2010-01-01T00:00:00Z'
+  end_datetime: '2011-12-31T23:59:59Z'
+metadata:
+  title: 'Eastern Amazon: biodiversity and carbon across land uses'
+  description: Land-use comparisons at 310 eastern Amazon sites show that ecological losses extend beyond
+    complete forest clearance. Logged-and-burned primary forest had 25% lower large-tree richness and
+    27% lower dung-beetle richness than undisturbed primary forest; aboveground carbon also differed substantially
+    among forest conditions. These are observational comparisons used to estimate transition impacts,
+    not repeated measurements of experimentally changed sites. The supplied table contains site-level
+    richness for seven groups and four carbon pools, with forest-species richness linked separately. It
+    supports examining which ecological components differ across land uses and why tracking forest area
+    alone can miss degradation; it does not itself contain the paper’s estimated transition effects.
+  license: Apache-2.0
+  attribution: Nunes et al. (2022)
+  doi: 10.5281/zenodo.6518744
+  categories:
+  - Nature
+  - Nature's Contributions to People
+  study_ids:
+  - doi-10.1073-pnas.2202310119
+  study_time: Field surveys during 2010 and 2011.
+  publications:
+  - id: doi-10.1073-pnas.2202310119
+    title: Linking land-use and land-cover transitions to their ecological impact in the Amazon
+    doi: 10.1073/pnas.2202310119
+    url: https://www.pnas.org/doi/10.1073/pnas.2202310119
+    year: 2022
+  annotations:
+    limitations:
+    - Site tables remain nonspatial; coordinates require a verified join and CRS.
+    - Missing values remain NA. Site aggregates do not replace individual observations.
+    evidence_type: Observational site comparisons combined with land-cover transition analysis
+    dataset_role: Site-level biodiversity and carbon inputs underlying comparisons among land-use classes.
+assets:
+  data:
+    location: local
+    path: site-biodiversity-carbon.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      annotations:
+        encoding: UTF-8
+        missing_value: NA
+        site_key:
+        - Region
+        - Transect_code
+        units:
+          richness_fields: species count
+          carbon_pool_fields: Mg C per hectare
+        field_groups:
+          richness:
+          - ant_rich
+          - bird_rich
+          - db_rich
+          - liana_rich
+          - sap_rich
+          - tree_rich
+          - bee_rich
+          carbon:
+          - Aboveground_pool
+          - Litter_pool
+          - Dead_pool
+          - Soil_pool_new
+        Soil_pool_new: Soil carbon stock at 0-30 cm depth, Mg C per hectare.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.5281/zenodo.6518744
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.pnas.org/doi/10.1073/pnas.2202310119
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original:
+    location: local
+    path: source/data_all_joined.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Original joined site table and covariates
+  forest_species:
+    location: local
+    path: source/data_rich_forest_sp.csv
+    media_type: text/csv
+    roles:
+    - data
+    metadata:
+      title: Forest-species richness by site
+      annotations:
+        site_key:
+        - Region
+        - Transect_code
+        missing_value: NA
+        first_column: Unnamed source row index.
+        definition: Species recorded at least once at a primary forest site.
+  carbon_pgm:
+    location: local
+    path: source/Carbon_all_PGM.txt
+    media_type: text/plain
+    roles:
+    - data
+    metadata:
+      title: Paragominas carbon pools
+      annotations:
+        delimiter: whitespace with quoted headers
+        unit: Mg C per hectare
+  carbon_stm:
+    location: local
+    path: source/Carbon_all_STM.txt
+    media_type: text/plain
+    roles:
+    - data
+    metadata:
+      title: Santarem carbon pools
+      annotations:
+        delimiter: whitespace with quoted headers
+        unit: Mg C per hectare
+  license:
+    location: local
+    path: source/LICENSE
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Source repository license
+  readme:
+    location: local
+    path: source/README.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Source repository README
+  analysis_code:
+    location: local
+    path: source/Script_LMMs.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Source site-analysis code
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

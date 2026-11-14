@@ -1,0 +1,51 @@
+{
+  "dataset_id": "wwf-amazon-fisheries-annual-metrics",
+  "metadata_evidence": [
+    {
+      "source": "https://rs.figshare.com/articles/dataset/20013551",
+      "locator": "Supplement Table 2 v1, license and workbook file",
+      "supports": "CC-BY-4.0 and exact result-workbook identity."
+    },
+    {
+      "source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+      "locator": "Metadata and Supplement Table 2_Year Trends_",
+      "supports": "All 121 rows and 11 fields; annual coverage; source variable definitions."
+    },
+    {
+      "source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx",
+      "locator": "Metadata, Total length (cm), and region trait sheets",
+      "supports": "Body-size source trait is total length in centimetres."
+    },
+    {
+      "source": "https://doi.org/10.1098/rspb.2022.0726",
+      "locator": "PDF pages 2-3, Methods",
+      "supports": "Biomass weighting; price adjustments to 2010 CPI/US dollars and economic-index construction."
+    }
+  ],
+  "decisions": [
+    "Export the exact results sheet, retaining all rows and columns and the source NA token. Do not infer regional polygons or reconstruct raw landings."
+  ],
+  "limitations": [
+    "These are regional summary metrics. Raw annual taxon-landings records and region geometries are not supplied."
+  ],
+  "published_source_comparison": {
+    "local_md5": "697d6d89753c6f7561b9d35a5261164c",
+    "published_md5": "849f824e48ae1db80311015bd3b67958",
+    "result": "Workbook bytes differ; every populated literal/formula/cached cell in both sheets matches the published workbook."
+  },
+  "field_definitions": {
+    "Region": "The corresponding region",
+    "Year": "The year",
+    "Total Landings (tonnes)": "Total biomass landed for the corresponding year",
+    "Time Series Duration": "The total length of the time series",
+    "Species Richness": "The total number of taxonomic units for the corresponding year",
+    "Shannon Diversity": "The shannon-diversity index for the corresponding year",
+    "Evenness": "The evenness index for the corresponding year",
+    "Jaccard Dissimilarity": "The Jaccard dissimilitarity index between the corresponding year and first year of the time series",
+    "Mean Body Size": "The landings biomass-weighted mean body size",
+    "Mean Trophic Level": "The landings biomass-weighted mean trophic level",
+    "Mean Price Index": "The landings biomass-weighted mean price index",
+    "Mean Revenue Index": "The landings biomass-weighted mean revenue index"
+  },
+  "field_definition_source": "Definitions transcribed from the original workbook Metadata sheet."
+}

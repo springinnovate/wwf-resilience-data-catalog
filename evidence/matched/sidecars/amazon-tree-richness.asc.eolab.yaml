@@ -1,0 +1,111 @@
+schema: eolab/item/v1
+id: wwf-amazon-tree-richness
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: Tree species richness across the original Amazon forest
+  description: Using forest inventories, the study asked where Amazonian tree species richness is greatest
+    and how it varies among forest types. The highest richness was found in terra-firme forests of western
+    Amazonia's Pebas region and French Guiana. This file estimates species per hectare on a 0.1-degree
+    grid, using old-growth plots of trees at least 10 cm in diameter at breast height. It describes the
+    original lowland forest extent, with greater uncertainty in sparsely sampled white-sand and swamp
+    forests. Values are not total species per grid cell or a measure of restoration success. The original
+    grid is downloadable; map display awaits CRS confirmation.
+  license: CC-BY-4.0
+  attribution: ter Steege et al. (2023)
+  doi: 10.6084/m9.figshare.22786166.v2
+  citation: ter Steege et al. (2023). Mapping density, diversity and species-richness of the Amazon tree
+    flora. Version2. Figshare. https://doi.org/10.6084/m9.figshare.22786166.v2
+  categories:
+  - Nature
+  statuses:
+  - CRS confirmation needed
+  study_ids:
+  - doi-10.1038-s42003-023-05514-6
+  study_time: April 2023 ATDN compilation; the underlying plot census dates vary and do not establish
+    one map observation interval.
+  publications:
+  - id: doi-10.1038-s42003-023-05514-6
+    title: Mapping density, diversity and species-richness of the Amazon tree flora
+    doi: 10.1038/s42003-023-05514-6
+    url: https://www.nature.com/articles/s42003-023-05514-6
+    year: 2023
+  annotations:
+    limitations:
+    - Based on old-growth forest plots and interpolated over the original lowland forest extent; this
+      is not a current forest-cover inventory.
+    temporal_note: Catalog time is the source-file modification date, not a measurement date.
+    processing: Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.
+    evidence_type: Forest-inventory baseline with spatial interpolation
+    dataset_role: Interpolated tree species-richness baseline, species per hectare.
+assets:
+  data:
+    location: local
+    path: amazon-tree-richness.asc
+    media_type: text/plain
+    roles:
+    - data
+    metadata:
+      annotations:
+        meaning: Estimated species richness per hectare
+        unit: species ha-1
+        source_format: ESRI ASCII grid
+        tree_definition: Free-standing woody individuals with diameter at breast height at least 10 cm.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.22786166.v2
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s42003-023-05514-6
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  source_script:
+    location: local
+    path: source/TreeDiversityScript.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original map-generation script
+  source_functions:
+    location: local
+    path: source/TreeDiversityFunctions.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original interpolation functions
+  source_grid:
+    location: local
+    path: source/AmazonLowLandForestRaisg.csv
+    media_type: text/csv
+    roles:
+    - metadata
+    metadata:
+      title: Original interpolation-grid coordinates
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

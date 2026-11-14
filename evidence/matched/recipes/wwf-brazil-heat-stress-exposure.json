@@ -1,0 +1,56 @@
+{
+  "sidecar": "matched/sidecars/heat-stress-exposed-population.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-brazil-heat-stress-exposure.md",
+  "curation": "curation/wwf-brazil-heat-stress-exposure.json",
+  "directory": "brazil-heat-stress-exposure",
+  "row_ids": [
+    "row-018"
+  ],
+  "primary_source": "DeforestationAndClimate/15128679/number_population_figure3.csv",
+  "operation": {
+    "type": "csv_table",
+    "source": "DeforestationAndClimate/15128679/number_population_figure3.csv",
+    "encoding": "cp1252",
+    "delimiter": ";",
+    "decimal_columns": [
+      "pop"
+    ]
+  },
+  "source_files": {
+    "DeforestationAndClimate/15128679/number_population_figure3.csv": "19574586063c985f021db02025db1ba0abbf48f7bce952f8efbc9769fd0d48a7",
+    "DeforestationAndClimate/15128679/Figure 3.R": "9958d7a61474d9e3695e73908f3fb48c4a260de0059921420f9f3967a9a67ef8",
+    "DeforestationAndClimate/15128679/outdoor_pop.csv": "ee38fc0a5f61ba51789ce81d158bfa4dbd1356856ee73372b611ad95c9ffe79c",
+    "DeforestationAndClimate/15128679/threshold_34_pop.csv": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a",
+    "DeforestationAndClimate/15128688/munic_WbgtMaxMed-id.txt": "c5a235d7514bda4c10ed96f3e683ddae40e9574e6e88375ca2071dfa5ade4eb9",
+    "DeforestationAndClimate/15128688/Figure 4.R": "4a4a6cf5f938024484718f3cff8b0e97b90082599fb28ffe3817d272f97ccbc3",
+    "DeforestationAndClimate/15128688/outdoor_pop.csv": "ee38fc0a5f61ba51789ce81d158bfa4dbd1356856ee73372b611ad95c9ffe79c",
+    "DeforestationAndClimate/15128688/threshold_34_pop.csv": "ea4e7bb552cf9116a3fa489da65d02cabf929951d061ae847a23276d7a0e712a"
+  },
+  "attachments": [
+    {
+      "source": "DeforestationAndClimate/15128679/number_population_figure3.csv",
+      "path": "source/number_population_figure3.csv"
+    },
+    {
+      "source": "DeforestationAndClimate/15128679/Figure 3.R",
+      "path": "source/Figure 3.R"
+    },
+    {
+      "source": "DeforestationAndClimate/15128679/outdoor_pop.csv",
+      "path": "source/outdoor_pop.csv"
+    },
+    {
+      "source": "DeforestationAndClimate/15128679/threshold_34_pop.csv",
+      "path": "source/threshold_34_pop.csv"
+    },
+    {
+      "source": "DeforestationAndClimate/15128688/munic_WbgtMaxMed-id.txt",
+      "path": "source/munic_WbgtMaxMed-id.txt"
+    },
+    {
+      "source": "DeforestationAndClimate/15128688/Figure 4.R",
+      "path": "source/Figure 4.R"
+    }
+  ],
+  "expected_rows": 12
+}

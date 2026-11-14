@@ -1,0 +1,30 @@
+{
+  "sidecar": "pilot/sidecars/atto-monthly-carbon-fluxes-2023.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-atto-monthly-carbon-fluxes-2023.md",
+  "curation": "curation/wwf-atto-monthly-carbon-fluxes-2023.json",
+  "directory": "atto-fluxes-2023",
+  "attachments": [
+    {
+      "source": "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv",
+      "path": "source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv"
+    }
+  ],
+  "primary_source": "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv",
+  "source_files": {
+    "doi-10.17617-3.ou3kya/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921"
+  },
+  "expected_source_rows": 119,
+  "year": 2023,
+  "columns": [
+    "Time",
+    "Year",
+    "Month",
+    "NEE_gCper_m2_month",
+    "GPP_gCper_m2_month",
+    "Reco_gCper_m2_month"
+  ],
+  "expected_output_sha256": "b719e994de0dbbf9a07abdaf4feae834ed72711a2f9b3655e2d6088ddfaa0ecf",
+  "row_ids": [
+    "row-053"
+  ]
+}

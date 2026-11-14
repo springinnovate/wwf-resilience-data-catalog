@@ -1,0 +1,75 @@
+{
+  "dataset_id": "wwf-atto-monthly-carbon-fluxes-2023",
+  "metadata_evidence": [
+    {
+      "source": "Source CSV header and all 119 records",
+      "supports": "Column names, units embedded in flux names, month-end labels, twelve 2023 rows, missing 2021-05, no explicit quality flag columns."
+    },
+    {
+      "source": "https://edmond.mpg.de/api/datasets/:persistentId/?persistentId=doi:10.17617/3.OU3KYA",
+      "locator": "latestVersion.license; latestVersion.files[dataFile.id=333872]; citation.dsDescription",
+      "supports": "CC0-1.0, version 1.0, exact file identity, STILT endpoint coordinate meanings."
+    },
+    {
+      "source": "paper-023_amazon-carbon-source-2023.pdf",
+      "locator": "Section 2.2, printed pages 4-5 (PDF pages 5-6)",
+      "supports": "ATTO eddy covariance measured at 81 m; filtered half-hourly fluxes used for NEE, gap-filling, and partitioning; full processing details referred to Supporting Information Text S5."
+    },
+    {
+      "source": "paper-023_amazon-carbon-source-2023.pdf",
+      "locator": "Data Availability Statement, printed page 17 (PDF page 18)",
+      "supports": "Monthly totals of NEE, GPP, Reco and monthly mean regional deltaCO2 are supplied by dataset DOI."
+    }
+  ],
+  "limitations": [
+    "Monthly derived flux totals only; underlying half-hourly observations and quality flags are absent from this file.",
+    "The pilot does not reproduce original filtering, gap-filling, or partitioning.",
+    "No geographic footprint is assigned to the table. finalLat/finalLon are trajectory endpoints and must not be interpreted as fixed tower coordinates.",
+    "Original source series lacks May 2021; the selected 2023 year is complete.",
+    "Supporting Information Text S5 was not separately reviewed in this pilot inspection."
+  ],
+  "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+  "processing": [
+    "Select Year=2023.",
+    "Retain Time, Year, Month and the three monthly carbon-flux columns.",
+    "Preserve original numeric strings; no new flux calculation or spatial inference."
+  ],
+  "pilot_corrections": [
+    "Existing matches.csv calls the date column TimeYearMonth, but the source header is Time with separate Year and Month columns.",
+    "Existing matching evidence labels finalLat/finalLon station coordinates; authoritative dataset description says mean STILT ending locations."
+  ],
+  "source_version": "1.0",
+  "source_column_correction": "The date column is Time, not TimeYearMonth. finalLat/finalLon are STILT trajectory endpoints, not station coordinates.",
+  "source_time_gap_note": "The original monthly series lacks May 2021; the selected 2023 year is complete.",
+  "field_definitions": {
+    "data": {
+      "Time": {
+        "description": "Month-end label for the monthly aggregation, retained from the source table; not an instantaneous sample time."
+      },
+      "Year": {
+        "description": "Calendar year."
+      },
+      "Month": {
+        "description": "Calendar month, 1 through 12."
+      },
+      "NEE_gCper_m2_month": {
+        "unit": "g C m-2 month-1",
+        "description": "Monthly net ecosystem exchange. Selected values satisfy NEE = Reco - GPP; negative values indicate net uptake."
+      },
+      "GPP_gCper_m2_month": {
+        "unit": "g C m-2 month-1",
+        "description": "Monthly gross primary productivity from partitioned eddy-covariance fluxes."
+      },
+      "Reco_gCper_m2_month": {
+        "unit": "g C m-2 month-1",
+        "description": "Monthly ecosystem respiration from partitioned eddy-covariance fluxes."
+      }
+    },
+    "original": {
+      "": "Unnamed row index, 0 through 118; not a scientific variable.",
+      "finalLat": "Mean ending latitude of STILT backward trajectories, not ATTO station latitude.",
+      "finalLon": "Mean ending longitude of STILT backward trajectories, not ATTO station longitude.",
+      "deltaCO2_ppm": "Monthly averaged regional CO2 signal, parts per million."
+    }
+  }
+}

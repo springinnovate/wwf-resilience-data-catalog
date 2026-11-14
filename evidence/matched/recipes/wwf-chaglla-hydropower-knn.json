@@ -1,0 +1,194 @@
+{
+  "sidecar": "matched/sidecars/chaglla-hydropower-knn.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-chaglla-hydropower-knn.md",
+  "curation": "curation/wwf-chaglla-hydropower-knn.json",
+  "directory": "chaglla-hydropower-knn",
+  "row_ids": [
+    "row-067"
+  ],
+  "primary_source": "Data repository/Results/energy/energy_E0_PF0.csv",
+  "operation": {
+    "type": "csv_concat",
+    "sources": [
+      {
+        "path": "Data repository/Results/energy/energy_E0_PF0.csv",
+        "land_management": "E0"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E1-a_PF0.csv",
+        "land_management": "E1-a"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E1-b_PF0.csv",
+        "land_management": "E1-b"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E1-c_PF0.csv",
+        "land_management": "E1-c"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E1-d_PF0.csv",
+        "land_management": "E1-d"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E1-e_PF0.csv",
+        "land_management": "E1-e"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E2-a_PF0.csv",
+        "land_management": "E2-a"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E2-b_PF0.csv",
+        "land_management": "E2-b"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E2-c_PF0.csv",
+        "land_management": "E2-c"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E2-d_PF0.csv",
+        "land_management": "E2-d"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E2-e_PF0.csv",
+        "land_management": "E2-e"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E4-a_PF0.csv",
+        "land_management": "E4-a"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E4-b_PF0.csv",
+        "land_management": "E4-b"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E4-c_PF0.csv",
+        "land_management": "E4-c"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E4-d_PF0.csv",
+        "land_management": "E4-d"
+      },
+      {
+        "path": "Data repository/Results/energy/energy_E4-e_PF0.csv",
+        "land_management": "E4-e"
+      }
+    ],
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "filter": {
+      "column": "DS",
+      "endswith": "_KNN"
+    },
+    "columns": [
+      "land_management",
+      "scenario",
+      "climatology",
+      "DS",
+      "Average_Energy_MW",
+      "Firm_Energy_MW"
+    ]
+  },
+  "source_files": {
+    "Data repository/Results/energy/energy_E0_PF0.csv": "dd321c225c076bc0c366607dbee46c3514c2011b76322b3b22dfdbd952d576e7",
+    "Data repository/Results/energy/energy_E1-a_PF0.csv": "4937b71f9202c81817276516f6536b779ee067ec1d2009881c14082eb9cad924",
+    "Data repository/Results/energy/energy_E1-b_PF0.csv": "c58a8a0d23624775a4d946c2e2227d6d411bc334159972382dca4e990768f3e7",
+    "Data repository/Results/energy/energy_E1-c_PF0.csv": "bbad2c70379aa65c7d94448be377c3212f672d12057e21d4e118293259963c11",
+    "Data repository/Results/energy/energy_E1-d_PF0.csv": "da0778e0f5e00c2e96f35a6af42b37c521bd1b2d82d09f3119fd85afdb553f77",
+    "Data repository/Results/energy/energy_E1-e_PF0.csv": "1bf5dd6c6f4df2c70456b15c9c4a23f7a23a338cd6129f5f4a6e5abb6df30d31",
+    "Data repository/Results/energy/energy_E2-a_PF0.csv": "4d1c4cf1a1a1e4af56fb73a153705083fa1949996ac16fba9eac466175b66f03",
+    "Data repository/Results/energy/energy_E2-b_PF0.csv": "f40481d3eac3400dbbf418a6fecb2c9ee8a3e1be2ca491056400bdf8e151966c",
+    "Data repository/Results/energy/energy_E2-c_PF0.csv": "a5e7e67572fc6807e808c3a970db4188a1a53b122f2f2c7ffaa31edaf8217f41",
+    "Data repository/Results/energy/energy_E2-d_PF0.csv": "0882bb33400093b095048123fbb294d02c499b88291486d1a4444bd0e9a6b6c8",
+    "Data repository/Results/energy/energy_E2-e_PF0.csv": "77da8264de43171e8f1782d393f577573901b5e4af9b2f84deb7cfd6fa23f08f",
+    "Data repository/Results/energy/energy_E4-a_PF0.csv": "fb3ca566ffee6cd3f959fec5ac7103a54de823a27e09c003d0b395c103f1821c",
+    "Data repository/Results/energy/energy_E4-b_PF0.csv": "2355bb0d00e046f3055ec23d85f6ef3b9f24daf3e7822169aea2b961863635c2",
+    "Data repository/Results/energy/energy_E4-c_PF0.csv": "e6b713e02194abbd57e8bb4d11a7d60dc313b3ddd9978d00d4e42aa100ba64ab",
+    "Data repository/Results/energy/energy_E4-d_PF0.csv": "e385c197f2f59f859973081dee62fe0210ead937a0a55d39e0abae7c4c683e9d",
+    "Data repository/Results/energy/energy_E4-e_PF0.csv": "1209b82aceae5c9e308d15cf0af45bbf8fb75983be2c487d88c70808e45737cf",
+    "Data repository/SRC/SWAT/Run_landuse_analysis.R": "c73554c88a3ad1e4322c0a0efd202b7b095554b815e7b00fe1e5456ad1ec959c",
+    "Data repository/SRC/Robust_Decision_Analysis/script_parallelCoordinatesPlot_v5_1_Deltas.R": "0eeb3fa4aa56f319754cbbf5623a52eb703c547ef3f8f202a5976fcd541439b6"
+  },
+  "attachments": [],
+  "expected_rows": 336,
+  "bundles": [
+    {
+      "path": "source/original-tables-and-code.zip",
+      "files": [
+        {
+          "source": "Data repository/Results/energy/energy_E0_PF0.csv",
+          "path": "energy_E0_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E1-a_PF0.csv",
+          "path": "energy_E1-a_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E1-b_PF0.csv",
+          "path": "energy_E1-b_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E1-c_PF0.csv",
+          "path": "energy_E1-c_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E1-d_PF0.csv",
+          "path": "energy_E1-d_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E1-e_PF0.csv",
+          "path": "energy_E1-e_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E2-a_PF0.csv",
+          "path": "energy_E2-a_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E2-b_PF0.csv",
+          "path": "energy_E2-b_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E2-c_PF0.csv",
+          "path": "energy_E2-c_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E2-d_PF0.csv",
+          "path": "energy_E2-d_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E2-e_PF0.csv",
+          "path": "energy_E2-e_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E4-a_PF0.csv",
+          "path": "energy_E4-a_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E4-b_PF0.csv",
+          "path": "energy_E4-b_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E4-c_PF0.csv",
+          "path": "energy_E4-c_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E4-d_PF0.csv",
+          "path": "energy_E4-d_PF0.csv"
+        },
+        {
+          "source": "Data repository/Results/energy/energy_E4-e_PF0.csv",
+          "path": "energy_E4-e_PF0.csv"
+        },
+        {
+          "source": "Data repository/SRC/SWAT/Run_landuse_analysis.R",
+          "path": "Run_landuse_analysis.R"
+        },
+        {
+          "source": "Data repository/SRC/Robust_Decision_Analysis/script_parallelCoordinatesPlot_v5_1_Deltas.R",
+          "path": "script_parallelCoordinatesPlot_v5_1_Deltas.R"
+        }
+      ]
+    }
+  ]
+}

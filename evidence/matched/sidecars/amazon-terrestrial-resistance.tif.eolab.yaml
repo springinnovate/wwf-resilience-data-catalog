@@ -1,0 +1,106 @@
+schema: eolab/item/v1
+id: wwf-amazon-terrestrial-resistance
+kind: raster
+primary_asset: data
+temporal:
+  mode: modified
+metadata:
+  title: Barriers to terrestrial connectivity across the Amazon
+  description: 'The study examined how dams, forest loss, fire, extraction and roads interrupt ecological
+    connections across the Amazon, and how modeled connectivity differs inside and outside Indigenous
+    Territories and Protected Areas. It found higher connectivity inside those areas. This file is the
+    terrestrial resistance surface used as an input to that analysis: it combines weighted human pressures
+    with natural barriers such as rivers and wetlands. Higher scores mean stronger barriers; supplied
+    values range from 1 to 34. Use it to examine the assumed pattern of terrestrial barriers. It is neither
+    the final connectivity result nor a causal estimate of protection or restoration benefits.'
+  license: CC-BY-4.0
+  attribution: Ritter et al. (2025)
+  doi: 10.6084/m9.figshare.28089815.v1
+  citation: Ritter, C. D. (2025). Amazon Basin data and code to replicate analyses. Version 1. Figshare.
+    https://doi.org/10.6084/m9.figshare.28089815.v1
+  categories:
+  - Nature
+  study_ids:
+  - doi-10.1073-pnas.2418189122
+  study_time: Input layers represent different dates, spanning 2001-2023; this is a composite resistance
+    surface.
+  publications:
+  - id: doi-10.1073-pnas.2418189122
+    title: Indigenous territories and protected areas are crucial for ecosystem connectivity in the Amazon
+      basin
+    doi: 10.1073/pnas.2418189122
+    url: https://www.pnas.org/doi/10.1073/pnas.2418189122
+    year: 2025
+  annotations:
+    limitations:
+    - Relative resistance scores are not probabilities or measured movement rates.
+    - The delivered grid starts at 1; values have not been shifted to the paper's conceptual zero-impact
+      baseline.
+    temporal_note: Catalog time is a source-file modification date; the component dates are described
+      in the linked evidence.
+    processing: Lossless COG conversion in native EPSG:5641; grid, values and mask preserved.
+    evidence_type: Spatial connectivity modeling and area comparison
+    dataset_role: Terrestrial resistance input to the connectivity analysis.
+assets:
+  data:
+    location: local
+    path: amazon-terrestrial-resistance.tif
+    media_type: image/tiff; application=geotiff; profile=cloud-optimized
+    roles:
+    - data
+    metadata:
+      annotations:
+        band: 1
+        meaning: Terrestrial resistance to ecological connectivity
+        unit: '1'
+        unit_description: dimensionless relative resistance score
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.28089815.v1
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.pnas.org/doi/10.1073/pnas.2418189122
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  original_archive:
+    location: local
+    path: source/_2SPAnew2024_Resistance_analysis_DATASET.zip
+    media_type: application/zip
+    roles:
+    - data
+    metadata:
+      title: Original resistance-analysis package
+  source_code:
+    location: local
+    path: source/_2SPAnew2024_Resistance_analysis.R
+    media_type: text/plain
+    roles:
+    - metadata
+    metadata:
+      title: Original resistance-generation script
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources
+source:
+  format: geotiff

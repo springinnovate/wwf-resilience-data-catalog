@@ -1,0 +1,34 @@
+{
+  "sidecar": "matched/sidecars/amazon-tree-richness.asc.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-tree-richness.md",
+  "curation": "curation/wwf-amazon-tree-richness.json",
+  "directory": "amazon-tree-richness",
+  "row_ids": [
+    "row-040"
+  ],
+  "readiness": "Download only: CRS confirmation needed",
+  "operation": {
+    "type": "copy",
+    "source": "22786166/TreeRichness_ha.asc"
+  },
+  "source_files": {
+    "22786166/TreeRichness_ha.asc": "8841fb87f5d712677ccaddfd0991c3df423da9463ea166b2cd30eb022d0104c1",
+    "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f",
+    "22786166/TreeDiversityFunctions.R": "70322ff50fb8baeb4aa95fb766ed2d9697ab7b20a0adfda55d6d40c7d8285a01",
+    "22786166/AmazonLowLandForestRaisg.csv": "bee3c51400e3ce528c59c929bef2d83114eb60f6077165db13c14b723dfc1a2c"
+  },
+  "attachments": [
+    {
+      "source": "22786166/TreeDiversityScript.R",
+      "path": "source/TreeDiversityScript.R"
+    },
+    {
+      "source": "22786166/TreeDiversityFunctions.R",
+      "path": "source/TreeDiversityFunctions.R"
+    },
+    {
+      "source": "22786166/AmazonLowLandForestRaisg.csv",
+      "path": "source/AmazonLowLandForestRaisg.csv"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "sidecar": "matched/sidecars/carbon-losses.xlsx.eolab.yaml",
+  "scientific_note": "notes/wwf-forest-carbon-loss-gain-compilation.md",
+  "curation": "curation/wwf-forest-carbon-loss-gain-compilation.json",
+  "directory": "forest-carbon-loss-gain-compilation",
+  "row_ids": [
+    "row-002"
+  ],
+  "primary_source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx",
+  "operation": {
+    "type": "copy",
+    "source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx"
+  },
+  "source_files": {
+    "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_losses_forest_type_current_v2.xlsx": "fd163b691c6254bb2bc24ddeac943dc39d533614f93eec36c93877f982499a12",
+    "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_accumulation_forest_type_current_v2.xlsx": "8322dee016f3f606f5e8c34dd6af3dbe0bbba3b08a94063b26b14639e37876df",
+    "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx": "f059bc0207eb406adfe198b61bb23a065fe02e4d0c58744ff207bb4fd8faecbc"
+  },
+  "attachments": [
+    {
+      "source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/AGC_accumulation_forest_type_current_v2.xlsx",
+      "path": "source/AGC_accumulation_forest_type_current_v2.xlsx"
+    },
+    {
+      "source": "AMetaAnalysisOfCarbonLosses_row8/AMetaAnalysisOfCarbonLosses_row8/references_info_v2.xlsx",
+      "path": "source/references_info_v2.xlsx"
+    }
+  ]
+}

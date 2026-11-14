@@ -1,0 +1,64 @@
+{
+  "sidecar": "pilot/sidecars/amazon-barriers.gpkg.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-barrier-locations.md",
+  "curation": "curation/wwf-amazon-barrier-locations.json",
+  "directory": "amazon-barriers",
+  "attachments": [
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+      "path": "source/barriers_all_validas4326.shp"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx",
+      "path": "source/barriers_all_validas4326.shx"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf",
+      "path": "source/barriers_all_validas4326.dbf"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj",
+      "path": "source/barriers_all_validas4326.prj"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg",
+      "path": "source/barriers_all_validas4326.cpg"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd",
+      "path": "source/barriers_all_validas4326.qmd"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md",
+      "path": "source/README.md"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R",
+      "path": "source/part_1_add_barriers_CURRENT_SET.R"
+    },
+    {
+      "source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R",
+      "path": "source/part_1_add_barriers_FUTURE_SET.R"
+    }
+  ],
+  "primary_source": "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp",
+  "source_files": {
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shp": "460d88e450b3a3916289675599facbecf7cae755a8f62733ee96ae741ad853ca",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.shx": "7933d2a19c26ab4e6f7036fe360903c49545601513520317f3dfee3be2e6a2e0",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.dbf": "341e13f6b636a06219fd77b5976ab5f8b05181517dac52638cf5f642fc32c37f",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/barriers_all_validas4326.qmd": "c9c623166136e126e3e90a9d58228f47496fee45c0ff49b5063d76517351a96a",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/README.md": "6f1631004063d788cb101093daaea1caeb38bc0903ef3952cc9fa251ee7705bb",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_CURRENT_SET.R": "7075f8d38fb224b3c6394f2e543b1e8c76ed30805969d125006166be6d77bc6a",
+    "AnthropogenicBarriers_row34/AnthropogenicBarriers_row34/part_1_add_barriers_FUTURE_SET.R": "dfd4a7c6b947d0a823c7251a64dd5c84bae32df4070b3a09bd6c9c70e0e156bc"
+  },
+  "expected_features": 562,
+  "output_layer": "barriers",
+  "row_ids": [
+    "row-009",
+    "row-010",
+    "row-011",
+    "row-012"
+  ]
+}

@@ -1,77 +1,67 @@
 # WWF resilience data catalog
 
-We are preparing a STAC catalog of research data for the WWF resilience platform. Before building it, we needed to establish which datasets described in our study sheet were actually present in the downloaded files, and what other useful data those files contained.
+We are preparing research data for the WWF resilience platform. First, we needed to establish which datasets described in the study sheet were present in the downloaded files, identify their papers, and keep the evidence behind each match.
 
-This review compares **78 dataset descriptions from 30 papers** with **1,882 data and supporting files in 23 study folders**. It uses file contents, metadata, documentation and study code to distinguish the requested data from inputs, related results and missing outputs.
-
-**Start with the [study data review workbook](outputs/study_data_matches.xlsx).** It shows what was found, what needs checking, and the evidence behind each decision. The review describes the files available on 13 November 2026; it is not yet a STAC catalog.
+The review covers **78 dataset descriptions from 30 papers**, checked against **1,882 data and supporting files in 23 study folders**. **19 descriptions were found and 29 were partly found.** The 19 matched descriptions are now represented in a prepared EOLab collection, with the limitations below kept visible.
 
 ## What we found
 
 | Result | Descriptions | What it means |
 | --- | ---: | --- |
 | Found | 19 | The requested data were identified. Metadata or other checks may still be needed. |
-| Partly found | 29 | Only some requested content was found, or the files contain filtered or processed results with different coverage. |
+| Partly found | 29 | Some requested content is present, or processed results have different coverage. |
 | Supporting files only | 8 | Inputs, code or documentation are present, but the requested output was not found. |
-| Different data | 1 | The candidate file contains a different drought index: SPI instead of SPEI. |
-| Not found locally | 21 | No corresponding study package was found in the indexed folders. These descriptions belong to seven papers. |
+| Different data | 1 | The candidate contains SPI rather than the requested SPEI drought index. |
+| Not found locally | 21 | No corresponding study package was found. These descriptions belong to seven papers. |
 
-All **30 paper identities have been checked**, with article DOIs and links to their publisher pages. Those links identify the papers; they are separate from dataset download links. “Not found locally” does not mean that data are unavailable online.
+All **30 paper identities were checked**, with article DOIs and publisher links in the [paper registry](data/decisions/papers_verified.json). Publisher links identify papers; dataset repositories and download links are recorded separately. “Not found locally” does not mean unavailable online.
 
-We also found **670 additional or unresolved scientific entries associated with 16 papers**: **627 files and 43 archived members or layers** that were not assigned to a supplied description. These are **not 670 distinct datasets**. Copies, alternative formats, related outputs and unresolved files remain visible. Code, ordinary inputs, figures and technical support files are counted separately.
+We also identified **670 additional or unresolved scientific entries associated with 16 papers**: 627 files and 43 archived members or layers. These are not 670 independent datasets. Copies, alternative formats and related products remain visible so they can be considered for a later catalog pass.
 
-These are two different kinds of follow-up: locate requested data that are missing, and decide which additional data deserve their own descriptions in the catalog.
+## Prepared evidence
+
+The prepared collection has **24 catalog entries: 7 maps, 8 tables/workbooks, and 9 native grids available for download while their CRS is confirmed**. It covers all 19 matched descriptions plus the existing barrier-input pilot. One description may supply several scenarios, while two descriptions can share a table.
+
+Start with the [prepared evidence results](docs/prepared-evidence.md) and the [scientific notes](evidence/notes/). The notes explain each study’s question, findings, interpretation and the role of the supplied data, with specific sources. The committed [matched YAMLs](evidence/matched/sidecars/) and [pilot YAMLs](evidence/pilot/sidecars/) are the catalog descriptions used when preparing or refreshing the processed files.
+
+The collection has passed local preparation and EOLab admission checks. An EOLab directory scan is still needed to update the running catalog. Important remaining limits include:
+
+- Nine WBGT and tree grids lack a confirmed CRS, so no map geometry is inferred.
+- Fish-package rights contain conflicting wording.
+- Carbon-study reference IDs need correction before joining some records to citations.
+- Hydropower scenario periods and the firm-power definition, and seed-mass class boundaries, remain unresolved.
+
+The [readiness notes](docs/stac-readiness.md) preserve the wider matching-review gaps, including partial matches, missing outputs and additional local data. Finding the right file does not establish scientific validity or suitability for every analysis.
+
+## Reading the matching result
+
+The main matching result is **`study_data_matches.xlsx`**, generated in `build/reconciliation/`. It reproduces the recorded review of the files available on 13 November 2026. Workbooks and generated reports are rebuilt locally rather than stored in Git; use the [rebuilding guide](docs/rebuilding.md) to create them from the committed inputs.
+
+| Workbook tab | What it tells you |
+| --- | --- |
+| **Study review** | All 78 descriptions, short dataset names, results and what needs checking. |
+| **Other available data** | Additional or unresolved data for each of the 16 papers. |
+| **Details** | Original descriptions, recorded evidence and limitations. |
+| **Guide** | How to interpret the review and navigate supporting records. |
+
+For closer inspection, **Paper references** gives paper identities and verification sources; **File links** identifies the exact file, sheet, variable or archive member behind a match. **File inventory**, **Archive contents** and **Other data files** retain the complete lists. The same information is exported as CSV and JSON in `build/reconciliation/`.
 
 ## Article full text
 
-We also searched for full-text copies of the **30 papers**. **24 PDFs were downloaded**, **5 downloads were blocked**, and **no open copy was found for 1 paper**. The [article download workbook](reports/article_downloads.xlsx) and [CSV table](reports/article_downloads.csv) list each paper, its source, the copy obtained and any remaining access problem.
+The recorded search obtained **24 PDFs**, encountered **5 blocked downloads**, and found **no open copy for 1 paper**. The [article-search findings](docs/article-downloads.md) give links and access notes for follow-up. Rebuilding the article report creates `article_downloads.xlsx` and `article_downloads.csv` in `build/articles/`; PDFs remain untracked in `wwf-resilience-articles/`.
 
-Paper 013, on Amazon hot droughts, came from the U.S. Department of Energy repository as an author manuscript with an earlier title and editing notes; the final publisher PDF was not obtained. Version differences are recorded in the table.
+Copies are labeled by version. For example, the hot-drought paper was obtained as an author manuscript with an earlier title and editing notes, rather than the final publisher PDF. Finding an article does not establish that its dataset is present.
 
-For the six outstanding papers, the [article-search findings](docs/article-downloads.md) give specific links to try. Manual access has not been verified. A listed full-text link is not a successful download, and an article PDF does not establish that its underlying dataset is present.
+## What is kept in this repository
 
-## First datasets prepared for EOLab
-
-A three-dataset pilot now prepares the biomass-vulnerability raster, Amazon barrier points, and 2023 ATTO monthly carbon-flux table with EOLab YAML sidecars. The spatial files retain their verified native CRS; the table remains nonspatial. Each includes a concise catalog description, paper/source references and original-file attachments. The full review history and detailed supporting evidence are preserved in a linked file.
-
-See the [pilot results and files](docs/evidence-pilot.md). The barrier points are supporting inputs, not computed connectivity indices. The pilot also corrects the earlier interpretation of the ATTO table's date and coordinate columns.
-
-## How to use the workbook
-
-Download the workbook and open it in Excel or another spreadsheet application. Start with these tabs:
-
-| Tab | What to read |
+| Reviewed source | Purpose |
 | --- | --- |
-| **Study review** | All 78 descriptions, using short dataset names, a result, what was found and what needs checking. |
-| **Other available data** | A summary of additional or unresolved data for each of the 16 papers. |
-| **Details** | The original descriptions and full recorded evidence and limitations, without shortening. |
-| **Guide** | How to interpret the review and navigate the supporting records. |
+| [Data inputs](data/) | Preserved sheet, inventory, matching decisions, verified papers and article-search records. |
+| [Matched YAMLs](evidence/matched/sidecars/) and [pilot YAMLs](evidence/pilot/sidecars/) | Canonical catalog metadata, references, units and essential limitations. |
+| [Scientific notes](evidence/notes/) | Human-readable study findings and interpretation. |
+| [Curation records](evidence/curation/) | Detailed reviewed evidence, unique field definitions, corrections and source interpretation. |
+| [Matched recipes](evidence/matched/recipes/) and [pilot recipes](evidence/pilot/recipes/) | Source checksums, selections, conversions and supporting-file declarations. |
 
-For closer inspection, **Paper references** holds article identities and verification sources; **File links** identifies the exact file, sheet, variable or archive member behind a match. **Other data files**, **File inventory** and **Archive contents** provide the complete lists. **Source sheet** preserves the supplied sheet, and **Match records** preserves the detailed matching table.
+Preparation combines these sources with the study files. Each processed dataset links to `evidence-summary.md` and a complete `review-context.json`, preserving the original matching evidence and preparation checks. Generated workbooks, reports and validation results stay under ignored `build/` folders; the reviewed `.eolab.yaml` files remain committed.
 
-The same results are available as text tables:
-
-- [Study review](outputs/review_summary.csv): the short review of all 78 descriptions.
-- [Other available data](outputs/other_data_summary.csv): the 16-paper summary of extra or unresolved data.
-- [Full matching evidence](outputs/matches.csv) and [exact file links](outputs/asset_links.csv): the detail behind the summaries.
-- [Descriptions without a full or partial match](outputs/unmatched_sheet_entries.csv): 30 entries needing the requested data, rather than merely supporting files or a different product.
-- [Additional or unresolved files and layers](outputs/unmatched_local_data.csv): all 670 entries behind the other-data summary.
-- [Paper references](outputs/papers.csv): article DOIs, publisher links, verification sources and publication-year notes.
-
-File paths point into the external study-data folder. They identify what was inspected; they are not public download links. The underlying study datasets are not included in this repository.
-
-## How to interpret the findings
-
-“Found” means that the described data were identified. It does not mean they are ready to publish or that every scientific calculation has been reproduced. The review examined headers, samples, documentation and code; it did not run the studies' models or check every value.
-
-Some gaps affect how the data can be used. For example:
-
-- The aircraft files contain carbon dioxide samples, but no carbon monoxide data were found, and the samples have not been reconstructed into the stated 590 profiles.
-- Only 234 of 292 mapped Amazon dieback points meet the description's greater-than-80% decline threshold.
-- The tree density, diversity and richness grids were found, but their coordinate system and observation period still need confirmation.
-
-Before creating catalog entries, we need to resolve product and coverage differences, confirm coordinates, dates and units, check source rights, choose stable file locations, and avoid counting duplicate files or overlapping descriptions as separate datasets. The [STAC readiness notes](docs/stac-readiness.md) set out the specific outstanding work by paper and description.
-
-The repository's [Apache-2.0 license](LICENSE) covers this project's code and original annotations. It does not establish redistribution rights for the referenced papers, descriptions or third-party datasets. Their own attribution and usage terms still apply.
-
-For rebuilding the workbook or updating the evidence, see the [rebuilding and maintenance guide](docs/rebuilding.md).
+The [Apache-2.0 license](LICENSE) covers this project’s code and original annotations. Referenced studies and datasets retain their own attribution and usage terms. Bulk scientific files and article PDFs are not included in Git.

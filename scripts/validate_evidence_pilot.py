@@ -9,12 +9,19 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+from evidence_notes import pilot_evidence_context
+from evidence_sources import load_pilot_plan
 from pathlib import Path
 import subprocess
 import sys
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[1]
+
+
+def current_context(context: dict) -> dict:
+    """Compare current authored evidence without historical delivery snapshots."""
+    return {key: value for key, value in context.items() if key != 'provenance_history'}
 
 
 def require(condition: bool, message: str) -> None:
@@ -43,7 +50,7 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
 
     expected_schema = json.loads((REPO / 'evidence/pilot/eolab-item-v1.schema.json').read_text(encoding='utf-8'))
     require(descriptor_json_schema() == expected_schema, 'EOLab descriptor schema differs from the reviewed schema.')
-    plan = json.loads(records_path.read_text(encoding='utf-8'))
+    plan = load_pilot_plan(records_path)
     records = {record['id']: record for record in plan['records']}
     registry = create_default_dataset_handler_registry()
     discovery = FilesystemDatasetDiscovery(data_root, (data_root,), registry)
@@ -74,7 +81,8 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
         require(props['eolab:metadata'] == expected_metadata,
                 'Curated metadata or publication references changed during admission.')
         context_path = data_root / record['directory'] / declaration['assets']['review_context']['path']
-        require(json.loads(context_path.read_text(encoding='utf-8')) == record['review_context'],
+        require(current_context(json.loads(context_path.read_text(encoding='utf-8')))
+                == current_context(pilot_evidence_context(record)),
                 'Linked supporting evidence differs from the reviewed record.')
         for key, asset in declaration['assets'].items():
             admitted = item['assets'][key]
@@ -104,6 +112,7 @@ def validate(data_root: Path, eolab_source: Path, records_path: Path) -> tuple[d
     report = dict(eolab_source_revision=revision, eolab_merged_revision=plan['eolab_contract']['merged_revision'],
                   descriptor_module_sha256=hashlib.sha256(module.read_bytes()).hexdigest(),
                   schema_matches=True, discovery_errors=0, repeated_discovery_identical=True,
+                  provenance_history_excluded_from_context_comparison=True,
                   public_paths_are_catalog_identities=True, database_published=False,
                   scope='Real filesystem discovery, native raster/vector readers, sidecar admission and public metadata projection. No running HTTP/pgSTAC service was exercised.',
                   datasets=summaries)
@@ -115,11 +124,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data-root', type=Path, required=True)
     parser.add_argument('--eolab-source', type=Path, required=True)
-    parser.add_argument('--records', type=Path, default=REPO/'evidence/pilot/records.json')
-    parser.add_argument('--report', type=Path, required=True)
-    parser.add_argument('--items', type=Path, required=True)
+    parser.add_argument('--recipes', '--records', dest='recipes', type=Path, default=REPO/'evidence/pilot/recipes')
+    parser.add_argument('--report', type=Path, default=REPO/'build/evidence/pilot/admission.json')
+    parser.add_argument('--items', type=Path, default=REPO/'build/evidence/pilot/stac-preview.json')
     args = parser.parse_args()
-    report, items = validate(args.data_root, args.eolab_source, args.records)
+    report, items = validate(args.data_root, args.eolab_source, args.recipes)
     write_json(args.report, report)
     write_json(args.items, items)
     print('EOLab admitted exactly three datasets; metadata, relative source links and repeat-scan identity checks passed.')

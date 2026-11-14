@@ -1,0 +1,80 @@
+{
+  "sidecar": "matched/sidecars/tree-dispersal-traits.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-tree-dispersal-traits.md",
+  "curation": "curation/wwf-amazon-tree-dispersal-traits.json",
+  "directory": "amazon-tree-dispersal-traits",
+  "row_ids": [
+    "row-049"
+  ],
+  "primary_source": "28417586/NetworkDataPollinationNew.csv",
+  "operation": {
+    "type": "csv_table",
+    "source": "28417586/NetworkDataPollinationNew.csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "column_indices": [
+      0,
+      1,
+      2,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "output_headers": [
+      "species",
+      "family",
+      "genus",
+      "seedmass",
+      "Fleshy",
+      "Anemochory",
+      "Hydrochory",
+      "Explosive dehiscence",
+      "Unassisted_Stevenson_Correa",
+      "Endozoochory",
+      "Synzoochory",
+      "Epizoochory",
+      "Myrmecochory",
+      "Wind",
+      "Explosive",
+      "Water",
+      "Unassisted_McGlone",
+      "Ant",
+      "GroundM",
+      "ArboralD"
+    ]
+  },
+  "source_files": {
+    "28417586/NetworkDataPollinationNew.csv": "be83b280e685e14fbdf758e1cfcd33921897a60353b8461146cb3ef1a1eb7bb1",
+    "28417586/NetworksFinal.R": "6998ef05b26da4bc4636411c3df4dd1b295ff2c6a22d7e627310bcc6dad75465",
+    "28417586/Publications.xlsx": "f219b4f2ac22062fd015b7efb9eca9cb278e18e3c9c6a5cef76745918851d3b2"
+  },
+  "attachments": [
+    {
+      "source": "28417586/NetworkDataPollinationNew.csv",
+      "path": "source/NetworkDataPollinationNew.csv"
+    },
+    {
+      "source": "28417586/NetworksFinal.R",
+      "path": "source/NetworksFinal.R"
+    },
+    {
+      "source": "28417586/Publications.xlsx",
+      "path": "source/Publications.xlsx"
+    }
+  ],
+  "expected_rows": 5201
+}

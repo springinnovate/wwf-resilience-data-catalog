@@ -1,0 +1,18 @@
+{
+  "sidecar": "matched/sidecars/wbgt-rcp8-forested.nc.eolab.yaml",
+  "scientific_note": "notes/wwf-wbgt-rcp8-forested.md",
+  "curation": "curation/wwf-wbgt-rcp8-forested.json",
+  "directory": "wbgt-rcp8-forested",
+  "row_ids": [
+    "row-017"
+  ],
+  "readiness": "Download only: CRS confirmation needed",
+  "operation": {
+    "type": "copy",
+    "source": "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp8_comflor.nc"
+  },
+  "source_files": {
+    "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp8_comflor.nc": "ca3d4fdb1c636af9987522139bee30191530b2ab2e30d3ce8f0f025ad317e8d5"
+  },
+  "attachments": []
+}

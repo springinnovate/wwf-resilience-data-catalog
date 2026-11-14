@@ -1,0 +1,88 @@
+schema: eolab/item/v1
+id: wwf-wbgt-rcp4-deforested
+kind: nonspatial
+primary_asset: data
+temporal:
+  mode: interval
+  start_datetime: '2071-01-01T00:00:00Z'
+  end_datetime: '2100-12-31T23:59:59Z'
+metadata:
+  title: 'In-shade heat stress: RCP4.5 with complete Amazon savannization'
+  description: The study used a climate model to ask how complete replacement of Amazon forest by savanna
+    would change heat stress alongside global warming. Across paired simulations, savannization raised
+    in-shade heat stress, with greater increases under RCP8.5. This file supplies the RCP4.5 climate (2071-2100)
+    scenario with complete Amazon savannization. Values are degrees Celsius for average daily maximum
+    in-shade wet-bulb globe temperature in the warmest month, on a South American model grid. It is one
+    scenario, not a difference map, observed illness record, or policy-effect estimate. Download is available;
+    map display awaits CRS confirmation.
+  license: CC-BY-4.0
+  attribution: Oliveira et al. (2021)
+  doi: 10.6084/m9.figshare.15128664.v1
+  citation: Oliveira (2021). Figure 1 source data. Version 1. Figshare. https://doi.org/10.6084/m9.figshare.15128664.v1
+  categories:
+  - Drivers & Pressures
+  statuses:
+  - CRS confirmation needed
+  study_ids:
+  - doi-10.1038-s43247-021-00275-8
+  study_time: Model climatology 2071-2100. Periods follow Methods; figure captions differ (see linked
+    evidence).
+  publications:
+  - id: doi-10.1038-s43247-021-00275-8
+    title: Deforestation and climate change are projected to increase heat stress risk in the Brazilian
+      Amazon
+    doi: 10.1038/s43247-021-00275-8
+    url: https://www.nature.com/articles/s43247-021-00275-8
+    year: 2021
+  annotations:
+    scenario: RCP4.5 climate (2071-2100); complete Amazon savannization
+    limitations:
+    - The native file's 1987 timestamp is a placeholder shared by all scenarios.
+    processing: Original NetCDF preserved byte for byte; no spatial reference or geometry assigned.
+    evidence_type: Climate model scenario experiment
+    dataset_role: Single modeled climate and land-cover scenario (45S), Figure 1.
+assets:
+  data:
+    location: local
+    path: wbgt-rcp4-deforested.nc
+    media_type: application/x-netcdf
+    roles:
+    - data
+    metadata:
+      annotations:
+        variable: wbgt
+        meaning: Warmest-month average daily maximum in-shade wet-bulb globe temperature
+        unit: degC
+        unit_basis: Paper Figure1 and Methods; unit absent from the source variable.
+  review_context:
+    location: local
+    path: review-context.json
+    media_type: application/json
+    roles:
+    - metadata
+    metadata:
+      title: Full review evidence and source history
+  source_repository:
+    location: external
+    href: https://doi.org/10.6084/m9.figshare.15128664.v1
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Original dataset repository
+  publication:
+    location: external
+    href: https://www.nature.com/articles/s43247-021-00275-8
+    media_type: text/html
+    roles:
+    - metadata
+    metadata:
+      title: Research article
+  evidence_summary:
+    location: local
+    path: evidence-summary.md
+    media_type: text/markdown
+    roles:
+    - metadata
+    metadata:
+      title: Study findings, interpretation and sources

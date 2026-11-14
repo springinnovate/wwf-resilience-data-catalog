@@ -1,0 +1,39 @@
+{
+  "dataset_id": "wwf-amazon-terrestrial-resistance",
+  "metadata_evidence": [
+    {
+      "source": "https://doi.org/10.1073/pnas.2418189122",
+      "locator": "PDF p.7, Materials and Methods",
+      "supports": "Resistance semantics, source impacts, relative weights and higher scores as greater barriers."
+    },
+    {
+      "source": "https://doi.org/10.1073/pnas.2418189122",
+      "locator": "PDF p.2, input-layer dates",
+      "supports": "Dams/mining/oil and gas 2023, deforestation 2001-2020, fires 2016-2021, roads 2020."
+    },
+    {
+      "source": "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "locator": "Lines 38-89, Resistance for LAND",
+      "supports": "Terrestrial score construction, inclusion of river/wetland barriers, explicit terra::project(\"EPSG:5641\") and Byte output."
+    },
+    {
+      "source": "https://api.figshare.com/v2/articles/28089815",
+      "locator": "license, version, files",
+      "supports": "CC-BY-4.0, version 1, published archive/script MD5s matching local files."
+    },
+    {
+      "source": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+      "locator": "_2SPAnew2024_Resistance_analysis_DATASET/resLand_EPSG5641.tif",
+      "supports": "Native EPSG:5641 (SIRGAS2000 / Brazil Mercator), original grid geometry, nodata255, Byte values1-34."
+    }
+  ],
+  "decisions": [
+    "Choose the resistance-analysis copy; the grainscape package contains a byte-identical raster.",
+    "Retain native CRS and approximately279.61m cells; the filename does not imply an EPSG:4326 grid or native180m cells.",
+    "Preserve source scores unchanged; do not regenerate the ecological model or recompute impact coefficients."
+  ],
+  "limitations": [
+    "Paper and script refer to multiple ecosystem resistance layers; only the matched terrestrial layer is admitted here.",
+    "Generating-code and publication descriptions differ in the baseline and some historical source-date labels. The supplied raster is preserved, and no silent reconciliation is applied."
+  ]
+}

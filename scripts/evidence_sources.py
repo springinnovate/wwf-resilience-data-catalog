@@ -46,10 +46,14 @@ def load_records(recipe_dir: Path) -> list[dict]:
         primary = descriptor['assets'][descriptor['primary_asset']]
         if primary['location'] != 'local':
             raise ValueError('A preparation recipe requires a local primary asset.')
+        note = reference(root, recipe['scientific_note'])
+        curation = json.loads(reference(root, recipe['curation']).read_text(encoding='utf-8'))
+        if note.stem != identifier or curation.get('dataset_id') != identifier:
+            raise ValueError('Scientific note and curation must identify the same dataset as the sidecar.')
         records.append(dict(recipe, id=identifier, kind=descriptor['kind'],
             output_file=primary['path'], descriptor=descriptor,
-            scientific_note_text=reference(root, recipe['scientific_note']).read_text(encoding='utf-8'),
-            review_context=json.loads(reference(root, recipe['curation']).read_text(encoding='utf-8'))))
+            scientific_note_text=note.read_text(encoding='utf-8'),
+            review_context=curation))
     if not records:
         raise ValueError('No evidence recipes found.')
     if len({r['id'] for r in records}) != len(records):

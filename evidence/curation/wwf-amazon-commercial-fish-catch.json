@@ -1,0 +1,101 @@
+{
+  "dataset_id": "wwf-amazon-commercial-fish-catch",
+  "metadata_evidence": [
+    {
+      "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/metadata/science-metadata.xml",
+      "locator": "dataset/title, creators, intellectualRights, methods and dataTable",
+      "supports": "Dataset identity, attribution, original rights wording, capture coverage 1976-2013, incomplete city records, annual maximum aggregation and the native archive."
+    },
+    {
+      "source": "data/source/parsed_sheet.json",
+      "locator": "rows[row_id=row-023]; corresponding decision in data/decisions/matching_root.json rows[row_id=23]",
+      "supports": "Paper association, t/year units and requested product."
+    },
+    {
+      "source": "urn_uuid_3132083d_2fc5_4ef9_895d_1666954ad536/data/gdaldegan.11.3-DATAnull",
+      "locator": "SNAPP_Fish_Data.gdb / Twenty_principal_comercial_taxa_catch",
+      "supports": "198 records, 32 attributes, explicit WGS84 CRS and native geometry; read again using the recorded GIS runtime."
+    },
+    {
+      "source": "https://shapely.readthedocs.io/en/stable/reference/shapely.make_valid.html",
+      "locator": "structure algorithm and keep_collapsed",
+      "supports": "Repair reasons from shell/hole structure; collapsed line-only pieces can be omitted. Checks quantify area/extent changes and reject material differences."
+    }
+  ],
+  "rights": "The EML names and links CC-BY-4.0 but adds share alike. The named license and contradictory text are preserved in the original XML; the concise sidecar does not assert a resolved license.",
+  "repair_acceptance": "Retain all records, identifiers and attribute values. Valid decoded geometries must remain exact. Invalid polygons use make_valid(method=structure, keep_collapsed=False); reject empty/nonpolygon results, relative planar area change above 1e-8 or coordinate-bound changes above 1e-8 degrees. Area checks assess repair size, not ecological correctness.",
+  "taxon_note": "Current taxon-field names are read from the fresh native geodatabase and preserve their exact Unicode spelling. Earlier inspection included misdecoded labels; those labels are not authoritative field definitions. Original matching evidence is regenerated separately from the frozen reconciliation inputs. No scientific-taxon reconciliation or catch reaggregation was performed.",
+  "field_encoding_note": "The prepared field names are read directly from the native geodatabase using UTF-8, with the recorded GDAL data configuration. Earlier text-decoding errors do not justify renaming or changing the native taxon fields.",
+  "field_definitions": {
+    "taxon_catch_fields": "tonnes/year, following source sheet row023; aggregation not independently recomputed",
+    "Area_km2": "square kilometres, from field name; not independently recomputed",
+    "Area_ha": "hectares, from field name; not independently recomputed",
+    "perc_tot": "Not independently defined in source EML; retain source values without assuming normalization",
+    "Shape_Length": "Source geometry bookkeeping field; not a recomputed metric length",
+    "Shape_Area": "Source geometry bookkeeping field; not a recomputed metric area"
+  },
+  "observation_coverage": {
+    "start_datetime": "1976-01-01T00:00:00Z",
+    "end_datetime": "2013-12-31T23:59:59Z",
+    "precision": "year",
+    "note": "Source EML methods report capture data from 1976–2013. No city has complete records for all years; most cities have fewer than four continuous years. These bounds describe contributing observations, not a continuous annual series."
+  },
+  "aggregation_evidence": [
+    {
+      "source": "metadata/science-metadata.xml",
+      "locator": "dataset/title; dataset/creator; dataset/intellectualRights",
+      "supports": [
+        "dataset identity",
+        "creators",
+        "attribution",
+        "license text"
+      ]
+    },
+    {
+      "source": "metadata/science-metadata.xml",
+      "locator": "dataset/methods/methodStep/description/section[title=\"Development of a spatially oriented database\"]",
+      "supports": [
+        "1976–2013 observation coverage",
+        "incomplete city-year coverage",
+        "maximum annual catch aggregation",
+        "188 ports /67cities /four countries"
+      ]
+    },
+    {
+      "source": "metadata/science-metadata.xml",
+      "locator": "dataset/dataTable/entityDescription; dataset/dataTable/physical",
+      "supports": [
+        "20 most important commercial taxa",
+        "SNAPP_Fish_Data.rar /nativegeodatabase origin"
+      ]
+    },
+    {
+      "source": "data/source/parsed_sheet.json",
+      "locator": "rows[row_id=row-023]; corresponding decision in data/decisions/matching_root.json rows[row_id=23]",
+      "supports": [
+        "original dataset description",
+        "t/year units",
+        "paper association",
+        "matchlimitations"
+      ]
+    },
+    {
+      "source": "SNAPP_Fish_Data.gdb",
+      "locator": "Twenty_principal_comercial_taxa_catch native layer schema and geometries",
+      "supports": [
+        "EPSG4326",
+        "198features",
+        "32sourcefields",
+        "native bounds",
+        "polygon validityassessment"
+      ]
+    }
+  ],
+  "limitations": [
+    "Historical catch maxima are a proxy, not measured standing biomass or current stocks.",
+    "Catch aggregation and taxon-field units were not independently reconstructed from port records.",
+    "Do not map EML common names to scientific taxa automatically; the package taxonomic labels have not been reconciled."
+  ],
+  "publication_date_note": "Journal issue year 2019; first online 3 October 2018.",
+  "historical_reader_note": "Historical inspection only: A fresh extraction read with GDAL 3.13.3 has 35 invalid geometries, while the earlier GDAL 3.12.3 trial had 147. This is a reader-dependent geometry interpretation, not a changed archive. This preparation uses a fresh extraction and reports its own per-feature repair checks."
+}

@@ -34,20 +34,10 @@ import yaml
 
 from prepare_evidence_pilot import require, relative_file, sha256, write_json
 from evidence_notes import write_evidence_summary
+from evidence_sources import load_records, evidence_context, input_fingerprints
 
 REPO = Path(__file__).resolve().parents[1]
 SCHEMA = REPO / 'evidence/pilot/eolab-item-v1.schema.json'
-
-
-def load_records(plan_dir: Path) -> list[dict]:
-    records = []
-    for path in sorted(plan_dir.glob('*.json')):
-        plan = json.loads(path.read_text(encoding='utf-8'))
-        records.extend(plan if isinstance(plan, list) else plan['records'])
-    require(bool(records), 'No evidence plans found.')
-    require(len({r['id'] for r in records}) == len(records), 'Duplicate dataset ID.')
-    require(len({r['directory'] for r in records}) == len(records), 'Duplicate dataset directory.')
-    return records
 
 
 def read_csv(path: Path, encoding='utf-8-sig', delimiter=',') -> list[list[str]]:
@@ -271,26 +261,6 @@ def prepare_vector(source_root: Path, target: Path, record: dict) -> dict:
                         repair_details=changes,source_reader=f'Fiona {fiona.__version__}; GDAL {fiona.__gdal_version__}')
 
 
-def evidence_context(record: dict) -> dict:
-    """Retain all frozen source rows and crosswalks alongside new evidence and checks."""
-    row_ids=set(record['row_ids'])
-    rows=json.loads((REPO/'data/source/parsed_sheet.json').read_text(encoding='utf-8'))['rows']
-    matches=read_dicts(REPO/'outputs/matches.csv')
-    links=read_dicts(REPO/'outputs/asset_links.csv')
-    papers=read_dicts(REPO/'outputs/papers.csv')
-    selected=[r for r in rows if r['row_id'] in row_ids]
-    require({r['row_id'] for r in selected}==row_ids,'Unknown sheet row.')
-    paper_ids={r['paper_id'] for r in selected}
-    return dict(note='Original sheet and matching records are historical evidence. The curated evidence and adjacent YAML describe this prepared product.',
-                source_base='evidence_data',source_sheet_rows=selected,
-                reconciliation_snapshot=[r for r in matches if r['row_id'] in row_ids],
-                paper_references=[r for r in papers if r['paper_id'] in paper_ids],
-                asset_links=[r for r in links if r['row_id'] in row_ids],
-                curated_evidence=record.get('review_context',{}),source_files=record['source_files'],
-                operation=record['operation'], evidence_summary=record.get('evidence_summary',{}),
-                metadata_history=record.get('metadata_history',[]))
-
-
 def prepare(source_root: Path,output_root: Path,plan_dir: Path,sidecar_dir: Path|None=None) -> dict:
     source_root=source_root.resolve(strict=True);output_root=output_root.resolve()
     require(not output_root.exists(),'Output already exists; choose a fresh directory.')
@@ -319,7 +289,7 @@ def prepare(source_root: Path,output_root: Path,plan_dir: Path,sidecar_dir: Path
         for name,checksum in record['source_files'].items():
             require(sha256(relative_file(source_root,name))==checksum,f'Source checksum changed: {name}')
     output_root.parent.mkdir(parents=True,exist_ok=True)
-    report=dict(plans={p.name:sha256(p) for p in sorted(plan_dir.glob('*.json'))},
+    report=dict(plans=input_fingerprints(plan_dir),
                 runtime={name:version(name) for name in ['numpy','rasterio','fiona','shapely','pyproj','openpyxl','PyYAML','jsonschema']},
                 datasets=[])
     with tempfile.TemporaryDirectory(prefix='.matched-evidence-',dir=output_root.parent) as temporary:
@@ -389,7 +359,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-root',type=Path,required=True)
     parser.add_argument('--output-root',type=Path,required=True)
-    parser.add_argument('--plans',type=Path,default=REPO/'evidence/matched/plans')
+    parser.add_argument('--plans',type=Path,default=REPO/'evidence/matched/recipes')
     parser.add_argument('--report',type=Path)
     parser.add_argument('--sidecar-dir',type=Path)
     args=parser.parse_args()

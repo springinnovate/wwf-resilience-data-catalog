@@ -12,3 +12,9 @@ inspection/
 Thumbs.db
 desktop.ini
 /data/evidence_data/
+
+# Rebuildable reports and rendered evidence previews. Canonical *.eolab.yaml stay tracked.
+/outputs/
+/reports/
+/evidence/*/reports/
+/evidence/*/briefs/

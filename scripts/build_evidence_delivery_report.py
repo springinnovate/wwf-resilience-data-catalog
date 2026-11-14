@@ -2,19 +2,9 @@
 import argparse
 import csv
 from pathlib import Path
-import json
+from evidence_sources import load_records, load_pilot_plan, reconciliation_tables
 
 REPO=Path(__file__).resolve().parents[1]
-
-
-def read_dicts(path):
-    with path.open(encoding='utf-8-sig',newline='') as handle:
-        return list(csv.DictReader(handle))
-
-
-def load_records(plan_dir):
-    return [record for path in sorted(plan_dir.glob('*.json'))
-            for record in json.loads(path.read_text(encoding='utf-8'))['records']]
 
 
 def write_csv(path,rows):
@@ -25,8 +15,8 @@ def write_csv(path,rows):
 
 
 def build(output_dir):
-    records=[dict(r,delivery_prefix='matched') for r in load_records(REPO/'evidence/matched/plans')]
-    pilot=json.loads((REPO/'evidence/pilot/records.json').read_text(encoding='utf-8'))['records']
+    records=[dict(r,delivery_prefix='matched') for r in load_records(REPO/'evidence/matched/recipes')]
+    pilot=load_pilot_plan(REPO/'evidence/pilot/recipes')['records']
     for record in pilot:
         records.append(dict(record,delivery_prefix='pilot',row_ids=record.get('row_ids') or record['descriptor']['metadata']['annotations']['row_ids']))
     delivery=[]
@@ -56,9 +46,10 @@ def build(output_dir):
                       'Availability: '+entry['availability']+'.', '',
                       'Paper: '+', '.join('[doi:'+doi+'](https://doi.org/'+doi+')' for doi in entry['paper_doi'].split('; '))+'.', ''])
     (output_dir/'catalog-summaries.md').write_text('\n'.join(lines),encoding='utf-8',newline='\n')
-    names={r['row_id']:r['dataset'] for r in read_dicts(REPO/'outputs/review_summary.csv')}
+    tables=reconciliation_tables()
+    names={r['row_id']:r['dataset'] for r in tables['review_summary']}
     coverage=[]
-    for row in read_dicts(REPO/'outputs/matches.csv'):
+    for row in tables['matches']:
         if row['match_status']!='Matched':continue
         linked=[d for d in delivery if row['row_id'] in d['description_ids'].split('; ')]
         if not linked:raise ValueError('Unrepresented matched description: '+row['row_id'])
@@ -73,6 +64,6 @@ def build(output_dir):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output-dir',type=Path,default=REPO/'evidence/matched/reports')
+    parser.add_argument('--output-dir',type=Path,default=REPO/'build/evidence/delivery')
     delivery,coverage=build(parser.parse_args().output_dir)
     print(f'{len(delivery)} catalog datasets account for {len(coverage)} matched descriptions and the supporting pilot layer.')

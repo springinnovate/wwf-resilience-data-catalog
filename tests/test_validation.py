@@ -1,9 +1,11 @@
-"""Corrupt copies of the small committed snapshot; no bulk datasets are needed."""
+"""Corrupt freshly built reports from frozen inputs; no bulk datasets are needed."""
 import csv
 import importlib.util
 import json
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -20,8 +22,14 @@ SPEC.loader.exec_module(VALIDATOR)
 class SnapshotCorruptionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # The negative fixtures must start from a known-good complete report.
-        VALIDATOR.validate(ROOT / "data", ROOT / "outputs")
+        # Build once from the authoritative inputs; each test corrupts its own copy.
+        cls.fixture = tempfile.TemporaryDirectory(prefix="reconciliation-baseline-")
+        cls.addClassCleanup(cls.fixture.cleanup)
+        cls.fixture_outputs = Path(cls.fixture.name) / "reconciliation"
+        subprocess.run([sys.executable, str(ROOT / "scripts/build_reconciliation.py"),
+                        "--input-dir", str(ROOT / "data"), "--output-dir", str(cls.fixture_outputs)],
+                       cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
+        VALIDATOR.validate(ROOT / "data", cls.fixture_outputs)
 
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="reconciliation-validation-")
@@ -34,7 +42,7 @@ class SnapshotCorruptionTests(unittest.TestCase):
             ignore=lambda directory, names: {"evidence_data"}
             if Path(directory) == ROOT / "data" else set(),
         )
-        shutil.copytree(ROOT / "outputs", self.outputs)
+        shutil.copytree(self.fixture_outputs, self.outputs)
 
     def edit_json(self, path, transform):
         value = json.loads(path.read_text(encoding="utf-8"))

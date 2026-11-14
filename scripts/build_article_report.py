@@ -8,7 +8,6 @@ import io
 import json
 import os
 from pathlib import Path, PurePosixPath, PureWindowsPath
-import posixpath
 import re
 from urllib.parse import quote, urlsplit
 import zipfile
@@ -34,8 +33,9 @@ def load_records(input_path, verify_local):
             and not PurePosixPath(directory).is_absolute() and '\\' not in directory
             and '..' not in PurePosixPath(directory).parts,
             'Article directory must be a repository-relative path with forward slashes.')
-    with (REPO / 'outputs/papers.csv').open(encoding='utf-8-sig', newline='') as handle:
-        papers = {r['paper_id']: r for r in csv.DictReader(handle)}
+    verified = json.loads((REPO / 'data/decisions/papers_verified.json').read_text(encoding='utf-8'))
+    papers = {paper['paper_id']: paper for paper in verified}
+    require(len(papers) == len(verified), 'Verified paper identifiers must be unique.')
     records = snapshot['records']
     require(len(records) == len(papers) and {r['paper_id'] for r in records} == set(papers),
             'Article search must account for each paper exactly once.')
@@ -72,16 +72,18 @@ def export_records(snapshot, papers):
     for record in sorted(snapshot['records'], key=lambda r: r['paper_id']):
         paper = papers[record['paper_id']]
         local = str(PurePosixPath(snapshot['local_directory']) / record['filename']) if record['filename'] else ''
-        rows.append(dict(paper_id=record['paper_id'], paper=paper['verified_title'], year=paper['verified_year'],
+        rows.append(dict(paper_id=record['paper_id'], paper=paper['verified_title'], year=str(paper['verified_year']),
                          status=record['status'], where_found=record['source_name'], source_url=record['found_url'],
                          local_file=local, human_download_link=record['human_url'], copy_version=record['copy_version'],
                          notes=record['reader_note'], doi=paper['article_doi'], publisher_url=paper['publisher_url']))
     return rows
 
 
-def workbook_file_link(local_file):
-    # Exports retain the canonical reports/ layout, including comparison builds.
-    return quote(posixpath.relpath(local_file, start='reports'), safe='/')
+def workbook_file_link(local_file, workbook_path):
+    # Resolve from this workbook's location, including custom output directories.
+    target = REPO / local_file
+    relative = os.path.relpath(target.resolve(), start=workbook_path.parent.resolve())
+    return quote(Path(relative).as_posix(), safe='/')
 
 
 def save_workbook(path, rows, snapshot):
@@ -95,7 +97,7 @@ def save_workbook(path, rows, snapshot):
     merged_text(sheet, 2, f'{counts["Downloaded"]} downloaded | {counts["Download blocked"]} download blocked | '
                 f'{counts["No open copy found"]} no open copy found | Checked {checked.day} {checked:%B %Y}', height=25)
     merged_text(sheet, 3, 'Article folder (relative to repository): ' + snapshot['local_directory'], height=25)
-    merged_text(sheet, 4, 'Paper titles link to publishers. PDF links are relative to reports/. CSV file paths are relative to the repository. Try download may require manual access.', height=30)
+    merged_text(sheet, 4, 'Paper titles link to publishers. PDF links are relative to this workbook. CSV file paths are relative to the repository. Try download may require manual access.', height=30)
     headers = ['No.', 'Paper', 'Result', 'Where found', 'Local file', 'If not downloaded', 'Notes about this copy / next step']
     values = []
     for record in rows:
@@ -110,7 +112,7 @@ def save_workbook(path, rows, snapshot):
         external(sheet.cell(number, 2), record['publisher_url'])
         external(sheet.cell(number, 4), record['source_url'])
         if record['local_file']:
-            external(sheet.cell(number, 5), workbook_file_link(record['local_file']))
+            external(sheet.cell(number, 5), workbook_file_link(record['local_file'], path))
         else:
             external(sheet.cell(number, 6), record['human_download_link'])
         cell = sheet.cell(number, 3)
@@ -146,7 +148,7 @@ def save_workbook(path, rows, snapshot):
                     f'Article workbook row {number} differs.')
             record = rows[number-6]
             expected_links = {2: record['publisher_url'], 4: record['source_url']}
-            expected_links[5 if record['local_file'] else 6] = (workbook_file_link(record['local_file'])
+            expected_links[5 if record['local_file'] else 6] = (workbook_file_link(record['local_file'], path)
                 if record['local_file'] else record['human_download_link'])
             for col, url in expected_links.items():
                 require(actual.cell(number, col).hyperlink.target == url, f'Article workbook link differs at row {number}.')
@@ -158,7 +160,7 @@ def save_workbook(path, rows, snapshot):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input', type=Path, default=REPO/'data/articles/article_search.json')
-    parser.add_argument('--output-dir', type=Path, default=REPO/'reports')
+    parser.add_argument('--output-dir', type=Path, default=REPO/'build/articles')
     parser.add_argument('--verify-local', action='store_true', help='Also verify the recorded local PDF sizes and SHA256 hashes.')
     args = parser.parse_args()
     try:

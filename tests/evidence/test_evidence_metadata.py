@@ -64,6 +64,16 @@ class ScientificMetadataRefreshTests(unittest.TestCase):
             self.assertEqual((self.output/record['directory']/'evidence-summary.md').read_text(encoding='utf-8'),
                              render_evidence_summary(record))
 
+    def test_source_refactor_preserves_old_context_once_in_delivery_history(self):
+        previous={'evidence':'old detailed evidence','metadata_history':[{'decision':'keep me'}]}
+        current={'curated_evidence':{'decision':'reviewed'},'source_files':{'data.csv':'hash'}}
+        migrated=refresh.preserve_provenance(previous,current)
+        self.assertEqual(migrated['provenance_history'],[previous])
+        self.assertEqual(refresh.preserve_provenance(migrated,current),migrated)
+        revised=dict(current,curated_evidence={'decision':'updated'})
+        second=refresh.preserve_provenance(migrated,revised)
+        self.assertEqual(second['provenance_history'],[previous,current])
+
     def test_changed_payload_is_rejected_without_writes(self):
         (self.output/'vector/data.bin').write_bytes(b'changed scientific data')
         before=self.snapshot()
@@ -124,17 +134,22 @@ class ScientificMetadataRefreshTests(unittest.TestCase):
             for record in records:
                 with self.subTest(dataset=record['id']):
                     descriptor=record['descriptor'];Draft202012Validator(schema).validate(descriptor)
-                    metadata=descriptor['metadata'];summary=record['evidence_summary']
+                    metadata=descriptor['metadata'];note=record['scientific_note_text']
                     self.assertNotRegex(json.dumps(metadata),r'paper-\d{3}|row-\d{3}|Matched to sheet')
-                    self.assertEqual(metadata['annotations']['evidence_type'],summary['evidence_type'])
-                    self.assertEqual(metadata['annotations']['dataset_role'],summary['dataset_role'])
-                    self.assertTrue(summary['sources']);self.assertTrue(summary['limitations'])
-                    for source in summary['sources']:
-                        self.assertTrue(all(source[k].strip() for k in ['title','url','location','supports']))
+                    for key in ['evidence_type','dataset_role']:
+                        self.assertIn(metadata['annotations'][key],note)
+                    for section in ['Question','What the study found','Limits and interpretation',
+                                    'Sources for these statements']:
+                        self.assertIn('## '+section,note)
+                    self.assertRegex(note,r'https://(?:doi.org|www\.|[a-z])')
+                    self.assertNotIn('](review-context.json)',note)
+                    self.assertNotIn('../plans/',note)
+                    self.assertNotIn('../records.json',note)
+                    self.assertTrue(record['review_context'])
                     self.assertEqual(descriptor['assets']['evidence_summary']['path'],'evidence-summary.md')
                     path=ROOT/'evidence'/collection/'sidecars'/(record['output_file']+'.eolab.yaml')
                     self.assertEqual(yaml.safe_load(path.read_text(encoding='utf-8')),descriptor)
-                    self.assertTrue(record['metadata_history'])
+                    self.assertNotIn('metadata_history',record)
 
 
 if __name__=='__main__':unittest.main()

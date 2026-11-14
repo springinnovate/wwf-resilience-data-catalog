@@ -8,7 +8,7 @@ This pilot prepares one raster, one vector and one nonspatial table from the stu
 | Amazon river barriers | `amazon-barriers/amazon-barriers.gpkg` | 562 points: 359 dams and 203 waterfalls, with all 31 source attributes. | Supporting input locations, including current and future scenarios. These are not the missing connectivity indices or impact rankings. Some auxiliary field definitions remain unresolved. |
 | ATTO carbon fluxes, 2023 | `atto-fluxes-2023/atto-monthly-carbon-fluxes-2023.csv` | Twelve monthly records of NEE, GPP and ecosystem respiration, with their original date labels. | Monthly derivatives, not the original half-hourly measurements. The source's trajectory coordinates are not station coordinates. |
 
-The [three-row review table](../evidence/pilot/reports/evidence_pilot.csv) lists the files, references and checks.
+The pilot preparation command generates a three-row CSV review table alongside its JSON report under `build/evidence/pilot/`. The files, references and checks come from the committed reviewed sources.
 
 These paths are relative to `processed-evidence-data/pilot/`. Each primary file has an adjacent `.eolab.yaml` sidecar. Original files are retained as supporting assets inside each dataset's `source/` directory. The original study-data collection is unchanged.
 
@@ -16,17 +16,17 @@ These paths are relative to `processed-evidence-data/pilot/`. Each primary file 
 
 The preparation script checks source hashes before processing. It compares every full-resolution raster value and mask, every vector coordinate and decoded attribute, and every selected table value with the originals. The spatial files retain EPSG:4326; no reprojection, clipping, coordinate inference or geometry repair is applied. Raster overviews use nearest-neighbour sampling for display.
 
-The EOLab check uses its existing filesystem discovery and native metadata readers, then its public metadata projection. It checks that supporting files do not become duplicate datasets, annotations and publication references survive, repeated discovery is stable, and public file links use catalog identities rather than machine paths. This is a local admission check, not a deployment or a write to a running STAC database. All three passed these local checks. The Docker service was unavailable, so no live HTTP/pgSTAC import was attempted. See the [preparation report](../evidence/pilot/reports/evidence_pilot.json) and [EOLab admission report](../evidence/pilot/reports/evidence_pilot_admission.json) for the actual results.
+The EOLab check uses its existing filesystem discovery and native metadata readers, then its public metadata projection. It checks that supporting files do not become duplicate datasets, annotations and publication references survive, repeated discovery is stable, and public file links use catalog identities rather than machine paths. This is a local admission check, not a deployment or a write to a running STAC database. All three passed these local checks. The Docker service was unavailable, so no live HTTP/pgSTAC import was attempted. Rebuilding and validating writes current preparation and admission results under ignored `build/evidence/pilot/`; these reports are not committed.
 
-The [public STAC preview](../evidence/pilot/reports/evidence_pilot_stac.json) is an inspection artifact. Its local asset URLs become usable after the datasets are imported into EOLab; the preview is not a standalone hosted catalog.
+The generated `build/evidence/pilot/stac-preview.json` is an inspection artifact. Its local asset URLs become usable after the datasets are imported into EOLab; the preview is not a standalone hosted catalog.
 
 ## Metadata and remaining questions
 
-The [sidecar copies](../evidence/pilot/sidecars/) contain the catalog description, references, rights, variable meanings and essential limitations. The current descriptions explain the scientific findings, evidence type and the role of each file. Worksheet matching labels are retained only in the linked provenance. A separate `evidence-summary.md` note provides the study question, interpretation and source passages.
+The canonical committed [sidecars](../evidence/pilot/sidecars/) contain the catalog description, references, rights, variable meanings and essential limitations. The current descriptions explain the scientific findings, evidence type and the role of each file. Worksheet matching labels are retained only in the linked provenance. A separate `evidence-summary.md` note provides the study question, interpretation and source passages.
 
-Each dataset links to **Full review evidence and source history** (`review-context.json`). This preserves the original spreadsheet rows and matching records. Its `pilot_sidecar_snapshot` also preserves every field from the first pilot sidecar: detailed source citations, processing notes, checksums, technical inventories, complete field dictionaries, limitations and corrections. It is labeled as historical evidence so old comments and readiness judgments can be read in context. For ATTO, `pilot_sidecar_snapshot.metadata.annotations.pilot_corrections` explains the corrected date-column and coordinate interpretations.
+Each dataset links to **Full review evidence and source history** (`review-context.json`). A fresh build combines the original spreadsheet rows and regenerated matching records with preparation checks and the current reviewed interpretation in `curated_evidence`. For ATTO, that reviewed evidence explains the corrected date-column and coordinate meanings. A metadata refresh also preserves the previously delivered full contexts in generated `provenance_history`; a fresh build has no prior-delivery history.
 
-The versioned [records](../evidence/pilot/records.json) are the authoring source for both the YAML and linked review context. Edit those records and regenerate the files together. Supporting-file declarations remain in the YAML so EOLab groups the originals with their prepared dataset instead of importing them again.
+The [pilot recipes](../evidence/pilot/recipes/) define source files, checksums and preparation choices. They reference the canonical YAMLs, [scientific Markdown notes](../evidence/notes/) and detailed [curation records](../evidence/curation/). Edit those sources directly. Preparation copies the YAMLs and renders `evidence-summary.md`, adding its link to the complete generated review context. Supporting-file declarations remain in the YAML so EOLab groups the originals with their prepared dataset instead of importing them again.
 
 - **Raster time:** biomass response inputs span 2000–2018, while broader study/stressor records span 1982–2018. Neither is silently asserted to be an exact map observation interval. EOLab uses the original file modification time, explicitly labeled as such, while the scientific periods remain in the metadata.
 - **Vector time and meaning:** current/future are source scenario labels, not verified observation dates. EOLab again uses a disclosed source-modification timestamp. The points are study inputs, not final connectivity outputs.
@@ -39,17 +39,17 @@ The initial pilot deferred the fisheries catch polygons after its reader reporte
 
 Use a GIS-enabled Python 3.12 environment with `requirements-evidence.txt`. EOLab's vector admission also needs the `osgeo` Python bindings matched to its native GDAL library. A conda-forge environment containing `python=3.12`, `gdal`, `rasterio`, `fiona`, `pyproj`, `shapely`, `numpy`, `pyyaml`, `pydantic`, `jsonschema` and `ijson` is suitable. Record actual versions from the preparation report; GeoPackage byte hashes can change with library versions even when coordinates and values are unchanged.
 
-Set `WWF_EVIDENCE_SOURCE`, `WWF_EVIDENCE_OUTPUT` and `EOLAB_SOURCE` in your local environment. They identify the source collection, a **new** output directory, and an EOLab checkout containing the merged sidecar importer. The source collection is currently under `data/evidence_data/`, which is Git-ignored. Keep these machine-specific settings untracked; source paths in the records remain relative to that collection. The workbook checksum checker excludes only this local source directory from its frozen input inventory.
+Set `WWF_EVIDENCE_SOURCE`, `WWF_EVIDENCE_OUTPUT` and `EOLAB_SOURCE` in your local environment. They identify the source collection, a **new** output directory, and an EOLab checkout containing the merged sidecar importer. The source collection is currently under `data/evidence_data/`, which is Git-ignored. Keep these machine-specific settings untracked; source paths in the recipes remain relative to that collection. The workbook checksum checker excludes only this local source directory from its frozen input inventory.
 
 From the repository root, in PowerShell:
 
 ```powershell
-python scripts/prepare_evidence_pilot.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_OUTPUT" --report build/evidence-pilot.json --sidecar-dir build/evidence-sidecars
-python scripts/validate_evidence_pilot.py --data-root "$env:WWF_EVIDENCE_OUTPUT" --eolab-source "$env:EOLAB_SOURCE" --report build/evidence-admission.json --items build/evidence-stac.json
+python scripts/prepare_evidence_pilot.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_OUTPUT" --report build/evidence/pilot/preparation.json
+python scripts/validate_evidence_pilot.py --data-root "$env:WWF_EVIDENCE_OUTPUT" --eolab-source "$env:EOLAB_SOURCE" --report build/evidence/pilot/admission.json --items build/evidence/pilot/stac-preview.json
 python -m unittest discover -s tests/evidence -v
 ```
 
-The `--report` option writes both JSON detail and a CSV summary; summary paths are relative to the pilot output directory.
+The preparer defaults to the committed pilot recipes. The `--report` option writes both JSON detail and a CSV summary; summary paths are relative to the pilot output directory.
 
 The preparer refuses to overwrite an existing output directory and publishes the three datasets together after its checks pass. Give a rebuild a fresh destination; compare the reported content checks before replacing an earlier delivery.
 

@@ -1,0 +1,93 @@
+{
+  "sidecar": "matched/sidecars/site-biodiversity-carbon.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-land-use-biodiversity-carbon.md",
+  "curation": "curation/wwf-amazon-land-use-biodiversity-carbon.json",
+  "directory": "amazon-land-use-biodiversity-carbon",
+  "row_ids": [
+    "row-035",
+    "row-036"
+  ],
+  "primary_source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+  "operation": {
+    "type": "csv_table",
+    "source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "column_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      27,
+      11,
+      12,
+      13,
+      14
+    ],
+    "output_headers": [
+      "Region",
+      "Catchment",
+      "Transect",
+      "Transect_code",
+      "LU_UF",
+      "ant_rich",
+      "bird_rich",
+      "db_rich",
+      "liana_rich",
+      "sap_rich",
+      "tree_rich",
+      "bee_rich",
+      "Aboveground_pool",
+      "Litter_pool",
+      "Dead_pool",
+      "Soil_pool_new"
+    ]
+  },
+  "source_files": {
+    "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv": "84ef2ff7156bf700eeeb5f2fa3815112cf3f17b1dd8d835eb98cb8d94bc77464",
+    "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_rich_forest_sp.csv": "8e3ad6e62f8f7a94a520b2aa4fa5fdbdc5d0e2aee4def716f8cb616ee32c301e",
+    "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_PGM.txt": "d1add744e00269abff1e2eee97ccfbfb1a176fd9e3a619d29e897eb742450580",
+    "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_STM.txt": "1b610d16d9fce83c48243e6b8499c3f561b88281eb2c820d2d26484b4fb45ccf",
+    "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "cassioalencarnunes-LULC_transitions-c501bd5/README.md": "d6440dd8223aa91baab45a7c1d15bfb37ab26554fb19fd09224f3d2329d4e0bf",
+    "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R": "b8ce7fc0e600ff27bb52090f221160669d6c33af23d8f0171b21750c132b484e"
+  },
+  "attachments": [
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_all_joined.csv",
+      "path": "source/data_all_joined.csv"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/data_rich_forest_sp.csv",
+      "path": "source/data_rich_forest_sp.csv"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_PGM.txt",
+      "path": "source/Carbon_all_PGM.txt"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Data/Carbon_all_STM.txt",
+      "path": "source/Carbon_all_STM.txt"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+      "path": "source/LICENSE"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/README.md",
+      "path": "source/README.md"
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+      "path": "source/Script_LMMs.R"
+    }
+  ],
+  "expected_rows": 310
+}

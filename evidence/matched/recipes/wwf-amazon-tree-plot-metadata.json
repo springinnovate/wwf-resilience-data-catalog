@@ -1,0 +1,36 @@
+{
+  "sidecar": "matched/sidecars/amazon-tree-plots.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-tree-plot-metadata.md",
+  "curation": "curation/wwf-amazon-tree-plot-metadata.json",
+  "directory": "amazon-tree-plot-metadata",
+  "row_ids": [
+    "row-041"
+  ],
+  "primary_source": "22786166/PlotData.csv",
+  "operation": {
+    "type": "csv_table",
+    "source": "22786166/PlotData.csv",
+    "encoding": "latin-1",
+    "delimiter": ","
+  },
+  "source_files": {
+    "22786166/PlotData.csv": "67625f51f5fac612271050f553140fe9a3685afb9e0fc1cb1fe5d81a9c31c959",
+    "22786166/PlotsAbiotic.csv": "62b4b2fa72fd596f0371a9948021e0a3ff4c5beefe8b9bfe32c5b6065b25c776",
+    "22786166/TreeDiversityScript.R": "ca9fcb54c77d978f89762b387aa21681edd87f16ae85aad80c94d7167b99fd9f"
+  },
+  "attachments": [
+    {
+      "source": "22786166/PlotData.csv",
+      "path": "source/PlotData.csv"
+    },
+    {
+      "source": "22786166/PlotsAbiotic.csv",
+      "path": "source/PlotsAbiotic.csv"
+    },
+    {
+      "source": "22786166/TreeDiversityScript.R",
+      "path": "source/TreeDiversityScript.R"
+    }
+  ],
+  "expected_rows": 2046
+}

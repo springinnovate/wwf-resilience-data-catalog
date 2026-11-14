@@ -1,0 +1,73 @@
+{
+  "dataset_id": "wwf-amazon-tree-dispersal-traits",
+  "metadata_evidence": [
+    {
+      "source": "https://figshare.com/articles/dataset/28417586",
+      "locator": "v2 license, description and file MD5s",
+      "supports": "CC-BY-4.0; all selected original assets exactly match deposited bytes."
+    },
+    {
+      "source": "28417586/NetworksFinal.R",
+      "locator": "Lines 19-34 and 111-125",
+      "supports": "Species column becomes R row names; Stevenson/Correa uses original CSV positions13-20, McGlone positions21-27; repeated Unassisted headers are distinct."
+    },
+    {
+      "source": "https://doi.org/10.1038/s42003-026-09896-1",
+      "locator": "PDF pages 11-12, Methods: dispersal and seed mass",
+      "supports": "Two dispersal schemes and logarithmic seed-mass classes; fleshiness compiled at species level."
+    }
+  ],
+  "decisions": [
+    "Select taxonomy plus requested seed/fruit/dispersal columns by position, preserving all 5,201 species. Rename only the two Unassisted headers to retain source identity. Do not merge schemes or translate seedmass class codes into physical masses."
+  ],
+  "limitations": [
+    "seedmass contains logarithmic class codes, not measured mass in grams; exact class boundaries are unresolved.",
+    "Some species have multiple dispersal assignments. The two classifications must not be combined as independent species counts."
+  ],
+  "dispersal_classifications": {
+    "Stevenson_Correa": {
+      "source_positions": [
+        13,
+        20
+      ],
+      "descriptions": {
+        "Anemochory": "wind",
+        "Hydrochory": "water",
+        "Explosive dehiscence": "explosive dehiscence",
+        "Unassisted": "unassisted",
+        "Endozoochory": "internal animal dispersal",
+        "Synzoochory": "animal carrying/caching",
+        "Epizoochory": "external animal dispersal",
+        "Myrmecochory": "ant dispersal"
+      }
+    },
+    "McGlone": {
+      "source_positions": [
+        21,
+        27
+      ],
+      "descriptions": {
+        "Wind": "wind",
+        "Explosive": "explosive dehiscence",
+        "Water": "water",
+        "Unassisted": "unassisted",
+        "Ant": "ants",
+        "GroundM": "terrestrial dispersers, mainly mammals and large birds",
+        "ArboralD": "arboreal vertebrates, mainly primates, bats and birds"
+      }
+    }
+  },
+  "seedmass_class_boundaries": "Unresolved; source seedmass codes must not be converted to measured mass or assigned guessed bin boundaries.",
+  "ambiguous_header_resolution": [
+    {
+      "source_position": 16,
+      "source_name": "Unassisted",
+      "output_name": "Unassisted_Stevenson_Correa"
+    },
+    {
+      "source_position": 24,
+      "source_name": "Unassisted",
+      "output_name": "Unassisted_McGlone"
+    }
+  ]
+}

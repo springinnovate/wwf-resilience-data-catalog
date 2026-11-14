@@ -1,0 +1,18 @@
+{
+  "sidecar": "matched/sidecars/wbgt-rcp4-deforested.nc.eolab.yaml",
+  "scientific_note": "notes/wwf-wbgt-rcp4-deforested.md",
+  "curation": "curation/wwf-wbgt-rcp4-deforested.json",
+  "directory": "wbgt-rcp4-deforested",
+  "row_ids": [
+    "row-017"
+  ],
+  "readiness": "Download only: CRS confirmation needed",
+  "operation": {
+    "type": "copy",
+    "source": "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp4_se6flor.nc"
+  },
+  "source_files": {
+    "DeforestationAndClimate/15128664/WBGTid_COR-mdmx_AS_MesMax_rcp4_se6flor.nc": "d6058ac664713e5f519f8dcfcffc089bc8700bedba2489e166b44e2885f98131"
+  },
+  "attachments": []
+}

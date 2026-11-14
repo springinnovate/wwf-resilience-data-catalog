@@ -19,7 +19,7 @@ import yaml
 
 from evidence_notes import render_evidence_summary, pilot_evidence_context
 from prepare_evidence_pilot import require, relative_file, sha256, write_json
-from prepare_matched_evidence import evidence_context, load_records
+from evidence_sources import evidence_context, load_records, load_pilot_plan, input_fingerprints, inputs_sha256
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -46,6 +46,15 @@ def check_descriptor_change(old, new):
     brief = new['assets'].get('evidence_summary', {})
     require(without_metadata(brief) == dict(location='local', path='evidence-summary.md',
             media_type='text/markdown', roles=['metadata']), 'Invalid scientific evidence note asset.')
+
+
+def preserve_provenance(previous, current):
+    """Keep changed delivery contexts once, outside the versioned authoring inputs."""
+    prior = {k:v for k,v in previous.items() if k != 'provenance_history'}
+    history = deepcopy(previous.get('provenance_history', []))
+    if prior != current and prior not in history:
+        history.append(prior)
+    return dict(current, provenance_history=history) if history else dict(current)
 
 
 def plan_collection(root, records, contexts, fingerprints, schema):
@@ -80,12 +89,17 @@ def plan_collection(root, records, contexts, fingerprints, schema):
                 payloads[path] = before[path]
         old_context = json.loads(context_path.read_text(encoding='utf-8'))
         new_context = contexts[identifier]
-        for key, value in old_context.items():
-            if key not in {'evidence_summary', 'metadata_history'}:
-                require(new_context.get(key) == value, 'Historical evidence changed: ' + identifier + '/' + key)
-        if old_context.get('metadata_history'):
-            require(new_context.get('metadata_history', [])[:len(old_context['metadata_history'])]
-                    == old_context['metadata_history'], 'Historical metadata was removed.')
+        if 'scientific_note_text' in record:
+            # Preserve old delivered evidence as generated history when the source
+            # layout changes, without keeping duplicate snapshots in Git.
+            new_context = preserve_provenance(old_context, new_context)
+        else:
+            for key, value in old_context.items():
+                if key not in {'evidence_summary', 'metadata_history'}:
+                    require(new_context.get(key) == value, 'Historical evidence changed: ' + identifier + '/' + key)
+            if old_context.get('metadata_history'):
+                require(new_context.get('metadata_history', [])[:len(old_context['metadata_history'])]
+                        == old_context['metadata_history'], 'Historical metadata was removed.')
         new = record['descriptor']
         validator.validate(new)
         require(new['id'] == identifier and new['kind'] == record['kind'], 'Descriptor identity differs.')
@@ -170,26 +184,18 @@ def publish(root, replacements, before, payloads):
 
 
 def reviewed_records():
-    return dict(matched=load_records(REPO/'evidence/matched/plans'),
-                pilot=json.loads((REPO/'evidence/pilot/records.json').read_text(encoding='utf-8'))['records'])
+    return dict(matched=load_records(REPO/'evidence/matched/recipes'),
+                pilot=load_pilot_plan(REPO/'evidence/pilot/recipes')['records'])
 
 
 def export_review_files(collections):
+    """Render disposable previews; committed YAML and notes remain the inputs."""
     for collection, records in collections.items():
-        base=REPO/'evidence'/collection
-        (base/'sidecars').mkdir(parents=True, exist_ok=True)
+        base=REPO/'build/evidence'/collection
         (base/'briefs').mkdir(parents=True, exist_ok=True)
         for record in records:
-            (base/'sidecars'/(record['output_file']+'.eolab.yaml')).write_text(
-                yaml.safe_dump(record['descriptor'],allow_unicode=True,sort_keys=False,width=100),
-                encoding='utf-8',newline='\n')
-            text = render_evidence_summary(record)
-            # Versioned previews point to plans; delivered notes point to adjacent full context.
-            target = '../records.json' if collection=='pilot' else '../plans/' + next(
-                p.name for p in (base/'plans').glob('*.json') if any(
-                    r['id']==record['id'] for r in json.loads(p.read_text(encoding='utf-8'))['records']))
-            text = text.replace('(review-context.json)', '(' + target + ')')
-            (base/'briefs'/(record['id']+'.md')).write_text(text,encoding='utf-8',newline='\n')
+            (base/'briefs'/(record['id']+'.md')).write_text(
+                render_evidence_summary(record),encoding='utf-8',newline='\n')
 
 
 def refresh(data_root):
@@ -203,10 +209,10 @@ def refresh(data_root):
         checks={d['id']:d['checks'] for d in previous['datasets']}
         if collection=='matched':
             contexts={r['id']:dict(evidence_context(r),preparation_checks=checks[r['id']]) for r in records}
-            fingerprints={'plans':{p.name:sha256(p) for p in sorted((REPO/'evidence/matched/plans').glob('*.json'))}}
+            fingerprints={'plans':input_fingerprints(REPO/'evidence/matched/recipes')}
         else:
             contexts={r['id']:pilot_evidence_context(r) for r in records}
-            fingerprints={'records_sha256':sha256(REPO/'evidence/pilot/records.json')}
+            fingerprints={'records_sha256':inputs_sha256(REPO/'evidence/pilot/recipes')}
         report, updates, old, data=plan_collection(root,records,contexts,fingerprints,schema)
         reports[collection]=report
         replacements.update(updates);before.update(old);payloads.update(data)
@@ -219,11 +225,11 @@ def refresh(data_root):
     try:
         for collection, report in reports.items():
             name='preparation.json' if collection=='matched' else 'evidence_pilot.json'
-            write_json(REPO/'evidence'/collection/'reports'/name,report)
+            write_json(REPO/'build/evidence'/collection/name,report)
         export_review_files(collections)
-        write_json(REPO/'evidence/matched/reports/metadata-refresh.json',audit)
+        write_json(REPO/'build/evidence/metadata-refresh.json',audit)
     except Exception as error:
-        raise RuntimeError('Processed metadata was published and verified, but repository report/preview '
+        raise RuntimeError('Processed metadata was published and verified, but local report/preview '
                            'export failed. The delivery is updated; copy its preparation reports and '
                            'rerun --export-only after resolving the export error.') from error
     return audit
@@ -236,7 +242,7 @@ def main():
     args=parser.parse_args()
     if args.export_only:
         export_review_files(reviewed_records())
-        print('Exported reviewed sidecars and evidence briefs.')
+        print('Rendered evidence note previews in build/evidence.')
     else:
         require(args.data_root is not None,'Specify --data-root or --export-only.')
         print(json.dumps(refresh(args.data_root),indent=2))

@@ -1,0 +1,30 @@
+{
+  "sidecar": "matched/sidecars/amazon-terrestrial-resistance.tif.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-terrestrial-resistance.md",
+  "curation": "curation/wwf-amazon-terrestrial-resistance.json",
+  "directory": "amazon-terrestrial-resistance",
+  "row_ids": [
+    "row-033"
+  ],
+  "readiness": "Map ready",
+  "operation": {
+    "type": "raster",
+    "source": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+    "archive_member": "_2SPAnew2024_Resistance_analysis_DATASET/resLand_EPSG5641.tif"
+  },
+  "source_files": {
+    "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip": "a484ed30bd4215f433a0a7960e18eaa47dd88cfb18d822941016be094201169e",
+    "28089815/_3SPAnew2024_GrainsOfConnectivity_Grainscape_DATASET.zip": "db2fe4c33c3f129c04ac3f5c4a9d7bc89a84d0571fe56a3883a64b6764ac736f",
+    "28089815/_2SPAnew2024_Resistance_analysis.R": "81be817ede9cfc3e5d1e45ac1db0f316ad40e4ac54e63ed475d0ce49b9c403a3"
+  },
+  "attachments": [
+    {
+      "source": "28089815/_2SPAnew2024_Resistance_analysis_DATASET.zip",
+      "path": "source/_2SPAnew2024_Resistance_analysis_DATASET.zip"
+    },
+    {
+      "source": "28089815/_2SPAnew2024_Resistance_analysis.R",
+      "path": "source/_2SPAnew2024_Resistance_analysis.R"
+    }
+  ]
+}

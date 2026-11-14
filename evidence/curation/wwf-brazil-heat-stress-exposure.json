@@ -1,0 +1,43 @@
+{
+  "dataset_id": "wwf-brazil-heat-stress-exposure",
+  "metadata_evidence": [
+    {
+      "source": "https://figshare.com/articles/dataset/15128679",
+      "locator": "Figure 3 v1: license and file MD5s",
+      "supports": "CC-BY-4.0; all four supplied files exactly match published bytes."
+    },
+    {
+      "source": "https://figshare.com/articles/dataset/15128688",
+      "locator": "Figure 4 v2: license and file MD5s",
+      "supports": "CC-BY-4.0; municipal table and Figure 4 script exactly match published bytes."
+    },
+    {
+      "source": "DeforestationAndClimate/15128679/Figure 3.R",
+      "locator": "read.csv2 and ylab",
+      "supports": "Semicolon/comma-decimal source parsing and population in millions."
+    },
+    {
+      "source": "https://www.nature.com/articles/s43247-021-00275-8",
+      "locator": "Figure 3 and Methods: Population analysis",
+      "supports": "Figure 3 caption defines additional numbers of people exposed above extreme-risk thresholds due to Amazon deforestation, under historical and future climate scenarios. Population is held at 2019 levels; high vulnerability is a subset."
+    }
+  ],
+  "decisions": [
+    "Normalize only the pop decimal separator from comma to dot and CSV encoding/delimiter. Preserve numeric precision and all categorical strings, including trailing whitespace. Retain source municipal files as inputs without deriving new impact maps.",
+    "Values are the published Figure 3 additional-exposure estimates. They have not been recomputed from municipal with-forest/without-forest inputs; the source caption supplies their interpretation."
+  ],
+  "limitations": [
+    "Population is in millions. The high-vulnerability rows are part of the totals and must not be added to them.",
+    "These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent start years for its climate periods."
+  ],
+  "temporal_uncertainty": {
+    "methods_and_sheet": "Historical 1981-2010; future 2071-2100.",
+    "figure_captions": "Some captions use historical 1980-2010 and future 2073-2100.",
+    "decision": "Keep categorical source period labels; do not assert a single precise observation interval."
+  },
+  "population_interpretation": {
+    "population_unit": "millions of people",
+    "source_typology": "Total Population and High vulnerability are overlapping populations, not additive categories.",
+    "pop": "Published additional exposure attributed to Amazon rainforest deforestation, in millions of people; the Total Population label is the full affected population, and High vulnerability is its subset."
+  }
+}

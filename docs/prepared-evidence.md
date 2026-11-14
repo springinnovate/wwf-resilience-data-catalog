@@ -10,19 +10,19 @@ We wanted to turn the datasets identified in the study review into usable catalo
 | Tables and workbooks | 8 | Carbon studies, fisheries metrics, heat exposure, site biodiversity/carbon, tree plots, dispersal traits, hydropower, and the pilot ATTO flux table. |
 | Native grids available for download | 9 | Six WBGT scenarios and three tree grids. Their geographic CRS remains undocumented, so map geometry is withheld. |
 
-Read the [catalog summaries](../evidence/matched/reports/catalog-summaries.md) to see what the studies found and how each supplied dataset contributes. For files and availability, start with the [dataset list](../evidence/matched/reports/datasets.csv) or the [19-description coverage table](../evidence/matched/reports/study_coverage.csv). File paths in those tables are relative to `processed-evidence-data/`. Multiple scenarios can belong to one description, and the two site biodiversity/carbon descriptions share one prepared table. Entry counts are therefore different from description counts.
+Read the committed [scientific notes](../evidence/notes/) to see what the studies found and how each supplied dataset contributes. Running `python scripts/build_evidence_delivery_report.py` creates the catalog summaries, dataset list and 19-description coverage table in ignored `build/evidence/delivery/`. These reports are generated locally, not committed. File paths in those tables are relative to `processed-evidence-data/`. Multiple scenarios can belong to one description, and the two site biodiversity/carbon descriptions share one prepared table. Entry counts are therefore different from description counts.
 
 ## What readers see
 
 Each entry leads with the scientific question or finding, its relevance, and the role of that particular file. The summaries distinguish observed comparisons, models, research syntheses and ecological baselines. They do not attribute an entire paper’s conclusions to every input file.
 
-The linked **Study findings, interpretation and sources** note (`evidence-summary.md`) gives the comparison, finding, interpretation, limitations and specific paper sections or figures behind the summary. The separate **Full review evidence and source history** file (`review-context.json`) retains original sheet rows, matching decisions, field definitions, checksums, preparation checks and previous metadata. Original scientific files remain supporting assets. Internal sheet identifiers and matching labels no longer appear in the public descriptions.
+The linked **Study findings, interpretation and sources** note (`evidence-summary.md`) gives the comparison, finding, interpretation, limitations and specific paper sections or figures behind the summary. The separate **Full review evidence and source history** file (`review-context.json`) combines original sheet rows, regenerated matching decisions, reviewed field definitions, checksums and preparation checks. On refresh, it also retains previously delivered full contexts in generated `provenance_history`; fresh builds have no prior-delivery history. Original scientific files remain supporting assets. Internal sheet identifiers and matching labels no longer appear in the public descriptions.
 
 An independent [scientific framing review](../evidence/matched/review/evidence-framing-review.md) checked all 24 entries. Examples include the distinction between higher carbon stocks and faster accumulation, land-use comparisons versus before/after interventions, and the local ATTO carbon sink versus the paper’s broader regional result.
 
 The hydropower originals are grouped into one ZIP containing all 16 original KNN/BCSD result tables and the two inspected scripts. Every member was compared with its source checksum. The prepared CSV contains only the requested KNN mean/firm power results, with source scenario codes preserved.
 
-An independent [YAML review](../evidence/matched/review/yaml-review.md) checked both completeness and readability, then checked that all generated sidecars matched the reviewed plans. The review led to clearer geographic coverage, heat-exposure meaning, soil depth, tree sampling definitions and time qualifications.
+An independent [YAML review](../evidence/matched/review/yaml-review.md) checked completeness and readability of the descriptions that are now maintained as the canonical committed sidecars. The review led to clearer geographic coverage, heat-exposure meaning, soil depth, tree sampling definitions and time qualifications.
 
 ## What was checked
 
@@ -32,7 +32,7 @@ An independent [YAML review](../evidence/matched/review/yaml-review.md) checked 
 - CSV extraction checks the selected cells, row counts, field order, encodings and any declared decimal conversion. Formula-bearing carbon workbooks are preserved without recalculation.
 - EOLab's actual discovery and native readers admitted the collection with all linked files present, metadata retained, repeated scans stable, and public map footprints expressed in WGS84. This is a filesystem/admission check; the running catalog still needs a rescan.
 
-See the [preparation report](../evidence/matched/reports/preparation.json), [admission report](../evidence/matched/reports/admission.json), [original publication check](../evidence/matched/reports/publication.json), and [metadata refresh check](../evidence/matched/reports/metadata-refresh.json). The [STAC preview](../evidence/matched/reports/stac-preview.json) illustrates the admitted metadata; its asset URLs are usable through EOLab after import.
+Current preparation and admission reports are generated under `build/evidence/matched/` and `build/evidence/pilot/`. The combined refresh audit is `build/evidence/metadata-refresh.json`. The commands below produce those local results and a STAC preview. Preview asset URLs become usable through EOLab after import; the preview is not a hosted catalog.
 
 ## Questions that remain
 
@@ -54,30 +54,34 @@ Use Python 3.12 with `requirements-evidence.txt` and EOLab's compatible native G
 Keep machine-specific roots in local environment variables. `WWF_EVIDENCE_SOURCE` identifies the source collection, currently kept in the ignored `data/evidence_data/` directory. `WWF_EVIDENCE_STAGE` identifies a **new** staging directory for the new matched entries, and `EOLAB_SOURCE` identifies a checkout with the reviewed sidecar importer.
 
 ```powershell
-python scripts/prepare_matched_evidence.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_STAGE" --report build/matched-preparation.json --sidecar-dir build/matched-sidecars
-python scripts/validate_matched_evidence.py --data-root "$env:WWF_EVIDENCE_STAGE" --eolab-source "$env:EOLAB_SOURCE" --report build/matched-admission.json --items build/matched-stac.json
-python scripts/build_evidence_delivery_report.py --output-dir build/evidence-review
+python scripts/prepare_matched_evidence.py --source-root "$env:WWF_EVIDENCE_SOURCE" --output-root "$env:WWF_EVIDENCE_STAGE" --report build/evidence/matched/preparation.json
+python scripts/validate_matched_evidence.py --data-root "$env:WWF_EVIDENCE_STAGE" --eolab-source "$env:EOLAB_SOURCE" --report build/evidence/matched/admission.json --items build/evidence/matched/stac-preview.json
+python scripts/build_evidence_delivery_report.py
 python -m unittest discover -s tests/evidence -v
 ```
 
-Edit the [plans](../evidence/matched/plans/) to change descriptions or preparation choices, then rebuild into a fresh staging directory. Existing outputs are never overwritten. Review changes before publishing the new `matched/` folder; keep `pilot/` in place. Source archives, rasters, tables and PDFs remain untracked.
+The command defaults to the committed [matched recipes](../evidence/matched/recipes/). Each recipe references a canonical [YAML sidecar](../evidence/matched/sidecars/), a [scientific note](../evidence/notes/) and a detailed [curation record](../evidence/curation/). Change the recipe when changing data selection or transformation; edit the YAML for catalog metadata, the Markdown note for scientific prose, and the curation record for detailed supporting interpretation.
+
+A data rebuild needs a fresh staging directory; existing outputs are never overwritten. Review changes before publishing the new `matched/` folder and retain `pilot/`. Preparation copies the canonical YAML and renders the note with a link to the complete generated `review-context.json`. Source archives, rasters, tables and PDFs remain untracked. Rebuilding provenance uses the frozen inputs directly and does not require pre-existing reconciliation reports.
 
 For the combined published folder, run `validate_matched_evidence.py` with `--include-pilot` and `--data-root` set to the processed-data root. This also requires all 19 matched descriptions to be represented and verifies the existing pilot. Then use **Scan directories** in EOLab. The existing pilot preparation and refresh commands remain documented in the [pilot guide](evidence-pilot.md).
 
 ### Refresh scientific descriptions
 
-Edit the matched plans or pilot records, including their `evidence_summary` sections. Keep original matching evidence and prior metadata in the linked review context. To export the reviewed YAMLs and brief previews without modifying a delivery:
+Edit the canonical [matched YAMLs](../evidence/matched/sidecars/) or [pilot YAMLs](../evidence/pilot/sidecars/), the [scientific notes](../evidence/notes/), and any affected [curation records](../evidence/curation/). Keep reviewed source interpretation and corrections in the curation records; the refresh retains prior delivered contexts in generated history. To check and export note previews without modifying a delivery or overwriting the canonical YAMLs:
 
 ```powershell
 python scripts/refresh_evidence_metadata.py --export-only
 python scripts/build_evidence_delivery_report.py
 ```
 
+Preview notes are written under `build/evidence/matched/briefs/` and `build/evidence/pilot/briefs/`. They are generated copies; edit the sources above, not the previews.
+
 For the existing combined collection, set `WWF_PROCESSED_EVIDENCE` to its root in your local environment:
 
 ```powershell
 python scripts/refresh_evidence_metadata.py --data-root "$env:WWF_PROCESSED_EVIDENCE"
-python scripts/validate_matched_evidence.py --data-root "$env:WWF_PROCESSED_EVIDENCE" --include-pilot --eolab-source "$env:EOLAB_SOURCE" --report evidence/matched/reports/admission.json --items evidence/matched/reports/stac-preview.json
+python scripts/validate_matched_evidence.py --data-root "$env:WWF_PROCESSED_EVIDENCE" --include-pilot --eolab-source "$env:EOLAB_SOURCE" --report build/evidence/matched/admission.json --items build/evidence/matched/stac-preview.json
 ```
 
 The refresh checks both collections before replacing metadata. It adds or updates the scientific notes and updates YAMLs, full review context and preparation reports. Original data and supporting assets retain their bytes and modification times; dataset identities, native geometry and temporal declarations cannot change. Previous scientific preparation checks remain in the reports. Unexpected file changes stop publication. Caught replacement errors trigger rollback; replacements are atomic per file rather than a whole-directory transaction. Wait for validation to finish before running **Scan directories** in EOLab.

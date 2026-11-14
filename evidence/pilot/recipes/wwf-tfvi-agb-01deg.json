@@ -1,0 +1,20 @@
+{
+  "sidecar": "pilot/sidecars/tfvi-agb-0.1deg.tif.eolab.yaml",
+  "scientific_note": "notes/wwf-tfvi-agb-01deg.md",
+  "curation": "curation/wwf-tfvi-agb-01deg.json",
+  "directory": "tfvi-agb",
+  "attachments": [
+    {
+      "source": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
+      "path": "source/tfvi_agb_0.1deg.tif"
+    }
+  ],
+  "primary_source": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
+  "source_files": {
+    "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe"
+  },
+  "expected_valid_pixels": 161864,
+  "row_ids": [
+    "row-019"
+  ]
+}

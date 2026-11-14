@@ -1,6 +1,6 @@
 """Validate a reconciliation snapshot offline, independently of the builder.
 
-Only the committed source, manifest, decisions and reports are required. This
+Only the frozen source, manifest, decisions and generated reports are required. This
 checks preservation and relational integrity, not scientific correctness or the
 continued availability of publisher pages or externally stored datasets.
 """
@@ -359,7 +359,7 @@ def validate_workbook(path, tables, source_columns, review, other, matches, link
     return shortened
 
 
-def validate(input_dir=REPO / "data", output_dir=REPO / "outputs"):
+def validate(input_dir=REPO / "data", output_dir=REPO / "build/reconciliation"):
     """Return concise validation counts, or raise ValueError with the first fault."""
     input_dir, output_dir = Path(input_dir), Path(output_dir)
     snapshot = read_json(input_dir / "snapshot.json")
@@ -580,7 +580,7 @@ def validate(input_dir=REPO / "data", output_dir=REPO / "outputs"):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-dir", type=Path, default=REPO / "data")
-    parser.add_argument("--output-dir", type=Path, default=REPO / "outputs")
+    parser.add_argument("--output-dir", type=Path, default=REPO / "build/reconciliation")
     args = parser.parse_args(argv)
     try:
         counts = validate(args.input_dir, args.output_dir)

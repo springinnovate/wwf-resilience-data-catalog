@@ -1,0 +1,46 @@
+{
+  "dataset_id": "wwf-amazon-tree-plot-metadata",
+  "metadata_evidence": [
+    {
+      "source": "https://figshare.com/articles/dataset/22786166",
+      "locator": "v2 license, file list and MD5s",
+      "supports": "CC-BY-4.0; exact bytes of PlotData, PlotsAbiotic and analysis script."
+    },
+    {
+      "source": "https://doi.org/10.1038/s42003-023-05514-6",
+      "locator": "PDF pages 2 and 8, Methods",
+      "supports": "Inventory tree definition: free-standing woody individuals with DBH at least 10 cm; 2,046 plots retained; establishment dates differ from measurement dates."
+    },
+    {
+      "source": "22786166/TreeDiversityScript.R",
+      "locator": "Plot-data loading and density/diversity/richness sections",
+      "supports": "D is trees per hectare; fa.plots is Fisher alpha; supplied richness summaries used directly."
+    },
+    {
+      "source": "22786166/PlotData.csv",
+      "locator": "All records and byte inspection",
+      "supports": "Unique PlotCode values; 18 columns; establishment dates 1934-2021; Latin-1/Windows-1252 decode identically without replacement characters."
+    }
+  ],
+  "decisions": [
+    "Transcode decoded strings to UTF-8 without changing field names, values, row order or citations. Retain all original bytes as a linked asset. Do not use establishment years as observation timestamps."
+  ],
+  "limitations": [
+    "Coordinate datum is not documented in the inspected sources; this delivery is a table without inferred map geometry.",
+    "The paper reports establishment through 2020, while three supplied records have year_est=2021."
+  ],
+  "encoding_basis": "ISO-8859-1; no bytes in the 0x80-0x9f range, so Windows-1252 yields identical text.",
+  "unresolved_field_definitions": [
+    "ColD and some ancillary source codes are not fully defined in the delivered table; preserve them without reinterpretation."
+  ],
+  "establishment_year_exceptions": {
+    "field": "year_est",
+    "source_year": 2021,
+    "plot_codes": [
+      "FLP_01",
+      "Iamoe1",
+      "Iamoe2"
+    ],
+    "interpretation": "These three establishment-year records extend beyond the paper's stated 2020 endpoint; establishment dates are not measurement dates."
+  }
+}

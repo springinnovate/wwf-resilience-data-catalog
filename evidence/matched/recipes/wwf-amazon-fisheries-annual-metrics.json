@@ -1,0 +1,31 @@
+{
+  "sidecar": "matched/sidecars/fisheries-annual-metrics.csv.eolab.yaml",
+  "scientific_note": "notes/wwf-amazon-fisheries-annual-metrics.md",
+  "curation": "curation/wwf-amazon-fisheries-annual-metrics.json",
+  "directory": "amazon-fisheries-annual-metrics",
+  "row_ids": [
+    "row-013"
+  ],
+  "primary_source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+  "operation": {
+    "type": "xlsx_table",
+    "source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+    "sheet": "Supplement Table 2_Year Trends_",
+    "header_row": 1
+  },
+  "source_files": {
+    "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx": "71365e3e2c142a77764456afa81bc6a3c6f4333020f82541fe04029bead4d214",
+    "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx": "ca789522ea146afa4567ea6931e7425e1b0e3f73bf50689560ccd0963d3ca4f7"
+  },
+  "attachments": [
+    {
+      "source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_002.xlsx",
+      "path": "source/rspb20220726_si_002.xlsx"
+    },
+    {
+      "source": "BiodiversityUnderpins_row41/BiodiversityUnderpins_row41/rspb20220726_si_001.xlsx",
+      "path": "source/rspb20220726_si_001.xlsx"
+    }
+  ],
+  "expected_rows": 121
+}

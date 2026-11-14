@@ -1,6 +1,6 @@
 """Build the auditable sheet-to-local-data reconciliation (no source changes).
 
-Usage: python scripts/build_reconciliation.py [--input-dir data] [--output-dir outputs]
+Usage: python scripts/build_reconciliation.py [--input-dir data] [--output-dir build/reconciliation]
 Requires openpyxl. Inputs are the preserved sheet, inventory and reviewed decisions.
 This exports reconciliation evidence, not STAC or a scientific validation result.
 """
@@ -15,7 +15,7 @@ from workbook_presentation import read_presentation, build_workbook
 parser=argparse.ArgumentParser(description=__doc__)
 repo=Path(__file__).resolve().parents[1]
 parser.add_argument('--input-dir',type=Path,default=repo/'data')
-parser.add_argument('--output-dir',type=Path,default=repo/'outputs')
+parser.add_argument('--output-dir',type=Path,default=repo/'build/reconciliation')
 args=parser.parse_args()
 inputs=args.input_dir.resolve(); out=args.output_dir.resolve()
 if out==inputs or out in inputs.parents or inputs in out.parents:

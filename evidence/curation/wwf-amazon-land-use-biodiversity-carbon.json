@@ -1,0 +1,60 @@
+{
+  "dataset_id": "wwf-amazon-land-use-biodiversity-carbon",
+  "metadata_evidence": [
+    {
+      "source": "https://zenodo.org/records/6518744",
+      "locator": "v1.1 archive: cassioalencarnunes-LULC_transitions-c501bd5",
+      "supports": "All four supplied data files, LICENSE and README exactly match published archive members."
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/LICENSE",
+      "locator": "Repository root license",
+      "supports": "Apache-2.0 for this code-and-data repository; Zenodo labels it Other (Open)."
+    },
+    {
+      "source": "https://doi.org/10.1073/pnas.2202310119",
+      "locator": "PDF page 4 Figure 2; PDF page 8 Ecological variables",
+      "supports": "Carbon stocks Mg C per hectare; biodiversity and carbon/soil surveys in 2010-2011; species richness groups."
+    },
+    {
+      "source": "cassioalencarnunes-LULC_transitions-c501bd5/Script_LMMs.R",
+      "locator": "Lines 13-15 and CS_variables/biodiversity_variables",
+      "supports": "Joined table used as model input; prepared output preserves unscaled values."
+    }
+  ],
+  "decisions": [
+    "One Item covers both descriptions because their primary asset is the same joined table. Select only the five site keys/classes, seven richness fields and four carbon fields; retain the complete original and the separate forest-species and regional carbon files. No coordinate join or spatial inference."
+  ],
+  "limitations": [
+    "Site tables remain nonspatial; coordinates require a verified join and CRS.",
+    "Missing values remain NA. Site aggregates do not replace individual observations."
+  ],
+  "field_definitions": {
+    "richness": {
+      "ant_rich": "ants",
+      "bird_rich": "birds",
+      "db_rich": "dung beetles",
+      "liana_rich": "lianas",
+      "sap_rich": "small trees",
+      "tree_rich": "large trees",
+      "bee_rich": "orchid bees"
+    },
+    "carbon": {
+      "Aboveground_pool": "Above-ground carbon",
+      "Litter_pool": "Litter carbon",
+      "Dead_pool": "Dead-wood carbon",
+      "Soil_pool_new": "Soil carbon, 0-30 cm"
+    },
+    "land_cover": {
+      "UF": "undisturbed primary forest",
+      "LF": "logged primary forest",
+      "LBF": "logged-and-burned primary forest",
+      "PA": "pasture",
+      "MA": "mechanized agriculture",
+      "SFyoung": "young secondary forest, 20 years or younger",
+      "SFold": "old secondary forest, older than 20 years"
+    },
+    "carbon_units": "Mg C per hectare; Soil_pool_new covers 0–30 cm depth."
+  },
+  "forest_species_definition": "Species recorded at least once at a primary forest site."
+}

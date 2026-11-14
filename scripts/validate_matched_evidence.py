@@ -1,8 +1,6 @@
 """Check the expanded delivery with EOLab's real discovery and source readers."""
 from __future__ import annotations
 import argparse
-import csv
-import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -15,10 +13,15 @@ from shapely.geometry import shape
 import yaml
 
 from prepare_evidence_pilot import require,relative_file,sha256,write_json
-from prepare_matched_evidence import load_records,evidence_context,read_dicts
+from evidence_sources import load_records, load_pilot_plan, reconciliation_tables, evidence_context
 from evidence_notes import render_evidence_summary, pilot_evidence_context
 
 REPO=Path(__file__).resolve().parents[1]
+
+
+def current_context(context: dict) -> dict:
+    """Compare current authored evidence without historical delivery snapshots."""
+    return {key:value for key,value in context.items() if key != 'provenance_history'}
 
 
 def validate(data_root: Path,eolab_source: Path,plan_dir: Path,include_pilot=False) -> tuple[dict,list]:
@@ -42,7 +45,7 @@ def validate(data_root: Path,eolab_source: Path,plan_dir: Path,include_pilot=Fal
         context=evidence_context(record);context['preparation_checks']=results[record['id']]['checks']
         entries[record['id']]=(record,matched_root/record['directory'],context,results[record['id']])
     if include_pilot:
-        pilot=json.loads((REPO/'evidence/pilot/records.json').read_text(encoding='utf-8'))
+        pilot=load_pilot_plan(REPO/'evidence/pilot/recipes')
         delivered=json.loads((data_root/'pilot/preparation-report.json').read_text(encoding='utf-8'))
         old={r['id']:r for r in delivered['datasets']}
         for record in pilot['records']:
@@ -55,7 +58,7 @@ def validate(data_root: Path,eolab_source: Path,plan_dir: Path,include_pilot=Fal
         Draft202012Validator(schema).validate(declaration)
         require(yaml.safe_load((folder/result['sidecar']).read_text(encoding='utf-8'))==declaration,
                 'Delivered YAML differs from its plan: '+identifier)
-        require(json.loads((folder/'review-context.json').read_text(encoding='utf-8'))==context,
+        require(current_context(json.loads((folder/'review-context.json').read_text(encoding='utf-8')))==current_context(context),
                 'Linked full evidence differs from the plan: '+identifier)
         for name,details in result['files'].items():
             path=relative_file(folder,name)
@@ -108,13 +111,14 @@ def validate(data_root: Path,eolab_source: Path,plan_dir: Path,include_pilot=Fal
     encoded=json.dumps(items,ensure_ascii=False)
     require('file://' not in encoded and str(data_root) not in encoded and data_root.as_posix() not in encoded,
             'Public metadata exposes a private source root.')
-    matched=read_dicts(REPO/'outputs/matches.csv')
+    matched=reconciliation_tables()['matches']
     expected_rows={r['row_id'] for r in matched if r['match_status']=='Matched'}
     represented={row for record,_,_,_ in entries.values() for row in record['row_ids']}
     if include_pilot:require(expected_rows <= represented,'A matched sheet description is unaccounted for.')
     report=dict(eolab_source_revision=subprocess.check_output(['git','-C',str(eolab_source),'rev-parse','HEAD'],text=True).strip(),
                 schema_matches=True,discovery_errors=0,repeated_discovery_identical=True,
                 all_linked_assets_exist=True,all_delivered_checksums_match=True,full_evidence_preserved=True,
+                provenance_history_excluded_from_context_comparison=True,
                 includes_existing_pilot=include_pilot,matched_descriptions_covered=len(expected_rows & represented),
                 database_published=False,datasets=summaries)
     return report,items
@@ -124,12 +128,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data-root',type=Path,required=True)
     parser.add_argument('--eolab-source',type=Path,required=True)
-    parser.add_argument('--plans',type=Path,default=REPO/'evidence/matched/plans')
+    parser.add_argument('--recipes','--plans',dest='recipes',type=Path,default=REPO/'evidence/matched/recipes')
     parser.add_argument('--include-pilot',action='store_true')
-    parser.add_argument('--report',type=Path,required=True)
-    parser.add_argument('--items',type=Path,required=True)
+    parser.add_argument('--report',type=Path,default=REPO/'build/evidence/matched/admission.json')
+    parser.add_argument('--items',type=Path,default=REPO/'build/evidence/matched/stac-preview.json')
     args=parser.parse_args()
-    report,items=validate(args.data_root,args.eolab_source,args.plans,args.include_pilot)
+    report,items=validate(args.data_root,args.eolab_source,args.recipes,args.include_pilot)
     write_json(args.report,report);write_json(args.items,items)
     print(f"EOLab admitted {len(items)} Items with full linked evidence; repeated discovery is stable.")
 

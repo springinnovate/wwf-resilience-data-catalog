@@ -20,11 +20,14 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python scripts/check_inputs.py
-      - run: python scripts/build_reconciliation.py --output-dir build/rebuilt
-      - run: python scripts/validate_reconciliation.py --output-dir build/rebuilt
-      - run: python scripts/compare_outputs.py build/rebuilt
-      - run: python scripts/build_article_report.py --output-dir build/article-report
-      - run: python scripts/compare_outputs.py build/article-report --expected reports
+      - run: python scripts/build_reconciliation.py
+      - run: python scripts/validate_reconciliation.py
+      - run: python scripts/build_reconciliation.py --output-dir build/reconciliation-repeat
+      - run: python scripts/validate_reconciliation.py --output-dir build/reconciliation-repeat
+      - run: python scripts/compare_outputs.py build/reconciliation-repeat --expected build/reconciliation
+      - run: python scripts/build_article_report.py
+      - run: python scripts/build_article_report.py --output-dir build/articles-repeat
+      - run: python scripts/compare_outputs.py build/articles-repeat --expected build/articles
       - run: python -m unittest discover -s tests -v
 
   evidence-pilot:

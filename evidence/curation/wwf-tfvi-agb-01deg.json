@@ -1,0 +1,92 @@
+{
+  "dataset_id": "wwf-tfvi-agb-01deg",
+  "metadata_evidence": [
+    {
+      "source": "source_raster_header",
+      "locator": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif",
+      "supports": "Physical grid, CRS, type, nodata, single-band layout. Full array checked for pixel count and numeric range."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 7 / printed p. 993; PDF p. 10 / printed p. 996, Figure 5",
+      "supports": "TFVI sign and magnitude interpretation; Figure 5 depicts 0.25-degree versions for visualization, while the distributed pilot is the 0.1-degree source product."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 11 / printed p. 997, Resource availability and Datasets used",
+      "supports": "Published output/code archive DOI; 0.1-degree latitude-longitude standard grid and broader 1982-2018 study period."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 12 / printed p. 998, Forest response variables",
+      "supports": "Annual above-ground biomass inputs span 2000-2018."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF pp. 13-14 / printed pp. 999-1000, Long-term TFVI, Equations 8-10",
+      "supports": "Response variables standardized to Z scores, index definition and sign semantics."
+    },
+    {
+      "source": "paper",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF pp. 10-11 / printed pp. 996-997, Discussion",
+      "supports": "AGB vulnerability robustness caveat, correlational interpretation, stationarity assumption and excluded societal consequences."
+    },
+    {
+      "source": "paper_supplement",
+      "url": "https://doi.org/10.1016/j.oneear.2021.06.002",
+      "locator": "PDF p. 29 / supplement p. 11, Figure S11",
+      "supports": "AGB vulnerability and model coefficient maps; figure displays values different from zero at 95% confidence."
+    },
+    {
+      "source": "dataset_repository",
+      "url": "https://zenodo.org/api/records/5115158",
+      "locator": "metadata.license, metadata.description, files",
+      "supports": "CC-BY-4.0 dataset license; GeoTIFF_CSV.txz archive identity and checksum."
+    },
+    {
+      "source": "published_code",
+      "url": "https://zenodo.org/records/5115158/files/Scripts.txz?download=1",
+      "locator": "Scripts/02_TFVI/calc_tfvi.r, lines 1808-1830, 2194-2200, 4178-4179",
+      "supports": "AR1 response fit retains finite paired observations; long-term stress trends are computed separately; TFVI formula uses autocorrelation denominator; plot labels omit physical units."
+    }
+  ],
+  "limitations": [
+    "This pilot preserves the published pan-tropical grid; it is not an Amazon-only subset.",
+    "The native file contains substantial negative and positive extremes. These must not be clipped, converted to percentages or interpreted as probabilities.",
+    "The 0.1-degree source is not the 0.25-degree visualization shown in the main paper. A second 0.1-degree file in FigureS11 is an exact duplicate and should not become a second dataset.",
+    "The paper treats the findings as correlational. The model assumes stationary sensitivities and resilience and does not estimate societal impacts.",
+    "The paper specifically notes weaker consistency between AGB vulnerability and variance patterns, potentially related to shorter/annual biomass records.",
+    "The scientific analysis was not rerun. Format conversion verifies data preservation, not the correctness of the study model.",
+    "Exact map observation dates are not embedded. Preserve documented input/study periods separately and label any file-modification temporal fallback."
+  ],
+  "scientific_periods": [
+    {
+      "role": "above_ground_biomass_response_inputs",
+      "start_year": 2000,
+      "end_year": 2018,
+      "evidence": "Paper, PDF p. 12 / printed p. 998, Forest response variables."
+    },
+    {
+      "role": "broader_study_and_stressor_records",
+      "start_year": 1982,
+      "end_year": 2018,
+      "evidence": "Paper, PDF p. 11 / printed p. 997, Datasets used."
+    }
+  ],
+  "doi_scope": "The dataset DOI identifies the original deposited package. This preparation has no separately registered DOI.",
+  "temporal_note": "Catalog time is the preserved source-file modification time, not the observation period.",
+  "processing": [
+    "Lossless COG encoding with nearest-neighbour display overviews.",
+    "Native CRS, grid, full-resolution values and mask retained."
+  ],
+  "variable_interpretation": {
+    "band_meaning": "Tropical Forest Vulnerability Index for above-ground biomass",
+    "units": "dimensionless standardized index",
+    "units_basis": "Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag."
+  }
+}

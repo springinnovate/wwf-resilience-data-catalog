@@ -1,6 +1,6 @@
 # Evidence summary review
 
-The revised descriptions explain what the studies found, how the supplied data support those findings, and where interpretation must stop. An independent review covered all 24 item descriptions and their structured evidence briefs. No scientific framing blockers remain in the reviewed plans. This is a review of the summaries and their supporting sources, not a rerun or independent validation of the studies.
+The revised descriptions explain what the studies found, how the supplied data support those findings, and where interpretation must stop. An independent review covered all 24 item descriptions and their supporting scientific notes. No scientific framing blockers remain in the reviewed descriptions. This is a review of the summaries and their supporting sources, not a rerun or independent validation of the studies.
 
 The review checked each description against the relevant article sections, figures and deposited metadata. It distinguished observations, model scenarios, synthesis estimates, baseline maps and supporting inputs. Spreadsheet matching labels and internal row identifiers are absent from the public summaries; the original matching history remains supporting provenance.
 
@@ -33,10 +33,10 @@ The briefs identify research relevance without claiming that a policy was adopte
 
 Nine native grids still await CRS confirmation before map display. Plot coordinates also lack a verified datum. Hydropower scenario interpretation, seed-mass class boundaries and the fish database's inconsistent rights wording remain documented. Better summaries do not resolve these source-data limitations.
 
-## Generated outputs checked
+## Review scope and maintained sources
 
-All 24 generated YAML sidecars exactly match their reviewed descriptors. Each of the 24 rendered briefs includes its structured question, findings, interpretation, evidence type, dataset role, limitations and source references. Every relative provenance link resolves to the corresponding repository record or plan.
+At the conclusion of the scientific review, all 24 generated YAML sidecars matched their reviewed descriptors, and all 24 notes retained the question, findings, interpretation, evidence type, dataset role, limitations and source references. These are now maintained directly as committed [matched YAMLs](../sidecars/), [pilot YAMLs](../../pilot/sidecars/) and [scientific notes](../../notes/). Detailed supporting interpretation is kept in [curation records](../../curation/), connected to each dataset by its recipe. During preparation or refresh, the rendered note links to the adjacent complete `review-context.json`.
 
 Public descriptions contain 91–110 words; detailed briefs retain the supporting explanation and citations. No internal `row-` or `paper-` identifiers or machine-specific absolute paths were found in the public descriptions or briefs. Essential uncertainties remain visible, including withheld map display where the CRS is unconfirmed.
 
-This check covers repository-generated outputs. It does not claim that physical datasets have been republished or that a live EOLab catalog has been rescanned.
+This check covers the reviewed scientific descriptions and notes. It does not claim that physical datasets have been republished or that a live EOLab catalog has been rescanned.

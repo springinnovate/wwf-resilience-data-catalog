@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import prepare_matched_evidence as prepare
 import build_evidence_delivery_report as delivery_report
+from evidence_sources import load_pilot_plan, reconciliation_tables
 
 
 class MatchedPreparationTests(unittest.TestCase):
@@ -371,9 +372,9 @@ class MatchedPreparationTests(unittest.TestCase):
         self.assertFalse((self.root / 'escape.csv').exists())
 
     def test_final_plans_sidecars_hash_coverage_and_all_matched_sheet_rows(self):
-        # This check reads tracked plans, sidecars and reconciliation outputs only;
+        # This check reads tracked recipes, sidecars and freshly rebuilt matching records;
         # CI does not need the downloaded scientific collection.
-        records = prepare.load_records(ROOT / 'evidence/matched/plans')
+        records = prepare.load_records(ROOT / 'evidence/matched/recipes')
         self.assertEqual(len(records), 21)
         validator = Draft202012Validator(json.loads(prepare.SCHEMA.read_text(encoding='utf-8')))
         sidecar_root = ROOT / 'evidence/matched/sidecars'
@@ -402,11 +403,10 @@ class MatchedPreparationTests(unittest.TestCase):
                     self.assertRegex(record['source_files'][source], r'^[0-9a-f]{64}$')
         self.assertEqual({path.name for path in sidecar_root.glob('*.eolab.yaml')}, expected_sidecars)
 
-        pilot = json.loads((ROOT / 'evidence/pilot/records.json').read_text(encoding='utf-8'))['records']
+        pilot = load_pilot_plan(ROOT / 'evidence/pilot/recipes')['records']
         all_records = [*pilot, *records]
         self.assertEqual(len({record['id'] for record in all_records}), len(all_records))
-        with (ROOT / 'outputs/matches.csv').open(encoding='utf-8-sig', newline='') as handle:
-            matched = {row['row_id'] for row in csv.DictReader(handle) if row['match_status'] == 'Matched'}
+        matched = {row['row_id'] for row in reconciliation_tables()['matches'] if row['match_status'] == 'Matched'}
         self.assertEqual(len(matched), 19)
         represented = {row for record in all_records for row in record['row_ids']}
         barrier = next(record for record in pilot if record['id'] == 'wwf-amazon-barrier-locations')
@@ -419,10 +419,12 @@ class MatchedPreparationTests(unittest.TestCase):
         datasets, coverage = delivery_report.build(output)
         self.assertEqual(len(datasets), 24)
         self.assertEqual(len(coverage), 19)
+        repeated = self.root / 'repeat-reports'
+        self.assertEqual(delivery_report.build(repeated), (datasets, coverage))
         for name in ['datasets.csv', 'study_coverage.csv', 'catalog-summaries.md']:
             with self.subTest(report=name):
                 self.assertEqual((output / name).read_bytes(),
-                                 (ROOT / 'evidence/matched/reports' / name).read_bytes())
+                                 (repeated / name).read_bytes())
 
     def test_existing_delivery_and_source_nested_output_are_not_modified(self):
         output = self.root / 'existing'

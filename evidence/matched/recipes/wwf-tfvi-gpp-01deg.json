@@ -1,0 +1,30 @@
+{
+  "sidecar": "matched/sidecars/tfvi-gpp-0.1deg.tif.eolab.yaml",
+  "scientific_note": "notes/wwf-tfvi-gpp-01deg.md",
+  "curation": "curation/wwf-tfvi-gpp-01deg.json",
+  "directory": "tfvi-gpp",
+  "row_ids": [
+    "row-020"
+  ],
+  "readiness": "Map ready",
+  "operation": {
+    "type": "raster",
+    "source": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_gpp_0.1deg.tif"
+  },
+  "source_files": {
+    "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_gpp_0.1deg.tif": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
+    "GeoTIFF_CSV/Figure05/geotiff_0.25deg/tfvi_gpp_0.25deg.tif": "f93ca2040eac73e47329bbc2c1586b09f81d72ba200f5c485bed96376c774617",
+    "GeoTIFF_CSV/FigureS12/geotiff_0.1deg/tfvi_gpp_0.1deg.tif": "79c9e4b4daf8f22250ebe4f2a5257b9f2158e2bedb827e1298e1cfd9048d3d73",
+    "GeoTIFF_CSV/FigureS12/geotiff_0.25deg/tfvi_gpp_0.25deg.tif": "f93ca2040eac73e47329bbc2c1586b09f81d72ba200f5c485bed96376c774617"
+  },
+  "attachments": [
+    {
+      "source": "GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_gpp_0.1deg.tif",
+      "path": "source/tfvi_gpp_0.1deg.tif"
+    },
+    {
+      "source": "GeoTIFF_CSV/Figure05/geotiff_0.25deg/tfvi_gpp_0.25deg.tif",
+      "path": "source/tfvi_gpp_0.25deg.tif"
+    }
+  ]
+}

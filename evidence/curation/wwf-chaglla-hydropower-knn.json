@@ -1,0 +1,76 @@
+{
+  "dataset_id": "wwf-chaglla-hydropower-knn",
+  "metadata_evidence": [
+    {
+      "source": "https://zenodo.org/records/8161594",
+      "locator": "Record description, creators, license and Data repository.zip",
+      "supports": "CC-BY-4.0 repository linked from the published article; deposit title predates the final article title."
+    },
+    {
+      "source": "https://doi.org/10.1038/s43247-024-01738-4",
+      "locator": "PDF pages 8-9, Hydropower modelling and Climate/landuse scenarios; Data availability",
+      "supports": "Mean/firm power outcomes; three selected GCMs, two SSPs, three future periods and 16 management options; repository association."
+    },
+    {
+      "source": "Data repository/SRC/SWAT/Run_landuse_analysis.R",
+      "locator": "Landuse vector and model/downscaling loops",
+      "supports": "16 E0/E1/E2/E4 management codes; KNN and Bcsdprecipitation retained as distinct methods in originals."
+    },
+    {
+      "source": "Data repository/SRC/Robust_Decision_Analysis/script_parallelCoordinatesPlot_v5_1_Deltas.R",
+      "locator": "Climatology labels near lines78; MW labels near lines106-113",
+      "supports": "Code uses 2015-2045,2045-2075,2075-2100 labels; power units are MW."
+    },
+    {
+      "source": "Data repository/Results/energy/",
+      "locator": "All 16 CSV headers and rows",
+      "supports": "42 rows each; selecting DS suffix _KNN retains exactly21 per file, 336 total. Original numeric strings preserved."
+    },
+    {
+      "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fs43247-024-01738-4/MediaObjects/43247_2024_1738_MOESM2_ESM.pdf",
+      "locator": "Supplementary Information, section 3.3, PDF pages 19-22",
+      "supports": "Describes daily hydropower-operation equations but does not establish the firm-power reliability criterion. MATLAB reservoirSimulator6_2.m, reservoirSimulator6_3.m, durationCurve.m and the supplied R scripts also did not establish the field calculation. The criterion remains unresolved.",
+      "download_sha256": "0c3757ff1d728acef75d9a4433506f573253b60afeade0a49df947f93e81f903"
+    }
+  ],
+  "decisions": [
+    "Combine only KNN rows and the requested mean/firm power columns; add management code from filename. Preserve complete original 42-row files, including BCSD results and TotalSpills. No model rerun or scenario relabeling."
+  ],
+  "limitations": [
+    "Management and climatology codes retain the source labels; their complete mapping to paper scenario names and periods needs confirmation.",
+    "These are modeled summary power estimates, not a daily power series or measured generation.",
+    "Firm_Energy_MW is reported in MW, but its reliability criterion is unresolved in the inspected sources."
+  ],
+  "temporal_uncertainty": {
+    "paper_methods": "1985-2014, 2019-2044, 2045-2074, 2075-2100",
+    "paper_results": "Some results refer to near-future 2015-2044 and end-century2075-2099.",
+    "supplied_plot_code": "Reference,2015-2045,2045-2075,2075-2100",
+    "decision": "Preserve climatology codes and document disagreements; use an explicitly labeled file-modification catalog time."
+  },
+  "scenario_context": {
+    "paper_land_use_names": {
+      "S0": "current",
+      "S1": "full agricultural expansion",
+      "S2": "limited agricultural expansion",
+      "S3": "partial restoration"
+    },
+    "paper_management_suffixes": {
+      "a": "rainfed",
+      "b": "rainfed and terracing",
+      "c": "irrigated",
+      "d": "irrigated and terraced",
+      "e": "efficiently irrigated and terraced"
+    },
+    "mapping_status": "Source files use E4 where the paper discusses S3; full source-to-paper code mapping remains to be verified. Original E codes are preserved."
+  },
+  "source_bundle_note": "All 16 original energy tables and both inspected scripts are retained in one ZIP. Each member is checked against its original source hash; the full membership and source mapping are recorded in preparation_checks.supporting_archives.",
+  "field_definitions": {
+    "land_management": "Added from exact source filename; not an inferred scenario name.",
+    "scenario": "his occurs for E0 historical rows; historical occurs in other files. Both source labels are preserved. Future labels ssp126 and ssp585 refer to SSP1-2.6 and SSP5-8.5.",
+    "climatology": "0 historical;1/2/3 ordered future groups. No specific observation timestamp is assigned.",
+    "DS": "MIROC6_KNN, MPI_ESM1_2_HR_KNN, MPI_ESM1_2_LR_KNN.",
+    "Average_Energy_MW": "Mean modeled power, megawatts.",
+    "Firm_Energy_MW": "Modeled firm power, megawatts. The exact exceedance probability or reliability criterion has not yet been verified from the paper or inspected source algorithms; no standard percentile is assumed.",
+    "TotalSpills": "Original source field retained in attachments; excluded from prepared power-only table because spill units were not verified."
+  }
+}

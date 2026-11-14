@@ -41,7 +41,7 @@ python scripts/check_inputs.py
 python scripts/build_article_report.py
 ```
 
-This reproduces the **recorded search results**. It does not search publishers, retry blocked links, download articles or confirm that a manual download will work. A normal report rebuild does not need the local PDFs. On the machine holding the files in the recorded local directory, optionally check each PDF's file signature, size and SHA256 hash with:
+This reproduces the **recorded search results**. It does not search publishers, retry blocked links, download articles or confirm that a manual download will work. A normal report rebuild does not need the local PDFs. If the PDFs are present in `wwf-resilience-articles/`, optionally check each PDF's file signature, size and SHA256 hash with:
 
 ```sh
 python scripts/build_article_report.py --verify-local
@@ -54,7 +54,9 @@ python scripts/build_article_report.py --output-dir build/article-report
 python scripts/compare_outputs.py build/article-report --expected reports
 ```
 
-To record a later successful download, first confirm that the file is the intended full article or clearly labelled manuscript, rather than a supplement or access-error page. Update that paper's search record with the source, filename, version, validation metadata and any remaining caveat. Keep the PDF in the ignored `wwf-resilience-articles/` folder; do not add article files to Git. Review the changed record, refresh the input checksums with `python scripts/check_inputs.py --write`, then rebuild the article report and verify the local files. A report rebuild alone must not change an access result from blocked to downloaded. If the article folder moves, update `local_directory` in the search record, refresh its checksum and rebuild both tables. The recorded search date and download results do not change merely because files move.
+To record a later successful download, first confirm that the file is the intended full article or clearly labelled manuscript, rather than a supplement or access-error page. Update that paper's search record with the source, filename, version, validation metadata and any remaining caveat. Keep the PDF in the ignored `wwf-resilience-articles/` folder; do not add article files to Git. Review the changed record, refresh the input checksums with `python scripts/check_inputs.py --write`, then rebuild the article report and verify the local files. A report rebuild alone must not change an access result from blocked to downloaded.
+
+The `local_directory` field must use a repository-relative path with forward slashes. CSV file paths are relative to the repository root; Excel PDF hyperlinks are relative to the canonical `reports/` folder, including exports staged with `--output-dir`. Keep that folder layout when using the workbook. Moving the entire checkout requires no report changes. If the article folder changes within the checkout, update its relative path, keep it ignored, refresh the input checksum and rebuild both tables. Do not publish drive letters, usernames or full machine paths in notes, reports or PR descriptions. The recorded search date and download results do not change merely because files move.
 
 ## Inputs and their roles
 

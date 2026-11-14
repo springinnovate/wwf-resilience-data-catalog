@@ -2,7 +2,7 @@
 
 **24 of the 30 papers were downloaded as PDFs.** Five more have identified full-text routes that blocked automated retrieval. For one paper, no open article copy was located in the sources checked. These are the recorded results of the 13 November 2026 search, not a guarantee of current access.
 
-Open the [article download workbook](../reports/article_downloads.xlsx) or [CSV table](../reports/article_downloads.csv) for the full paper list, source links, filenames, versions and access notes. The actual PDFs are in `D:\repositories\wwf-resilience-data-catalog\wwf-resilience-articles`; this local folder is ignored by Git.
+Open the [article download workbook](../reports/article_downloads.xlsx) or [CSV table](../reports/article_downloads.csv) for the full paper list, source links, filenames, versions and access notes. Article filenames are relative to the repository. The `wwf-resilience-articles/` folder is ignored by Git; PDFs are not included in this repository.
 
 ## The six outstanding papers
 

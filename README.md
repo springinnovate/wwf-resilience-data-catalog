@@ -66,7 +66,7 @@ python -m unittest discover -s tests -v
 
 All scripts resolve default locations relative to this checkout, so they can also be invoked by absolute path from another working directory. `--input-dir` selects a complete alternate input snapshot. The builder refuses overlapping input/output directories.
 
-`data/snapshot.json` records the original report timestamp and expected coverage. That timestamp is retained during rebuilds; it is not the wall-clock time of the latest run. Workbook timestamps and ZIP entry timestamps are fixed. Output comparison checks text bytes and the uncompressed XLSX package contents, allowing differences in ZIP compression metadata across runtimes.
+`data/snapshot.json` records the original report timestamp and expected coverage. That timestamp is retained during rebuilds; it is not the wall-clock time of the latest run. Workbook timestamps and ZIP entry timestamps are fixed, and literal XML CRLF line endings are normalized to LF to remove the platform's text-mode serialization difference. Output comparison checks text bytes and the uncompressed XLSX package contents, allowing differences in ZIP compression metadata across runtimes.
 
 Validation checks source-sheet hashes and exact text, record uniqueness, decision coverage, paper and asset references, archive coverage, unmatched-data sets, CSV/JSON/workbook agreement and literal treatment of spreadsheet text. It verifies the recorded reconciliation; it does not independently validate the studies' scientific calculations or recheck live publisher pages.
 

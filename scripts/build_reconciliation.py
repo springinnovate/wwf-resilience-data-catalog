@@ -281,6 +281,12 @@ wb.properties.created=stamp;wb.properties.modified=stamp
 target=out/'study_data_matches.xlsx';wb.save(target)
 with zipfile.ZipFile(target) as archive_in:
     package={name:archive_in.read(name) for name in archive_in.namelist()}
+# et_xmlfile writes worksheet temporary files in text mode: Windows inserts
+# CRLF into embedded text where Linux writes LF. XML readers normalize literal
+# line endings to LF anyway. Preserve character references (e.g. &#13;) and
+# normalize only literal CRLF so the package is reproducible across platforms.
+package={name:payload.replace(b'\r\n',b'\n') if name.endswith(('.xml','.rels')) else payload
+         for name,payload in package.items()}
 import re
 fixed_time=stamp.isoformat(timespec='seconds')+'Z'
 package['docProps/core.xml']=re.sub(rb'(<dcterms:modified[^>]*>).*?(</dcterms:modified>)',lambda m:m[1]+fixed_time.encode()+m[2],package['docProps/core.xml'])

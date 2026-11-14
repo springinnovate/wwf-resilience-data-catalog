@@ -2,8 +2,8 @@
   "search_date": "2026-11-13",
   "search_timezone": "America/Los_Angeles",
   "report_timestamp_utc": "2026-11-14T03:23:04+00:00",
-  "local_directory": "C:\\Users\\richp\\Downloads\\wwf-resilience-articles",
-  "scope": "The 30 article identities from the original supplied description sheet. Articles are stored locally outside the Git repository.",
+  "local_directory": "D:\\repositories\\wwf-resilience-data-catalog\\wwf-resilience-articles",
+  "scope": "The 30 article identities from the original supplied description sheet. Articles are stored in a local folder ignored by Git; the PDFs are not versioned.",
   "records": [
     {
       "paper_id": "paper-001",

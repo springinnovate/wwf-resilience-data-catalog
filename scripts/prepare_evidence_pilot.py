@@ -7,10 +7,12 @@ from __future__ import annotations
 
 import argparse
 import calendar
+from copy import deepcopy
 import csv
 import hashlib
 from importlib.metadata import version
 import json
+import os
 from pathlib import Path, PurePosixPath
 import shutil
 import tempfile
@@ -196,6 +198,142 @@ def prepare(source_root: Path, output_root: Path, records_path: Path,
     return report
 
 
+
+def refresh_metadata(source_root: Path, output_root: Path, records_path: Path,
+                     schema_path: Path) -> dict[str, Any]:
+    """Refresh a verified delivery's metadata while retaining its original payloads.
+
+    All source and delivered files must match the previous preparation report.
+    Staged files use unrecognized extensions so a concurrent directory scan cannot
+    admit temporary copies. Replacements are atomic per file; a caught failure
+    restores metadata backups. A process or machine crash is not a transaction.
+    """
+    source_root = source_root.resolve(strict=True)
+    output_root = output_root.resolve(strict=True)
+    require(not output_root.is_relative_to(source_root), 'Output must be outside the original data collection.')
+    require(not output_root.is_relative_to(REPO), 'Scientific outputs must remain outside the Git repository.')
+    plan = json.loads(records_path.read_text(encoding='utf-8'))
+    validator = Draft202012Validator(json.loads(schema_path.read_text(encoding='utf-8')))
+    records = plan['records']
+    require(sorted(r['kind'] for r in records) == ['nonspatial', 'raster', 'vector'], 'Pilot needs exactly three kinds.')
+    require(len({r['id'] for r in records}) == 3, 'Pilot identifiers are not unique.')
+    report_path = output_root / 'preparation-report.json'
+    previous = json.loads(report_path.read_text(encoding='utf-8'))
+    report = deepcopy(previous)
+    require(report['eolab_contract'] == plan['eolab_contract'], 'EOLab contract changed; prepare a new delivery.')
+    require(len(report['datasets']) == 3 and {d['id'] for d in report['datasets']} == {r['id'] for r in records},
+            'Delivered dataset identities differ from the plan.')
+    delivered = {d['id']: d for d in report['datasets']}
+    replacements: dict[Path, bytes] = {}
+    expected_files = {report_path}
+    payloads: dict[Path, tuple[str, int]] = {}
+    before: dict[Path, tuple[str, int]] = {report_path: (sha256(report_path), report_path.stat().st_mtime_ns)}
+
+    for record in records:
+        descriptor = record['descriptor']
+        validator.validate(descriptor)
+        dataset = delivered[record['id']]
+        for key, expected in [('kind', record['kind']), ('directory', record['directory']),
+                              ('primary', record['output_file']),
+                              ('sidecar', record['output_file'] + '.eolab.yaml'),
+                              ('source_files', record['source_files'])]:
+            require(dataset[key] == expected, f'Delivered {key} differs from the plan for {record["id"]}.')
+        for name, checksum in record['source_files'].items():
+            require(sha256(relative_file(source_root, name)) == checksum,
+                    f'Source checksum differs for {record["id"]}: {name}')
+        folder = relative_file(output_root, record['directory'])
+        sidecar = relative_file(folder, dataset['sidecar'])
+        context = folder / 'review-context.json'
+        require(dataset['sidecar'] in dataset['files'] and 'review-context.json' in dataset['files'],
+                'Delivered metadata is missing from the preparation report.')
+        for name, details in dataset['files'].items():
+            path = relative_file(folder, name)
+            checksum = sha256(path)
+            require(checksum == details['sha256'] and path.stat().st_size == details['bytes'],
+                    f'Delivered file differs from the preparation report: {record["directory"]}/{name}')
+            expected_files.add(path)
+            before[path] = (checksum, path.stat().st_mtime_ns)
+            if path not in (sidecar, context):
+                payloads[path] = before[path]
+        old_descriptor = yaml.safe_load(sidecar.read_text(encoding='utf-8'))
+        for key in ['id', 'kind', 'primary_asset', 'source', 'temporal']:
+            require(descriptor.get(key) == old_descriptor.get(key),
+                    f'Metadata refresh cannot change {key}; prepare a new delivery.')
+        require(descriptor['id'] == record['id'] and descriptor['kind'] == record['kind'],
+                'Descriptor identity differs from the plan.')
+        local_paths = lambda d: {key: asset['path'] for key, asset in d['assets'].items()
+                                 if asset['location'] == 'local'}
+        require(local_paths(descriptor) == local_paths(old_descriptor),
+                'Metadata refresh cannot change local asset locations or claims.')
+        require(descriptor['assets'][descriptor['primary_asset']]['path'] == dataset['primary'],
+                'Descriptor primary asset differs from the delivery.')
+        for name in local_paths(descriptor).values():
+            require(relative_file(folder, name).is_file(), 'A declared local asset is missing.')
+        replacements[sidecar] = yaml.safe_dump(descriptor, allow_unicode=True, sort_keys=False,
+                                               width=100).encode('utf-8')
+        replacements[context] = (json.dumps(record['review_context'], ensure_ascii=False, indent=2,
+                                            allow_nan=False) + '\n').encode('utf-8')
+        validator.validate(yaml.safe_load(replacements[sidecar]))
+        for path in (sidecar, context):
+            content = replacements[path]
+            dataset['files'][path.relative_to(folder).as_posix()] = dict(
+                sha256=hashlib.sha256(content).hexdigest(), bytes=len(content))
+
+    require({p.resolve() for p in output_root.rglob('*') if p.is_file()} == expected_files,
+            'Delivered file list differs from the preparation report.')
+    report['records_sha256'] = sha256(records_path)
+    report['metadata_refresh'] = dict(
+        previous_records_sha256=previous['records_sha256'],
+        method='Metadata-only refresh; original transformation checks and runtime retained.',
+        source_checksums_verified=True, delivered_checksums_verified=True,
+        payload_files_verified=len(payloads), payload_bytes_and_mtimes_preserved=True,
+        data_transformations_rerun=False,
+        updated_files=[p.relative_to(output_root).as_posix() for p in replacements] + ['preparation-report.json'])
+    replacements[report_path] = (json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + '\n').encode('utf-8')
+
+    # Stage all content and backups before replacing any delivered metadata.
+    staging = Path(tempfile.mkdtemp(prefix='.evidence-metadata-', dir=output_root.parent)).resolve()
+    require(staging.is_relative_to(output_root.parent), 'Unexpected metadata staging location.')
+    keep_backups = False
+    try:
+        staged = {}
+        backups = {}
+        for index, (path, content) in enumerate(replacements.items()):
+            staged[path] = staging / f'{index}.pending'
+            staged[path].write_bytes(content)
+            backups[path] = staging / f'{index}.previous'
+            shutil.copy2(path, backups[path])
+        for path, state in before.items():
+            require((sha256(path), path.stat().st_mtime_ns) == state,
+                    'A delivered file changed during metadata refresh; no changes were published.')
+        replaced = []
+        try:
+            for path, pending in staged.items():
+                os.replace(pending, path)
+                replaced.append(path)
+            for path, state in payloads.items():
+                require((sha256(path), path.stat().st_mtime_ns) == state,
+                        'A scientific payload changed during metadata refresh.')
+            for path, content in replacements.items():
+                require(path.read_bytes() == content, 'Published metadata differs from its staged content.')
+        except BaseException:
+            failures = []
+            for path in reversed(replaced):
+                try:
+                    os.replace(backups[path], path)
+                except OSError:
+                    failures.append(path.relative_to(output_root).as_posix())
+            if failures:
+                keep_backups = True
+                raise RuntimeError('Metadata rollback failed for: ' + ', '.join(failures)
+                                   + f'. Recovery copies retained in {staging.name}/.')
+            raise
+    finally:
+        if not keep_backups:
+            shutil.rmtree(staging)
+    return report
+
+
 def write_summary(path: Path, report: dict[str, Any], records_path: Path) -> None:
     """Write the three-row review table with paths relative to the pilot output."""
     records = {record['id']: record for record in json.loads(records_path.read_text(encoding='utf-8'))['records']}
@@ -228,9 +366,12 @@ def main() -> None:
     parser.add_argument('--records', type=Path, default=REPO/'evidence/pilot/records.json')
     parser.add_argument('--schema', type=Path, default=REPO/'evidence/pilot/eolab-item-v1.schema.json')
     parser.add_argument('--report', type=Path)
+    parser.add_argument('--refresh-metadata', action='store_true',
+                        help='Update metadata in an existing verified delivery without reconverting data.')
     parser.add_argument('--sidecar-dir', type=Path)
     args = parser.parse_args()
-    report = prepare(args.source_root, args.output_root, args.records, args.schema)
+    operation = refresh_metadata if args.refresh_metadata else prepare
+    report = operation(args.source_root, args.output_root, args.records, args.schema)
     if args.report:
         write_json(args.report, report)
         write_summary(args.report.with_suffix('.csv'), report, args.records)
@@ -240,7 +381,8 @@ def main() -> None:
             shutil.copyfile(args.output_root/dataset['directory']/dataset['sidecar'],
                             args.sidecar_dir/dataset['sidecar'])
     for dataset in report['datasets']:
-        print(f"Prepared {dataset['kind']}: {dataset['id']}")
+        action = "Refreshed metadata for" if args.refresh_metadata else "Prepared"
+        print(f"{action} {dataset['kind']}: {dataset['id']}")
 
 
 if __name__ == '__main__':

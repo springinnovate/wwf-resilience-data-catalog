@@ -32,7 +32,7 @@ For the six outstanding papers, the [article-search findings](docs/article-downl
 
 ## First datasets prepared for EOLab
 
-A three-dataset pilot now prepares the biomass-vulnerability raster, Amazon barrier points, and 2023 ATTO monthly carbon-flux table with EOLab YAML sidecars. The spatial files retain their verified native CRS; the table remains nonspatial. Each includes paper/source references, original-file attachments, processing notes and remaining metadata questions.
+A three-dataset pilot now prepares the biomass-vulnerability raster, Amazon barrier points, and 2023 ATTO monthly carbon-flux table with EOLab YAML sidecars. The spatial files retain their verified native CRS; the table remains nonspatial. Each includes a concise catalog description, paper/source references and original-file attachments. The full review history and detailed supporting evidence are preserved in a linked file.
 
 See the [pilot results and files](docs/evidence-pilot.md). The barrier points are supporting inputs, not computed connectivity indices. The pilot also corrects the earlier interpretation of the ATTO table's date and coordinate columns.
 

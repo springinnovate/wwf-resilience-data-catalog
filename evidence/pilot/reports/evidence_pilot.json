@@ -5,7 +5,7 @@
     "merged_revision": "cee788e82e7577afb57681cc962acd764a67f3b6",
     "validated_source_revision": "73215e7d91dac57edad0882a388989e9c6bdf8a6"
   },
-  "records_sha256": "fc6932584ab263cd7961480df8a24ee60b00fdc1a0c1b065c47f7ce300a0d672",
+  "records_sha256": "e948d36e8a682530a4e4d36206d889a2055aa18aa41ec6101ed4dcd31373feb3",
   "runtime": {
     "numpy": "2.5.4",
     "rasterio": "1.5.2",
@@ -28,8 +28,8 @@
       },
       "files": {
         "review-context.json": {
-          "sha256": "4ec1966f393881aa2ba7081af07d6f46e8f3fb493d8792931cadaa486e145a38",
-          "bytes": 7724
+          "sha256": "244af7cf0f24bf5e621843fcba83f07983c6f6cf57dea5998a06323a39cefd2d",
+          "bytes": 20549
         },
         "source/tfvi_agb_0.1deg.tif": {
           "sha256": "df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe",
@@ -40,8 +40,8 @@
           "bytes": 518159
         },
         "tfvi-agb-0.1deg.tif.eolab.yaml": {
-          "sha256": "d52e4aa75d1d02710388efed85d0a63d4ba8711bede29b31c7cdfa07660a7d83",
-          "bytes": 10114
+          "sha256": "0bc7ffcca670210e564408f192be0e13b34125597ee2e2b9890e328e4aa450ba",
+          "bytes": 3100
         }
       },
       "checks": {
@@ -93,12 +93,12 @@
           "bytes": 299008
         },
         "amazon-barriers.gpkg.eolab.yaml": {
-          "sha256": "b545d883535ef8c1cef35875e148baff42476d5828b537cfbcb2d3e899140371",
-          "bytes": 22288
+          "sha256": "49aaa812dc0662d710cefc86b6a0eaa0e7374b37417b5ce997cfaf66fa086b72",
+          "bytes": 4933
         },
         "review-context.json": {
-          "sha256": "1ee2219a7da7295cb985de5ea4662e06d805aa4feb47b94e7971ec604275de35",
-          "bytes": 30637
+          "sha256": "1043a639e09aa83add668e7f700141506fe4e1fe706c835d0c10c685339a2e5a",
+          "bytes": 59590
         },
         "source/barriers_all_validas4326.cpg": {
           "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
@@ -241,12 +241,12 @@
           "bytes": 966
         },
         "atto-monthly-carbon-fluxes-2023.csv.eolab.yaml": {
-          "sha256": "3eda7fbb61fd4abe6e5567e5fef7c0576740fb3d20ac6e92c70ff8e41982e650",
-          "bytes": 8179
+          "sha256": "715aa4805ee0f0deecb2290d3a8aee576bc7a9325c27d1402bdde305e3f1f198",
+          "bytes": 3805
         },
         "review-context.json": {
-          "sha256": "be9d7393b8f16782408b5973bfbc94a2a2920ed88fe4852240e04fee8b3b37b1",
-          "bytes": 8324
+          "sha256": "9f46edad3cf5fe9cd0be39733c82e62b50415fb06e2cd19b8bda6416d6fa11d9",
+          "bytes": 19030
         },
         "source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv": {
           "sha256": "ddca9aeb6d0eb8c8b44d6dfc079d71001994ffc46becbf12a03e91a85d8a0921",
@@ -270,5 +270,23 @@
         "transformation": "Select Year=2023 and six named columns; preserve original numeric strings."
       }
     }
-  ]
+  ],
+  "metadata_refresh": {
+    "previous_records_sha256": "fc6932584ab263cd7961480df8a24ee60b00fdc1a0c1b065c47f7ce300a0d672",
+    "method": "Metadata-only refresh; original transformation checks and runtime retained.",
+    "source_checksums_verified": true,
+    "delivered_checksums_verified": true,
+    "payload_files_verified": 14,
+    "payload_bytes_and_mtimes_preserved": true,
+    "data_transformations_rerun": false,
+    "updated_files": [
+      "tfvi-agb/tfvi-agb-0.1deg.tif.eolab.yaml",
+      "tfvi-agb/review-context.json",
+      "amazon-barriers/amazon-barriers.gpkg.eolab.yaml",
+      "amazon-barriers/review-context.json",
+      "atto-fluxes-2023/atto-monthly-carbon-fluxes-2023.csv.eolab.yaml",
+      "atto-fluxes-2023/review-context.json",
+      "preparation-report.json"
+    ]
+  }
 }

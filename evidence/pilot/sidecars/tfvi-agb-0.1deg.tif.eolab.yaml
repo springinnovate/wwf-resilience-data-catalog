@@ -6,10 +6,9 @@ temporal:
   mode: modified
 metadata:
   title: Tropical forest biomass vulnerability (TFVI), 0.1-degree grid
-  description: Tropical Forest Vulnerability Index for above-ground biomass, supplied with Saatchi et
-    al. (2021). Negative values indicate vulnerability toward sustained biomass loss; positive values
-    indicate vulnerability toward higher biomass. Values near zero indicate relative stability. This is
-    a modeled, standardized index, not a biomass stock map or a probability.
+  description: Pan-tropical, 0.1-degree Tropical Forest Vulnerability Index for above-ground biomass.
+    Negative values indicate vulnerability toward biomass loss; positive values toward higher biomass;
+    values near zero indicate relative stability.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -18,7 +17,7 @@ metadata:
   categories:
   - Nature
   statuses:
-  - Matched
+  - Matched to sheet description
   study_ids:
   - paper-010
   study_time: 'Above-ground biomass response observations: 2000-2018. Broader study and long-term stressor
@@ -30,141 +29,17 @@ metadata:
     citation: Saatchi, S., et al. (2021). Detecting vulnerability of humid tropical forests to multiple
       stressors. One Earth 4(7), 988-1003. https://doi.org/10.1016/j.oneear.2021.06.002
     url: https://linkinghub.elsevier.com/retrieve/pii/S2590332221003444
-    authors: []
     year: 2021
-    notes: []
-    annotations: {}
   annotations:
     row_ids:
     - row-019
-    product_role: described_product
-    preparation_status: Prepared and checked for the EOLab pilot; scientific limitations remain.
     limitations:
-    - This pilot preserves the published pan-tropical grid; it is not an Amazon-only subset.
-    - The native file contains substantial negative and positive extremes. These must not be clipped,
-      converted to percentages or interpreted as probabilities.
-    - The 0.1-degree source is not the 0.25-degree visualization shown in the main paper. A second 0.1-degree
-      file in FigureS11 is an exact duplicate and should not become a second dataset.
-    - The paper treats the findings as correlational. The model assumes stationary sensitivities and resilience
-      and does not estimate societal impacts.
-    - The paper specifically notes weaker consistency between AGB vulnerability and variance patterns,
-      potentially related to shorter/annual biomass records.
-    - The scientific analysis was not rerun. Format conversion verifies data preservation, not the correctness
-      of the study model.
-    - Exact map observation dates are not embedded. Preserve documented input/study periods separately
-      and label any file-modification temporal fallback.
-    source_sheet_annotations:
-    - row_id: row-019
-      study_objective: Here, we develop a tropical forest vulnerability index (TFVI) to detect and evaluate
-        the vulnerability of global tropical forests to threats across space and time.
-      study_location: the tropical and subtropical moist forests (HTFs); the study domain for the tropical
-        moist forests is more than 2,000 Mha covering all three continents
-      dataset_description: Maps of vulnerability of humid tropical forests derived from the hybrid autoregression
-        model (hybrid AR1) for above-ground biomass; the absolute magnitude of TFVI represents the risk
-        of critical transitions that would result in abrupt decreases or increases of the response variable
-        given long-term trends in the stressors.
-      asset_or_risk: RISK
-      typology_category: Nature
-      typology_dimension: Regulating
-      relationship_description: We then used additive regression AR1 models to simultaneously assess the
-        relationship of temporal autocorrelation to multiple stressors.
-      threshold_description: ''
-      time: 1982 to 2018
-      Notes: 'BCK: yes lots of geotiffs to ingest here; I just need to figure out which are the ones we
-        want from like 12 different folders!'
-      'Data readiness: 1 = ready to ingest; 2 = needs additional work to use; 3 = could be useful for other modeling': '1'
-    metadata_evidence:
-    - source: source_raster_header
-      locator: GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif
-      supports: Physical grid, CRS, type, nodata, single-band layout. Full array checked for pixel count
-        and numeric range.
-    - source: paper
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF p. 7 / printed p. 993; PDF p. 10 / printed p. 996, Figure 5
-      supports: TFVI sign and magnitude interpretation; Figure 5 depicts 0.25-degree versions for visualization,
-        while the distributed pilot is the 0.1-degree source product.
-    - source: paper
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF p. 11 / printed p. 997, Resource availability and Datasets used
-      supports: Published output/code archive DOI; 0.1-degree latitude-longitude standard grid and broader
-        1982-2018 study period.
-    - source: paper
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF p. 12 / printed p. 998, Forest response variables
-      supports: Annual above-ground biomass inputs span 2000-2018.
-    - source: paper
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF pp. 13-14 / printed pp. 999-1000, Long-term TFVI, Equations 8-10
-      supports: Response variables standardized to Z scores, index definition and sign semantics.
-    - source: paper
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF pp. 10-11 / printed pp. 996-997, Discussion
-      supports: AGB vulnerability robustness caveat, correlational interpretation, stationarity assumption
-        and excluded societal consequences.
-    - source: paper_supplement
-      url: https://doi.org/10.1016/j.oneear.2021.06.002
-      locator: PDF p. 29 / supplement p. 11, Figure S11
-      supports: AGB vulnerability and model coefficient maps; figure displays values different from zero
-        at 95% confidence.
-    - source: dataset_repository
-      url: https://zenodo.org/api/records/5115158
-      locator: metadata.license, metadata.description, files
-      supports: CC-BY-4.0 dataset license; GeoTIFF_CSV.txz archive identity and checksum.
-    - source: published_code
-      url: https://zenodo.org/records/5115158/files/Scripts.txz?download=1
-      locator: Scripts/02_TFVI/calc_tfvi.r, lines 1808-1830, 2194-2200, 4178-4179
-      supports: AR1 response fit retains finite paired observations; long-term stress trends are computed
-        separately; TFVI formula uses autocorrelation denominator; plot labels omit physical units.
-    doi_scope: The dataset DOI identifies the original deposited package. This preparation has no separately
-      registered DOI.
-    scientific_periods:
-    - role: above_ground_biomass_response_inputs
-      start_year: 2000
-      end_year: 2018
-      evidence: Paper, PDF p. 12 / printed p. 998, Forest response variables.
-    - role: broader_study_and_stressor_records
-      start_year: 1982
-      end_year: 2018
-      evidence: Paper, PDF p. 11 / printed p. 997, Datasets used.
-    temporal_note: Catalog time is the preserved source-file modification time, not the observation period.
-    processing:
-    - Lossless COG encoding with nearest-neighbour display overviews.
-    - Native CRS, grid, full-resolution values and mask retained.
-    source_technical_metadata:
-      crs: EPSG:4326
-      width: 3599
-      height: 649
-      bands: 1
-      dtype: float32
-      nodata: -3.3999999521443642e+38
-      transform:
-      - 0.09999999999999998
-      - 0.0
-      - -179.95
-      - 0.0
-      - -0.09999999999999996
-      - 30.85
-      bounds:
-      - -179.95
-      - -34.049999999999976
-      - 179.94999999999993
-      - 30.85
-      source_compression: DEFLATE
-      source_tiled: false
-      source_overviews: []
-      valid_pixels: 161864
-      minimum: -143.2269744873047
-      maximum: 250.39346313476562
-      embedded_band_description: null
-      embedded_units: null
-      band_meaning: Tropical Forest Vulnerability Index for above-ground biomass
-      units: dimensionless standardized index
-      units_basis: Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term
-        TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag.
-    sources:
-    - base: evidence_data
-      path: GeoTIFF_CSV/Figure05/geotiff_0.1deg/tfvi_agb_0.1deg.tif
-      sha256: df9a31856e90a370615f7c9af8809d70cd8fbcab3e334a202e8d5f9d33e76cbe
+    - Dimensionless modeled index; magnitudes are not percentages or biomass stocks.
+    - Exact map observation dates are unresolved. Results describe correlations and assume stable model
+      relationships over time.
+    temporal_note: Catalog time is the source-file modification date. Documented scientific periods are
+      listed under study time.
+    processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
 assets:
   data:
     location: local
@@ -173,14 +48,11 @@ assets:
     roles:
     - data
     metadata:
-      title: Tropical forest biomass vulnerability (TFVI), 0.1-degree grid
       annotations:
         band: 1
         meaning: Tropical Forest Vulnerability Index for above-ground biomass
         unit: '1'
         unit_description: dimensionless standardized index
-        unit_basis: Interpretation from the standardized response in paper Eq. 8 and dimensionless long-term
-          TFVI definition in Eq. 10; source GeoTIFF itself has no unit tag.
         zero_is_valid: true
   review_context:
     location: local
@@ -189,7 +61,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Original descriptions and matching evidence
+      title: Full review evidence and source history
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.5115158

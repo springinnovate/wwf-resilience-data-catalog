@@ -29,7 +29,11 @@ class SnapshotCorruptionTests(unittest.TestCase):
         self.path = Path(self.temp.name)
         self.data = self.path / "data"
         self.outputs = self.path / "outputs"
-        shutil.copytree(ROOT / "data", self.data)
+        shutil.copytree(
+            ROOT / "data", self.data,
+            ignore=lambda directory, names: {"evidence_data"}
+            if Path(directory) == ROOT / "data" else set(),
+        )
         shutil.copytree(ROOT / "outputs", self.outputs)
 
     def edit_json(self, path, transform):

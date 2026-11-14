@@ -2,7 +2,7 @@
   "plans": {
     "fish.json": "0f6bcb713b62a4816b2ca1e8eb21803026f096b9d6f41bf2224c9c6bf6945a1f",
     "spatial.json": "eefe30b7aa615c097e580da6a98c040dc0fbda205649c5fbf480acef0b536342",
-    "tables.json": "2fbc85254fdaa660f1dd0891567fac175bb9579d7e53fd2abc49813547512d9d"
+    "tables.json": "a3a8c5f2acb1a84846edf2a5ee276366693c03462f32da35f38763e49ccba060"
   },
   "runtime": {
     "numpy": "2.5.4",

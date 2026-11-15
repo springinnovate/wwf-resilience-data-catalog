@@ -5,15 +5,14 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Forest surface-warming vulnerability to climate and forest loss
-  description: The study asked how climate stress and forest loss affect tropical forest functioning.
-    Its land-surface temperature analysis found widespread vulnerability toward persistent warming across
-    forests in the Americas, associated with climate warming, atmospheric drying, and tree-cover loss.
-    This 0.1-degree map is the dimensionless diagnostic index for daytime land-surface temperature. Positive
-    values indicate vulnerability toward warming, negative values toward cooling, and values near zero
-    indicate relative stability. The map can help examine where forest cooling functions may be under
-    pressure. Values are not degrees Celsius, the probability of forest collapse, or a prediction of the
-    cooling benefit from planting or restoring forest.
+  title: 'Tropical forest vulnerability: surface warming'
+  description: A statistical analysis found widespread vulnerability toward surface warming in forests
+    of the Americas, associated with climate warming, atmospheric drying and tree-cover loss. This 0.1-degree
+    map shows the daytime land-surface temperature component of the Tropical Forest Vulnerability Index.
+    Positive values indicate vulnerability toward warming, negative values toward cooling, and near-zero
+    values relative stability. Compare the pattern with local forest and climate observations to investigate
+    pressure on forest cooling. Values are dimensionless, not degrees Celsius or estimates of cooling
+    from planting or restoring forest.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -37,8 +36,14 @@ metadata:
     - Results describe correlations and assume stable model relationships over time.
     temporal_note: Catalog time is the source-file modification date, not the observation period.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
-    evidence_type: Diagnostic model using satellite and environmental observations
-    dataset_role: 0.1-degree TFVI diagnostic grid for daytime land-surface temperature.
+    evidence_type: Statistical model using satellite observations
+    dataset_role: 0.1-degree vulnerability index for daytime land-surface temperature.
+  keywords:
+  - tropical forest
+  - surface temperature
+  - forest cooling
+  - forest loss
+  - climate stress
 assets:
   data:
     location: local
@@ -53,6 +58,7 @@ assets:
         unit: '1'
         unit_description: dimensionless standardized index
         zero_is_valid: true
+      title: Surface warming vulnerability index (GeoTIFF)
   review_context:
     location: local
     path: review-context.json
@@ -60,7 +66,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.5115158
@@ -100,6 +106,6 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geotiff

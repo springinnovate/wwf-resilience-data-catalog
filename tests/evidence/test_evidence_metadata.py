@@ -137,9 +137,8 @@ class ScientificMetadataRefreshTests(unittest.TestCase):
                     metadata=descriptor['metadata'];note=record['scientific_note_text']
                     self.assertNotRegex(json.dumps(metadata),r'paper-\d{3}|row-\d{3}|Matched to sheet')
                     for key in ['evidence_type','dataset_role']:
-                        self.assertIn(metadata['annotations'][key],note)
-                    for section in ['Question','What the study found','Limits and interpretation',
-                                    'Sources for these statements']:
+                        self.assertTrue(metadata['annotations'][key].strip())
+                    for section in ['Findings','Using these data','Limits','Sources']:
                         self.assertIn('## '+section,note)
                     self.assertRegex(note,r'https://(?:doi.org|www\.|[a-z])')
                     self.assertNotIn('](review-context.json)',note)

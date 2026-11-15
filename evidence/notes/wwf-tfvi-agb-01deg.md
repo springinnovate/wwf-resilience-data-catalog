@@ -1,30 +1,21 @@
-## Question
+## Findings
 
-Where do tropical forests show biomass vulnerability to climate and land-use pressures?
+Statistical models of satellite and environmental observations found strong regional differences and widespread forest vulnerability in the Americas. The study also found statistical indicators of slower recovery as climate stress increased; these were inferred from persistence in the time series, not from restoration treatments. This file contains the aboveground-biomass component of that analysis.
 
-## What the study found
+## Using these data
 
-The study identified strong regional differences and widespread vulnerability in the Americas. Its multi-response analysis found signs of slowing recovery as climate stress increased; the supplied raster is specifically the biomass-response index.
+The 0.1-degree Tropical Forest Vulnerability Index (TFVI) grid shows the direction of inferred biomass vulnerability: negative for decreases, positive for increases, and near zero for relative stability. Compare the spatial pattern with local observations and other forest indicators to select areas for closer monitoring. The source grid spans the humid tropics rather than an Amazon-only subset.
 
-## How to use the evidence
+## Limits
 
-The map can guide monitoring and the investigation of conservation and restoration needs. Associations with stressors and indicators of slowing recovery do not establish the causal effect of an intervention.
+- Values are dimensionless and retain their signs and extremes; they are not biomass stocks, percentages, collapse probabilities or restoration gains.
+- The model describes statistical relationships and assumes they remain stable. It does not estimate the causal effect of conservation or restoration.
+- The paper reports weaker consistency between biomass vulnerability and variance patterns, possibly related to shorter, annual biomass records.
+- Biomass inputs cover 2000–2018; the broader study and stressor records cover 1982–2018. The exact observation interval of this map is unresolved; its file-modification date is not an observation date.
+- The supplied grid is 0.1 degree; Figure 5 presents 0.25-degree products. Model uncertainty and significance were not recalculated.
 
-## How the evidence was obtained
-
-Satellite observations and statistical modeling
-
-## What this dataset contributes
-
-Derived biomass vulnerability index
-
-## Limits and interpretation
-
-- Index values are dimensionless and retain their signs; they are not biomass stocks, percentages, collapse probabilities or restoration gains.
-- Biomass observations span 2000–2018; other study stressor series span longer periods. A file modification time does not date an ecological observation.
-- The analysis assumes stable statistical relationships; site decisions need local evidence and other ecological indicators.
-
-## Sources for these statements
+## Sources
 
 - [Saatchi et al. (2021), Detecting vulnerability of humid tropical forests to multiple stressors](https://doi.org/10.1016/j.oneear.2021.06.002). Summary and Science for Society (p. 988); Discussion (pp. 996–997); Experimental procedures (pp. 998–1000). Regional differences, intended early-warning use, response-specific index and limits of correlations.
 - [TFVI source scripts and grids](https://doi.org/10.5281/zenodo.5115158). Biomass TFVI raster and analysis scripts. Identity of the 0.1-degree biomass product, index interpretation and source data.
+- [Saatchi et al. (2021), biomass interpretation and limits](https://doi.org/10.1016/j.oneear.2021.06.002). Figure 5, PDF p.10 / printed p.996; Discussion, PDF pp.10–11 / printed pp.996–997; Forest response variables, PDF p.12 / printed p.998; Equations 8–10, printed pp.999–1000. Sign semantics, 0.25-degree figure products, weaker biomass consistency, annual 2000–2018 inputs and statistical assumptions.

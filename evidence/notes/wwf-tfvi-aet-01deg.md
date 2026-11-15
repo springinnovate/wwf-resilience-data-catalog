@@ -1,31 +1,19 @@
-## Question
+## Findings
 
-Where are humid tropical forests vulnerable to changes in evapotranspiration under climate stress and forest-cover change?
+Statistical models of satellite and environmental observations identified vulnerability toward lower evapotranspiration in areas of forest-cover loss: the southern and eastern Amazon, Central America, eastern Africa and Madagascar, and insular Asia. Other regions showed vulnerability toward higher evapotranspiration, associated with atmospheric drying and incoming radiation (Figure 5C).
 
-## What the study found
+## Using these data
 
-The paper identifies vulnerability toward declining evapotranspiration in areas of forest-cover loss, including the southern and eastern Amazon, Central America, eastern Africa and Madagascar, and insular Asia. It also reports regions with vulnerability toward higher evapotranspiration, related to atmospheric drying and incoming radiation (Figure 5C). These results concern the study analysis rather than a new comparison calculated for this delivery.
+The 0.1-degree Tropical Forest Vulnerability Index (TFVI) grid describes evapotranspiration: water returned to the atmosphere by vegetation and evaporation. Negative values indicate vulnerability toward decreases, positive values toward increases, and near-zero values relative stability under the analyzed stressor trends. Compare the pattern with forest-cover and water-cycle observations. Either direction needs ecological context; neither is a general score of ecosystem health.
 
-## How to use the evidence
+## Limits
 
-Interpret the sign as the direction of potential change in evapotranspiration under the analyzed stressor trends: negative for decreases, positive for increases, and near zero for relative stability. Both directions need ecological context; the index is not a water-flux measurement or a direct score of ecosystem health. The map can inform investigation of water-cycle vulnerability but does not estimate the effect of a land-management intervention.
+- Values are dimensionless signed indices, not probabilities, measured changes or the physical units of the response variable.
+- The model describes statistical relationships and assumes they remain stable. It does not estimate the causal effect of conservation or restoration.
+- Figure 5 uses the separately supplied 0.25-degree grid; the primary file is the 0.1-degree version and the alternative remains linked.
+- The exact observation interval of the grid is unresolved. Model uncertainty and significance were not recalculated.
 
-## How the evidence was obtained
-
-Diagnostic model using satellite and environmental observations
-
-## What this dataset contributes
-
-0.1-degree TFVI diagnostic grid for evapotranspiration.
-
-## Limits and interpretation
-
-- The model describes statistical relationships and assumes they remain stable; it is not a causal evaluation of conservation or restoration.
-- Values are dimensionless signed indices, not probabilities, measured changes, or the physical units of the response variable.
-- Figure 5 uses the separately supplied 0.25-degree grid; the primary asset is the 0.1-degree version, with the alternative retained as a linked file.
-- Model uncertainty and significance were not recalculated. The grid does not contain a verified observation interval.
-
-## Sources for these statements
+## Sources
 
 - [Saatchi et al. (2021), forest vulnerability results](https://doi.org/10.1016/j.oneear.2021.06.002). PDF pp.7-8 / printed pp.993-994, Forest vulnerability and resilience; Figure 5C on PDF p.10 / printed p.996. Study findings for evapotranspiration and the direction represented by TFVI. Figure 5C is the paper analysis corresponding to this response variable.
 - [Saatchi et al. (2021), data and index construction](https://doi.org/10.1016/j.oneear.2021.06.002). PDF pp.12-14 / printed pp.998-1000, Forest response variables and Equations 8-10; Figure S13. Response definition, standardized index construction, sign interpretation, and model assumptions.

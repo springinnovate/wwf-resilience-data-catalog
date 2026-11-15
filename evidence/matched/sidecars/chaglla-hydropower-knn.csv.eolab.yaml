@@ -6,17 +6,24 @@ temporal:
   mode: modified
 metadata:
   title: 'Chaglla hydropower: irrigation and climate scenarios'
-  description: Upstream irrigation can protect crop production while reducing downstream hydropower in
-    the upper Huallaga basin. Coupled watershed and reservoir models found that irrigation choices could
-    affect Chaglla’s firm power more strongly than climate change alone, making food, energy and ecosystem
-    objectives difficult to satisfy together. This table supplies 336 modeled mean- and firm-power summaries
-    for 16 land-management configurations under selected climate scenarios. It supports inspecting the
-    hydropower side of those comparisons; it is not the full multisector decision analysis or observed
-    electricity generation. Original scenario codes are retained because their mapping and exact period
-    bounds still need confirmation, as does the firm-power reliability criterion.
+  description: In the upper Huallaga basin, modeled irrigation choices could reduce Chaglla's firm power
+    more strongly than climate change alone, while protecting crop production. The coupled watershed and
+    reservoir analysis found trade-offs among food production, hydropower and ecosystems. This table contains
+    336 modeled mean- and firm-power summaries in MW for 16 land-management configurations under selected
+    climate scenarios. Use it to examine the power estimates within those comparisons; crop, ecosystem
+    and other results require the broader analysis. Original scenario codes are retained because their
+    mapping to published scenarios and exact period bounds remain unresolved. The firm-power reliability
+    criterion also needs confirmation. These are modeled outputs, not observed electricity generation.
   license: CC-BY-4.0
   attribution: Ding et al. (2024)
   doi: 10.5281/zenodo.8161594
+  keywords:
+  - Chaglla
+  - upper Huallaga
+  - hydropower
+  - irrigation
+  - land management
+  - climate scenarios
   categories:
   - Nature's Contributions to People
   study_ids:
@@ -36,8 +43,8 @@ metadata:
       names and periods needs confirmation.
     - These are modeled summary power estimates, not a daily power series or measured generation.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
-    evidence_type: Coupled watershed–reservoir modeling and climate/management scenario analysis
-    dataset_role: Selected modeled mean/firm-power outputs; a subset of the broader multisector analysis.
+    evidence_type: Watershed and reservoir model
+    dataset_role: Modeled mean and firm power for selected management and climate combinations.
 assets:
   data:
     location: local
@@ -57,6 +64,7 @@ assets:
           climatology: 'Source period code: 0 historical; 1, 2, 3 future groups.'
           DS: Climate model and KNN downscaling method.
           Firm_Energy_MW: Modeled firm power, MW; the reliability criterion needs confirmation.
+      title: Modeled mean and firm power (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -64,7 +72,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.8161594
@@ -97,4 +105,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

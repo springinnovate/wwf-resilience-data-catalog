@@ -39,5 +39,10 @@
     "population_unit": "millions of people",
     "source_typology": "Total Population and High vulnerability are overlapping populations, not additive categories.",
     "pop": "Published additional exposure attributed to Amazon rainforest deforestation, in millions of people; the Total Population label is the full affected population, and High vulnerability is its subset."
+  },
+  "threshold_interpretation": {
+    "source_table": "number_population_figure3.csv labels in-shade WBGT >34°C and outdoor WBGT >40°C.",
+    "paper_wording": "The paper also uses ≥34°C for in-shade extreme risk (PDF p.5; Population analysis, p.6). The exact boundary has not been reconciled with the deposited calculation.",
+    "interpretation": "Retain source labels. The two exposure settings use different thresholds; population totals do not directly compare hazards in shade and outdoors."
   }
 }

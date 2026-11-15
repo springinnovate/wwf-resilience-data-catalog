@@ -8,17 +8,24 @@ temporal:
   end_datetime: '2016-12-31T23:59:59Z'
 metadata:
   title: 'Amazon fisheries: harvest trends and resilience'
-  description: Amazon fish landings shifted toward smaller-bodied species across six regional time series,
-    even though total landed biomass showed no consistent decline. The study combines these observations
-    with food-web models in which species can temporarily replace declining catches, while continued depletion
-    reduces that buffering capacity. The models suggest that higher biodiversity can delay fishery collapse;
-    the landings alone do not demonstrate that outcome. This table provides 121 annual regional records
-    from 1984–2016, including landings, diversity and biomass-weighted traits. It supports scrutiny of
-    warning signs beyond total catch, but lacks fishing effort, subsistence harvests and independent stock
-    surveys needed for a complete fishery assessment.
+  description: Across six Amazon fish-landing series, catches shifted toward smaller-bodied species while
+    total landed biomass showed no consistent decline. The study's theoretical food-web models showed
+    how catches of other species could initially compensate for declines, and how continued depletion
+    reduced that capacity. Higher biodiversity delayed collapse in the models; the landing records alone
+    do not demonstrate this effect. This table contains 121 annual regional records from 1984–2016, including
+    landed biomass, diversity and biomass-weighted traits. Use it to compare changes in catch composition
+    and body size with total catches. Fishing effort, subsistence harvests and independent stock surveys
+    are absent.
   license: CC-BY-4.0
   attribution: Heilpern et al. (2022)
   doi: 10.6084/m9.figshare.20013551.v1
+  keywords:
+  - Amazon
+  - fisheries
+  - fish landings
+  - body size
+  - species composition
+  - fishing pressure
   categories:
   - Nature
   study_ids:
@@ -34,9 +41,8 @@ metadata:
     limitations:
     - These are regional summary metrics. Raw annual taxon-landings records and region geometries are
       not supplied.
-    evidence_type: Observational landings analysis interpreted with theoretical food-web models
-    dataset_role: Annual regional summary metrics from the observed landings series; not model trajectories
-      or stock assessments.
+    evidence_type: Fish landing records and food-web models
+    dataset_role: Annual regional summaries of landed biomass, diversity and fish traits.
 assets:
   data:
     location: local
@@ -55,6 +61,7 @@ assets:
           Jaccard Dissimilarity: Change from the first year of each regional series.
           Mean Price Index / Mean Revenue Index: Source economic indices; definitions are in the linked
             review evidence.
+      title: Annual fish landings and community measures (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -62,7 +69,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.6084/m9.figshare.20013551.v1
@@ -102,4 +109,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

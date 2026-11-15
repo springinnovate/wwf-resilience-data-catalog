@@ -5,15 +5,14 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Tropical forest biomass vulnerability to climate and land-use pressures
-  description: Satellite observations show that tropical forests respond differently to climate and land-use
-    pressures. The study found widespread vulnerability in the Americas and slower recovery of forest
-    carbon cycling as stress increased. This map shows the biomass component of that assessment, helping
-    identify regions for closer monitoring and conservation or restoration planning. Negative index values
-    indicate vulnerability toward biomass loss, positive values toward higher biomass, and values near
-    zero relative stability. It is a standardized diagnostic index based on observed relationships; it
-    does not measure carbon stocks, predict a probability of collapse, or estimate the benefit of a restoration
-    intervention.
+  title: Tropical forest biomass vulnerability
+  description: 'Satellite-based statistical models found widespread forest vulnerability in the Americas
+    and indicators of slower recovery as climate stress increased. This 0.1-degree map shows the biomass
+    component of the Tropical Forest Vulnerability Index. Negative values indicate vulnerability toward
+    biomass loss; positive values indicate the opposite direction, and near-zero values relative stability.
+    Compare these patterns with local forest and climate observations when selecting areas for closer
+    monitoring. The index is dimensionless: it does not estimate carbon stocks or the benefit of a restoration
+    action. Biomass results were less consistent than some other responses.'
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -42,8 +41,14 @@ metadata:
     temporal_note: Catalog time is the source-file modification date. Documented scientific periods are
       listed under study time.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
-    evidence_type: Satellite observations and statistical modeling
-    dataset_role: Derived biomass vulnerability index
+    evidence_type: Statistical model using satellite observations
+    dataset_role: 0.1-degree vulnerability index for biomass.
+  keywords:
+  - tropical forest
+  - biomass
+  - forest monitoring
+  - climate stress
+  - forest loss
 assets:
   data:
     location: local
@@ -58,6 +63,7 @@ assets:
         unit: '1'
         unit_description: dimensionless standardized index
         zero_is_valid: true
+      title: Biomass vulnerability index (GeoTIFF)
   review_context:
     location: local
     path: review-context.json
@@ -65,7 +71,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.5115158
@@ -97,6 +103,6 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geotiff

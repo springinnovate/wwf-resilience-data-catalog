@@ -8,17 +8,24 @@ temporal:
   end_datetime: '2013-12-31T23:59:59Z'
 metadata:
   title: Amazon fisheries and the connected wetlands that support them
-  description: Amazon commercial fisheries depend on fish moving between rivers and wetlands. The study
-    found that migratory species accounted for more than 80% of known maximum commercial catches, and
-    linked regional catches of migratory characiform fishes to flooded forest area. These findings support
-    managing fisheries and wetland connections across river basins and national borders. This layer maps
-    historical maximum annual catches for 20 commercial fish taxa across 198 sub-basins and mainstem sections.
-    Values sum maxima from different cities and years; they provide historical context for the study’s
-    management framework, rather than current fish stocks or an estimate of a conservation policy’s effect.
+  description: Migratory fishes accounted for more than 80% of known maximum commercial catches in the
+    Amazon. Regional catches of migratory characiform fishes were associated with flooded forest area,
+    supporting the study's proposal to manage fisheries and connected wetlands across river basins and
+    national borders. This layer summarizes historical maximum annual catches for 20 commercial fish taxa
+    across 198 sub-basins and mainstem sections. Values sum city-level maxima from different years. Use
+    them to examine historical catch geography and its relationship to connected habitats; they do not
+    estimate current fish stocks or the effect of a protection policy.
   attribution: Venticinque, Goulding, Barthem and colleagues; Amazon Waters Expert Working Group, supported
     by SNAPP.
   doi: 10.5063/F1TB152P
   citation: Venticinque et al. SNAPP Western Amazon Fish Database. https://doi.org/10.5063/F1TB152P
+  keywords:
+  - Amazon
+  - commercial fisheries
+  - migratory fish
+  - flooded forests
+  - river connectivity
+  - historical catches
   categories:
   - Nature
   statuses: []
@@ -38,8 +45,8 @@ metadata:
     license_note: The source names CC-BY-4.0 but also says share alike; redistribution terms need clarification.
     processing: Converted to GeoPackage with polygon-validity repair; all 198 records and their attribute
       values retained.
-    evidence_type: Historical catch synthesis and observational spatial analysis
-    dataset_role: Mapped catch summaries underlying a management framework
+    evidence_type: Historical catch records
+    dataset_role: Historical maximum annual catches by sub-basin and mainstem section.
 assets:
   data:
     location: local
@@ -54,6 +61,7 @@ assets:
           BL1_BL4_Id: Source basin identifier.
           taxon_columns: Twenty named commercial fish taxa; full list in the linked evidence.
           TonTot: Source total catch field.
+      title: Historical maximum catches by river area (GeoPackage)
   review_context:
     location: local
     path: review-context.json
@@ -61,7 +69,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   original:
     location: local
     path: source/SNAPP_Fish_Data.rar
@@ -93,7 +101,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geopackage
   layer: catch

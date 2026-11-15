@@ -5,15 +5,14 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Forest productivity vulnerability to climate and forest loss
-  description: The study asked where climate stress and forest loss are weakening humid tropical forests.
-    It found widespread vulnerability of forest productivity in the Amazon, with stronger signals along
-    the arc of deforestation. This 0.1-degree map is the dimensionless diagnostic index for gross primary
-    productivity. Negative values indicate vulnerability toward lower productivity; positive values toward
-    higher productivity, and values near zero indicate relative stability. It can help identify places
-    for closer assessment alongside land-use and climate evidence. The index describes vulnerability inferred
-    from observed relationships; it does not measure carbon uptake, the probability of forest collapse,
-    or the effect of a restoration intervention.
+  title: 'Tropical forest vulnerability: photosynthetic carbon uptake'
+  description: A statistical analysis found widespread vulnerability toward lower gross primary productivity
+    in the Amazon, with stronger signals along the arc of deforestation. This 0.1-degree map shows that
+    component of the Tropical Forest Vulnerability Index. Gross primary productivity is carbon taken up
+    through photosynthesis before respiration losses. Negative values indicate vulnerability toward decreases,
+    positive values toward increases, and near-zero values relative stability. Compare these patterns
+    with local forest and climate observations. The dimensionless index does not measure carbon uptake
+    or estimate the effect of a restoration action.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -36,8 +35,14 @@ metadata:
     - Results describe correlations and assume stable model relationships over time.
     temporal_note: Catalog time is the source-file modification date, not the observation period.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
-    evidence_type: Diagnostic model using satellite and environmental observations
-    dataset_role: 0.1-degree TFVI diagnostic grid for gross primary productivity.
+    evidence_type: Statistical model using satellite observations
+    dataset_role: 0.1-degree vulnerability index for gross primary productivity.
+  keywords:
+  - tropical forest
+  - photosynthesis
+  - gross primary productivity
+  - forest loss
+  - climate stress
 assets:
   data:
     location: local
@@ -52,6 +57,7 @@ assets:
         unit: '1'
         unit_description: dimensionless standardized index
         zero_is_valid: true
+      title: Photosynthetic carbon uptake vulnerability index (GeoTIFF)
   review_context:
     location: local
     path: review-context.json
@@ -59,7 +65,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.5115158
@@ -99,6 +105,6 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geotiff

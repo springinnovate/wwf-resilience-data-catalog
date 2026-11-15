@@ -1,31 +1,19 @@
-## Question
+## Findings
 
-How does tree species richness per hectare vary across Amazonian forest types and regions?
+Tree species richness was highest in nonflooded (terra-firme) forests of the Pebas region and French Guiana, and lower in several sandy-soil, floodplain and swamp forests. The spatial model explained 71% of plot-level variation. This fell to 65% when plots were left out in turn and their values predicted, with particularly large losses for white-sand and swamp forests (Results: Tree species-richness; Figure 2).
 
-## What the study found
+## Using these data
 
-The paper reports highest richness in terra-firme forests of the Pebas region and French Guiana, with lower richness in several sandy-soil, floodplain and swamp forests. The spatial model explained 71% of plot-level variation, dropping to 65% when plots were left out in turn; white-sand and swamp predictions weakened especially strongly in that check (Results: Tree species-richness; Figure 2).
+Each value estimates species per hectare, standardized from plot observations using Fisher's alpha and tree density. It is not the total number of species in the 0.1-degree grid cell. The model interpolates old-growth inventories of trees at least 10 cm in diameter at breast height over the original lowland forest extent. Compare like forest types; natural richness differences alone do not establish habitat damage or restoration need.
 
-## How to use the evidence
+## Limits
 
-Each value estimates species per hectare, standardized from the plot data using Fisher's alpha and tree density. It is not the total number of species in the 0.1-degree cell. The model uses old-growth inventories of trees with diameter at breast height of at least 10 cm and covers the original lowland forest extent. It provides baseline ecological context; it does not quantify present habitat quality or the gain from restoration.
+- This is a baseline of old-growth conditions across the original forest extent, not a current forest-cover map or evidence of change after an intervention.
+- Inventory dates vary. The April 2023 compilation date does not establish a single map observation period.
+- Predictions are less reliable in sparsely sampled white-sand and swamp forests. The difference between fitted and leave-one-out results matters when applying the map to new locations.
+- The geographic coordinate reference system (CRS) is undocumented. The original ASCII grid is downloadable, but map display awaits confirmation.
 
-## How the evidence was obtained
-
-Forest-inventory baseline with spatial interpolation
-
-## What this dataset contributes
-
-Interpolated tree species-richness baseline, species per hectare.
-
-## Limits and interpretation
-
-- The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.
-- Inventory dates vary; the April 2023 compilation does not establish a single map observation period.
-- The leave-one-out check reduced overall explained variation from 71% to 65%, with particularly large losses for sparsely sampled white-sand and swamp forests.
-- Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable.
-
-## Sources for these statements
+## Sources
 
 - [ter Steege et al. (2023), richness results](https://www.nature.com/articles/s42003-023-05514-6). PDF pp.3-4, Results: Tree species-richness; Figure 2; leave-one-out check and Supplementary Figure 6 discussed on PDF p.4. Per-hectare richness, regional pattern, fitted and leave-one-out model results, and higher uncertainty in white-sand and swamp forests.
 - [ter Steege et al. (2023), sampling and map construction](https://www.nature.com/articles/s42003-023-05514-6). PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns. Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness.

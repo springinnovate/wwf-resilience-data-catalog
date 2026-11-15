@@ -6,17 +6,23 @@ temporal:
   mode: modified
 metadata:
   title: 'Amazon trees: animal seed dispersal and seed traits'
-  description: 'Animal seed dispersal is widespread among Amazonian trees: the study’s two classifications
-    assign roughly four in five sampled species to animal-mediated dispersal. This highlights a potential
-    dependence of forest regeneration on animals, rather than demonstrating a restoration response to
-    protecting them. The supplied table contains dispersal assignments, seed-mass classes and fruit fleshiness
-    for 5,201 species, keeping the two classifications separate. It supports comparisons of tree traits
-    and potential dispersal dependencies; it is a selected part of the broader pollination-and-dispersal
-    study, not its complete interaction network. Some species have multiple assignments, and the seed-mass
-    values are class codes rather than measurements in grams.'
+  description: Animal-mediated seed dispersal accounts for roughly four in five sampled Amazonian tree
+    species under the study's two classification systems. This indicates potential dependence of regeneration
+    on animals, although the study did not measure regeneration after animal loss or protection. The table
+    contains dispersal assignments, seed-mass classes and fruit fleshiness for 5,201 species. Use it to
+    compare traits and dispersal modes while keeping the two classifications separate. It is a selection
+    from the broader pollination-and-dispersal dataset. Some species have multiple assignments, and seed-mass
+    values are class codes rather than measurements in grams.
   license: CC-BY-4.0
   attribution: ter Steege et al. (2026)
   doi: 10.6084/m9.figshare.28417586.v2
+  keywords:
+  - Amazon
+  - seed dispersal
+  - animal dispersal
+  - regeneration
+  - seed traits
+  - tree species
   categories:
   - Nature
   study_ids:
@@ -35,9 +41,8 @@ metadata:
     - Some species have multiple dispersal assignments. The two classifications must not be combined as
       independent species counts.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
-    evidence_type: Species-trait and dispersal-mode compilation
-    dataset_role: Selected species-level dispersal assignments and seed traits from the broader network
-      dataset.
+    evidence_type: Trait compilation
+    dataset_role: Species-level dispersal assignments, seed-mass classes and fruit traits.
 assets:
   data:
     location: local
@@ -56,6 +61,7 @@ assets:
           Unassisted_Stevenson_Correa: Unassisted dispersal in the Stevenson/Correa classification.
           Unassisted_McGlone: Unassisted dispersal in the McGlone classification.
         dispersal_values: 0/1 indicators; more than one assignment can occur.
+      title: Dispersal and seed traits by species (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -63,7 +69,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.6084/m9.figshare.28417586.v2
@@ -111,4 +117,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

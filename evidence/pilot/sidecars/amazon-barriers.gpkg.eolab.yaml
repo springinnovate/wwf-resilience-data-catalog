@@ -6,18 +6,24 @@ temporal:
   mode: modified
 metadata:
   title: Amazon dams and waterfalls used to assess fish access to suitable habitat
-  description: 'Dams can block fish from reaching suitable habitat as the climate changes. A study combining
-    fish-distribution models with river connectivity found that the Amazon–Solimões corridor retains extensive
-    connected, suitable habitat, while planned hydropower expansion and climate change could reduce such
-    areas. This layer provides the dam and waterfall locations used to examine those risks and supports
-    inspection of barriers relevant to energy and river-conservation planning. It contains current barriers
-    and additional future-scenario records. The points are study inputs: the modeled habitat-access results
-    and dam-impact rankings are not included in this layer.'
+  description: Fish-distribution and river-connectivity models identified extensive connected, suitable
+    habitat along the Amazon–Solimões corridor, with potential contraction under planned hydropower expansion
+    and climate change. This layer contains the dam and waterfall locations used in those models. Use
+    it to examine where barriers enter the current and future river-connectivity scenarios. The future
+    scenario includes current barriers as well as additional future records. The points are model inputs;
+    habitat-access results and dam-impact rankings require the study's species and connectivity outputs.
   license: CC-BY-4.0
   attribution: Katia Yofukuji, Thomaz Fabrin, Bruno Henrique Mioto Stabile, Dayani Bailly
   doi: 10.5281/zenodo.18000863
   citation: Yofukuji, K., Fabrin, T., Mioto Stabile, B. H., and Bailly, D. (2025). River Connectivity
     Analysis Pipeline (v1). Zenodo. https://doi.org/10.5281/zenodo.18000863
+  keywords:
+  - Amazon
+  - dams
+  - waterfalls
+  - fish habitat
+  - river connectivity
+  - climate change
   categories:
   - Nature
   - Drivers & Pressures
@@ -41,8 +47,8 @@ metadata:
     temporal_note: Catalog time is the source-file modification date, not an observation or scenario date.
     processing: Converted Shapefile to GeoPackage; all coordinates and 31 attributes retained.
     attribution_note: Retain the per-record Source attribution when reusing the data.
-    evidence_type: Species-distribution and river-connectivity modeling
-    dataset_role: Barrier-location inputs to the study
+    evidence_type: River connectivity model
+    dataset_role: Dam and waterfall locations used in current and future barrier scenarios.
 assets:
   data:
     location: local
@@ -58,6 +64,7 @@ assets:
           Country: Country label; one record has no value.
           scenario: Current or future scenario. The future workflow uses both groups.
           Source: Original source reference for each barrier.
+      title: Dam and waterfall locations (GeoPackage)
   review_context:
     location: local
     path: review-context.json
@@ -65,7 +72,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.18000863
@@ -161,7 +168,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geopackage
   layer: barriers

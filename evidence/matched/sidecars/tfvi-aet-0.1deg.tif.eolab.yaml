@@ -5,15 +5,14 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Forest water-cycle vulnerability to climate and forest loss
-  description: The study asked how climate stress and forest loss affect tropical forest water and carbon
-    cycling. It identified vulnerability toward lower evapotranspiration in areas of forest loss, including
-    the southern and eastern Amazon, while other tropical areas showed signals toward higher evapotranspiration.
-    This 0.1-degree map is the dimensionless diagnostic index for evapotranspiration, the water returned
-    to the atmosphere by vegetation and evaporation. Negative values indicate vulnerability toward decreases;
-    positive values toward increases, with near-zero values indicating relative stability. It provides
-    context for assessing forest water-cycle pressures. It is not a measurement of water flux, a probability
-    of forest collapse, or an estimate of restoration benefits.
+  title: 'Tropical forest vulnerability: evapotranspiration'
+  description: A statistical analysis found vulnerability toward lower evapotranspiration in areas of
+    tropical forest loss, including the southern and eastern Amazon. Other regions showed the opposite
+    direction. This 0.1-degree map shows the evapotranspiration component of the Tropical Forest Vulnerability
+    Index. Negative values indicate vulnerability toward decreases in water returned to the atmosphere
+    by plants and evaporation; positive values indicate increases, and near-zero values relative stability.
+    Use it to examine regional water-cycle pressures. Values are a dimensionless index, not measured water
+    flux or predicted gains from forest restoration.
   license: CC-BY-4.0
   attribution: Saatchi et al. (2021)
   doi: 10.5281/zenodo.5115158
@@ -37,8 +36,14 @@ metadata:
     - Results describe correlations and assume stable model relationships over time.
     temporal_note: Catalog time is the source-file modification date, not the observation period.
     processing: Lossless COG conversion; original grid, full-resolution values and mask preserved.
-    evidence_type: Diagnostic model using satellite and environmental observations
-    dataset_role: 0.1-degree TFVI diagnostic grid for evapotranspiration.
+    evidence_type: Statistical model using satellite observations
+    dataset_role: 0.1-degree vulnerability index for evapotranspiration.
+  keywords:
+  - tropical forest
+  - evapotranspiration
+  - water cycle
+  - forest loss
+  - climate stress
 assets:
   data:
     location: local
@@ -53,6 +58,7 @@ assets:
         unit: '1'
         unit_description: dimensionless standardized index
         zero_is_valid: true
+      title: Evapotranspiration vulnerability index (GeoTIFF)
   review_context:
     location: local
     path: review-context.json
@@ -60,7 +66,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.5115158
@@ -100,6 +106,6 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)
 source:
   format: geotiff

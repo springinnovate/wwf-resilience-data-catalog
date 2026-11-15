@@ -419,6 +419,30 @@ class MatchedPreparationTests(unittest.TestCase):
         datasets, coverage = delivery_report.build(output)
         self.assertEqual(len(datasets), 24)
         self.assertEqual(len(coverage), 19)
+        summary = (output / 'catalog-summaries.md').read_text(encoding='utf-8')
+        publication_groups = {tuple(sorted(dataset['paper_doi'].split('; ')))
+                              for dataset in datasets}
+        self.assertEqual(sum(line.startswith('## ') for line in summary.splitlines()),
+                         len(publication_groups))
+        self.assertEqual(sum(line.startswith('### ') for line in summary.splitlines()),
+                         len(datasets))
+        for dataset in datasets:
+            with self.subTest(dataset=dataset['dataset_id']):
+                self.assertEqual(summary.count('`' + dataset['file'] + '`'), 1)
+                self.assertEqual(summary.count('`' + dataset['evidence_summary'] + '`'), 1)
+        for group in publication_groups:
+            for doi in group:
+                self.assertEqual(summary.count('(https://doi.org/' + doi + ')'), 1)
+        for title, path in [
+            ('Carbon recovery workbook',
+             'matched/forest-carbon-loss-gain-compilation/source/AGC_accumulation_forest_type_current_v2.xlsx'),
+            ('Complete original 2014-2023 table',
+             'pilot/atto-fluxes-2023/source/ATTO_monthly_eddyfluxes_deltaCO2_2014_2023_v202511.csv'),
+            ('Original Shapefile SHP component',
+             'pilot/amazon-barriers/source/barriers_all_validas4326.shp'),
+        ]:
+            with self.subTest(supporting_data=title):
+                self.assertIn(title + ': `' + path + '`', summary)
         repeated = self.root / 'repeat-reports'
         self.assertEqual(delivery_report.build(repeated), (datasets, coverage))
         for name in ['datasets.csv', 'study_coverage.csv', 'catalog-summaries.md']:

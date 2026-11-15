@@ -1,31 +1,19 @@
-## Question
+## Findings
 
-How do Amazonian tree alpha-diversity patterns differ among forest types and regions?
+Fisher's alpha was highest in nonflooded (terra-firme) forests of the Pebas region and French Guiana, and lower in several sandy-soil, floodplain and swamp forests. The spatial model explained 66% of variation in plot diversity, with higher standard errors in white-sand and swamp forests (Results: Tree alpha-diversity; Figure 1).
 
-## What the study found
+## Using these data
 
-The paper reports the highest Fisher's alpha in terra-firme forests of the Pebas region and French Guiana, and lower values in several sandy-soil, floodplain and swamp forests. Its spatial model explained 66% of variation in plot diversity. Standard errors were higher in white-sand and swamp forests (Results: Tree alpha-diversity; Figure 1). These are fitted-model results, not evidence of an intervention effect.
+The 0.1-degree grid interpolates a dimensionless diversity index from old-growth inventories of trees at least 10 cm in diameter at breast height. It covers the original lowland forest extent. Use it to compare diversity among forest types and regions; Fisher's alpha differs from the number of species per hectare. Low diversity alone does not establish degradation or a need for restoration.
 
-## How to use the evidence
+## Limits
 
-Fisher's alpha is a dimensionless diversity index derived from tree inventories, not a count of species per hectare. This map interpolates observations for trees with diameter at breast height of at least 10 cm, across the original lowland forest extent. Use it as ecological background on differences among forest types and regions. Low modeled diversity alone does not establish degradation or a need for restoration.
+- This is a baseline of old-growth conditions across the original forest extent, not a current forest-cover map or evidence of change after an intervention.
+- Inventory dates vary. The April 2023 compilation date does not establish a single map observation period.
+- Sparse sampling raises uncertainty in white-sand and swamp forests. Variation explained in the fitted model is not a guarantee of accuracy at unsampled sites.
+- The geographic coordinate reference system (CRS) is undocumented. The original ASCII grid is downloadable, but map display awaits confirmation.
 
-## How the evidence was obtained
-
-Forest-inventory baseline with spatial interpolation
-
-## What this dataset contributes
-
-Interpolated tree alpha-diversity baseline, Fisher's alpha.
-
-## Limits and interpretation
-
-- The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.
-- Inventory dates vary; the April 2023 compilation does not establish a single map observation period.
-- Sparse sampling raises uncertainty in white-sand and swamp forests; fitted-model explained variation is not an out-of-sample accuracy guarantee.
-- Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable.
-
-## Sources for these statements
+## Sources
 
 - [ter Steege et al. (2023), diversity results](https://www.nature.com/articles/s42003-023-05514-6). PDF p.2, Results: Tree alpha-diversity; Figure 1 on PDF p.3; Supplementary Figure 2 discussed in Results. Regional alpha-diversity pattern, 66% fitted-model explained variation and higher errors in white-sand and swamp forests.
 - [ter Steege et al. (2023), sampling and map construction](https://www.nature.com/articles/s42003-023-05514-6). PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns. Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness.

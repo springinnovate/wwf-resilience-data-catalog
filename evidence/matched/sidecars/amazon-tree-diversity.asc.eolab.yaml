@@ -5,14 +5,13 @@ primary_asset: data
 temporal:
   mode: modified
 metadata:
-  title: Tree diversity across the original Amazon forest
-  description: The study asked how Amazonian tree diversity varies with location and forest type. It found
-    especially high Fisher's alpha in terra-firme forests of western Amazonia's Pebas region and French
-    Guiana. This 0.1-degree grid interpolates that diversity index from old-growth inventories of trees
-    at least 10 cm in diameter at breast height. It provides an ecological baseline across the original
-    lowland forest extent, rather than a map of current habitat condition or restoration effects. Fisher's
-    alpha is dimensionless and differs from species per hectare. Estimates are less certain in sparsely
-    sampled white-sand and swamp forests. Map display awaits CRS confirmation.
+  title: 'Amazon tree diversity: Fisher''s alpha baseline'
+  description: 'Old-growth forest inventories show especially high Fisher''s alpha diversity in nonflooded
+    forests of western Amazonia''s Pebas region and French Guiana. This 0.1-degree grid estimates that
+    diversity index across the original lowland forest extent, for trees at least 10 cm in diameter at
+    breast height. Fisher''s alpha is an index, not a species count. Compare like forest types when interpreting
+    differences: naturally low diversity does not establish degradation. Estimates are less certain in
+    sparsely sampled white-sand and swamp forests. Map display awaits coordinate-system confirmation.'
   license: CC-BY-4.0
   attribution: ter Steege et al. (2023)
   doi: 10.6084/m9.figshare.22786166.v2
@@ -38,8 +37,14 @@ metadata:
       is not a current forest-cover inventory.
     temporal_note: Catalog time is the source-file modification date, not a measurement date.
     processing: Original ASCII grid preserved byte for byte; no spatial reference or geometry assigned.
-    evidence_type: Forest-inventory baseline with spatial interpolation
-    dataset_role: Interpolated tree alpha-diversity baseline, Fisher's alpha.
+    evidence_type: Forest inventory and spatial interpolation
+    dataset_role: Estimated Fisher's alpha diversity on a 0.1-degree grid.
+  keywords:
+  - Amazon
+  - old-growth forest
+  - forest inventory
+  - tree diversity
+  - ecological baseline
 assets:
   data:
     location: local
@@ -53,6 +58,7 @@ assets:
         unit: '1'
         source_format: ESRI ASCII grid
         tree_definition: Free-standing woody individuals with diameter at breast height at least 10 cm.
+      title: Fisher's alpha diversity grid (ASCII)
   review_context:
     location: local
     path: review-context.json
@@ -60,7 +66,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.6084/m9.figshare.22786166.v2
@@ -108,4 +114,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

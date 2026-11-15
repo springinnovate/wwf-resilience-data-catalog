@@ -6,18 +6,24 @@ temporal:
   mode: modified
 metadata:
   title: 'Tropical forest carbon: disturbance losses and recovery'
-  description: Tropical forest degradation can remove substantial aboveground carbon even when forest
-    remains. This synthesis of 146 studies compares losses after different disturbances and carbon stocks
-    during recovery. After 20 years, recovering degraded forests averaged 75% of reference carbon stocks,
-    versus 38% in secondary forests regrowing after clearance. The reference is prior standing or nearby
-    undisturbed forest. This difference includes carbon retained after disturbance; it does not mean faster
-    accumulation. The supplied loss and recovery workbooks contain the compiled study estimates and a
-    reference crosswalk. They support comparisons for carbon accounting and recovery planning, with substantial
-    variation among disturbance types, regions and studies; they are not predictions for a particular
-    site.
+  description: Across 146 studies of tropical moist forests, recovering degraded forests averaged 75 ±
+    23% of reference aboveground carbon stocks 20 years after the last disturbance, compared with 38 ±
+    16% in secondary forests regrowing after clearance (mean ± one standard deviation). The reference
+    is prior standing or nearby undisturbed forest. The higher stock in degraded forests includes carbon
+    retained through disturbance; it does not mean faster accumulation. The loss and recovery workbooks
+    contain compiled study estimates and a reference crosswalk. Use them to compare disturbance-related
+    carbon losses and recovery for carbon accounting and planning, allowing for variation among disturbance
+    histories, regions and studies. They do not predict recovery at a particular site.
   license: CC-BY-4.0
   attribution: Heinrich, Holcomb et al. (2026)
   doi: 10.5281/zenodo.19470704
+  keywords:
+  - tropical moist forest
+  - forest degradation
+  - secondary forest
+  - aboveground carbon
+  - carbon recovery
+  - disturbance
   categories:
   - Nature's Contributions to People
   study_ids:
@@ -35,8 +41,8 @@ metadata:
       joins need review.
     - Use the saved workbook values; formulas depend on external references and have not been recalculated.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
-    evidence_type: Literature synthesis and meta-analysis
-    dataset_role: Compiled study estimates underlying disturbance-loss and carbon-recovery comparisons.
+    evidence_type: Meta-analysis
+    dataset_role: Compiled estimates of disturbance-related carbon losses and subsequent stocks.
 assets:
   data:
     location: local
@@ -53,6 +59,7 @@ assets:
           AbsoluteCLoss: Absolute carbon loss, Mg C per hectare.
           PercLossCompIntactFor: Loss relative to intact forest, percent.
           Cpool: Carbon pools included by the source study.
+      title: Carbon losses after disturbance (Excel)
   review_context:
     location: local
     path: review-context.json
@@ -60,7 +67,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.19470704
@@ -90,7 +97,8 @@ assets:
         rows: 214
         key_fields:
           GrowthRate: Annual carbon gain, Mg C per hectare per year.
-          PercentageAt20yrs: Recovery relative to intact forest after 20 years, percent.
+          PercentageAt20yrs: Aboveground carbon stock after 20 years as a percentage of the reference
+            stock (prior standing or nearby undisturbed forest), not the percentage of lost carbon recovered.
   references:
     location: local
     path: source/references_info_v2.xlsx
@@ -106,4 +114,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

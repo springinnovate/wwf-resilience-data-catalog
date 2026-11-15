@@ -6,17 +6,24 @@ temporal:
   mode: modified
 metadata:
   title: 'Brazil: additional heat exposure under Amazon savannization'
-  description: A worst-case climate-model experiment replacing all Amazon rainforest with savanna increased
-    estimated human heat exposure, especially under high emissions. In the late-century RCP8.5 scenario,
-    the study estimated more than 11 million additional people exposed to extreme in-shade heat stress,
-    including about 5.7 million in highly vulnerable communities. These are conditional estimates using
-    2019 population, not forecasts of population growth or observed health outcomes. This table contains
-    the 12 published Figure 3 estimates across historical and future climates, heat-exposure settings
-    and vulnerability groups. It supports comparing the modeled human consequences of forest loss; the
-    high-vulnerability figures are subsets of the totals and must not be added to them.
+  description: Replacing all Amazon rainforest with savanna increased modeled human heat exposure relative
+    to retained forest under the same climate. In the late-century RCP8.5 experiment, more than 11 million
+    additional people exceeded the extreme in-shade heat-stress threshold, including about 5.7 million
+    in the high-vulnerability subset. The experiment holds population at 2019 levels. This table contains
+    the 12 published Figure 3 estimates for historical and future climates, in-shade and outdoor exposure,
+    and vulnerability groups. Use it to compare additional exposure under this extreme land-cover change.
+    High-vulnerability values are included in the totals; the estimates do not forecast population growth
+    or observed health outcomes.
   license: CC-BY-4.0
   attribution: Oliveira et al. (2021)
   doi: 10.6084/m9.figshare.15128679.v1
+  keywords:
+  - Brazil
+  - Amazon
+  - heat stress
+  - savannization
+  - population exposure
+  - climate scenarios
   categories:
   - Climate
   study_ids:
@@ -37,9 +44,8 @@ metadata:
     - These are additional-exposure scenario summaries, not a municipal impact map; the paper uses inconsistent
       start years for its climate periods.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
-    evidence_type: Climate-model scenario experiment with population exposure analysis
-    dataset_role: Published Figure 3 additional-exposure estimates, with municipal inputs retained as
-      supporting data.
+    evidence_type: Climate model experiment
+    dataset_role: Published additional heat-exposure estimates with municipal supporting data.
 assets:
   data:
     location: local
@@ -56,6 +62,7 @@ assets:
           periodo: Historical, RCP 4.5 or RCP 8.5.
           pop: Additional people exposed due to Amazon deforestation, millions.
           tip: Total Population or its High vulnerability subset.
+      title: Additional population exposed to heat stress (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -63,7 +70,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.6084/m9.figshare.15128679.v1
@@ -150,4 +157,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

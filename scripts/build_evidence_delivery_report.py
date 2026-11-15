@@ -20,8 +20,10 @@ def build(output_dir):
     for record in pilot:
         records.append(dict(record,delivery_prefix='pilot',row_ids=record.get('row_ids') or record['descriptor']['metadata']['annotations']['row_ids']))
     delivery=[]
+    other_data={}
     for record in records:
-        metadata=record['descriptor']['metadata'];kind=record['kind']
+        descriptor=record['descriptor']
+        metadata=descriptor['metadata'];kind=record['kind']
         availability='Download only: CRS confirmation needed' if 'CRS confirmation needed' in metadata.get('statuses',[]) else ('Map ready' if kind!='nonspatial' else 'Table/workbook ready')
         # Plans additionally mark catalog-only grids, independent of presentation-label spelling.
         if record.get('readiness','').startswith('Download only'):availability='Download only: CRS confirmation needed'
@@ -29,6 +31,11 @@ def build(output_dir):
         annotations=metadata.get('annotations',{})
         questions=list(annotations.get('limitations',[]))
         if annotations.get('license_note'):questions.append(annotations['license_note'])
+        other_data[record['id']]=[
+            (asset.get('metadata',{}).get('title',asset['path']),folder+asset['path'])
+            for asset_key,asset in descriptor['assets'].items()
+            if asset_key!=descriptor['primary_asset'] and asset['location']=='local'
+            and 'data' in asset.get('roles',[])]
         delivery.append(dict(dataset_id=record['id'],dataset=metadata['title'],description_ids='; '.join(record['row_ids']),
             availability=availability,file=folder+record['output_file'],sidecar=folder+record['output_file']+'.eolab.yaml',
             summary=metadata['description'],evidence_type=annotations.get('evidence_type',''),
@@ -38,13 +45,38 @@ def build(output_dir):
             remaining_questions=' '.join(questions)))
     delivery.sort(key=lambda r:r['dataset_id'])
     write_csv(output_dir/'datasets.csv',delivery)
-    lines=['# Catalog summaries', '',
-           'Public descriptions for the prepared collection. Paper findings and the role of each supplied file are distinguished below.', '']
-    for entry in delivery:
-        lines.extend(['## '+entry['dataset'], '', '**Evidence:** '+entry['evidence_type']+'. '
-                      +'**Dataset role:** '+entry['dataset_role']+'.', '', entry['summary'], '',
-                      'Availability: '+entry['availability']+'.', '',
-                      'Paper: '+', '.join('[doi:'+doi+'](https://doi.org/'+doi+')' for doi in entry['paper_doi'].split('; '))+'.', ''])
+    studies={}
+    for record in records:
+        publications=record['descriptor']['metadata']['publications']
+        key=tuple(sorted(publication['doi'] for publication in publications))
+        if key not in studies:
+            studies[key]=dict(publications=publications,dataset_ids=set())
+        studies[key]['dataset_ids'].add(record['id'])
+    lines=['# Study findings and available data', '',
+           f'{len(delivery)} catalog entries, grouped by the publications they support. '
+           'Each description explains the finding and what the supplied file can be used for.', '',
+           'File paths are relative to `processed-evidence-data/`; they are not download links. '
+           'Open the corresponding EOLab entry to download a file, or find it in the prepared folder. '
+           'The adjacent `evidence-summary.md` has Findings, Using these data, Limits and Sources. '
+           'Other data lists supporting data files within the same entry. '
+           '`datasets.csv` lists primary data files and review records; `study_coverage.csv` checks coverage '
+           'of the original sheet descriptions.', '']
+    for study in sorted(studies.values(),key=lambda group:group['publications'][0]['title'].casefold()):
+        publications=study['publications']
+        lines.extend(['## '+'; '.join(publication['title'] for publication in publications), '',
+                      'Article: '+', '.join('[doi:'+publication['doi']+'](https://doi.org/'+publication['doi']+')'
+                                           for publication in publications)+'.', ''])
+        entries=sorted((entry for entry in delivery if entry['dataset_id'] in study['dataset_ids']),
+                       key=lambda entry:entry['dataset'].casefold())
+        for entry in entries:
+            lines.extend(['### '+entry['dataset'], '', entry['summary'], '',
+                          entry['availability']+'. Primary data: `'+entry['file']+'`.', '',
+                          'Findings and limits: `'+entry['evidence_summary']+'`.', ''])
+            if other_data[entry['dataset_id']]:
+                lines.extend(['**Other data:**', ''])
+                lines.extend('- '+title+': `'+path+'`.'
+                             for title,path in other_data[entry['dataset_id']])
+                lines.append('')
     (output_dir/'catalog-summaries.md').write_text('\n'.join(lines),encoding='utf-8',newline='\n')
     tables=reconciliation_tables()
     names={r['row_id']:r['dataset'] for r in tables['review_summary']}

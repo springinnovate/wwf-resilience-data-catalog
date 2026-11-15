@@ -1,31 +1,21 @@
-## Question
+## Findings
 
-How do upstream land management and irrigation interact with climate change to affect Chaglla hydropower, and what trade-offs arise with food production and ecosystems?
+In the modeled upper Huallaga system, maintaining current land use produced comparatively modest climate-only changes in hydropower. Irrigation expansion could substantially reduce Chaglla's firm power and create years with none. The coupled watershed and reservoir analysis found that options favoring food production, hydropower or ecosystems separately could impose losses on other sectors. More efficient irrigation and coordinated decisions reduced some trade-offs without eliminating them.
 
-## What the study found
+## Using these data
 
-In the modeled upper Huallaga system, maintaining current land use produced comparatively modest climate-only changes in hydropower, while irrigation expansion could substantially reduce firm power and create years with none. The broader analysis found that options favoring food production, hydropower or ecosystems separately could impose losses on other sectors, with more efficient irrigation and coordinated decisions reducing some trade-offs rather than eliminating them.
+The table contains modeled mean and firm power in MW for 16 management configurations, each with 21 selected KNN climate/model combinations: 336 rows. Use it to examine how upstream land management and water use affect the modeled power estimates alongside climate variation. The broader 10,080-pathway analysis also evaluates crops, ecosystems, reservoir operation and target screening; those results are not all supplied here.
 
-## How to use the evidence
+These comparisons are conditional model outcomes. They do not measure the effects of implemented policies or observed electricity generation.
 
-The evidence motivates considering upstream water use alongside reservoir operation when comparing adaptation options. These are conditional outcomes of a coupled modeling framework, not measured effects of implemented policies. The delivered table is a power-output subset with 16 management configurations and 21 KNN climate/model combinations each. It does not supply all crop, ecosystem, reservoir-operation or target-screening results from the 10,080-pathway decision analysis.
-
-## How the evidence was obtained
-
-Coupled watershed–reservoir modeling and climate/management scenario analysis
-
-## What this dataset contributes
-
-Selected modeled mean/firm-power outputs; a subset of the broader multisector analysis.
-
-## Limits and interpretation
+## Limits
 
 - Source management and climatology codes are preserved. Their complete mapping to published scenario names and precise time periods remains unresolved; the paper and code use differing period bounds.
 - The firm-power field is in MW, but its reliability/exceedance criterion was not established in the inspected paper, supplementary methods or supplied algorithms.
-- The analysis assumes management configurations remain constant within each climatic period; transitional effects, wider crop choices and future changes in electricity demand are not fully represented.
-- The prepared table contains modeled summary power, not measured generation or daily series, and retains only KNN results; the linked archive preserves the complete original KNN/BCSD tables and inspected scripts.
+- The analysis assumes management configurations remain constant within each climatic period. Transitional effects, wider crop choices and future changes in electricity demand are not fully represented.
+- The prepared table contains summary power, not daily series, and retains only KNN results. The linked archive preserves the complete original KNN/BCSD tables and inspected scripts.
 
-## Sources for these statements
+## Sources
 
 - [Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters](https://www.nature.com/articles/s43247-024-01738-4). Results, Sectoral impacts of climate and landuse change and Conflicting outcomes for hydropower, food, and ecosystems; Figures 3-4; PDF pages 3-5. Climate-only comparisons, effects of irrigation and modeled cross-sector trade-offs.
 - [Sustainable land and irrigation management to limit loss of hydropower in the Andes-Amazon headwaters](https://www.nature.com/articles/s43247-024-01738-4). Results, multisector pathways; Figure 5; PDF pages 5-6; Discussion, study limitations; PDF page 8. The broader decision analysis, limits of optimizing one sector, and assumptions about fixed land-use configurations and demand.

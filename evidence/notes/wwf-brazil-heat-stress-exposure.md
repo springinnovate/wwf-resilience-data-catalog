@@ -1,30 +1,21 @@
-## Question
+## Findings
 
-How could replacement of all Amazon rainforest by savanna change human heat-stress exposure under historical and future climates, and who would be most vulnerable?
+In a worst-case climate model experiment, replacing all Amazon rainforest with savanna increased extreme heat-stress exposure relative to retained forest under the same climate. Under late-century RCP8.5, the paper reports more than 11 million additional people above the in-shade extreme-risk threshold; about 5.7 million were in the high-vulnerability subset. Figure 3 compares additional exposure from Amazon deforestation across historical, RCP4.5 and RCP8.5 climates, for in-shade and outdoor conditions.
 
-## What the study found
+## Using these data
 
-The worst-case experiment replacing all Amazon rainforest with savanna increased exposure to extreme heat stress. Under late-century RCP8.5, the paper reports more than 11 million additional people above the in-shade extreme-risk threshold relative to the forested scenario; about 5.7 million were in the high-vulnerability subset. Figure 3 reports additional exposure attributed to Amazon deforestation across historical, RCP4.5 and RCP8.5 climates, for in-shade and outdoor conditions.
+The table contains the 12 published Figure 3 additional-exposure estimates, with municipal inputs retained as supporting data. Use it to compare the modeled exposure consequences of complete forest replacement and their overlap with social vulnerability. Population is held at 2019 levels: the estimates describe how that population would be exposed under each simulated climate. The Figure 3 values were transcribed, not independently recomputed from the municipal inputs.
 
-## How to use the evidence
+The source table labels the thresholds as in-shade WBGT >34°C and outdoor WBGT >40°C. These different thresholds mean the population counts are not a direct comparison of hazards in shade and outdoors.
 
-These comparisons illustrate potential exposure consequences of complete Amazon rainforest replacement by savanna and their overlap with social vulnerability. The population is held at 2019 levels, so the results ask how that population would be exposed under the simulated climates. They do not predict a specific future deforestation trajectory, demographic change, illness or mortality. The published Figure 3 values are transcribed, not independently recomputed from the municipal inputs.
+## Limits
 
-## How the evidence was obtained
+- A particular climate model and complete Amazon rainforest replacement by savanna define this extreme experiment. It does not represent ordinary partial deforestation, observed impacts or a forecast of a specific policy intervention.
+- Population growth, demographic changes and changes in adaptation are not modeled. Social vulnerability describes population context, not measured illness or mortality.
+- Population units are millions. High-vulnerability rows are subsets of total-population rows and must not be added to them.
+- The paper gives inconsistent start years for its historical and future climate periods; categorical source labels are retained.
 
-Climate-model scenario experiment with population exposure analysis
-
-## What this dataset contributes
-
-Published Figure 3 additional-exposure estimates, with municipal inputs retained as supporting data.
-
-## Limits and interpretation
-
-- A particular climate model and complete Amazon rainforest replacement by savanna define this worst-case experiment; it does not represent ordinary partial deforestation, observed impacts or a calibrated forecast of a policy intervention.
-- Population growth, demographic changes and changes in adaptation are not modeled. Social vulnerability describes population context rather than a measured health response.
-- Population units are millions, and the high-vulnerability rows overlap the total-population rows. The paper gives inconsistent start years for its historical and future climate periods; categorical source labels are retained.
-
-## Sources for these statements
+## Sources
 
 - [Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon](https://www.nature.com/articles/s43247-021-00275-8). Introduction, experimental scope; PDF page 2. The study frames replacement of the entire Amazon rainforest by savanna as a worst-case scenario.
 - [Deforestation and climate change are projected to increase heat stress risk in the Brazilian Amazon](https://www.nature.com/articles/s43247-021-00275-8). Results and discussion, Amazon savannization and heat stress; Figure 3 caption; PDF pages 4-5. Additional exposure relative to the forested scenario, the more-than-11-million estimate, its high-vulnerability subset and the scenario interpretation.

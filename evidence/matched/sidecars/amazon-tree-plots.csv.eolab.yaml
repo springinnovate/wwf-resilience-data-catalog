@@ -6,17 +6,23 @@ temporal:
   mode: modified
 metadata:
   title: 'Amazon tree diversity: plot observations'
-  description: Amazon tree diversity varies strongly among forest types and regions, so tree counts or
-    a single basin-wide average cannot describe it adequately. Using 2,046 inventory plots, the study
-    found distinct patterns in density, species richness and Fisher’s alpha diversity, and used forest-type-specific
-    spatial models to map those patterns. This table supplies the plot observations and standardized diversity
-    measures behind that analysis, for free-standing woody stems at least 10 cm in diameter. It supports
-    checking the observational basis of regional biodiversity comparisons. It is not a current forest-condition
-    map or evidence of change through time; the supplied coordinates remain attributes because their datum
-    is unverified.
+  description: Across 2,046 Amazon forest inventory plots, tree density, species richness and Fisher's
+    alpha diversity varied among forest types and regions. The study used spatial models for different
+    forest types to map these patterns. This table contains the plot observations, standardized richness
+    measures and diversity metrics for free-standing woody stems at least 10 cm in diameter at breast
+    height. Use it to examine the observations behind regional biodiversity comparisons and to distinguish
+    differences in density, richness and diversity. These inventories do not measure change through time
+    or current forest condition. Coordinates remain table attributes because their datum is unverified.
   license: CC-BY-4.0
   attribution: ter Steege et al. (2023)
   doi: 10.6084/m9.figshare.22786166.v2
+  keywords:
+  - Amazon
+  - forest inventory
+  - tree density
+  - species richness
+  - Fisher's alpha
+  - old-growth forest
   categories:
   - Nature
   study_ids:
@@ -34,8 +40,8 @@ metadata:
       map geometry.
     - The paper reports establishment through 2020, while three supplied records have year_est=2021.
     temporal_note: Catalog time is the source-file modification date; it is not an observation date.
-    evidence_type: Forest inventory observations with spatial modeling in the associated study
-    dataset_role: Plot-level density, richness, diversity and reference data underlying regional models.
+    evidence_type: Forest inventory and spatial interpolation
+    dataset_role: Plot-level tree density, richness, diversity and reference data.
 assets:
   data:
     location: local
@@ -56,6 +62,7 @@ assets:
           year_est: Plot establishment year.
         sample_definition: Free-standing woody stems with diameter at breast height (DBH) at least 10
           cm.
+      title: Tree inventories by plot (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -63,7 +70,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.6084/m9.figshare.22786166.v2
@@ -113,4 +120,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

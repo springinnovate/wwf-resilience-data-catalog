@@ -8,18 +8,25 @@ temporal:
   end_datetime: '2023-12-31T23:59:59Z'
 metadata:
   title: ATTO forest carbon exchange during the 2023 Amazon drought
-  description: During the extreme 2023 drought, measurements near the Amazon Tall Tower Observatory showed
-    that the local forest remained a net carbon sink over the year. The study associated this local response
-    with reduced ecosystem respiration and sufficient soil moisture, while its wider regional analysis
-    found a different carbon balance. This table provides monthly carbon uptake, respiration and net exchange
-    for 2023, supporting investigation of local drought responses and checks on ecosystem models. The
-    linked 2014–2023 source table provides the historical comparison. These tower measurements describe
-    a local forest footprint and cannot establish the carbon balance of the whole Amazon.
+  description: During the extreme 2023 drought, the local forest measured near the Amazon Tall Tower Observatory
+    remained a net carbon sink over the year. Reduced ecosystem respiration contributed to that balance;
+    the authors suggest sufficient soil moisture buffered the forest. Their wider regional analysis found
+    a different carbon balance. This table contains monthly carbon uptake, respiration and net exchange
+    for 2023. Use it to examine local drought responses and ecosystem model performance, with the linked
+    2014–2023 table providing the historical comparison. The tower measurements describe a local forest
+    footprint and cannot establish the carbon balance of the whole Amazon.
   license: CC0-1.0
   attribution: Botia et al. (2026), supporting datasets deposited in Edmond.
   doi: 10.17617/3.OU3KYA
   citation: Botia et al. (2026). Supporting datasets for Carbon cycle response to Amazon drought in 2023.
     Version 1.0. Edmond. https://doi.org/10.17617/3.OU3KYA
+  keywords:
+  - ATTO
+  - Amazon
+  - drought
+  - carbon fluxes
+  - ecosystem respiration
+  - gross primary productivity
   categories:
   - Nature
   statuses: []
@@ -38,8 +45,8 @@ metadata:
     - Underlying half-hourly measurements and quality flags are not included.
     - The source table's finalLat/finalLon describe air-trajectory endpoints, not the tower location.
     processing: Selected 2023 and six columns; original values and numeric precision preserved.
-    evidence_type: Local flux observations interpreted alongside regional models
-    dataset_role: 2023 monthly tower flux observations
+    evidence_type: Tower flux measurements
+    dataset_role: Monthly local carbon uptake, respiration and net exchange for 2023.
 assets:
   data:
     location: local
@@ -73,6 +80,7 @@ assets:
           unit: g C m-2 month-1
           description: Monthly ecosystem respiration from partitioned eddy-covariance fluxes.
         rows: 12
+      title: Monthly carbon fluxes, 2023 (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -80,7 +88,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.17617/3.OU3KYA
@@ -120,4 +128,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

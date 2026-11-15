@@ -1,31 +1,19 @@
-## Question
+## Findings
 
-How does tree density vary across Amazonian forest types and regions?
+Old-growth forest inventories show higher tree densities in northwestern Amazonia and lower densities in central-southern and eastern Amazonia. The spatial model explained 43% of variation among inventory plots (Results: Tree density; Supplementary Figure 1). Substantial variation remains unexplained.
 
-## What the study found
+## Using these data
 
-The paper reports higher tree densities in northwestern Amazonia and lower densities in central-southern and eastern Amazonia. The spatial density model explained 43% of variation among inventory plots (Results: Tree density; Supplementary Figure 1). This describes a modeled ecological baseline, not a present-day census of the grid cells.
+The 0.1-degree grid estimates trees per hectare by interpolating between old-growth inventory plots over the original lowland forest extent. The inventories count free-standing woody individuals at least 10 cm in diameter at breast height. Compare forest types and regions to examine natural differences in forest structure; tree density alone does not establish carbon stocks.
 
-## How to use the evidence
+## Limits
 
-Values estimate the number of trees per hectare for woody individuals with diameter at breast height of at least 10 cm. The model interpolates old-growth plot observations over the original lowland forest extent. It can provide background on natural differences in forest structure, but it does not measure present forest cover, degradation, carbon stocks, or restoration outcomes.
+- This is a baseline of old-growth conditions across the original forest extent, not a current forest-cover map or evidence of change after an intervention.
+- Inventory dates vary. The April 2023 compilation date does not establish a single map observation period.
+- The fitted model explains variation among sampled plots; this is not a guarantee of accuracy at an individual location.
+- The geographic coordinate reference system (CRS) is undocumented. The original ASCII grid is downloadable, but map display awaits confirmation.
 
-## How the evidence was obtained
-
-Forest-inventory baseline with spatial interpolation
-
-## What this dataset contributes
-
-Interpolated tree-density baseline, trees per hectare.
-
-## Limits and interpretation
-
-- The model represents old-growth conditions across original forest extent, not current forest cover or an intervention outcome.
-- Inventory dates vary; the April 2023 compilation does not establish a single map observation period.
-- The density model explained 43% of variation among inventory plots; substantial variation remains unexplained.
-- Geographic CRS is undocumented; map display is withheld pending confirmation. The original ASCII grid remains downloadable.
-
-## Sources for these statements
+## Sources
 
 - [ter Steege et al. (2023), density results](https://www.nature.com/articles/s42003-023-05514-6). PDF p.2, Results: Tree density; Supplementary Figure 1 discussed there. Regional density pattern, units and the density model's 43% explained variation.
 - [ter Steege et al. (2023), sampling and map construction](https://www.nature.com/articles/s42003-023-05514-6). PDF p.2, original-forest mapping scope and sampling caveats; PDF p.8, Methods: Tree data and Modelling density, diversity, and richness patterns. Old-growth inventories; diameter-at-breast-height threshold of 10 cm; April 2023 compilation; interpolation by forest/soil group over original extent; hectare standardization for richness.

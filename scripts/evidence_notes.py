@@ -6,9 +6,7 @@ def render_evidence_summary(record):
     if 'scientific_note_text' in record:
         return ('# ' + record['descriptor']['metadata']['title'] + '\n\n'
                 + record['scientific_note_text'].rstrip() + '\n\n'
-                + 'These notes describe scientific findings and their potential use. '
-                  'They do not establish that a particular policy was adopted because of the study.\n\n'
-                  '[Full provenance, matching evidence and preparation checks](review-context.json).\n')
+                + '[Data sources and preparation record](review-context.json).\n')
     summary = record['evidence_summary']
     lines = ['# ' + record['descriptor']['metadata']['title'], '']
     for key, label in [('question', 'Question'), ('finding', 'What the study found'),
@@ -22,9 +20,7 @@ def render_evidence_summary(record):
     for source in summary['sources']:
         lines.extend(['- [' + source['title'] + '](' + source['url'] + '). '
                       + source['location'] + '. ' + source['supports']])
-    lines.extend(['', 'These notes describe scientific findings and their potential use. '
-                  'They do not establish that a particular policy was adopted because of the study.', '',
-                  '[Full provenance, matching evidence and preparation checks](review-context.json).', ''])
+    lines.extend(['', '[Data sources and preparation record](review-context.json).', ''])
     return '\n'.join(lines)
 
 

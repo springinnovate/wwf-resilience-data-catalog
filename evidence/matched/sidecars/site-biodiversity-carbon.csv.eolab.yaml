@@ -8,17 +8,23 @@ temporal:
   end_datetime: '2011-12-31T23:59:59Z'
 metadata:
   title: 'Eastern Amazon: biodiversity and carbon across land uses'
-  description: Land-use comparisons at 310 eastern Amazon sites show that ecological losses extend beyond
-    complete forest clearance. Logged-and-burned primary forest had 25% lower large-tree richness and
-    27% lower dung-beetle richness than undisturbed primary forest; aboveground carbon also differed substantially
-    among forest conditions. These are observational comparisons used to estimate transition impacts,
-    not repeated measurements of experimentally changed sites. The supplied table contains site-level
-    richness for seven groups and four carbon pools, with forest-species richness linked separately. It
-    supports examining which ecological components differ across land uses and why tracking forest area
-    alone can miss degradation; it does not itself contain the paper’s estimated transition effects.
+  description: At 310 eastern Amazon sites, logged-and-burned primary forest had 25% lower large-tree
+    richness and 27% lower dung-beetle richness than undisturbed primary forest. Aboveground carbon was
+    28–46% lower in logged or logged-and-burned forest. These observational comparisons show ecological
+    differences within standing forests as well as across land uses. The table contains site-level richness
+    for seven groups and four carbon pools; forest-species richness is linked separately. Use it to compare
+    biodiversity and carbon among land-use classes. The paper's estimated transition impacts require further
+    analyses; these data are not repeated measurements of sites before and after an intervention.
   license: Apache-2.0
   attribution: Nunes et al. (2022)
   doi: 10.5281/zenodo.6518744
+  keywords:
+  - eastern Amazon
+  - land use
+  - forest degradation
+  - species richness
+  - carbon stocks
+  - secondary forest
   categories:
   - Nature
   - Nature's Contributions to People
@@ -35,8 +41,8 @@ metadata:
     limitations:
     - Site tables remain nonspatial; coordinates require a verified join and CRS.
     - Missing values remain NA. Site aggregates do not replace individual observations.
-    evidence_type: Observational site comparisons combined with land-cover transition analysis
-    dataset_role: Site-level biodiversity and carbon inputs underlying comparisons among land-use classes.
+    evidence_type: Observational comparison
+    dataset_role: Site-level species richness and carbon pools across land-use classes.
 assets:
   data:
     location: local
@@ -69,6 +75,7 @@ assets:
           - Dead_pool
           - Soil_pool_new
         Soil_pool_new: Soil carbon stock at 0-30 cm depth, Mg C per hectare.
+      title: Biodiversity and carbon by site (CSV)
   review_context:
     location: local
     path: review-context.json
@@ -76,7 +83,7 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Full review evidence and source history
+      title: Data sources and preparation (JSON)
   source_repository:
     location: external
     href: https://doi.org/10.5281/zenodo.6518744
@@ -169,4 +176,4 @@ assets:
     roles:
     - metadata
     metadata:
-      title: Study findings, interpretation and sources
+      title: Findings and limits (Markdown)

@@ -1,10 +1,34 @@
 # WWF resilience data catalog
 
-We are preparing research data for the WWF resilience platform. First, we needed to establish which datasets described in the study sheet were present in the downloaded files, identify their papers, and keep the evidence behind each match.
+This collection brings together research findings and data relevant to forest conservation, regeneration, fisheries and water management. Start with a scientific question, read the finding and its limits, then choose the files needed for your analysis.
 
-The review covers **78 dataset descriptions from 30 papers**, checked against **1,882 data and supporting files in 23 study folders**. **19 descriptions were found and 29 were partly found.** The 19 matched descriptions are now represented in a prepared EOLab collection, with the limitations below kept visible.
+| Question | A place to start |
+| --- | --- |
+| How does disturbance history affect forest carbon recovery? | [Carbon loss and recovery](evidence/notes/wwf-forest-carbon-loss-gain-compilation.md): recovering degraded forests held more aboveground carbon after 20 years than forests regrowing after clearance. Retained carbon contributes to the difference; higher stocks do not mean faster accumulation. |
+| Does forest area alone capture ecological condition? | [Biodiversity and carbon across land uses](evidence/notes/wwf-amazon-land-use-biodiversity-carbon.md): ecological differences occur among standing forest conditions as well as between forest and agriculture. These are observational site comparisons, not before-and-after intervention measurements. |
+| How could forest loss affect heat exposure? | [Amazon forest cover and heat exposure](evidence/notes/wwf-brazil-heat-stress-exposure.md): modeled complete replacement of Amazon forest by savanna increases heat stress and population exposure. This is an imposed extreme scenario, not an observed health effect or a forecast of a particular policy. |
+| Can total catch hide changes in a fishery? | [Fisheries harvest trends](evidence/notes/wwf-amazon-fisheries-annual-metrics.md): shifts toward smaller-bodied species can matter even without a consistent decline in total landings. The study distinguishes these observations from its theoretical biodiversity and collapse results. |
 
-## What we found
+The [study index](docs/prepared-evidence.md#find-a-study) also links directly to forest vulnerability, tree diversity and traits, river and terrestrial connectivity, local carbon exchange and hydropower scenarios. The study notes explain **Findings**, **Using these data**, **Limits** and **Sources**. Relevance to a management question does not by itself establish the effect of an intervention.
+
+## Available data
+
+The prepared collection has **24 catalog entries: 7 maps, 8 tables/workbooks, and 9 native grids available for download while their CRS is confirmed**. It covers all 19 matched descriptions plus the existing barrier-input pilot. One description may supply several scenarios, while two descriptions can share a table.
+
+The committed [matched YAMLs](evidence/matched/sidecars/) and [pilot YAMLs](evidence/pilot/sidecars/) supply each catalog description, file definition and reference. Maps, tables, model outputs and study inputs retain their different purposes. Open a study note for the comparison, applicability and cited paper sections before treating a supplied file as evidence for your question.
+
+The collection has passed local preparation and EOLab admission checks. An EOLab directory scan is still needed to update the running catalog. Important remaining limits include:
+
+- Nine WBGT and tree grids lack a confirmed CRS, so no map geometry is inferred.
+- Fish-package rights contain conflicting wording.
+- Carbon-study reference IDs need correction before joining some records to citations.
+- Hydropower scenario periods and the firm-power definition, and seed-mass class boundaries, remain unresolved.
+
+The [readiness notes](docs/stac-readiness.md) preserve the wider matching-review gaps, including partial matches, missing outputs and additional local data. Finding the right file does not establish scientific validity or suitability for every analysis.
+
+## Checking which study files were found
+
+The historical file review covers **78 dataset descriptions from 30 papers**, checked against **1,882 data and supporting files in 23 study folders**. Its labels describe whether the requested files were identified; they do not grade scientific evidence or intervention effectiveness.
 
 | Result | Descriptions | What it means |
 | --- | ---: | --- |
@@ -16,24 +40,7 @@ The review covers **78 dataset descriptions from 30 papers**, checked against **
 
 All **30 paper identities were checked**, with article DOIs and publisher links in the [paper registry](data/decisions/papers_verified.json). Publisher links identify papers; dataset repositories and download links are recorded separately. “Not found locally” does not mean unavailable online.
 
-We also identified **670 additional or unresolved scientific entries associated with 16 papers**: 627 files and 43 archived members or layers. These are not 670 independent datasets. Copies, alternative formats and related products remain visible so they can be considered for a later catalog pass.
-
-## Prepared evidence
-
-The prepared collection has **24 catalog entries: 7 maps, 8 tables/workbooks, and 9 native grids available for download while their CRS is confirmed**. It covers all 19 matched descriptions plus the existing barrier-input pilot. One description may supply several scenarios, while two descriptions can share a table.
-
-Start with the [prepared evidence results](docs/prepared-evidence.md) and the [scientific notes](evidence/notes/). The notes explain each study’s question, findings, interpretation and the role of the supplied data, with specific sources. The committed [matched YAMLs](evidence/matched/sidecars/) and [pilot YAMLs](evidence/pilot/sidecars/) are the catalog descriptions used when preparing or refreshing the processed files.
-
-The collection has passed local preparation and EOLab admission checks. An EOLab directory scan is still needed to update the running catalog. Important remaining limits include:
-
-- Nine WBGT and tree grids lack a confirmed CRS, so no map geometry is inferred.
-- Fish-package rights contain conflicting wording.
-- Carbon-study reference IDs need correction before joining some records to citations.
-- Hydropower scenario periods and the firm-power definition, and seed-mass class boundaries, remain unresolved.
-
-The [readiness notes](docs/stac-readiness.md) preserve the wider matching-review gaps, including partial matches, missing outputs and additional local data. Finding the right file does not establish scientific validity or suitability for every analysis.
-
-## Reading the matching result
+The review also identified **670 additional or unresolved scientific entries associated with 16 papers**: 627 files and 43 archived members or layers. These are not 670 independent datasets. Copies, alternative formats and related products remain visible for a later catalog pass.
 
 The main matching result is **`study_data_matches.xlsx`**, generated in `build/reconciliation/`. It reproduces the recorded review of the files available on 13 November 2026. Workbooks and generated reports are rebuilt locally rather than stored in Git; use the [rebuilding guide](docs/rebuilding.md) to create them from the committed inputs.
 
@@ -62,6 +69,6 @@ Copies are labeled by version. For example, the hot-drought paper was obtained a
 | [Curation records](evidence/curation/) | Detailed reviewed evidence, unique field definitions, corrections and source interpretation. |
 | [Matched recipes](evidence/matched/recipes/) and [pilot recipes](evidence/pilot/recipes/) | Source checksums, selections, conversions and supporting-file declarations. |
 
-Preparation combines these sources with the study files. Each processed dataset links to `evidence-summary.md` and a complete `review-context.json`, preserving the original matching evidence and preparation checks. Generated workbooks, reports and validation results stay under ignored `build/` folders; the reviewed `.eolab.yaml` files remain committed.
+Preparation combines these sources with the study files. Each processed dataset includes `evidence-summary.md` for scientific interpretation and `review-context.json` for the original matching records, source history and preparation checks. Generated workbooks, reports and validation results stay under ignored `build/` folders; the reviewed `.eolab.yaml` files remain committed.
 
 The [Apache-2.0 license](LICENSE) covers this project’s code and original annotations. Referenced studies and datasets retain their own attribution and usage terms. Bulk scientific files and article PDFs are not included in Git.
